@@ -2,19 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yuanfeng123.github.io</id>
     <title>Yuanfeng&apos;s Blog</title>
-    <updated>2021-05-15T01:37:13.738Z</updated>
+    <updated>2021-05-15T01:41:11.910Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yuanfeng123.github.io"/>
     <link rel="self" href="https://yuanfeng123.github.io/atom.xml"/>
-    <subtitle>&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
-&lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=G-RMXS87N84V&quot;&gt;&lt;/script&gt;
-&lt;script&gt;
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag(&apos;js&apos;, new Date());
-
-  gtag(&apos;config&apos;, &apos;G-RMXS87N84V&apos;);
-&lt;/script&gt;</subtitle>
     <logo>https://yuanfeng123.github.io/images/avatar.png</logo>
     <icon>https://yuanfeng123.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Yuanfeng&apos;s Blog</rights>
