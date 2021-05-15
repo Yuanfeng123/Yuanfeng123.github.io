@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="">
 <meta name="theme-color" content="#000">
-<title>第10章 枚举与结构类型 | Yuanfeng&#39;s Blog</title>
+<title>第5章 逻辑 | Yuanfeng&#39;s Blog</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/favicon.ico?v=1621057676105">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/media/fonts/font-awesome.css">
@@ -58,7 +58,7 @@
 </script>
 
 
-  <meta name="description" content="第10章 枚举与结构类型" />
+  <meta name="description" content="第5章 逻辑" />
   <meta name="keywords" content="C/C++" />
 </head>
 
@@ -273,25 +273,29 @@
   <div class="toc-wrapper auto-number auto"
     id="toc_wrapper">
     <ul class="markdownIt-TOC">
-<li><a href="#101-%E6%9E%9A%E4%B8%BE">10.1 枚举</a>
+<li><a href="#51-%E9%80%BB%E8%BE%91%E7%B1%BB%E5%9E%8B%E4%B8%8E%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97">5.1 逻辑类型与逻辑运算</a>
 <ul>
-<li><a href="#1011-%E6%9E%9A%E4%B8%BE">10.1.1 枚举</a></li>
+<li><a href="#511-%E9%80%BB%E8%BE%91%E7%B1%BB%E5%9E%8B">5.1.1 逻辑类型</a></li>
+<li><a href="#512-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97">5.1.2 逻辑运算</a></li>
+<li><a href="#513-%E6%9D%A1%E4%BB%B6%E8%BF%90%E7%AE%97%E5%92%8C%E9%80%97%E5%8F%B7%E8%BF%90%E7%AE%97">5.1.3 条件运算和逗号运算</a></li>
 </ul>
 </li>
-<li><a href="#102-%E7%BB%93%E6%9E%84">10.2 结构</a>
+<li><a href="#52-if-else%E6%8B%93%E5%B1%95">5.2 if else拓展</a>
 <ul>
-<li><a href="#1021-%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B">10.2.1 结构类型</a></li>
-<li><a href="#1022-%E7%BB%93%E6%9E%84%E4%B8%8E%E5%87%BD%E6%95%B0">10.2.2 结构与函数</a></li>
-<li><a href="#1023-%E6%8B%93%E5%B1%95%E5%83%8F%E7%B1%BB%E4%B8%80%E6%A0%B7%E5%9C%A8%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%AD%E5%B0%81%E8%A3%85%E5%87%BD%E6%95%B0">10.2.3 拓展：像类一样在结构体中封装函数</a></li>
-<li><a href="#1024-%E6%8B%93%E5%B1%95c%E5%8F%AF%E4%BB%A5%E5%9C%A8%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%AD%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0">10.2.4 拓展：C++可以在结构体中定义函数</a></li>
+<li><a href="#521-%E5%B5%8C%E5%A5%97%E7%9A%84if-else">5.2.1 嵌套的if-else</a></li>
+<li><a href="#522-%E8%81%94%E7%BA%A7if-else">5.2.2 联级if-else</a></li>
 </ul>
 </li>
-<li><a href="#103-%E7%B1%BB%E5%9E%8B%E4%B8%8E%E8%81%94%E5%90%88">10.3 类型与联合</a>
+<li><a href="#53-%E5%A4%9A%E8%B7%AF%E5%88%86%E6%94%AF">5.3 多路分支</a></li>
+<li><a href="#54-%E6%A1%88%E4%BE%8B%E8%AE%AD%E7%BB%83">5.4 案例训练</a>
 <ul>
-<li><a href="#1031-%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89">10.3.1 类型定义</a></li>
-<li><a href="#332-%E8%81%94%E5%90%88">3.3.2 联合</a></li>
+<li><a href="#541-%E5%BE%AA%E7%8E%AF%E8%AE%A1%E7%AE%97">5.4.1 循环计算</a></li>
+<li><a href="#542-%E7%AE%97%E5%B9%B3%E5%9D%87%E6%95%B0">5.4.2 算平均数</a></li>
+<li><a href="#545-%E7%8C%9C%E6%95%B0%E6%B8%B8%E6%88%8F">5.4.5 猜数游戏</a></li>
+<li><a href="#546-%E6%95%B4%E6%95%B0%E9%80%86%E5%BA%8F">5.4.6 整数逆序</a></li>
 </ul>
 </li>
+<li><a href="#55-if%E8%AF%AD%E5%8F%A5%E5%B8%B8%E8%A7%81%E7%9A%84%E9%94%99%E8%AF%AF">5.5 if语句常见的错误</a></li>
 </ul>
 
   </div>
@@ -557,8 +561,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://yuanfeng123.github.io/post/di-10-zhang/">
-      第10章 枚举与结构类型
+    <a class="post-title-link" href="https://yuanfeng123.github.io/post/di-5-zhang-luo-ji/">
+      第5章 逻辑
     </a>
   </h1>
   <div class="post-meta">
@@ -566,7 +570,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-05-13 11:21:33">2021-05-13</span>
+      <span class="publish-time" data-t="2021-05-14 13:47:31">2021-05-14</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -585,17 +589,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>21<span class="language" data-lan="minute">分钟</span></span>
+      <span>12<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>4538<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>2650<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/di-10-zhang/" data-flag-title="第10章 枚举与结构类型" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/di-5-zhang-luo-ji/" data-flag-title="第5章 逻辑" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -604,843 +608,542 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <h1 id="101-枚举">10.1 枚举</h1>
-<h2 id="1011-枚举">10.1.1 枚举</h2>
-<p><strong>常量符号化</strong></p>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-
-const int red = 0;
-const int yellow = 1;
-const int green = 2;
-
-int main(int argc, char const *argv[]) {
-    int color = -1;
-    char *colorName = NULL;
-    
-    printf(&quot;输入你喜欢的颜色的代码：&quot;);
-    scanf(&quot;%d&quot;, &amp;color);
-    switch(color) {
-        case red: colorName = &quot;red&quot;; break;
-        case yellow: colorName = &quot;yellow&quot;; break;
-        case green: colorName = &quot;green&quot;; break;
-        default: colorName = &quot;unknown&quot;; break;    
-    }
-    printf(&quot;你喜欢的颜色是%s\n&quot;, colorName);
-  
-    return 0;
-}
-</code></pre>
+              <h1 id="51-逻辑类型与逻辑运算">5.1 逻辑类型与逻辑运算</h1>
+<h2 id="511-逻辑类型">5.1.1 逻辑类型</h2>
+<p><strong>bool类型</strong></p>
 <ul>
-<li>用符号而不是具体的数字来表示程序中的数字</li>
+<li>#include&lt;stdbool.h&gt;</li>
+<li>C89有这个雏形，到了C99之后才确定下来，就可以使用bool和true，false</li>
 </ul>
-<p><strong>枚举</strong></p>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-
-enum COLOR {RED, YELLOW, GREEN};
-
-int main(int argc, char const *argv[]) {
-    int color = -1;
-    char *colorName = NULL;
-    
-    printf(&quot;输入你喜欢的颜色的代码：&quot;);
-    scanf(&quot;%d&quot;, &amp;color);
-    switch(color) {
-        case RED: colorName = &quot;red&quot;; break;
-        case YELLOW: colorName = &quot;yellow&quot;; break;
-        case GREEN: colorName = &quot;green&quot;; break;
-        default: colorName = &quot;unknown&quot;; break;    
-    }
-    printf(&quot;你喜欢的颜色是%s\n&quot;, colorName);
-  
-    return 0;
-}
-</code></pre>
-<ul>
-<li>用枚举而不是定义独立的const int变量</li>
-<li>更方便的形式去定义名字</li>
-</ul>
-<p>枚举</p>
-<ul>
-<li>
-<p>枚举是一种用户定义的数据类型，它用关键字enum以如下语法来声明：</p>
-<pre><code class="language-C">enum 枚举类型名字{名字0, ...., 名字n};
-</code></pre>
-</li>
-<li>
-<p>枚举类型名字通常并不真的使用，要用的是在大括号里的名字，因为它们就是常量符号，它们的数据类型是int，值则依次从0到n</p>
-</li>
-<li>
-<p>例如</p>
-<pre><code class="language-C">enum colors{red, yellow, green};
-</code></pre>
-<ul>
-<li>就创建了三个常量，red的值是0，yellow的值是1，而green是2</li>
-<li>当需要一些可以排列起来的常量值时，定义枚举的意义就是给出了这些常量值名字</li>
-</ul>
-</li>
-</ul>
-<p>代码</p>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-enum color {red, yellow, green};
-void f(enum color c);
-
-int main() {
-    enum color t = red;//0
-    scanf(&quot;%d&quot;, &amp;t);
-    f(t);
-    
-    return 0;
-}
-
-void f(enum color c) {
-    printf(&quot;%d\n&quot;, c);
-}
-</code></pre>
-<ul>
-<li>枚举量可以作为值</li>
-<li>枚举类型可以跟上enum作为类型</li>
-<li>但是实际上是以整数来做内 部计算和外部输入输出的</li>
-</ul>
-<p>套路：自动计数的枚举</p>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-enum COLOR {RED, YELLOW, GREEN, NumCOLORS};
-int main(int argc, char const *argv[]) {
-    int color = -1;
-    char *ColorName[NumCOLORS] = {
-        &quot;red&quot;, &quot;yellow&quot;, &quot;green&quot;,
-    };
-    char *colorName = NULL;
-    
-    printf(&quot;输入你喜欢的颜色的代码：&quot;);
-    scanf(&quot;%d&quot;, &amp;color);
-    if(color&gt;=0&amp;&amp;color&lt;NumCOLORS) {
-        colorName = ColorNames[color];
-    } else {
-        colorName = &quot;unknown&quot;;
-    }
-    printf(&quot;你喜欢的颜色是%s\n&quot;, colorName);
-    
-    return 0;
-}
-</code></pre>
-<p>枚举量</p>
-<ul>
-<li>声明枚举量的时候可以指定值
-<ul>
-<li>enum COLOR {RED=1, YELLOW, GREEN = 5};</li>
-</ul>
-</li>
-</ul>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-enum COLOR {RED=1, YELLOW, GREEN = 5, NumCOLORS};
-int main() {
-    printf(&quot;code for GREEN is %d\n&quot;, GREEN);
-    return 0;
-}
-</code></pre>
-<p>枚举只是int</p>
-<ul>
-<li>即使给枚举类型的变量赋不存在的整数值也没有任何warning，error</li>
-</ul>
-<p>枚举</p>
-<ul>
-<li>虽然枚举类型可以当作类型使用，但是实际上很少用或者是不好用</li>
-<li>如果有意义上排比的名字，用枚举比const int方便（用于常量符号化）</li>
-<li>枚举比宏好，因为枚举有int类型</li>
-</ul>
-<h1 id="102-结构">10.2 结构</h1>
-<h2 id="1021-结构类型">10.2.1 结构类型</h2>
-<p>如果我们需要表达三个值一起，怎么办？比如年月日三个一起，或者是一个人的信息</p>
-<pre><code class="language-C">struct people {
-    char name[11];
-    int gender;
-    int height;
-    int grade;
-};
-</code></pre>
-<ul>
-<li>需要表达由不同数据组成的数据，就得需要用到C语言的结构</li>
-</ul>
-<p>声明结构类型</p>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-
-int main(int argc, char const *argv[]) {
-    struct date {
-        int month;
-        int day;
-        int year;
-    };
-    struct date today;
-    today.month = 07;
-    today.day = 31;
-    today.year = 2014;
-    printf(&quot;Today's date is %i-%i-%i. \n&quot;, today.year, today.month, today.day);
-    return 0;
-}
-</code></pre>
-<p>在函数内/外？</p>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-
-struct date {
-        int month;
-        int day;
-        int year;
-};
-
-int main(int argc, char const *argv[]) {
-    struct date today;
-    today.month = 07;
-    today.day = 31;
-    today.year = 2014;
-    printf(&quot;Today's date is %i-%i-%i. \n&quot;, today.year, today.month, today.day);
-    return 0;
-}
-</code></pre>
-<ul>
-<li>和本地变量一样，在函数内部声明的结构类型只能在函数内部使用</li>
-<li>所以通常在函数外部声明结构类型，这样就可以被多个函数所使用了</li>
-</ul>
-<p>声明结构的形式</p>
-<pre><code class="language-C">struct point{
-    int x;
-    int y;
-};
-struct point p1, p2;//p1和p2都是point，里面有x和y的值
-
-struct {
-    int x;
-    int y;
-} p1, p2;//p1和p2都是一种无名结构，里面有x和y，但这个结构没有名字
-
-//更常见的做法是下面这样的
-struct point {
-    int x;
-    int y;
-} p1, p2;
-</code></pre>
-<p>结构的初始化</p>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-
-struct date {
-   int month;
-   int day;
-   int year;
-};
-
-int main(int argc, char const *argv[]) {
-    struct date today = {07, 31, 2014};
-    struct date thismonth = {.month = 7, .year = 2014};
-    
-    printf(&quot;Today's date is %i-%i-%i. \n&quot;, today.year, today.month, today.day);
-    printf(&quot;This month is %i-%i-%i. \n&quot;, thismonth.year, thismonth.month, thismonth.day);
-    return 0;
-}
-</code></pre>
-<ul>
-<li>没有给初始值的结构成员的值会是0</li>
-</ul>
-<p>结构成员</p>
-<ul>
-<li>结构和数组有点像
-<ul>
-<li>不同点：数组元素只能是同一类型，而结构成员可以是不同类型的</li>
-<li>数组用[]运算符和下标访问其成员
-<ul>
-<li>a[0] = 10;</li>
-</ul>
-</li>
-<li>结构用.运算符和名字访问其成员
-<ul>
-<li>today.day</li>
-<li>student.firstName</li>
-<li>p1.x</li>
-<li>pl.y</li>
-</ul>
-</li>
-<li>结构类型没有意义，结构变量才是实体</li>
-</ul>
-</li>
-</ul>
-<p>结构运算</p>
-<ul>
-<li>
-<p>要访问整个结构，直接用结构变量的名字</p>
-</li>
-<li>
-<p>对于整个结构，可以做赋值，取地址，也可以传递给函数参数</p>
-<ul>
-<li>p1 = (struct point){5, 10};//相当于p1.x = 5; p1.y = 10;
-<ul>
-<li>前面有个强制转换，要把这两个值转为point的变量，并赋给p1</li>
-</ul>
-</li>
-<li>p1 = p2; //相当于p1.x = p2.x; p1.y = p2.y;</li>
-<li>数组无法做这两种运算</li>
-</ul>
-</li>
-<li>
-<p>其它</p>
-<pre><code class="language-C">struct point p1 = {5, 10};
-struct point p1 = {.x = 5, .y = 10};
-</code></pre>
-</li>
-<li>
-<p>测试代码</p>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-
-struct date {
-   int month;
-   int day;
-   int year;
-};
-
-int main(int argc, char const *argv[]) {
-    struct date today;
-    today = (struct date){07, 31, 2014};
-    struct date day;
-    day = today;
-    
-    day.year = 2015;
-    
-    printf(&quot;Today's date is %i-%i-%i. \n&quot;, today.year, today.month, today.day);
-    printf(&quot;The day's date is %i-%i-%i. \n&quot;, day.year, day.month, day.day);//2015-07-31
-    return 0;
-}
-</code></pre>
-<ul>
-<li>%i是%d的老式写法</li>
-<li>而上面这段代码也说明了，year和month其它都是两个完全不同的变量，有各自自己的值。但就是day = today这条代码不一样</li>
-</ul>
-</li>
-</ul>
-<p>结构指针</p>
-<ul>
-<li>
-<p>和数组不同，结构变量的名字并不是结构变量的地址，必须使用&amp;运算符</p>
-</li>
-<li>
-<p>代码</p>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-
-struct date {
-   int month;
-   int day;
-   int year;
-};
-
-int main(int argc, char const *argv[]) {
-    struct date today;
-    today = (struct date){07, 31, 2014};
-    struct date day;
-    
-    struct date *pDate = &amp;today;
-        
-    printf(&quot;Today's date is %i-%i-%i. \n&quot;, today.year, today.month, today.day);
-    printf(&quot;The day's date is %i-%i-%i. \n&quot;, day.year, day.month, day.day);//2015-07-31
-    printf(&quot;address of today is %p\n&quot;, pDate);
-    return 0;
-}
-</code></pre>
-</li>
-</ul>
-<p>结构作为函数参数</p>
-<pre><code class="language-C">int numberOfDays(struct date d)
-</code></pre>
-<ul>
-<li>整个结构可以作为参数的值传入函数</li>
-<li>这时候是在函数内新建一个结构变量，并复制调用者的结构的值</li>
-<li>也可以返回一个结构</li>
-<li>这与数组完全不同</li>
-</ul>
-<p>给出明天的日子</p>
 <pre><code class="language-C">#include &lt;stdio.h&gt;
 #include &lt;stdbool.h&gt;
 
-struct date {
-    int month;
-    int day;
-    int year;
-};
-
-bool isLeap(struct date d);
-int numberOfDays(struct date d);
-
-int main(int argc, char const *argv[]) {
-    struct date today, tomorrow;
-    
-    printf(&quot;Enter today's date (yyyy mm dd):&quot;);
-    scanf(&quot;%i %i %i&quot;, &amp;today.year, &amp;today.month, &amp;today.day);
-    
-    if(today.day != numberOfDays(today)) {
-        tomorrow.day = today.day + 1;
-        tomorrow.month = today.month;
-        tomorrow.year = today.year;
-    } else if(today.month == 12) {
-        tomorrow.day = 1;
-        tomorrow.month = 1;
-        tomorrow.year = today.year + 1;
-    } else {
-        tomorrow.day = 1;
-        tomorrow.month = today.month + 1;
-        tomorrow.year = today.year;
-    } 
-    
-    printf(&quot;Tomorrow's date is %i-%i-%i&quot;, tomorrow.year, tomorrow.month, tomorrow.day);
-    
+int main() {
+    bool b=6&gt;5;
+    bool t=true;
+    t=2;
+    printf(&quot;%d\n&quot;,b);//这样得到的是1，而不是true还是false。
     return 0;
 }
-
-int numberOfDays(struct date d) {
-    int result;
-    const int numOfDays[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    
-    result = numOfDays[d.month - 1];
-    if(d.month == 2 &amp;&amp; isLeap(d)) result = 29;
-    
-    return result;
-}
-
-bool isLeap(struct date d) {
-    bool result = false;
-    if(d.year % 4 == 0 &amp;&amp; d.year % 100 !=0 || d.year % 400 == 0) result = true;
-    
-    return result;
-}
-
 </code></pre>
-<p>输入结构</p>
+<ul>
+<li>我们没有一个特定的方法去得到它</li>
+</ul>
+<p>我们一般判断一个条件语句，都是利用0与1判断执行还是不执行</p>
+<h2 id="512-逻辑运算">5.1.2 逻辑运算</h2>
+<p><strong>逻辑运算</strong></p>
+<ul>
+<li>逻辑运算是对逻辑量进行的运算，结果只有0或1</li>
+<li>逻辑量是关系运算或逻辑运算的结果</li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021733.png" alt="24" loading="lazy"></figure>
+<p><strong>应用</strong></p>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021734.png" alt="25" loading="lazy"></figure>
+<p>如何判断一个字符c是否是大写字母？</p>
 <ul>
 <li>
-<p>没有直接的方式可以一次scanf一个结构</p>
-</li>
-<li>
-<p>错误代码</p>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-
-struct point {
-    int x;
-    int y;
-};
-
-void getStruct
+<pre><code class="language-C">c&gt;='A'&amp;&amp;c&lt;='Z'
 </code></pre>
 </li>
 </ul>
-<p>解决方案</p>
+<p><strong>理解一下</strong></p>
+<ul>
+<li>age&gt;20&amp;&amp;age&lt;30
+<ul>
+<li>在20~30内就是true</li>
+</ul>
+</li>
+<li>index&lt;0||index&gt;99
+<ul>
+<li>index小于0和大于99，而不在0~99这个区间内（也不是端点）</li>
+</ul>
+</li>
+<li>!age&lt;20
+<ul>
+<li>很多人会将其理解为“age不小于20“，但其实因为我们的“！”是单目运算符，它的优先级会比双目运算符还要高。所以它会先执行！age再执行下一步。</li>
+<li>而解决这个问题，只需要加个括号：！（age&lt;20）</li>
+</ul>
+</li>
+</ul>
+<p><strong>优先级</strong></p>
+<ul>
+<li>！&gt;&amp;&amp;&gt;||
+<ul>
+<li>!done &amp;&amp; (count&gt;Max)</li>
+<li>!done &amp;&amp; count&gt;Max</li>
+</ul>
+</li>
+</ul>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021735.png" alt="26" loading="lazy"></figure>
+<ul>
+<li>必须要比&gt;低，否则做不了a&gt;6&amp;&amp;a&lt;8</li>
+</ul>
+<p>应用</p>
+<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021736.png" alt="27" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021737.png" alt="28" loading="lazy"></figure>
+<p><strong>短路</strong></p>
 <ul>
 <li>
-<p>结构与数组不一样，因此没有办法直接修改</p>
-</li>
+<p>逻辑运算是自左向右进行的，如果左边的结果已经能够决定结果了，就不会做右边的计算</p>
+<ul>
 <li>
-<p>而结构作为参数的值传入函数时，只不过就是克隆了另一个结构，而不是指针</p>
-</li>
-<li>
-<p>传入函数与传入数组是不同的</p>
-</li>
-<li>
-<p>在这个输入函数中，完全可以创建一个临时的结构变量，然后把这个结构返回给调用者</p>
-</li>
-<li>
-<p>正确代码</p>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-
-struct point {
-    int x;
-    int y;
-};
-
-struct point getStruct(void);
-void output(struct point p); 
-
-int main() {
-    struct point y = {0, 0};
-    y = getStruct();
-    output(y);
-    
-    return 0;
-}
-
-struct point getStruct(void) {
-    struct point p;
-    scanf(&quot;%d %d&quot;, &amp;p.x, &amp;p.y);
-    return p;
-}
-
-void output(struct point p) {
-    printf(&quot;x=%d&quot;, p.x);
-    printf(&quot;y=%d&quot;, p.y);
-}
+<pre><code class="language-C">a==6 &amp;&amp; b==1;
+a==6 &amp;&amp; b=+1;
 </code></pre>
 </li>
 </ul>
-<p>结构指针作为参数</p>
-<ul>
-<li>经典C说过：传入一个较大的结构时，传入指针比返回结构更有效</li>
+</li>
+<li>
+<p>对于&amp;&amp;，左边是false时就不做右边了</p>
+</li>
+<li>
+<p>对于||，左边是true时，就不做右边了</p>
+</li>
+<li>
+<p>不要把赋值，包括复合赋值组合进表达式</p>
+</li>
 </ul>
-<p>指向结构的指针</p>
-<pre><code class="language-C">struct date {
-    int month;
-    int day;
-    int year; 
-} myday;
-
-struct date *p = &amp;myday;
-
-(*p).month = 12;
-p-&gt;month = 12;
+<h2 id="513-条件运算和逗号运算">5.1.3 条件运算和逗号运算</h2>
+<p><strong>条件运算符</strong></p>
+<ul>
+<li>
+<p>count=(count&gt;20)?count-10:count+10</p>
+</li>
+<li>
+<p>条件，条件满足时的值和条件不满足时的值。相当于下面：</p>
+<pre><code class="language-C">if(count&gt;20) {
+    count-=10;
+} else {
+    count+=10;
+}
+</code></pre>
+</li>
+<li>
+<p>这个也是语言早期遗留下来的东西</p>
+</li>
+</ul>
+<p><strong>优先级</strong></p>
+<figure data-type="image" tabindex="6"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021738.png" alt="29" loading="lazy"></figure>
+<p><strong>嵌套条件表达式</strong></p>
+<figure data-type="image" tabindex="7"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021739.png" alt="30" loading="lazy"></figure>
+<ul>
+<li>条件运算符是左右向左结合的
+<ul>
+<li>w&lt;x? x+w: x&lt;y? x:y</li>
+</ul>
+</li>
+<li>不建议使用嵌套条件表达式，因为这会使你的表达式变得复杂</li>
+</ul>
+<p><strong>逗号运算符</strong></p>
+<ul>
+<li>逗号用来连接两个表达式，并以其右边的表达式的值作为它的运算结果。逗号的优先级是所有运算符中最低的，所以它两边的表达式会先计算；</li>
+<li>逗号的组合关系是自左向右的，所以左边的表达式会先计算，而右边的表达式的值会留下来作为逗号运算的结果</li>
+</ul>
+<p>主要是在for中使用</p>
+<figure data-type="image" tabindex="8"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021740.png" alt="31" loading="lazy"></figure>
+<h1 id="52-if-else拓展">5.2 if else拓展</h1>
+<h2 id="521-嵌套的if-else">5.2.1 嵌套的if-else</h2>
+<p>求三个整数的最大值</p>
+<figure data-type="image" tabindex="9"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021741.png" alt="32" loading="lazy"></figure>
+<figure data-type="image" tabindex="10"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021742.png" alt="33" loading="lazy"></figure>
+<p><strong>嵌套示例</strong></p>
+<pre><code class="language-html">const int READY = 24;
+int code = 0;
+int count = 0;
+scanf(&quot;%d %d&quot;, &amp;code, &amp;count);
+	
+if(code == READY) {
+  if(count&lt;20) {
+    printf(&quot;达到要求&quot;); 
+  } else {
+    printf(&quot;未达到要求&quot;);
+  }
+}
 </code></pre>
 <ul>
-<li>用-&gt;表示指针所指的结构变量中的成员</li>
+<li>
+<p>这是我们要的效果</p>
+</li>
+<li>
+<p>它可以转换为下面这种格式</p>
+<pre><code class="language-html">if(code == READY) 
+  if(count&lt;20)
+    printf(&quot;达到要求&quot;);
+  else 
+	printf(&quot;未达到要求&quot;);
+</code></pre>
+</li>
 </ul>
-<p>结构指针参数</p>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-
-struct point* getStruct(struct point*);
-void output(struct point);
-void print(const struct point *p);
-
-int main() {
-    struct point y = {0, 0};
-    getStruct(&amp;y);
-    output(y);
-    output(*getStruct(&amp;y));//现在这个指针指向的是函数的返回值
-    print(getStruct(&amp;y));
-    getStruct(&amp;y)-&gt;x = 0;
-    *getStruct(&amp;y) = (struct point){1,2};
-}
-
-struct point* getStruct(struct point *p) {
-    scanf(&quot;%d&quot;, &amp;(p-&gt;x));
-    scanf(&quot;%d&quot;, &amp;(p-&gt;y));
-    printf(&quot;d, %d&quot;, p-&gt;x, p-&gt;y);
-    return p;
-}
-
-void output(struct point p) {
-    printf(&quot;%d, %d&quot;, p.x, p.y);
-}
-
-void print(const struct point *p) {
-    printf(&quot;%d, %d&quot;, p-&gt;x, p-&gt;y);
+<p><strong>嵌套的判断</strong></p>
+<ul>
+<li>当if的条件满足或者不满足的时候要执行的语句也可以是一条if或if-else语句，这就是嵌套的if语句</li>
+</ul>
+<figure data-type="image" tabindex="11"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021743.png" alt="34" loading="lazy"></figure>
+<p>问题</p>
+<pre><code class="language-HTML">if(code == READY) 
+  if(count&lt;20)
+    printf(&quot;达到要求&quot;);
+else 
+  printf(&quot;未达到要求&quot;);
+</code></pre>
+<ul>
+<li>当我们想要这样的时候，它却和上一个运行结果一模一样。那怎么办呢？</li>
+</ul>
+<p><strong>else的匹配</strong></p>
+<ul>
+<li>else总是和最近的那个if匹配</li>
+</ul>
+<p>除非你加个大括号</p>
+<pre><code class="language-html">const int READY = 24;
+int code = 0;
+int count = 0;
+scanf(&quot;%d %d&quot;, &amp;code, &amp;count);
+	
+if(code == READY) {
+  if(count&lt;20)
+    printf(&quot;达到要求&quot;);
+} else {
+  printf(&quot;未达到要求&quot;);
 }
 </code></pre>
-<h2 id="1022-结构与函数">10.2.2 结构与函数</h2>
-<p>结构数组</p>
-<pre><code class="language-C">struct date dates[100];
-struct date dates[] = {
-    {4, 5, 2005}. {2, 4, 2005}};
+<p>也知道了...</p>
+<p><strong>缩进</strong></p>
+<ul>
+<li>
+<p>缩进格式不能暗示else的匹配</p>
+<pre><code class="language-html">if(code == READY) 
+  if(count&lt;20)
+    printf(&quot;达到要求&quot;);
+else 
+  printf(&quot;未达到要求&quot;);
 </code></pre>
-<p>代码案例</p>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-struct time {
-    int hours;
-    int minutes;
-    int seconds;
-};
+</li>
+</ul>
+<p><strong>另一个例子</strong></p>
+<p>程序一</p>
+<figure data-type="image" tabindex="12"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021744.png" alt="35" loading="lazy"></figure>
+<ul>
+<li>这个程序所要表达的意思是：当player2move不等于2时，就会输出那个else下的语句。当gameover不等于0的时候，将什么都不输出（所以它和else没有任何关系）。</li>
+</ul>
+<p>程序二</p>
+<figure data-type="image" tabindex="13"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021745.png" alt="36" loading="lazy"></figure>
+<ul>
+<li>这个的话，就是当gameover不等于0的时候，最下面的那个else就会输出</li>
+</ul>
+<p>程序三</p>
+<figure data-type="image" tabindex="14"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021746.png" alt="37" loading="lazy"></figure>
+<ul>
+<li>这个的话，它所要表达的与程序一一样。那个else与gameover等不等与0没有半毛钱关系。但我们想要的是，这个gameover是在gamerover不等于0的时候输出，那怎么办呢？</li>
+</ul>
+<p>程序四</p>
+<figure data-type="image" tabindex="15"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021747.png" alt="38" loading="lazy"></figure>
+<ul>
+<li>加上大括号，就明了</li>
+</ul>
+<p>tips</p>
+<ul>
+<li>在if或else后面总是用｛｝</li>
+<li>即使只有一条语句的时候</li>
+</ul>
+<h2 id="522-联级if-else">5.2.2 联级if-else</h2>
+<p><strong>分段函数</strong></p>
+<figure data-type="image" tabindex="16"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021748.png" alt="39" loading="lazy"></figure>
+<p><strong>级联的if-else if</strong></p>
+<ul>
+<li>上面这段代码就是一个级联的if-else if</li>
+</ul>
+<figure data-type="image" tabindex="17"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021749.png" alt="40" loading="lazy"></figure>
+<p>早期的是这样的</p>
+<figure data-type="image" tabindex="18"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021750.png" alt="41" loading="lazy"></figure>
+<p>而如果这样下去，代码会越来越靠右，就很麻烦。所以人们想出了用级联的方法</p>
+<figure data-type="image" tabindex="19"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021751.png" alt="42" loading="lazy"></figure>
+<ul>
+<li>推荐使用左边的代码，因为它是单一出口</li>
+<li>而且右边的也把代码写死了，不具有灵活性</li>
+</ul>
+<h1 id="53-多路分支">5.3 多路分支</h1>
+<p><strong>switch-case</strong></p>
+<figure data-type="image" tabindex="20"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021752.png" alt="43" loading="lazy"></figure>
+<figure data-type="image" tabindex="21"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021753.png" alt="44" loading="lazy"></figure>
+<figure data-type="image" tabindex="22"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021754.png" alt="45" loading="lazy"></figure>
+<p><strong>break</strong></p>
+<figure data-type="image" tabindex="23"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021755.png" alt="46" loading="lazy"></figure>
+<p><strong>案例-转换成绩</strong></p>
+<p>版本一</p>
+<pre><code class="language-C">int score;
+scanf(&quot;%d&quot;,&amp;score);
+score/=10;	
 
-struct time timeUpdate(struct time now);
+switch(score) {
+    case 10:
+    case 9:
+        printf(&quot;A&quot;);
+        break;
+    case 8:
+        printf(&quot;B&quot;);
+        break;
+    case 7:
+        printf(&quot;C&quot;);
+        break;
+    case 6:
+        printf(&quot;D&quot;);
+        break;
+    default:
+        printf(&quot;E&quot;);
+        break;
+	}
+</code></pre>
+<p>版本二</p>
+<pre><code class="language-C">int score = 0;
+scanf(&quot;%d&quot;,&amp;score);
+	
+if(score&gt;=90) {
+    printf(&quot;A&quot;);
+} else if(score&gt;=80) {
+	printf(&quot;B&quot;); 
+} else if(score&gt;=70) {
+	printf(&quot;C&quot;);
+} else if(score&gt;=60) {
+	printf(&quot;D&quot;);
+} else {
+	printf(&quot;E&quot;);
+}
+</code></pre>
+<ul>
+<li>但这些代码都不符合我们的“单一出口”原则，因为我们还没学习字符或者字符串型数据的处理</li>
+</ul>
+<p>switch的经常使用</p>
+<figure data-type="image" tabindex="24"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021756.png" alt="47" loading="lazy"></figure>
+<ul>
+<li>今后用数组来做更好</li>
+</ul>
+<h1 id="54-案例训练">5.4 案例训练</h1>
+<p>程序语言无非就是输入输出，分支语句，调用函数等等。但编程难究竟是难在哪里呢？难在想问题，简单来说就是如何把一个问题转换为一个程序，一个算法</p>
+<h2 id="541-循环计算">5.4.1 循环计算</h2>
+<p><strong>小套路</strong></p>
+<figure data-type="image" tabindex="25"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021757.png" alt="48" loading="lazy"></figure>
+<p>一样</p>
+<pre><code class="language-C">int x, ret=-1;
+scanf(&quot;%d&quot;,&amp;x);
+int t = x;
+while(x&gt;0) {
+    x/=2;
+    ret++;
+}
+printf(&quot;%d是2的%d次方&quot;,t,ret);
+return 0;
+</code></pre>
+<figure data-type="image" tabindex="26"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021758.png" alt="49" loading="lazy"></figure>
+<ul>
+<li>有一种方法去模拟一下，就是你拿出一张纸，在上面写着运行结果。也就意味着，你需要写100多次。那太麻烦了，怎么办？</li>
+<li>小套路：如果要模拟运行一个很大次数的循环，可以模拟较少的循环次数，然后作出推断</li>
+</ul>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021759.png" alt="50" style="zoom:50%;" />
+<figure data-type="image" tabindex="27"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021800.png" alt="51" loading="lazy"></figure>
+<h2 id="542-算平均数">5.4.2 算平均数</h2>
+<figure data-type="image" tabindex="28"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021801.png" alt="52" loading="lazy"></figure>
+<p><strong>变量</strong></p>
+<figure data-type="image" tabindex="29"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021802.png" alt="53" loading="lazy"></figure>
+<p><strong>算法</strong></p>
+<figure data-type="image" tabindex="30"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021803.png" alt="54" loading="lazy"></figure>
+<p><strong>我的版本</strong></p>
+<pre><code class="language-C">int x, sum;
+double n=0.0;
+do {
+    scanf(&quot;%d&quot;,&amp;x);
+    sum+=x;
+} while(x!=-1);
+sum+=1;
+scanf(&quot;%lf&quot;,&amp;n);
+printf(&quot;平均数是%f&quot;,sum/n);
+</code></pre>
+<p>老师的版本</p>
+<pre><code class="language-C">int number;
+int sum = 0;
+int count=0;
 
-int main(void) {
-    struct time testTimes[5] = {
-        {11, 59, 59}, {12, 0, 0}, {1, 29, 59}, {23, 59, 59}, {19, 12, 27}
-    };
-    
-    int i;
-    for(i=0;i&lt;5;i++) {
-        printf(&quot;Time is %.2i:%.2i:%.2i&quot;, testTimes[i].hour, testTimes[i].minutes, testTimes[i].seconds);
-        testTimes[i] = timeUpdate(testTimes[i]);
-        printf(&quot;...one second later it's %.2i:%.2i:%.2i\n&quot;, testTimes[i].hour, testTimes[i].minutes, testTimes[i].seconds)
+do {
+    scanf(&quot;%d&quot;, &amp;number);
+    if(number != -1) {
+        sum += number;
+        count++;
     }
-    return 0;
+}while(number != -1);//但这里有一个不好就是双重判断了
+
+printf(&quot;%f\n&quot;, 1.0*sum/count);
+</code></pre>
+<p>老师的版本2</p>
+<pre><code class="language-C">int number;
+int sum = 0;
+int count=0;
+scanf(&quot;%d&quot;, &amp;number);
+while(number != -1) {
+    sum += number;
+    count++;
+    scanf(&quot;%d&quot;, &amp;number);
 }
 
-struct time timeUpdate(struct time now) {
-    ++now.seconds;
-    if(now.seconds == 60) {
-        now.seconds = 0;
-        ++now.minutes;
-        
-        if(now.minutes == 60) {
-            now.minutes = 0;
-            ++now.hour;
-            
-            if(now.hour == 24) {
-                now.hour = 0;
-            }
-        }
-    }
-    
-    return now;
-}
+printf(&quot;%f\n&quot;, 1.0*sum/count);
 </code></pre>
-<p>结构中的结构</p>
-<pre><code class="language-C">struct dateAndTime {
-    struct date sdate;
-    struct time stime;
-}
-</code></pre>
-<p>嵌套的结构</p>
-<pre><code class="language-C">struct point {
-    int x;
-    int y;
-};
-
-struct rectangle {
-    struct point pt1;
-    struct point pt2;
-};
-</code></pre>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022112.png" alt="81" loading="lazy"></figure>
-<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022113.png" alt="82" loading="lazy"></figure>
+<p>一个问题，可以用多种算法解决，条条大路通罗马</p>
+<h2 id="545-猜数游戏">5.4.5 猜数游戏</h2>
+<figure data-type="image" tabindex="31"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021804.png" alt="55" loading="lazy"></figure>
+<p><strong>算法</strong></p>
+<figure data-type="image" tabindex="32"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021805.png" alt="56" loading="lazy"></figure>
+<p><strong>代码</strong></p>
+<figure data-type="image" tabindex="33"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021806.png" alt="57" loading="lazy"></figure>
+<p><strong>随机数</strong></p>
 <ul>
-<li>最后一个rp-&gt;pt1-&gt;x，是因为pt1不是指针，无法指向，它就是一个结构</li>
+<li>每次召唤rand（）就得到了一个随机的整数</li>
 </ul>
-<p>结构中的结构的数组</p>
+<p><strong>%100</strong></p>
+<ul>
+<li>x%n的结果是[0，n-1]的一个整数</li>
+</ul>
+<p>我的版本</p>
 <pre><code class="language-C">#include &lt;stdio.h&gt;
-
-struct point {
-    int x;
-    int y;
-};
-
-struct rectangle {
-    struct point p1;
-    struct point p2;
-};
-
-void printRect(struct rectangle r) {
-    printf(&quot;&lt;%d, %d&gt; to &lt;%d, %d&gt;\n&quot;, r.p1.x, r.p1.y, r.p2.x, r.p2.y);
-}
-
-int main(int argc, char const *argv[]) {
-    int i;
-    struct rectangle rects[2] = {
-        {
-            {1, 2}, {3, 4}
-        },
-        {
-            {5, 6}, {7, 8}
-        }
-    };
-    for(i=0;i&lt;2;i++) printRect(rects[i]);
-}
-</code></pre>
-<h2 id="1023-拓展像类一样在结构体中封装函数">10.2.3 拓展：像类一样在结构体中封装函数</h2>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-typedef struct point {
-    int x, y;
-    void (*setPoint)(struct point *s, int a, int b);
-} Point;
-
-void set(Point *s, int a, int b) {
-    s-&gt;x = a;
-    s-&gt;y = b;
-}
-
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
 
 int main() {
-    Point p1;
-    p1.setPoint = set;
-    p1.setPoint(&amp;p1, 6, 9);
-    printf(&quot;%d, %d&quot;, p1.x, p1.y);
-    return 0;
-}
-</code></pre>
-<h2 id="1024-拓展c可以在结构体中定义函数">10.2.4 拓展：C++可以在结构体中定义函数</h2>
-<pre><code class="language-c++">#include &lt;bits/stdc++.h&gt;
-using namespace std;
-//思路：先把毯子信息存在数组中，再得到要查看的点，遍历毯子信息，看哪个毯子盖住了这个点。 
-typedef struct Carpet
-{
-	int xmin, xmax, ymin, ymax;
-	Carpet()
-	{
-		set(0,0,0,0);
+	srand(time(0));
+	int a = rand()%10;
+	int num;
+	scanf(&quot;%d&quot;, &amp;num);
+	
+	while(num!=a) {
+		if(a&gt;num) {
+		    printf(&quot;你猜小了\n&quot;);
+	    } else if(a&lt;num){
+		    printf(&quot;你猜大了\n&quot;);
+	    }
+	    scanf(&quot;%d&quot;, &amp;num);
 	}
-	void set(int a, int b, int g, int k)
-	{
-		xmin = a;
-		xmax = a + g;
-		ymin = b;
-		ymax = b + k;
-	}
-	bool contains(int x, int y)//地毯是否盖住(x,y)点
-	{
-		if(x &gt;= xmin &amp;&amp; x &lt;= xmax &amp;&amp; y &gt;= ymin &amp;&amp; y &lt;= ymax)
-			return true;
-		else
-			return false;
-	}
-}Carpet;
-
-int main()
-{
-	int n, a, b, g, k, x, y, frontCptNum = -1;//frontCptNum:最上面毯子的编号 
-	Carpet carp[10005];
-	cin&gt;&gt;n;
-	for(int i = 1; i &lt;= n; ++i)
-	{
-		cin&gt;&gt;a&gt;&gt;b&gt;&gt;g&gt;&gt;k;
-		carp[i].set(a, b, g, k);
-	}
-	cin&gt;&gt;x&gt;&gt;y;
-	for(int i = 1; i &lt;= n; ++i)
-	{
-		if(carp[i].contains(x, y))
-			frontCptNum = i; 
-	}	
-	cout&lt;&lt;frontCptNum;
+	
+	printf(&quot;你猜对了\n&quot;);
 	return 0;
 }
 </code></pre>
-<h1 id="103-类型与联合">10.3 类型与联合</h1>
-<h2 id="1031-类型定义">10.3.1 类型定义</h2>
-<p>自定义数据类型（typedef）</p>
+<h2 id="546-整数逆序">5.4.6 整数逆序</h2>
+<p><strong>整数的分解</strong></p>
+<figure data-type="image" tabindex="34"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021807.png" alt="58" loading="lazy"></figure>
+<p><strong>数的逆序</strong></p>
 <ul>
-<li>
-<p>C语言提供了一个叫做typeof的功能来声明一个已有的数据类型的新名字</p>
-<p>比如：typedef int Length;</p>
-<p>使得Length成为int类型的别名</p>
-</li>
-<li>
-<p>这样，Length这个名字就可以代替int出现在变量定义和参数声明的地方了：</p>
-<pre><code class="language-C">Length a, b, len;
-Length numbers[10];
-</code></pre>
+<li>输入一个正整数，输出逆序的数
+<ul>
+<li>结尾的0的处理</li>
+</ul>
 </li>
 </ul>
-<p>typedef</p>
-<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022114.png" alt="83" loading="lazy"></figure>
-<pre><code class="language-C">typedef struct {
-    int month;
-    int day;
-    int year;
-} Date;
+<p>老师的版本（和我的一样-这个是包括0的版本）</p>
+<pre><code class="language-C">int digit,x;
+x = 12345600;
+int ret = 0;
+	
+while(x&gt;0) {
+	digit = x%10;
+    printf(&quot;%d &quot;, digit);
+	x/=10;
+}
+	return 0;
 </code></pre>
-<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022115.png" alt="84" loading="lazy"></figure>
-<h2 id="332-联合">3.3.2 联合</h2>
-<p>他们会共用内存</p>
-<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022116.png" alt="86" style="zoom:67%;" />
-<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022117.png" alt="87" style="zoom:33%;" />
+<p>老师的版本（这个是不包括0的版本）</p>
+<pre><code class="language-C">int digit,x;
+x = 12345600;
+int ret = 0;
+	
+while(x&gt;0) {
+	digit = x%10;
+    ret = ret*10+digit;
+	x/=10;
+}
+printf(&quot;%d&quot;, ret);
+	return 0;
+</code></pre>
+<p>我的版本-不包括0；</p>
 <pre><code class="language-C">#include &lt;stdio.h&gt;
 
-typedef union {
-    int i;
-    char ch[sizeof(int)];
-} CHI;
-
-int main(int argc, char const *argv[]) {
-    CHI chi;
-    int i;
-    chi.i = 1234;
-    for(i=0; i&lt;sizeof(int); i++) {
-        printf(&quot;%02hhX&quot;, chi.ch[i]);
-    }
-    printf(&quot;\n&quot;);
-    return 0;
-}
-</code></pre>
-<p><strong>小端与大端</strong></p>
-<p>预备知识</p>
-<ul>
-<li>地址为什么会用十六进制？0000 0000 0062 FDDC，地址是这样的。</li>
-<li>一个十六进制数是用4个比特存储的，上面这个则用了64比特存储。而因为我们用的是64位的电脑，所以它的指针所占的字节是8字节（占多少与电脑的寻址能力有关）。64/8=8，你看，8字节，刚刚好</li>
-</ul>
-<p>一、大端模式和小端模式的起源<br>
-关于大端小端名词的由来，有一个有趣的故事，来自于Jonathan Swift的《格利佛游记》：Lilliput和Blefuscu这两个强国在过去的36个月中一直在苦战。战争的原因：大家都知道，吃鸡蛋的时候，原始的方法是打破鸡蛋较大的一端，可以那时的皇帝的祖父由于小时侯吃鸡蛋，按这种方法把手指弄破了，因此他的父亲，就下令，命令所有的子民吃鸡蛋的时候，必须先打破鸡蛋较小的一端，违令者重罚。然后老百姓对此法令极为反感，期间发生了多次叛乱，其中一个皇帝因此送命，另一个丢了王位，产生叛乱的原因就是另一个国家Blefuscu的国王大臣煽动起来的，叛乱平息后，就逃到这个帝国避难。据估计，先后几次有11000余人情愿死也不肯去打破鸡蛋较小的端吃鸡蛋。这个其实讽刺当时英国和法国之间持续的冲突。Danny Cohen一位网络协议的开创者，第一次使用这两个术语指代内存中的字节顺序，后来就被大家广泛接受。</p>
-<p>二、什么是大端和小端<br>
-Big-Endian和Little-Endian的定义如下：</p>
-<ol>
-<li>
-<p>Little-Endian就是低位字节排放在内存的低地址端，高位字节排放在内存的高地址端。</p>
-</li>
-<li>
-<p>Big-Endian就是高位字节排放在内存的低地址端，低位字节排放在内存的高地址端。举一个例子，比如数字0x12 34 56 78在内存中的表示形式为：</p>
-</li>
-</ol>
-<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210413195958.png" alt="image-20210413195958069" loading="lazy"></figure>
-<p>3)下面是两个具体例子：</p>
-<ul>
-<li>16bit宽的数0x1234在Little-endian模式（以及Big-endian模式）CPU内存中的存放方式（假设从地址0x4000开始存放）为：</li>
-</ul>
-<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210413200729.png" alt="image-20210413200729657" style="zoom:67%;" />
-<ul>
-<li>32bit宽的数0x12345678在Little-endian模式以及Big-endian模式）CPU内存中的存放方式（假设从地址0x4000开始存放）为：</li>
-</ul>
-<figure data-type="image" tabindex="6"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210413211447.png" alt="image-20210413211447470" loading="lazy"></figure>
-<p>4)大端小端没有谁优谁劣，各自优势便是对方劣势：</p>
-<ul>
-<li>小端模式 ：强制转换数据不需要调整字节内容，1、2、4字节的存储方式一样。</li>
-<li>大端模式 ：符号位的判定固定为第一个字节，容易判断正负。</li>
-</ul>
-<p>5）理解高位字节与低位字节</p>
-<ul>
-<li>0x12345678的二进制表示；0001 0010 0011 0100 0101 0110 0111 1000，它所说的高位字节是右边的，例如0001（4比特，而一个char我们是1字节的，也就是8比特，所以它会读取到0001 0010）</li>
-</ul>
-<p>三、数组在大端小端情况下的存储：<br>
-　　以unsigned int value = 0x12345678为例，分别看看在两种字节序下其存储情况，我们可以用unsigned char buf[4]来表示value：<br>
-　　Big-Endian: 低地址存放高位，如下：</p>
-<pre><code>高地址
----------------
-    buf[3] (0x78) -- 低位
-    buf[2] (0x56)
-    buf[1] (0x34)
-    buf[0] (0x12) -- 高位
----------------
-低地址
-</code></pre>
-<p>Little-Endian: 低地址存放低位，如下：</p>
-<pre><code>高地址
----------------
-    buf[3] (0x12) -- 高位
-    buf[2] (0x34)
-    buf[1] (0x56)
-    buf[0] (0x78) -- 低位
-低地址
-</code></pre>
-<p>代码验证</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-union {
-    unsigned int i;
-    unsigned char s[sizeof(int)]; //如果不加unsigned，会出现多个fff的情况，这是因为signed char会有数组元素是负数的情况
-} test;
-
 int main() {
-    test.i = 0x12345678;
-    //printf(&quot;%02x\n&quot;, test.i);
-    int i;
-    for(i = 0; i&lt;sizeof(int); i++) printf(&quot;%d:0x%02X\n&quot;, i, test.s[i]);// 2是向右对齐，而0的意思是当有空的时候以0填充
-    //printf(&quot;%010d&quot;, 1234);
-    return 0;
+	int digit,x;
+	x = 12345600;
+	
+	while(x&gt;0) {
+		digit = x%10;
+	x/=10;
+	if(digit!=0) 
+		printf(&quot;%d &quot;, digit);
+	}
+	
+	return 0;
 }
 </code></pre>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
+<h1 id="55-if语句常见的错误">5.5 if语句常见的错误</h1>
+<p><strong>忘了大括号</strong></p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021808.png"  />
+<p>测试程序</p>
+<pre><code class="language-C">int age = 0;
+double salay = 4000;
 
-union {
-    unsigned int i;
-    unsigned char s[sizeof(int)];
-} test;
+age = 55;
+if(age&gt;60)
+    salary = salary*1.2;
+    printf(&quot;%f\n&quot;, salary);//这句是无论是不是大于60都执行的，与你的缩进无关
 
-int IsBigEndian() {  
-    int a = 0x1234;  
-    char b =  *(char *)&amp;a;  //通过将int强制类型转换成char单字节，通过判断起始存储位置。即等于 取b等于a的低地址部分  
-    if( b == 0x12) return 1;  
-    return 0;  
-}
-
-int main() {
-    printf(&quot;%d&quot;, IsBigEndian());
-    return 0;
+</code></pre>
+<p>所以解决方法：</p>
+<figure data-type="image" tabindex="35"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021809.png" alt="60" loading="lazy"></figure>
+<p><strong>if后面的分号</strong></p>
+<p>这个代码是很多初学者会犯的错误</p>
+<figure data-type="image" tabindex="36"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021810.png" alt="61" loading="lazy"></figure>
+<pre><code class="language-C">if(age&gt;60);//这个是会执行的，而下面的将会变成普通语句，不会跟随if
+{
+    salary = salary * 1.2;
+    printf(&quot;%f&quot;, salay);
 }
 </code></pre>
-<p>四、为什么会有大小端模式之分呢？<br>
-这是因为在计算机系统中，我们是以字节为单位的，每个地址单元都对应着一个字节，一个字节为8bit。但是在C语言中除了8bit的char之外，还有16bit的short型，32bit的long型（要看具体的编译器），另外，对于位数大于8位的处理器，例如16位或者32位的处理器，由于寄存器宽度大于一个字节，那么必然存在着一个如果将多个字节安排的问题。因此就导致了大端存储模式和小端存储模式。例如一个16bit的short型x，在内存中的地址为0x0010，x的值为0x1122，那么0x11为高字节，0x22为低字节。对于大端模式，就将0x11放在低地址中，即0x0010中，0x22放在高地址中，即0x0011中。小端模式，刚好相反。我们常用的X86结构是小端模式，而KEIL C51则为大端模式。很多的ARM，DSP都为小端模式。有些ARM处理器还可以由硬件来选择是大端模式还是小端模式。</p>
-<p>参考资料</p>
+<p><strong>错误使用==和=</strong></p>
+<figure data-type="image" tabindex="37"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021811.png" alt="62" loading="lazy"></figure>
+<p>if（）这个框里面，如果你用的是“=”，那么它会变成赋值运算，当然这个等号右边的数必须是非零</p>
+<p>代码示例</p>
+<pre><code class="language-C">int age = 0;
+double salary = 4000;
+age = 55;
+if(age = 60) {
+    salary*=1.2;
+    printf(&quot;%f\n&quot;, salary);
+}
+
+//这段代码会提示你warning，但它能执行出结果，可是我们不要忽略它，要解决好每一个warning。
+
+//它会输出4800，也就是成功执行了if语句大括号内部的语句。
+</code></pre>
+<p>但是，当等号右边是0的时候呢？</p>
+<pre><code class="language-C">int age = 0;
+double salary = 4000;
+age = 55;
+if(age = 0) {
+    salary*=1.2;
+    printf(&quot;%f\n&quot;, salary);
+}
+
+//程序会没有结果，因为这个0在if语句的意思是假，是false，所以不会执行if大括号内部的代码
+</code></pre>
+<p><strong>代码风格</strong></p>
 <ul>
-<li><a href="https://blog.csdn.net/Eunice_fan1207/article/details/79232563">变量在内存中的字节顺序是-----大端还是小端？</a></li>
-<li><a href="https://blog.csdn.net/yangcs2009/article/details/39698997#:~:text=%E5%B0%8F%E7%AB%AF%E5%B0%B1%E6%98%AF%E4%BD%8E%E4%BD%8D%E5%AD%97,%E5%86%85%E5%AD%98%E7%9A%84%E9%AB%98%E5%9C%B0%E5%9D%80%E7%AB%AF%E3%80%82">计算机大端模式和小端模式 内存对齐问题（sizeof）</a></li>
-<li><a href="https://www.jianshu.com/p/f38f2c524ace">程序在计算机内部的存储方式</a></li>
+<li>在if和else之后必须加上大括号形成语句块</li>
+<li>大括号内的语句缩进一个tab的位置</li>
+</ul>
+<p>三种if-else的风格</p>
+<figure data-type="image" tabindex="38"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021812.png" alt="63" loading="lazy"></figure>
+<ul>
+<li>我们有着这三种的风格，那么它们每一种有什么不一样呢？
+<ul>
+<li>第一种：是因为一开始的编程的高很小，你只能看很少段，于是为了能够看到更多代码，就这样缩</li>
+<li>第二种：而由于我们现在使用的电脑屏幕较大了（有人把电脑转个90度，看的代码就多了），所以可以这样写了</li>
+<li>第三种：第三种的好处就是方便注释掉一个if else语句块</li>
+<li>一般大厂会对你的代码规范有要求</li>
+</ul>
+</li>
 </ul>
 
             </div>
@@ -1454,7 +1157,7 @@ int main() {
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://yuanfeng123.github.io/post/di-10-zhang/" title="第10章 枚举与结构类型">https://yuanfeng123.github.io/post/di-10-zhang/</a>
+      <a href="https://yuanfeng123.github.io/post/di-5-zhang-luo-ji/" title="第5章 逻辑">https://yuanfeng123.github.io/post/di-5-zhang-luo-ji/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -1469,12 +1172,12 @@ int main() {
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="C语言程序设计笔记列表" href="https://yuanfeng123.github.io/post/shi-dai-de/">C语言程序设计笔记列表</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="C语言程序设计笔记列表" href="https://yuanfeng123.github.io/post/shi-dai-de/">上一篇</a>
-      
     </div>
     <div class="nav-next">
+      
+        <a class="nav-pc-next" title="第4章 循环及其应用" href="https://yuanfeng123.github.io/post/di-4-zhang-xun-huan-ji-qi-ying-yong/">第4章 循环及其应用</a>
+        <a class="nav-mobile-next" title="第4章 循环及其应用" href="https://yuanfeng123.github.io/post/di-4-zhang-xun-huan-ji-qi-ying-yong/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
