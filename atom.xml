@@ -2,13 +2,41 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yuanfeng123.github.io</id>
     <title>Yuanfeng&apos;s Blog</title>
-    <updated>2021-05-15T06:27:07.370Z</updated>
+    <updated>2021-05-15T06:50:49.820Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yuanfeng123.github.io"/>
     <link rel="self" href="https://yuanfeng123.github.io/atom.xml"/>
     <logo>https://yuanfeng123.github.io/images/avatar.png</logo>
     <icon>https://yuanfeng123.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Yuanfeng&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[第11章 可变数组与链表]]></title>
+        <id>https://yuanfeng123.github.io/post/di-11-zhang-ke-bian-shu-zu-yu-lian-biao/</id>
+        <link href="https://yuanfeng123.github.io/post/di-11-zhang-ke-bian-shu-zu-yu-lian-biao/">
+        </link>
+        <updated>2021-05-14T18:49:28.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[第10章 枚举与结构类型]]></title>
+        <id>https://yuanfeng123.github.io/post/di-10-zhang-mei-ju-yu-jie-gou-lei-xing/</id>
+        <link href="https://yuanfeng123.github.io/post/di-10-zhang-mei-ju-yu-jie-gou-lei-xing/">
+        </link>
+        <updated>2021-05-14T18:47:48.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[第9章 指针]]></title>
+        <id>https://yuanfeng123.github.io/post/di-9-zhang-zhi-zhen/</id>
+        <link href="https://yuanfeng123.github.io/post/di-9-zhang-zhi-zhen/">
+        </link>
+        <updated>2021-05-14T18:47:13.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[第8章 指针与字符]]></title>
+        <id>https://yuanfeng123.github.io/post/di-8-zhang-zhi-zhen-yu-zi-fu/</id>
+        <link href="https://yuanfeng123.github.io/post/di-8-zhang-zhi-zhen-yu-zi-fu/">
+        </link>
+        <updated>2021-05-14T18:46:15.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[信息奥赛一本通题解]]></title>
         <id>https://yuanfeng123.github.io/post/xin-xi-ao-sai-yi-ben-tong-ti-jie/</id>
@@ -31,13 +59,6 @@
         <updated>2021-05-14T17:56:30.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[第6章 数组与函数]]></title>
-        <id>https://yuanfeng123.github.io/post/di-6-zhang-shu-zu-yu-han-shu/</id>
-        <link href="https://yuanfeng123.github.io/post/di-6-zhang-shu-zu-yu-han-shu/">
-        </link>
-        <updated>2021-05-14T17:56:04.000Z</updated>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[第5章 逻辑]]></title>
         <id>https://yuanfeng123.github.io/post/di-5-zhang-luo-ji/</id>
         <link href="https://yuanfeng123.github.io/post/di-5-zhang-luo-ji/">
@@ -57,26 +78,5 @@
         <link href="https://yuanfeng123.github.io/post/di-3-zhang-cheng-xu-jie-gou/">
         </link>
         <updated>2021-05-14T17:45:34.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[第2章 变量与表达式]]></title>
-        <id>https://yuanfeng123.github.io/post/di-2-zhang-bian-liang-yu-biao-da-shi/</id>
-        <link href="https://yuanfeng123.github.io/post/di-2-zhang-bian-liang-yu-biao-da-shi/">
-        </link>
-        <updated>2021-05-14T17:12:04.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[第1章 计算机与C语言]]></title>
-        <id>https://yuanfeng123.github.io/post/di-1-zhang-ji-suan-ji-yu-c-yu-yan/</id>
-        <link href="https://yuanfeng123.github.io/post/di-1-zhang-ji-suan-ji-yu-c-yu-yan/">
-        </link>
-        <updated>2021-05-14T17:11:05.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[第10章 枚举与结构类型]]></title>
-        <id>https://yuanfeng123.github.io/post/di-10-zhang/</id>
-        <link href="https://yuanfeng123.github.io/post/di-10-zhang/">
-        </link>
-        <updated>2021-05-13T15:21:33.000Z</updated>
     </entry>
 </feed>
