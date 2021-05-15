@@ -2125,11 +2125,11 @@ body {
       transition-duration: 59s;
       transition-timing-function: cubic-bezier(.34,0,.84,1);
     }.markdownIt-TOC a {
-      color: #eee;
-      border-bottom-color: #eee;
+      color: #5c7cfa;
+      border-bottom-color: #5c7cfa;
     }.markdownIt-TOC a:hover {
-      color: #fff;
-      border-bottom-color: #fff;
+      color: #339af0;
+      border-bottom-color: #339af0;
     }.active-current > a {
       color: #fc6423 !important;
       border-bottom-color: #fc6423 !important;
