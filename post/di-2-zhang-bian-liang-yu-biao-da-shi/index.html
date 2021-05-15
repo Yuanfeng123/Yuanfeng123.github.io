@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="keywords" content="C/C++中文网学习，信息学竞赛学习资料，Yuanfeng&#39;s Blog，Yuanfeng的博客">
-<meta name="description" content="">
+<meta name="description" content="&lt;a href=&#34;https://translate.google.com/translate?hl=&amp;sl=zh-CN&amp;tl=en&amp;u=https%3A%2F%2Fyuanfeng123.github.io%2F&#34; target=&#34;_blank&#34;&gt;En&lt;/a&gt;">
 <meta name="theme-color" content="#000">
 <title>第2章 变量与表达式 | Yuanfeng&#39;s Blog</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/favicon.ico?v=1621061396857">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/favicon.ico?v=1621109737658">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/media/fonts/font-awesome.css">
 <link
@@ -1795,181 +1795,6 @@ a=b+=c++-d+--e/-f</li>
       <hr>
     </div>
     <div class="result" id="result">
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://yuanfeng123.github.io/post/di-11-zhang-ke-bian-shu-zu-yu-lian-biao/"" data-c="
-          &lt;h1 id=&#34;111-可变数组&#34;&gt;11.1 可变数组&lt;/h1&gt;
-&lt;h2 id=&#34;1111-可变数组&#34;&gt;11.1.1 可变数组&lt;/h2&gt;
-&lt;p&gt;可变数组&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;可以变大&lt;/li&gt;
-&lt;li&gt;可以取得当前大小&lt;/li&gt;
-&lt;li&gt;对数组元素可以访问&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;接口（创建一个函数库）&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;Array array_create(int init_size);
-void array_free(Array *a);
-int array_size(const Array *a);
-int* array_at(Array* a, int index);
-void array_inflate(Array *a, int more_size);
-void array_set(Array *a, int index, int value);
-int array_get(const Array *a, int index);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;ALYM13066289426&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-#include &amp;lt;array.h&amp;gt;
-#include &amp;lt;stdlib.h&amp;gt;
-
-const BLOCK_SIZE = 20;
-
-/*typedef struct {
-    int *array;
-    int size;
-} Array; */
-
-Array array_create(int init_size) {
-    Array t;
-    t.size = init_size;
-    t.array = (int*)malloc(sizeof(int)*t.size);
-    return t;
-}
-
-int array_size(const Array *a) {
-    return a-&amp;gt;size;
-}//我们当然也可以直接使用printf(&amp;quot;%d\n&amp;quot;, a.size);但是区别就在于这里有名词叫封装，把size封装。因为当日后或许算法更加复杂，直接使用方法就不可以了，那么这个就能突显出优势
-
-void array_free(Array *a) {
-    free(a-&amp;gt;array);
-    a-&amp;gt;array = NULL;
-    a-&amp;gt;size = 0;
-}
-
-int* array_at(Array* a, int index) {
-    if(index &amp;gt;= a-&amp;gt;size) {
-        array_inflate(a, (index/BLOCK_SIZE+1)*BLOCK_SIZE-a-&amp;gt;size);
-    }
-    return &amp;amp;(a-&amp;gt;array[index]);
-}//为什么要返回指针，而不是直接int？
-/*要是想要查看某index的元素，需要用printf(&amp;quot;%d&amp;quot;, *array_at(&amp;amp;a, 0));
-为什么还要这么麻烦加个*呢？
-我们可以看到这里没有赋值的方法，而这样做的好处，就是能够赋值
-例如：*array_at(&amp;amp;a, 0) = 10;
-*/	
-
-void array_set(Array *a, int index, int value) {
-    a-&amp;gt;array[index] = value;
-}
-
-int array_get(const Array *a, int index) {
-    return a-&amp;gt;array[index];
-}
-
-void array_inflate(Array *a, int more_size) {
-    int *p = (int*)malloc(sizeof(int)*(a-&amp;gt;size+more_size));
-    int i;
-    for(i=0; i&amp;lt;a-&amp;gt;size; i++) p[i] = a-&amp;gt;array[i];
-    free(a-&amp;gt;array);
-    a-&amp;gt;array = p;
-    a-&amp;gt;size += more_size;
-}
-
-int main(int argc, char const *argv[]) {
-    Array a = array_create(100);
-    printf(&amp;quot;%d\n&amp;quot;, array_size(&amp;amp;a));
-    array_set(&amp;amp;a, 0, 10);
-    printf(&amp;quot;%d\n&amp;quot;, *array_at(&amp;amp;a, 0));
-    
-    int number = 0;
-    int cnt = 0;
-    while(number != -1) {
-        scanf(&amp;quot;%d&amp;quot;, &amp;amp;number);
-        if(number != -1) *array_at(&amp;amp;a, cnt++) = number;
-        
-        //array_set(&amp;amp;a, cnt++, number);
-       
-    }
-    
-    
-    array_free(&amp;amp;a);
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;112-链表&#34;&gt;11.2 链表&lt;/h1&gt;
-&lt;p&gt;可变数组有着缺陷&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;当遇到内存超额的时候，就会错误&lt;/li&gt;
-&lt;li&gt;那么思考一下，如果我们不是让内存更大，而是直接申请另一个block，把它们连起来，就告诉它下一个block在哪里
-&lt;ul&gt;
-&lt;li&gt;让一个数组指向下一个数组，如此类推&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;1122-链表&#34;&gt;11.2.2 链表&lt;/h2&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022128.png&#34; alt=&#34;85&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;结点由数据和指针两部分组成&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;代码&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;quot;node.h&amp;quot;
-#include &amp;lt;stdio.h&amp;gt;
-#include &amp;lt;stdlib.h&amp;gt;
-
-typedef struct _node {
-    int value;
-    struct _node *next;
-} Node;
-
-void add(Node* head, int number);
-    
-    
- 
-int main(int argc, char const *argv[]) {
-    Node *head = NULL;
-    int number;
-     
-    do {
-        scanf(&amp;quot;%d&amp;quot;, &amp;amp;number);
-        if(number != -1) {
-            head = add(head, number)
-        }
-    }while(number != -1);
-    
-    return 0;
-}
-
-Node* add(Node* head, int number) {
-    //add to linked_list
-    Node *p = (Node*)malloc(sizeof(Node));
-    p-&amp;gt;value = number;
-    p-&amp;gt;next = NULL;
-            
-    //find the last
-     Node *last = head;
-     if(last) {
-          while(last-&amp;gt;next) {//到NULL会变为false
-              last = last-&amp;gt;next;
-          }
-          last -&amp;gt; next = p;
-      } else {
-          head = p;
-      }
-    return head;
-}   
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;目标&lt;/p&gt;
-&lt;p&gt;做一个学生成绩管理系统&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;信息记录：序号，学生ID，成绩&lt;/li&gt;
-&lt;li&gt;功能菜单：插入（录入），删除，打印，保存，成绩从高到低排序&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;项目参考资料&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_44899829/article/details/103254211&#34;&gt;单链表创建学生成绩表 输出学生姓名成绩及班级平均分&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.codenong.com/cs107069704/&#34;&gt;通讯录管理系统&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/Endeavor_G/article/details/80552680&#34;&gt;c语言链表详解（超详细）&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-">第11章 可变数组与链表</a>
-      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://yuanfeng123.github.io/post/di-10-zhang-mei-ju-yu-jie-gou-lei-xing/"" data-c="
@@ -7031,6 +6856,181 @@ int main() {
 }
 &lt;/code&gt;&lt;/pre&gt;
 ">第1章 计算机与C语言</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://yuanfeng123.github.io/post/di-11-zhang-ke-bian-shu-zu-yu-lian-biao/"" data-c="
+          &lt;h1 id=&#34;111-可变数组&#34;&gt;11.1 可变数组&lt;/h1&gt;
+&lt;h2 id=&#34;1111-可变数组&#34;&gt;11.1.1 可变数组&lt;/h2&gt;
+&lt;p&gt;可变数组&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以变大&lt;/li&gt;
+&lt;li&gt;可以取得当前大小&lt;/li&gt;
+&lt;li&gt;对数组元素可以访问&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;接口（创建一个函数库）&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;Array array_create(int init_size);
+void array_free(Array *a);
+int array_size(const Array *a);
+int* array_at(Array* a, int index);
+void array_inflate(Array *a, int more_size);
+void array_set(Array *a, int index, int value);
+int array_get(const Array *a, int index);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;ALYM13066289426&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;array.h&amp;gt;
+#include &amp;lt;stdlib.h&amp;gt;
+
+const BLOCK_SIZE = 20;
+
+/*typedef struct {
+    int *array;
+    int size;
+} Array; */
+
+Array array_create(int init_size) {
+    Array t;
+    t.size = init_size;
+    t.array = (int*)malloc(sizeof(int)*t.size);
+    return t;
+}
+
+int array_size(const Array *a) {
+    return a-&amp;gt;size;
+}//我们当然也可以直接使用printf(&amp;quot;%d\n&amp;quot;, a.size);但是区别就在于这里有名词叫封装，把size封装。因为当日后或许算法更加复杂，直接使用方法就不可以了，那么这个就能突显出优势
+
+void array_free(Array *a) {
+    free(a-&amp;gt;array);
+    a-&amp;gt;array = NULL;
+    a-&amp;gt;size = 0;
+}
+
+int* array_at(Array* a, int index) {
+    if(index &amp;gt;= a-&amp;gt;size) {
+        array_inflate(a, (index/BLOCK_SIZE+1)*BLOCK_SIZE-a-&amp;gt;size);
+    }
+    return &amp;amp;(a-&amp;gt;array[index]);
+}//为什么要返回指针，而不是直接int？
+/*要是想要查看某index的元素，需要用printf(&amp;quot;%d&amp;quot;, *array_at(&amp;amp;a, 0));
+为什么还要这么麻烦加个*呢？
+我们可以看到这里没有赋值的方法，而这样做的好处，就是能够赋值
+例如：*array_at(&amp;amp;a, 0) = 10;
+*/	
+
+void array_set(Array *a, int index, int value) {
+    a-&amp;gt;array[index] = value;
+}
+
+int array_get(const Array *a, int index) {
+    return a-&amp;gt;array[index];
+}
+
+void array_inflate(Array *a, int more_size) {
+    int *p = (int*)malloc(sizeof(int)*(a-&amp;gt;size+more_size));
+    int i;
+    for(i=0; i&amp;lt;a-&amp;gt;size; i++) p[i] = a-&amp;gt;array[i];
+    free(a-&amp;gt;array);
+    a-&amp;gt;array = p;
+    a-&amp;gt;size += more_size;
+}
+
+int main(int argc, char const *argv[]) {
+    Array a = array_create(100);
+    printf(&amp;quot;%d\n&amp;quot;, array_size(&amp;amp;a));
+    array_set(&amp;amp;a, 0, 10);
+    printf(&amp;quot;%d\n&amp;quot;, *array_at(&amp;amp;a, 0));
+    
+    int number = 0;
+    int cnt = 0;
+    while(number != -1) {
+        scanf(&amp;quot;%d&amp;quot;, &amp;amp;number);
+        if(number != -1) *array_at(&amp;amp;a, cnt++) = number;
+        
+        //array_set(&amp;amp;a, cnt++, number);
+       
+    }
+    
+    
+    array_free(&amp;amp;a);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;112-链表&#34;&gt;11.2 链表&lt;/h1&gt;
+&lt;p&gt;可变数组有着缺陷&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当遇到内存超额的时候，就会错误&lt;/li&gt;
+&lt;li&gt;那么思考一下，如果我们不是让内存更大，而是直接申请另一个block，把它们连起来，就告诉它下一个block在哪里
+&lt;ul&gt;
+&lt;li&gt;让一个数组指向下一个数组，如此类推&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;1122-链表&#34;&gt;11.2.2 链表&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022128.png&#34; alt=&#34;85&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;结点由数据和指针两部分组成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;代码&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;quot;node.h&amp;quot;
+#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;stdlib.h&amp;gt;
+
+typedef struct _node {
+    int value;
+    struct _node *next;
+} Node;
+
+void add(Node* head, int number);
+    
+    
+ 
+int main(int argc, char const *argv[]) {
+    Node *head = NULL;
+    int number;
+     
+    do {
+        scanf(&amp;quot;%d&amp;quot;, &amp;amp;number);
+        if(number != -1) {
+            head = add(head, number)
+        }
+    }while(number != -1);
+    
+    return 0;
+}
+
+Node* add(Node* head, int number) {
+    //add to linked_list
+    Node *p = (Node*)malloc(sizeof(Node));
+    p-&amp;gt;value = number;
+    p-&amp;gt;next = NULL;
+            
+    //find the last
+     Node *last = head;
+     if(last) {
+          while(last-&amp;gt;next) {//到NULL会变为false
+              last = last-&amp;gt;next;
+          }
+          last -&amp;gt; next = p;
+      } else {
+          head = p;
+      }
+    return head;
+}   
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;目标&lt;/p&gt;
+&lt;p&gt;做一个学生成绩管理系统&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;信息记录：序号，学生ID，成绩&lt;/li&gt;
+&lt;li&gt;功能菜单：插入（录入），删除，打印，保存，成绩从高到低排序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;项目参考资料&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_44899829/article/details/103254211&#34;&gt;单链表创建学生成绩表 输出学生姓名成绩及班级平均分&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.codenong.com/cs107069704/&#34;&gt;通讯录管理系统&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/Endeavor_G/article/details/80552680&#34;&gt;c语言链表详解（超详细）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+">第11章 可变数组与链表</a>
       </div>
       
       <div class="item">
