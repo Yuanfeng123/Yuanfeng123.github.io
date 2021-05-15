@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="">
 <meta name="theme-color" content="#000">
-<title>Yuanfeng&#39;s Blog</title>
+<title>第6章 数组与函数 | Yuanfeng&#39;s Blog</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/favicon.ico?v=1621058237908">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/media/fonts/font-awesome.css">
@@ -58,6 +58,8 @@
 </script>
 
 
+  <meta name="description" content="第6章 数组与函数" />
+  <meta name="keywords" content="C/C++" />
 </head>
 
 <body>
@@ -93,7 +95,7 @@
             
               
             
-            <li class="nav-item nav-item-active">
+            <li class="nav-item ">
               
               
                 <a href="/" target="_self">
@@ -205,8 +207,24 @@
     <div
       class="section-layout gemini ">
       <div class="section-layout-wrapper">
-        <div id="sidebarMeta" class="sidebar">
-    
+        
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active language" data-lan="index">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item language" data-lan="preview">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/images/avatar.png"/>
@@ -249,110 +267,370 @@
 
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%AA%E8%AE%BA">第一章：数据结构绪论</a>
+<ul>
+<li><a href="#11-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E8%B5%B7%E6%BA%90">1.1 数据结构的起源</a></li>
+<li><a href="#12-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%9C%AF%E8%AF%AD">1.2 数据结构的基本概念与术语</a></li>
+<li><a href="#13-%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84%E4%B8%8E%E7%89%A9%E7%90%86%E7%BB%93%E6%9E%84">1.3 逻辑结构与物理结构</a></li>
+<li><a href="#14-%E6%8A%BD%E8%B1%A1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">1.4 抽象数据类型</a></li>
+<li><a href="#15-%E6%80%BB%E7%BB%93">1.5 总结</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AE%97%E6%B3%95">第二章：算法</a>
+<ul>
+<li><a href="#21-%E7%AE%97%E6%B3%95%E7%9A%84%E5%AE%9A%E4%B9%89">2.1 算法的定义</a></li>
+<li><a href="#22-%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E5%85%B3%E7%B3%BB">2.2 算法与数据结构的关系</a></li>
+<li><a href="#23-%E7%AE%97%E6%B3%95%E7%9A%84%E7%89%B9%E6%80%A7">2.3 算法的特性</a></li>
+<li><a href="#24-%E7%AE%97%E6%B3%95%E7%9A%84%E8%AE%BE%E8%AE%A1%E8%A6%81%E6%B1%82">2.4 算法的设计要求</a></li>
+<li><a href="#25-%E7%AE%97%E6%B3%95%E6%95%88%E7%8E%87%E7%9A%84%E5%BA%A6%E9%87%8F%E6%96%B9%E6%B3%95">2.5 算法效率的度量方法</a></li>
+<li><a href="#26-%E5%87%BD%E6%95%B0%E7%9A%84%E6%B8%90%E8%BF%9B%E5%A2%9E%E9%95%BF">2.6 函数的渐进增长</a></li>
+<li><a href="#27-%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6">2.7 算法的时间复杂度</a></li>
+<li><a href="#28-%E7%AE%97%E6%B3%95%E7%9A%84%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6">2.8 算法的空间复杂度</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%E7%BA%BF%E6%80%A7%E8%A1%A8">第三章：线性表</a>
+<ul>
+<li><a href="#31-%E7%BA%BF%E6%80%A7%E8%A1%A8">3.1 线性表</a></li>
+<li><a href="#32-%E7%BA%BF%E6%80%A7%E8%A1%A8%E4%B9%8B%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84%E5%AE%9E%E7%8E%B0">3.2 线性表之顺序存储结构实现</a></li>
+<li><a href="#33-%E7%BA%BF%E6%80%A7%E8%A1%A8%E4%B9%8B%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84%E5%AE%9E%E7%8E%B0">3.3 线性表之链式存储结构实现</a></li>
+<li><a href="#%E4%B8%8B%E9%9D%A2%E6%98%AF%E6%97%A7%E7%89%88%E6%88%91%E8%87%AA%E5%B7%B1%E5%86%99%E7%9A%84">下面是旧版（我自己写的）</a></li>
+<li><a href="#34-%E5%8D%95%E9%93%BE%E8%A1%A8%E7%BB%93%E6%9E%84%E4%B8%8E%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84%E4%BC%98%E7%BC%BA%E7%82%B9">3.4 单链表结构与顺序存储结构优缺点</a></li>
+<li><a href="#35-%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8">3.5 静态链表</a></li>
+<li><a href="#36-%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8">3.6 循环链表</a></li>
+<li><a href="#37-%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8">3.7 双向链表</a></li>
+<li><a href="#38-%E6%80%BB%E7%BB%93">3.8 总结</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97">第四章：栈与队列</a>
+<ul>
+<li><a href="#41-%E6%A0%88%E7%9A%84%E5%AE%9A%E4%B9%89">4.1 栈的定义</a></li>
+<li><a href="#42-%E6%A0%88%E4%B9%8B%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84">4.2 栈之顺序存储结构</a></li>
+<li><a href="#%E6%97%A7%E4%BB%A3%E7%A0%81">旧代码</a></li>
+<li><a href="#43-%E6%A0%88%E4%B9%8B%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84">4.3 栈之链式存储结构</a></li>
+<li><a href="#%E6%97%A7%E4%BB%A3%E7%A0%81-2">旧代码</a></li>
+<li><a href="#44-%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8-%E9%80%92%E5%BD%92">4.4 栈的应用-递归</a></li>
+<li><a href="#45-%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8-%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC">4.5 栈的应用-四则运算表达式求值</a>
+<ul>
+<li><a href="#%E4%B8%80%E4%B8%AD%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F">一，中缀表达式</a></li>
+<li><a href="#%E4%BA%8C%E5%90%8E%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F">二，后缀表达式</a></li>
+<li><a href="#%E4%B8%89%E5%89%8D%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F">三，前缀表达式</a></li>
+<li><a href="#%E5%9B%9B%E7%BB%83%E4%B9%A0%E9%A2%98%E4%B8%8E%E7%A8%8B%E5%BA%8F%E5%AE%9E%E7%8E%B0">四，练习题与程序实现</a></li>
+</ul>
+</li>
+<li><a href="#46-%E9%98%9F%E5%88%97%E5%86%85%E5%AE%B9%E4%B8%BA%E7%A9%BA">4.6 队列（内容为空）</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E4%BA%94%E7%AB%A0%E5%AD%97%E7%AC%A6%E4%B8%B2">第五章：字符串</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%A0%91">第六章：树</a>
+<ul>
+<li><a href="#61-%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89">6.1 树的定义</a></li>
+<li><a href="#62-%E6%A0%91%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84">6.2 树的存储结构</a>
+<ul>
+<li><a href="#621-%E5%8F%8C%E4%BA%B2%E8%A1%A8%E7%A4%BA%E6%B3%95">6.2.1 双亲表示法</a></li>
+<li><a href="#622-%E5%AD%A9%E5%AD%90%E8%A1%A8%E7%A4%BA%E6%B3%95">6.2.2 孩子表示法</a></li>
+<li><a href="#623-%E5%AD%A9%E5%AD%90%E5%85%84%E5%BC%9F%E8%A1%A8%E7%A4%BA%E6%B3%95">6.2.3 孩子兄弟表示法</a></li>
+</ul>
+</li>
+<li><a href="#63-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89">6.3 二叉树的定义</a></li>
+<li><a href="#64-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%80%A7%E8%B4%A8">6.4 二叉树的性质</a></li>
+<li><a href="#65-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84">6.5 二叉树的存储结构</a>
+<ul>
+<li><a href="#651-%E4%BA%8C%E5%8F%89%E6%A0%91%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84">6.5.1 二叉树顺序存储结构</a></li>
+<li><a href="#652-%E4%BA%8C%E5%8F%89%E9%93%BE%E8%A1%A8">6.5.2 二叉链表</a></li>
+</ul>
+</li>
+<li><a href="#66-%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91">6.6 遍历二叉树</a>
+<ul>
+<li><a href="#661-%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E5%8E%9F%E7%90%86">6.6.1 二叉树遍历原理</a></li>
+<li><a href="#682-%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E6%96%B9%E6%B3%95">6.8.2 二叉树遍历方法</a></li>
+<li><a href="#683-%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95">6.8.3 二叉树遍历算法</a></li>
+<li><a href="#664-%E6%8E%A8%E5%AF%BC%E9%81%8D%E5%8E%86%E7%BB%93%E6%9E%9C">6.6.4 推导遍历结果</a></li>
+</ul>
+</li>
+<li><a href="#67-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%BB%BA%E7%AB%8B">6.7 二叉树的建立</a>
+<ul>
+<li><a href="#%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81">实现代码</a></li>
+</ul>
+</li>
+<li><a href="#68-%E7%BA%BF%E7%B4%A2%E4%BA%8C%E5%8F%89%E6%A0%91">6.8 线索二叉树</a>
+<ul>
+<li><a href="#681-%E7%BA%BF%E7%B4%A2%E4%BA%8C%E5%8F%89%E6%A0%91%E5%8E%9F%E7%90%86">6.8.1 线索二叉树原理</a></li>
+<li><a href="#682-%E7%BA%BF%E7%B4%A2%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%9E%E7%8E%B0">6.8.2 线索二叉树的实现</a></li>
+</ul>
+</li>
+<li><a href="#69-%E6%A0%91%E6%A3%AE%E6%9E%97%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BD%AC%E6%8D%A2">6.9 树，森林与二叉树的转换</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
 </div>
+
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'gemini';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
       }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
     });
   }
-  </script>
-        <div class="section-box gemini">
-          <section class="section  posts-expand slide-down-in">
-            
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://yuanfeng123.github.io/post/di-7-zhang-shu-zu-yu-suan-fa-xiang-jiang/">
-      第7章 数组与算法详讲
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-05-14 13:56:30">2021-05-14</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://yuanfeng123.github.io/tag/dMfm7tyYN/">
-        <span>C/C++</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>13<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>2691<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><h1 id="71-数组">7.1 数组</h1>
-<h2 id="711-数组运算">7.1.1 数组运算</h2>
-<p>先用C语言做最简单的搜索：在一组给定的数据中，如何找出某个数据是否存在？</p>
 
-                
-              <p>
-            
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://yuanfeng123.github.io/post/di-7-zhang-shu-zu-yu-suan-fa-xiang-jiang/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
         
       </div>
-      
     </div>
-  </article>
+  
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
 
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <section class="post-header">
   <h1 class="post-title">
     <a class="post-title-link" href="https://yuanfeng123.github.io/post/di-6-zhang-shu-zu-yu-han-shu/">
       第6章 数组与函数
@@ -390,627 +668,3557 @@
       <span>26584<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
+    
+    
+    <span id="/post/di-6-zhang-shu-zu-yu-han-shu/" data-flag-title="第6章 数组与函数" class="meta-item pc-show leancloud_visitors">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-eye"></i>
+      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
+    </span>
+    
   </div>
 </section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><h1 id="第一章数据结构绪论">第一章：数据结构绪论</h1>
+            <div class="post-body next-md-body" id="post_body">
+              <h1 id="第一章数据结构绪论">第一章：数据结构绪论</h1>
 <h2 id="11-数据结构的起源">1.1 数据结构的起源</h2>
 <p>一个老头，弄出的一个玩意</p>
+<h2 id="12-数据结构的基本概念与术语">1.2 数据结构的基本概念与术语</h2>
+<p>数据</p>
+<ul>
+<li>定义：描述客观事物的符号，是计算机的可操作对象，是能被计算机识别，并输入给计算机处理的符号集合。</li>
+<li></li>
+</ul>
+<p>数据元素</p>
+<ul>
+<li>定义：是组成数据的，有一定意义的基本单位，在计算机中通常作为整体处理。也被称为记录。</li>
+<li>例子：在人类中，人就是数据元素；在禽类里，牛马羊鸡猪狗等动物就是禽类的数据元素</li>
+</ul>
+<p>数据项</p>
+<ul>
+<li>定义：一个数据元素可以由若干个数据项组成</li>
+<li>例子：人这个数据元素，可以有眼睛，鼻子，嘴，手这些数据项，也可以有姓名，年龄，性别，出生地址，联系电话等数据项，具体有哪些数据项要根据我们做的系统来决定。</li>
+</ul>
+<p>数据对象</p>
+<ul>
+<li>定义：是性质相同的数据元素的集合，是数据的子集</li>
+<li>理解：什么是性质相同？性质相同是指拥有相同数量和类型的数据项的数据元素。</li>
+<li>例子：男人和女人，这两个数据元素，他们的数据对象就是人，因为他们都拥有姓名，生日，性别等相同的数据项。</li>
+</ul>
+<p>数据结构</p>
+<ul>
+<li>定义：是相互之间存在一种或多种特定关系的数据元素的集合</li>
+</ul>
+<h2 id="13-逻辑结构与物理结构">1.3 逻辑结构与物理结构</h2>
+<p><strong>逻辑结构</strong></p>
+<p>一，集合结构</p>
+<ul>
+<li>描述：数据元素之间平起平坐</li>
+</ul>
+<p>二，线性结构</p>
+<ul>
+<li>描述：数据元素之间有先后顺序</li>
+</ul>
+<p>三，树形结构</p>
+<ul>
+<li>描述：数据元素之间的关系呈现一对多的状态</li>
+</ul>
+<p>四，图形结构</p>
+<ul>
+<li>描述：数据元素之间的关系呈现多对多的状态</li>
+</ul>
+<p>绘制逻辑结构示意图</p>
+<ul>
+<li>绘制逻辑结构示意图时，先画出结点</li>
+<li>再画出连接结点之间的线，如果有方向，还需要改为箭头</li>
+</ul>
+<p><strong>物理结构（也有些称存储结构）</strong></p>
+<p>一，顺序存储结构</p>
+<ul>
+<li>把数据元素存放在地址连续的存储单元里，其数据间的逻辑关系和物理关系是一致的</li>
+</ul>
+<p>二，链式存储结构</p>
+<ul>
+<li>把数据元素存放在任意的存储单元里，这组存储单元可以是连续的，也可以是不连续的。数据元素的存储关系并不能反映其逻辑关系，因此需要一个指针存放数据元素的地址，这样通过地址就可以找到相关联数据元素的位置</li>
+</ul>
+<p><strong>两者区别</strong></p>
+<ul>
+<li>逻辑结构是针对我们程序员的，而物理结构是针对内存操作的，也就是针对计算机的</li>
+</ul>
+<h2 id="14-抽象数据类型">1.4 抽象数据类型</h2>
+<p><strong>数据类型</strong></p>
+<ul>
+<li>指一组性质相同的值的集合及定义在此集合上的一些操作的总称</li>
+<li>为什么会考虑到数据类型？为什么要发明它？因为不想以其不能浪费任意一块内存空间</li>
+</ul>
+<p>C语言按照取值的不同，数据类型可以分为两类：</p>
+<ul>
+<li>原子类型：是不可以再分解的基本类型，包括整型，实型，字符型等</li>
+<li>结构类型：由若干个数据组合而成，是可以再分解的。例如整型数组是由若干个整型数据组合而成的</li>
+</ul>
+<p><strong>抽象数据类型</strong></p>
+<ul>
+<li>指一个数学模型及定义在该模型上的一组操作</li>
+<li>例子：抽象数据类型不仅仅指那些以及定义并且实现的数据类型，还可以是程序员在设计软件程序时自己定义的数据类型，比如当我们编写一个绘图程序的时候，会使用到坐标，而我们就会定义一个由x与y两个整型数据组合而成的结构类型</li>
+</ul>
+<p>描述抽象数据类型的标准格式</p>
+<pre><code>ADT 抽象数据类型名
+Data
+    数据元素之间逻辑关系的定义
+Operation
+    操作 1
+        初始条件
+        操作结果描述
+    操作 2
+        ......
+    操作 n
+        ......
+endADT
+</code></pre>
+<h2 id="15-总结">1.5 总结</h2>
+<h1 id="第二章算法">第二章：算法</h1>
+<h2 id="21-算法的定义">2.1 算法的定义</h2>
+<p>定义：算法是解决特定问题求解步骤方法的描述，在计算机中表现为指令的有限序列，并且每条指令表示一个或多个操作</p>
+<p>在世界上没有完全通用的算法，就像没有包治百病的药一样</p>
+<h2 id="22-算法与数据结构的关系">2.2 算法与数据结构的关系</h2>
+<p>我个人的理解：数据结构是骨架，算法是灵魂，要想写出一个好的程序，就得需要好的算法与好的数据结构</p>
+<h2 id="23-算法的特性">2.3 算法的特性</h2>
+<p>输入输出</p>
+<ul>
+<li>没有输出，你要这个算法干嘛？</li>
+<li>拓展：计算机是执行三种操作的机器，输入运算输出</li>
+</ul>
+<p>有穷性</p>
+<ul>
+<li>指算法在执行有限步骤之后，自动结束而不会出现循环，并且每一个步骤都在可接受的时间内完成。这里的有穷性不是数学意义上的有穷性。而是程序会在一个实际应用中可以接受的时间范围，合理的一个范围内结束并返回输出。</li>
+</ul>
+<p>确定性</p>
+<ul>
+<li>算法的每一步骤都具有确定的含义，不会出现二义性。算法在一定条件下，只有一条执行路径，相同的输入只能由唯一的输出结果。算法的每一个步骤被精准定义而无歧义</li>
+</ul>
+<p>可行性</p>
+<ul>
+<li>算法的每一步必须是可行的，也就是说，每一步都能够通过执行有限次数完成。可行性意味着算法可以转换为程序上机运行，并得到正确的结果。</li>
+</ul>
+<h2 id="24-算法的设计要求">2.4 算法的设计要求</h2>
+<p>一，正确性</p>
+<ul>
+<li>算法的正确性是指算法至少应该具有输入，输出，和加工处理无歧义性，能正确反映问题的需求呢，能够得到问题的正确答案。</li>
+<li>算法的正确性，大致分为以下四个层次
+<ul>
+<li>算法程序没有语法错误</li>
+<li>算法程序对于合法的输入数据能够产生满足要求的输出结果</li>
+<li>算法程序对于非法输入数据能够产生满足规格说明的结果</li>
+<li>算法程序对于精心选择，甚至刁难的测试数据都由满足要求的输出结果</li>
+</ul>
+</li>
+</ul>
+<p>二，可读性</p>
+<ul>
+<li>算法设计的另一目的是为了便于阅读，理解和交流</li>
+<li>我们写代码的时候，一方面是为了能让计算机执行，一方面就是便于他人阅读，让人理解和交流，自己将来也可能阅读</li>
+</ul>
+<p>三，健壮性</p>
+<ul>
+<li>当输入数据不合法时，算法也能做出相应处理，而不是产生异常或莫名其妙的结果</li>
+</ul>
+<p>四，时间效率高和存储量低</p>
+<h2 id="25-算法效率的度量方法">2.5 算法效率的度量方法</h2>
+<p><strong>事后统计方法</strong></p>
+<ul>
+<li>这种方法主要是通过设计好的测试程序和数据，利用计算机计时器对不同算法编制的程序的运行时间进行比较，从而确定算法效率的高低</li>
+<li>但这种方法缺陷很大
+<ul>
+<li>先根据算法编制好程序</li>
+<li>时间的比较依赖计算机硬件和软件等环境因素</li>
+<li>算法的测试数据设计困难</li>
+</ul>
+</li>
+</ul>
+<p><strong>事前分析估算方法</strong></p>
+<p>我们的计算机前辈为了对算法的评判更科学，于是研究出了一种叫做事前分析估算的方法</p>
+<ul>
+<li>事前分析估算方法：在计算机程序编制前，依据统计方法对算法进行估算。</li>
+</ul>
+<p>经过分析，我们发现，一个用高级程序语言编写的程序在计算机上运行时所消耗的时间取决于下列因素：</p>
+<ul>
+<li>算法采用的策略，方法（算法好坏的根本）</li>
+<li>编译产生的代码质量（要由软件来支持）</li>
+<li>问题的输入规模</li>
+<li>机器执行指令的速度（要看硬件性能）</li>
+</ul>
+<p>两种算法的比较</p>
+<ul>
+<li>
+<p>第一种</p>
+<pre><code class="language-c">int i, sum = 0, n = 100;           //执行一次
+for(i = 1; i &lt;= n; i++) {          //执行了n+1次，但第n+1次不是循环体，而是它的判断。
+    sum += i;                      //执行了n次
+}
+printf(&quot;%d&quot;, sum);                 //执行一次
+</code></pre>
+</li>
+<li>
+<p>第二种</p>
+<pre><code class="language-c">double sum = 0.0;      //执行一次
+int n = 100;           //执行一次
+sum = (n+1)*n/2;       //执行一次
+printf(&quot;%lf&quot;, sum);    //执行一次
+</code></pre>
+</li>
+<li>
+<p>分析</p>
+<ul>
+<li>第一种算法执行了2n+3次，而第二种执行了4次</li>
+</ul>
+</li>
+<li>
+<p>例子三</p>
+<pre><code class="language-c">int i, j, sum = 0, x = 0, n = 100;     //执行1次
+for(i = 1; i&lt;= n; i++) {
+    for(j = 1; j&lt;=n; j++) {
+        x++;                           //执行n*n次
+        sum += x;
+    }
+}
+printf(&quot;%d&quot;, sum);                     //执行1次
+</code></pre>
+<ul>
+<li>这个算法的执行次数是n<sup>2</sup>+2（忽略了循环体头尾的次数）</li>
+</ul>
+</li>
+</ul>
+<p>函数</p>
+<ul>
+<li>当我们分析一个算法的运行时间时，重要的是把基本操作的数量与输入规模关联起来，即基本操作的数量必须表示成输入规模的函数</li>
+<li>随着n的值越来越大，它们在时间效率上的差异也就越来越大</li>
+</ul>
+<h2 id="26-函数的渐进增长">2.6 函数的渐进增长</h2>
+<p>我们假设，手中有两个算法，算法A和算法B，算法A要做2n+3次操作，算法B要做3n+1次，那么难道算法A会一直都比算法B好吗？答案是不一定</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412023642.png" alt="1" style="zoom: 80%;" />
+<p>有三种结果：</p>
+<ul>
+<li>当算法A优于算法B时，n&gt;2，数学计算-&gt;  2n+3&lt;3n+1,   2&lt;n</li>
+<li>当算法A与算法B相等时，n=2，数学计算-&gt;   2n+3=3n+1，n=2</li>
+<li>当算法B优于算法A时，n&lt;2，数学计算-&gt;  2n+3&gt;3n+1，2&gt;n</li>
+<li>但最后，我们得出结论，算法A总体好于算法B</li>
+</ul>
+<p>此时，我们就给出一个定义，输入规模n在没有限制的情况下，只要超过一个数值，这个函数就总是大于另一个函数，我们称函数时渐近增长的</p>
+<ul>
+<li>函数的渐近增长：给定两个函数f(n)与g(n)，如果存在一个整数N，使得对于所有的n&gt;N，f(n)总是比g(n)大，那么，我们就说f(n)的增长渐近快于g(n)</li>
+<li>其次，我们从中发现，随着n的增大，后面的+3与+1其实并不影响最终算法变化的，所以我们可以忽略这些加法常数。</li>
+</ul>
+<p>。。。。最终，判断一个算法的效率时，函数中的常数和其它次要项常常可以忽略，更应该关注主项（最高阶项）的阶数</p>
+<pre><code class="language-c">for(i = 0; i&lt;41; i++) {//执行42次            
+    printf(&quot;%d &quot;, a[i]);//执行41次
+}
+    
+for(i = 1; i&lt;41; i++) {//执行41次
+    printf(&quot;%d &quot;, a[i]);//执行40次
+}
+    
+for(i = 1; i&lt;=41; i++) {//执行42次
+    printf(&quot;%d &quot;, a[i]);//执行41次
+}
+    
+</code></pre>
+<h2 id="27-算法的时间复杂度">2.7 算法的时间复杂度</h2>
+<p><strong>算法的时间复杂度</strong></p>
+<p>定义：在进行算法分析时，语句总的执行次数T(n)是关于问题规模n的函数</p>
+<p>推导大O阶方法</p>
+<p><strong>常数阶</strong></p>
+<pre><code class="language-c">int sum = 0, n = 100;
+sum = (1 + n) * n/2;
+printf(&quot;%d&quot;, sum);
+</code></pre>
+<p>时间复杂度为O(1)</p>
+<p><strong>线性阶</strong></p>
+<pre><code class="language-c">int i;
+for(i = 0; i&lt;n; i++) {//因为循环体要执行n次
+    //时间复杂度为O(1)的程序步骤序列
+    
+}
+</code></pre>
+<p><strong>对数阶</strong></p>
+<pre><code class="language-c">int count = 1;
+while(count &lt; n) {
+    count = count * 2;
+}
+</code></pre>
+<ul>
+<li>由于每次count乘以2之后，就距离n更近一分。也就是说有多少个2相乘后大于n，则会退出循环。由2<sup>x</sup>=n，得到x=log<sub>2</sub>n。所以这个循环的时间复杂度为O(logn)</li>
+</ul>
+<p><strong>平方阶</strong></p>
+<pre><code class="language-c">int i, j;
+for(i = 0; i&lt;n; i++) {
+    for(j = 0; j&lt;n; j++) {
+        //时间复杂度为O(1)的程序步骤序列
+    }
+}
+</code></pre>
+<ul>
+<li>时间复杂度为O(n<sup>2</sup>)</li>
+</ul>
+<pre><code class="language-c">int i, j;
+for(i = 0; i&lt;n; i++) {
+    for(j = i; i&lt;n; j++) {
+        
+    }
+}
+</code></pre>
+<ul>
+<li>分析：当i = 0时，内循环执行了n次；当i = 1时，内循环执行了n-1次；当i=n-1时，内循环执行1次</li>
+<li>n+(n-1)+(n-2) + (n-3) + ... + 2 + 1 = n(n+1)/2 = n<sup>2</sup>/2 + n/2
+<ul>
+<li>接着我们使用推导大O阶的方法，第一条省略掉加法常数；第二条只保留最高阶项，因此保留n<sup>2</sup>/2；第三条去除这个项相乘的常数，也就是去除1/2，最终得到这段代码的时间复杂度为O(n<sup>2</sup>)。</li>
+</ul>
+</li>
+</ul>
+<p>另一个例子</p>
+<pre><code class="language-c">void function(int count) {
+    print(count);
+}
 
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://yuanfeng123.github.io/post/di-6-zhang-shu-zu-yu-han-shu/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
+int i, j;
+for(i = 0; i&lt;n; i++) {
+    function(i);
+}
+</code></pre>
+<ul>
+<li>函数的次数是1，而这段代码总体的时间复杂度是O(n)</li>
+</ul>
+<pre><code class="language-c">void function(int count) {
+    int j;
+    for(j = count; j&lt;n; j++) {
+        //时间复杂度为O(1)的
+    }
+}
 
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://yuanfeng123.github.io/post/di-5-zhang-luo-ji/">
-      第5章 逻辑
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-05-14 13:47:31">2021-05-14</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://yuanfeng123.github.io/tag/dMfm7tyYN/">
-        <span>C/C++</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>12<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>2650<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><h1 id="51-逻辑类型与逻辑运算">5.1 逻辑类型与逻辑运算</h1>
-<h2 id="511-逻辑类型">5.1.1 逻辑类型</h2>
-<p><strong>bool类型</strong></p>
+int i;
+for(i = 0; i&lt;n; i++) {
+    function(i);
+}
 
-                
-              <p>
-            
-          
+//上面的代码同等于下面的代码
+int i, j;
+for(i = 0; i&lt;n; i++) {        //执行n次
+    for(j = i; j&lt;n;j++) {    //执行n-i次
         
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://yuanfeng123.github.io/post/di-5-zhang-luo-ji/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
+    }
+}
+</code></pre>
+<p>另一个相对复杂的语句</p>
+<pre><code class="language-c">void function(int count) {
+    int i;
+    for(i = count; i&lt;n; j++) {
+        //循环体
+    }
+}
 
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://yuanfeng123.github.io/post/di-4-zhang-xun-huan-ji-qi-ying-yong/">
-      第4章 循环及其应用
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-05-14 13:46:41">2021-05-14</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://yuanfeng123.github.io/tag/dMfm7tyYN/">
-        <span>C/C++</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>7<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>1390<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
+n++;                //执行1次
+function(n);        //执行次数为n
+int i, j;           //执行1次
+for(i = 0; i&lt;n; i++) {     //执行次数为n^2
+    function(i);
+}
+for(i = 0; i&lt;n; i++) {    //执行次数为n(n+1)/2
+    for(j = i; j&lt;n; j++) {
         
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><h1 id="41-循环控制及其应用">4.1 循环控制及其应用</h1>
-<h2 id="411-循环控制">4.1.1 循环控制</h2>
-<p><strong>找到从2到100的素数</strong></p>
+    }
+}
 
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://yuanfeng123.github.io/post/di-4-zhang-xun-huan-ji-qi-ying-yong/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://yuanfeng123.github.io/post/di-3-zhang-cheng-xu-jie-gou/">
-      第3章 程序结构
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-05-14 13:45:34">2021-05-14</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://yuanfeng123.github.io/tag/dMfm7tyYN/">
-        <span>C/C++</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>20<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>4569<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><h1 id="31-条件语句">3.1 条件语句</h1>
-<h2 id="311-做判断">3.1.1 做判断</h2>
-<p><strong>找零案例</strong><br>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://yuanfeng123.github.io/post/di-3-zhang-cheng-xu-jie-gou/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://yuanfeng123.github.io/post/di-2-zhang-bian-liang-yu-biao-da-shi/">
-      第2章 变量与表达式
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-05-14 13:12:04">2021-05-14</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://yuanfeng123.github.io/tag/dMfm7tyYN/">
-        <span>C/C++</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>25<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>6487<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><h1 id="21-变量">2.1 变量</h1>
-<h2 id="211-变量定义">2.1.1 变量定义</h2>
-<p><strong>算找零</strong></p>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://yuanfeng123.github.io/post/di-2-zhang-bian-liang-yu-biao-da-shi/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://yuanfeng123.github.io/post/di-1-zhang-ji-suan-ji-yu-c-yu-yan/">
-      第1章 计算机与C语言
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-05-14 13:11:05">2021-05-14</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://yuanfeng123.github.io/tag/dMfm7tyYN/">
-        <span>C/C++</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>19<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>5337<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><h1 id="11-计算机与编程语言">1.1 计算机与编程语言</h1>
-<h2 id="111-计算机如何工作编程是什么">1.1.1 计算机如何工作？编程是什么？</h2>
-<p>计算机是为人类服务的，那么我们拿餐厅的服务员来做一下比较。比如说你想要一杯水，你可以和服务员说“给我一杯水”</p>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://yuanfeng123.github.io/post/di-1-zhang-ji-suan-ji-yu-c-yu-yan/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://yuanfeng123.github.io/post/shi-dai-de/">
-      C语言程序设计笔记列表
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-05-13 20:43:07">2021-05-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>3<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-            
-              <p><h2 id="第一章">第一章</h2>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://yuanfeng123.github.io/post/shi-dai-de/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://yuanfeng123.github.io/post/di-10-zhang/">
-      第10章 枚举与结构类型
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-05-13 11:21:33">2021-05-13</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://yuanfeng123.github.io/tag/dMfm7tyYN/">
-        <span>C/C++</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>21<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>4538<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><h1 id="101-枚举">10.1 枚举</h1>
-<h2 id="1011-枚举">10.1.1 枚举</h2>
-<p><strong>常量符号化</strong></p>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://yuanfeng123.github.io/post/di-10-zhang/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-  
-            
-            
-<div class="page bg-color">
-  <ul class="pagination-ul">
-    
-    
-      
-        <li class="pagination-li pagination-active">
-            <a href="/page/../">
-              1
-            </a>
-        </li>
-      
-    
-    
-  </ul>
+</code></pre>
+<ul>
+<li>它的执行次数<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210416131447.png" alt="image-20210416131447771" style="zoom:67%;" /></li>
+<li>根据推导大O阶的方法，最终得到这段代码的时间复杂度为O(n<sup>2</sup>)</li>
+</ul>
+<p><strong>常见的时间复杂度</strong></p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210416132037.png" alt="image-20210416132037486" style="zoom:67%;" />
+<p><strong>最坏的情况与平均情况</strong></p>
+<p>关于时间复杂度，我们有这两种常见的情况。一般的，我们说一个算法的时间复杂度是说最坏的时候。就好比你早晨上班出门后突然想起来，手机忘带了，这年头，钥匙，钱包，手机三大件</p>
+<h2 id="28-算法的空间复杂度">2.8 算法的空间复杂度</h2>
+<h1 id="第三章线性表">第三章：线性表</h1>
+<h2 id="31-线性表">3.1 线性表</h2>
+<p>线性表定义：零个或多个数据元素的有限序列</p>
+<div align="center">
+    	<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210416195607.png" style="zoom:50%;">  
 </div>
-          </section>
+<p><strong>现实案例</strong></p>
+<p>假设你每天都要去幼儿园接你的孩子，你会发现小孩都会一个拉着他们各自前一个小朋友的衣服从教室出来，而每次你的孩子都排在第5，他的前面同样是那个女孩，后面同样又是那个男孩。于是你问老师为什么要这样，老师回答说是为了保护小朋友们安全，也避免怕漏掉小朋友，所以事先规定好出门的先后次序，确定好每个人的前面是谁，后面是谁，这样养成习惯后，如果有谁没有到位，他前面和后面的小朋友就会主动报告给老师。即使日后要外出到公园或博物馆等情况下，老师也可以很快的清点人数，万一有人走丢也能在最快时间知道，及时去寻找。这种排好队的组织方式，其实就是今天我们要介绍的数据结构：线性表</p>
+<p><strong>线性表的定义</strong></p>
+<p>线性表，从名字上你就能感觉到，它是像具有线一样的性质的表。举一个例子，在广场，有很多人分散在各处，当中有些是小朋友，有些是大人，还有不少宠物，这些小朋友的数据对于整个广场人群来说，不能算是线性表的结构。像那个现实案例，一个班级的小朋友，一个跟着一个排着队，有一个打头，一个收尾，当中的小朋友每一个都知道他前面那个是谁，后面一个是谁，这样如同有一根线把他们串联起来了，就可以称之为线性表。</p>
+<p>需要强调几个地方</p>
+<ul>
+<li>第一，它是一个序列，也就是说元素之间是有顺序的，若元素存在多个，则第一个元素无前驱，最后一个元素无后继，其他每个元素都有且只有一个前驱和后继。</li>
+<li>第二，线性表强调是有限的，就好比班级的人数是有限的。所以元素的个数当然也是有限的。事实上，在计算机中所处理的对象都是有限的，那种无限的数列，只存在于数学概念中。</li>
+</ul>
+<p>如果用数学语言来进行定义。可如下：</p>
+<ul>
+<li>
+<p>若将线性表记为（a<sub>1</sub>，...，a<sub>i-1</sub>，a<sub>i</sub>，a<sub>i+1</sub>，...，a<sub>n</sub>），则表中a<sub>i-1</sub>领先于a<sub>i</sub>，a<sub>i</sub>领先于a<sub>i+1</sub>，称a<sub>i-1</sub>是a<sub>i</sub>的直接前驱元素，a<sub>i+1</sub>是a<sub>i</sub>的直接后继元素。当i=1，2，...，n-1时，a<sub>i</sub>有且只有一个直接后继，当i=2，3，...，n时，a<sub>i</sub>有且仅有一个直接前驱。如下图</p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210416212923.png" alt="image-20210416212923547" loading="lazy"></figure>
+</li>
+<li>
+<p>所以线性表元素的个数n(n≥0）定义为线性表的长度。当n=0时，称其为空表</p>
+</li>
+</ul>
+<p>下面的十二星座列表也是一个线性表，符合是一个序列，并且元素是有限的要求，所以它是一个线性表</p>
+<div align="center">
+    	<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210416213122.png" style="zoom:80%;">  
+</div>
+<p>那么班级花名册呢，它是一个线性表吗？是，满足有序（编号），满足有限，并且满足类型相同的特点。下面的花名册线性表具有着多个用于描述学生的属性，这些我们就将其称为数据项。在比较复杂的线性表中，一个数据元素可以由若干个数据项组成。</p>
+<div align="center">
+    	<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210416213246.png" style="zoom:80%;">  
+</div>
+<p>再来一个例子，一群同学排队买演唱会门票，每人限购一张，此时排队的人群是否是线性表？是，那么此时来了三个同学想要插当中一个同学A的队，说同学A之前拿着三个书包就是用来占队的，书包也算是在排队。我们当然不能同意，那么这里用线性表的定义来说，是什么理由？嗯，因为要相同类型的数据，书包根本不算是人，与人这个数据对象不一样，所以排队无效。</p>
+<p><strong>线性表的抽象数据类型</strong></p>
+<p>线性表的抽象数据类型定义如下：</p>
+<pre><code>ADT 线性表（List）
+Data
+    线性表的数据对象集合为{a1，a2，...，an}，每个元素的类型均为DataType。其中，除第一个。数据元素之间的关系是一对一的关系
+Operation                                       //对哪个函数涉及到对线性表的操作就取指针
+    InitLis(*L);
+    ListEmpty(L);
+    ClearList(*L);
+    GetElem(L, i, *e);
+    LocateElem(L, e);
+    ListInsert(*L, i, e);
+    ListDelete(*L, i, *e);
+    ListLength(L);
+endADT
+</code></pre>
+<pre><code class="language-c">//将所有的在线性表Lb中但不在La中的数据元素插入到La中
+void union(List *La List Lb) {  
+    int La_len, Lb_len, i;
+    ElemType = e;
+    La_len = ListLength(La);
+    Lb_len = ListLength(Lb);
+    for(i = 1; i&lt;=lb; i++) {
+        GetElem(Lb, i, e);                     //取Lb中第i个元素的数据赋给e
+        if(!LocateElem(La, e))                 //La中不存在和e相同数据元素
+            ListInsert(La, ++La_len, e);      
+    }
+}
+</code></pre>
+<ul>
+<li>
+<p>自己的想法：如果lb中出现了两个相同的元素，例如它里面的元素数据集合是这样的{2, 3, 7, 1, 7, 8}</p>
+<p>而la集合是{1，2}。好，那么我们开始执行上面这个函数，执行一下，会得到la变成{1，2，3，7，}，看啊，现在读取到了lb元素的第5个，那么它会判断la中已经存在7了，所以它就不会插入7！</p>
+<ul>
+<li>但是这里有个问题：只是传入链表，和传入链表指针的区别是什么？我们可以用这个来验证一下</li>
+</ul>
+</li>
+<li>
+<p>这里，我们对于union操作，用到了前面线性表基本操作ListLength，GetElem，LocateElem，ListInsert等，可见，对于复杂的个性化操作，其实就是把基本操作组合起来实现的。</p>
+</li>
+</ul>
+<h2 id="32-线性表之顺序存储结构实现">3.2 线性表之顺序存储结构实现</h2>
+<p><strong>顺序存储定义</strong></p>
+<p>我们来看看线性表的两种物理结构的第一种—顺序存储结构，线性表的顺序存储结构，指的是用一段地址连续的存储单元依次存储线性表的数据元素。</p>
+<p><strong>顺序存储方式</strong></p>
+<p>线性表的顺序存储结构，说白了，就是在内存中找了块地儿，通过占位的形式，把一定内存空间给占了，然后把相同数据类型的数据元素依次存放在这块空地中。既然线性表的每个数据元素的类型都相同，所以可以使用编程语言中的一维数组来实现顺序存储结构，即把第一个数据元素存到数组下标为0的位置中，接着把线性表相邻的元素存储在数组中相邻的位置。</p>
+<p>在线性表中，我们需要估算好线性表的最大存储容量，建立一个数组，数组的长度就是这个最大存储容量。</p>
+<p>线性表的顺序存储的结构代码</p>
+<pre><code class="language-c">#define MAXSIZE 20
+typedef int ElemType;
+
+typedef struct {
+    ElemType data[MAXSIZE];    //数组存储数据元素，最大值为MAXSIZE
+    int length;                //线性表当前长度
+}SqList;
+</code></pre>
+<p>从上面代码发现了描述顺序存储结构需要的三个属性：</p>
+<ul>
+<li>存储空间的起始位置：数据data，它的存储位置就是存储空间的存储位置</li>
+<li>线性表的最大存储容量：数组长度MaxSize     -&gt;  数组长度一定是不变的吗？不一定，采用动态分配的一维数组可以写出可变的数组，不过会带来性能上的损耗</li>
+<li>线性表的当前长度：length</li>
+</ul>
+<p><strong>地址计算方法</strong></p>
+<p>C语言的数组的下标是从0开始的，于是线性表的第i个元素对应存储在数组下标为i-1的位置，即数据元素的序号和存放它的数组下标之间存在的对应关系如下图：</p>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210417190942.png" alt="image-20210417190942427" loading="lazy"></figure>
+<p>而用数组存储顺序表意味着要分配固定长度的数组空间，而由于线性表中可以进行插入和删除操作，因此分配的数组空间要大于当前线性表的长度</p>
+<p>在内存中的地址，每个存储单元都有自己的编号，这个编号被称为地址。由于每个数据元素，不管他是整型，实型还是字符型，它都是需要占用一定的存储单元空间的。假设占用的是c个存储单元，那么线性表中第i+1个数据元素的存储位置和第i个数据元素的存储位置满足下列关系（LOC表示获得存储位置的函数）</p>
+<ul>
+<li>LOC(a<sub>i+1</sub>)=LOC(a<sub>i</sub>)+c</li>
+</ul>
+<p>而对于第i个数据元素a<sub>i</sub>的存储位置可以由a<sub>1</sub>推算得出：</p>
+<ul>
+<li>LOG(a<sub>i</sub>)=LOC(a<sub>1</sub>)+(i-1)*c</li>
+</ul>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210417212439.png" alt="image-20210417212439552" loading="lazy"></figure>
+<ul>
+<li>通过这个公式，你可以随时算出线性表中任意位置的地址，不管它是第一个还是最后一个，都是相同的时间。那么我们对每个线性表位置的存入或者取出数据，对于计算机来说都是相等的时间，也就是一个常数。所以我们可以说它存取时间性能为O（1）。通常我们把具有这一特点的存储结构称为随机存取结构。</li>
+</ul>
+<p><strong>顺序存储结构的插入与删除</strong></p>
+<p>获得元素操作</p>
+<ul>
+<li>实现GetElem操作，即将线性表中的第i个位置元素值返回。</li>
+</ul>
+<pre><code class="language-c">#define OK 1
+#define ERROR 0
+#define TRUE 1
+#define FALSE 0
+typedef int Status;
+/*Status是函数的类型，其值是函数结果状态代码，如OK等*/
+/*初始条件：顺序线性表L已经存在，1≤i≤ListLength(L)*/
+/*操作结果：用e返回L中第i个数据元素的值*/
+Status GetElem(SqList L, int i, ElemType *e) {
+    if(L.length == 0 || i&lt;1 || i&gt;L.length)
+        return ERROR;
+    *e = L.data[i-1];
+    return OK;
+}
+</code></pre>
+<ul>
+<li>注意这里返回值Status是一个整型。</li>
+</ul>
+<p>插入操作</p>
+<ul>
+<li>
+<p>刚才我们也说过，这里的时间复杂度为O（1）。而如果我们要实现ListInsert（*L，i，e），即在线性表L中的第i个位置插入新元素e，应该如何操作？</p>
+</li>
+<li>
+<p>插入数据时的实现过程</p>
+<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210417222908.png" alt="image-20210417222908689" loading="lazy"></figure>
+</li>
+<li>
+<p>插入算法的思路：</p>
+<ul>
+<li>如果插入位置不合理，抛出异常；</li>
+<li>如果线性表长度大于等于数组长度，则抛出异常或动态添加容量；</li>
+<li>从最后一个元素开始向前遍历到第i个位置，分别将它们都向后移动一个位置；</li>
+<li>将要插入的元素填入位置i处；（顺序表的位置，而不是存储位置/数组位置）</li>
+<li>表长+1</li>
+</ul>
+</li>
+<li>
+<p>实现代码如下</p>
+<pre><code class="language-c">Status ListInsert(SqList *L, int i, ElemType e) {
+    int k;
+    if(L-&gt;length==MAXSIZE || i&lt;1 || i&gt;length + 1)
+        return ERROR;
+    if(i&lt;=L-&gt;length) {
+        /*
+        for(k = length; k&gt;=i; k--) 
+            L-&gt;data[k] = L-&gt;data[k-1]; 
+        */
+        for(k = length - 1; k&gt;= i-1; k--) 
+            L-&gt;data[k+1] = L-&gt;data[k];        
+    }
+    L-&gt;data[i-1] = e;
+    L-&gt;length++;
+    return OK;
+}
+</code></pre>
+</li>
+<li>
+<p>还有其它多种实现的方法，只不过它们的思路是一样的，就是实现方法不一样。</p>
+</li>
+</ul>
+<p>删除操作</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210417225419.png" alt="image-20210417225419310" style="zoom: 67%;" />
+<ul>
+<li>
+<p>删除算法的思路：</p>
+<ul>
+<li>如果删除位置不合理，抛出异常</li>
+<li>取出删除元素</li>
+<li>从删除元素位置开始遍历到最后一个元素位置，分别将它们往前移动一个位置</li>
+<li>表长-1</li>
+</ul>
+</li>
+<li>
+<p>实现代码如下：</p>
+<pre><code class="language-c">Status ListDelete(SqList *L, int i, ElemType *e) {
+    int k;
+    if(L-&gt;length==0 || i&lt;1 || i&gt;length)
+        return ERROR;
+    *e = L-&gt;data[i-1];
+    if(i&lt;L-&gt;length) {
+        for(k = i; i&lt;L-&gt;length; i++)
+            L-&gt;data[k-1] = L-&gt;data[k];
+        /*for(k = i - 1; i&lt;L-&gt;length -1 ; i++) 
+            L-&gt;data[i] = L-&gt;data[i+1];*/
+    }
+    L-&gt;length--;
+    return OK;
+}
+</code></pre>
+</li>
+</ul>
+<p>线性表顺序存储结构的优缺点</p>
+<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210417231242.png" alt="image-20210417231242384" loading="lazy"></figure>
+<p><strong>自己书写的代码</strong></p>
+<p>初始化</p>
+<ul>
+<li>
+<p>实现代码</p>
+<pre><code class="language-c">Status InitList(*L) {
+    L-&gt;length = 0;
+    return OK;
+}
+</code></pre>
+</li>
+<li></li>
+</ul>
+<p>得到长度</p>
+<ul>
+<li>
+<p>实现代码</p>
+<pre><code class="language-c">int ListLength(L) {
+    return L-&gt;length;
+}
+</code></pre>
+</li>
+</ul>
+<p>元素是否存在</p>
+<ul>
+<li>
+<p>实现代码</p>
+<pre><code class="language-c">typedef int BOOL;
+BOOL LocateElem(SqList L, e) {
+    int k;
+    for(k = 0; k&lt;L-&gt;length; k++) {
+        if(L-&gt;data[k] == e)
+            return 1;
+    }
+    return 0;
+} 
+</code></pre>
+</li>
+</ul>
+<p>联合两个顺序表</p>
+<ul>
+<li>
+<p>实现代码</p>
+<pre><code class="language-c">Status union(SqList *La, SqList Lb) {
+    int k;
+    int lena = ListLength(*La);
+    int lenb = ListLength(Lb);
+    ElemType e;
+    for(k = 1; k&lt;=lenb; k++) {
+        GetElem(Lb, k, &amp;e);
+        if(!LocateElem(La, e))
+            ListInsert(&amp;La, ++lena, e);        
+    }
+}
+</code></pre>
+</li>
+</ul>
+<p>是否为空</p>
+<ul>
+<li>
+<p>实现代码</p>
+<pre><code class="language-c">BOOL ListEmpty(L) {
+    if(L-&gt;length == 0)
+        return 1;
+    return 0;
+}
+</code></pre>
+</li>
+</ul>
+<p>清除顺序表</p>
+<ul>
+<li>
+<p>实现代码</p>
+<pre><code class="language-c">Status ClearList(SqList *L) {
+    L-&gt;length = 0;
+    return OK;
+}
+</code></pre>
+</li>
+</ul>
+<p>全部代码实现</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+
+#define OK 1
+#define ERROR 0
+#define TRUE 1
+#define FALSE 0
+#define MAXSIZE 20
+
+typedef int Status;
+typedef int BOOL;
+typedef int ElemType;
+
+typedef struct {
+    ElemType data[MAXSIZE];
+    int length;
+} SqList;
+
+Status InitList(SqList *L);
+BOOL ListEmpty(SqList L);
+Status ClearList(SqList *L);
+Status GetElem(SqList L, int i, ElemType *e);
+BOOL LocateElem(SqList L, ElemType e);
+Status ListInsert(SqList *L, int i, ElemType e);
+Status ListDelete(SqList *L, int i, ElemType *e);
+int ListLength(SqList L);
+Status Union(SqList *La, SqList Lb);
+Status MergeList(SqList *La, SqList Lb);
+Status PrintList(SqList L);
+Status ArrangeList(SqList *L);
+Status createList(SqList *L, int len);
+
+Status InitList(SqList *L) {
+    L-&gt;length = 0;
+    return OK;
+}
+
+BOOL ListEmpty(SqList L) {
+    if(L.length == 0)
+        return TRUE;
+    return FALSE;
+}
+
+Status ClearList(SqList *L) {
+    L-&gt;length = 0;
+    return OK;
+}
+
+Status GetElem(SqList L, int i, ElemType *e) {
+    if(i&lt;1 || i&gt;L.length || ListEmpty(L))
+        return ERROR;
+    *e = L.data[i-1];
+    return OK;
+}
+
+BOOL LocateElem(SqList L, ElemType e) {
+    int k;
+    for(k = 0; k&lt;L.length; k++) {
+        if(L.data[k]==e)
+            return TRUE;
+    }
+    return FALSE;
+}
+
+Status ListInsert(SqList *L, int i, ElemType e) {
+    int k;
+    if(i&lt;1 || L-&gt;length + 1&lt;i || L-&gt;length == MAXSIZE)
+        return ERROR;
+    if(i&lt;L-&gt;length) {
+        for(k = L-&gt;length; k&gt;=i; k--) 
+            L-&gt;data[k] = L-&gt;data[k-1];
+    }
+    
+    L-&gt;data[i-1] = e;
+    L-&gt;length++;
+    return OK;
+}
+
+Status ListDelete(SqList *L, int i, ElemType *e) {
+    int k;
+    if(ListEmpty(*L) || i&lt;1 || i&gt;L-&gt;length)
+        return ERROR;
+    *e = L-&gt;data[i-1];
+    for(k = i - 1; k&lt;L-&gt;length - 1; k++)
+        L-&gt;data[k] = L-&gt;data[k+1];
+    L-&gt;length--;
+    return OK;
+}
+
+int ListLength(SqList L) {
+    return L.length;
+}
+
+Status Union(SqList *La, SqList Lb) {
+    int k;
+    int lena = ListLength(*La);
+    int lenb = ListLength(Lb);
+    ElemType e;
+    for(k = 1; k&lt;= lenb; k++) {
+        GetElem(Lb, k, &amp;e);
+        if(!LocateElem(*La, e)) 
+            ListInsert(La, ++lena, e);    
+    }
+    return OK;
+}
+    
+Status MergeList(SqList *La, SqList Lb) {
+    if(ListEmpty(Lb))    //如果Lb是空，则不合并
+        return ERROR;
+    int k;
+    int lena = ListLength(*La);
+    int lenb = ListLength(Lb);
+    ElemType e;
+    for(k = 1;k&lt;=lenb;k++) {
+        GetElem(Lb, k, &amp;e);
+        ListInsert(La, ++lena, e);
+    }
+    return OK;
+}
+
+Status PrintList(SqList L) {
+    int k;
+    for(k = 0; k&lt;L.length; k++)
+        printf(&quot;%d &quot;, L.data[k]);
+    printf(&quot;\n&quot;);
+    return OK;
+}
+
+Status ArrangeList(SqList *L) {
+    int k, minIndex, j;
+    ElemType t;
+    for(k = 0; k&lt;L-&gt;length; k++){
+        minIndex = k;
+        for(j = k; j&lt;L-&gt;length; j++) {
+            if(L-&gt;data[minIndex]&gt;L-&gt;data[j]) 
+                minIndex = j;            
+        }
+        t = L-&gt;data[minIndex];
+        L-&gt;data[minIndex] = L-&gt;data[k];
+        L-&gt;data[k] = t;
+    }
+}
+
+Status createList(SqList *L, int len) {
+    int k;
+    for(k = 0; k &lt; len; k++) 
+        L-&gt;data[k] =rand() % 100 + 1;  
+        //ListInsert(L, k+1, rand() % 100 + 1) //如果使用这个，就不需要下面的赋值长度了
+    L-&gt;length = len;
+    return OK;
+}
+
+int main() {
+    srand(time(NULL));
+    /*顺序表测试
+    SqList List;
+    InitList(&amp;List);
+    createList(&amp;List, 10);
+    PrintList(List);
+    
+    ListInsert(&amp;List, 3, 2222);
+    PrintList(List);
+    
+    ElemType e = 0;
+    ListDelete(&amp;List, 7, &amp;e);
+    printf(&quot;删掉的元素是：%d\n&quot;, e);
+    PrintList(List);*/
+    
+    /*union函数测试
+    SqList l1;
+    InitList(&amp;l1);
+    createList(&amp;l1, 3);
+    printf(&quot;顺序表一：&quot;);
+    PrintList(l1);
+    
+    SqList l2;
+    InitList(&amp;l2);
+    createList(&amp;l2, 5);
+    ListInsert(&amp;l2, 6, l2.data[0]);
+    printf(&quot;顺序表二：&quot;);
+    PrintList(l2);
+    
+    Union(&amp;l1, l2);
+    PrintList(l1);*/
+    
+    SqList l1;
+    InitList(&amp;l1);
+    createList(&amp;l1, 3);
+    printf(&quot;顺序表一：&quot;);
+    PrintList(l1);
+    
+    SqList l2;
+    InitList(&amp;l2);
+    createList(&amp;l2, 5);
+    ListInsert(&amp;l2, 6, l2.data[0]);
+    printf(&quot;顺序表二：&quot;);
+    PrintList(l2);
+    
+    MergeList(&amp;l1, l2);
+    PrintList(l1);
+    ArrangeList(&amp;l1);
+    PrintList(l1);
+                
+    
+    return 0;
+}
+</code></pre>
+<h2 id="33-线性表之链式存储结构实现">3.3 线性表之链式存储结构实现</h2>
+<p><strong>顺序存储结构不足的解决方法</strong></p>
+<p>线性表的顺序存储结构是有缺点的，最大的缺点就是插入和删除元素需要移动大量的元素，这就很消耗时间。</p>
+<p>所以我们现在有一个方法，就是不选择用连续的存储空间来存储元素，而是哪里有空位就用哪里存，而再告诉每一个元素它的后继是谁，下一个元素是谁，告诉这个元素它下一个元素的位置（内存地址），而找到它。</p>
+<p><strong>线性表链式存储结构的定义</strong></p>
+<p>线性表的链式存储结构的特点是用一组任意的存储单元存储线性表的数据元素，这组存储单元可以是连续的，也可以是不连续的。这就意味着，这些数据元素可以存在内存未被占用的任意位置。</p>
+<p>在顺序结构中，每个数据元素只需要存储数据元素信息就可以了。现在的链式结构中，除了要存数据元素信息外，还要存储它的后继元素的存储地址。</p>
+<p>因此，为了表示每个数据元素a<sub>i</sub>与其直接后继数据元素a<sub>i+1</sub>之间的逻辑关系，对数据元素a<sub>i</sub>来说，除了存储其本身的信息之外，还需存储一个指示其直接后继的信息（即直接后继的存储位置）。我们把存储数据元素信息的域称为数据域，把存储直接后继位置的域称为指针域。指针域中存储的信息称作指针或链。这两部分信息组成数据元素a<sub>i</sub>的存储映像，称为结点（Node）。</p>
+<p>n个结点（a<sub>i</sub>的存储映像）链结成一个链表，即为线性表（a<sub>1</sub>，a<sub>2</sub>，...，a<sub>n</sub>）的链式存储结构，而又因为此链表的每个结点中只包含一个指针域，所以叫做单链表。单链表正是通过每个结点的指针域将线性表的数据元素按其逻辑次序链接在一起。</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210418160251.png" alt="image-20210418160251148" style="zoom:50%;" />
+<p>我们通常把链表中第一个结点的存储位置叫做头指针，那么整个链表的存取就必须是从头指针开始进行了。之后的每一个结点，其实就是上一个的后继指针指向的位置。而链表的最后一个结点指向的是空（NULL），也就是我们规定了线性链表的最后一个结点指针为”空“（通常用NULL或&quot;^&quot;符号表示）</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210418162149.png" alt="image-20210418162148932" style="zoom:50%;" />
+<ul>
+<li>而有时，我们为了更方便对链表进行操作，会在单链表的第一个结点前附设一个结点，称为头结点。头结点的数据域可以不存储任何信息，当然也可以存储关于线性表的长度等附加信息，头结点的指针域指向第一个结点的指针。（因为指针存的是指针）-&gt; 分配动态内存空间的时候，那个指针得到的是这个分配出来的内存的地址。</li>
+</ul>
+<figure data-type="image" tabindex="6"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210422173442.png" alt="image-20210422173442542" loading="lazy"></figure>
+<p><strong>头指针与头结点的异同</strong></p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210422173546.png" alt="image-20210422173546069" style="zoom: 67%;" />
+<p><strong>线性表链式存储结构代码描述</strong></p>
+<p>若线性表为空表，则头结点的指针域为“空”</p>
+<ul>
+<li>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210422174714.png" alt="image-20210422174714687" style="zoom:50%;" />
+</li>
+</ul>
+<p>下面这张图表示了单链表在内存中的存储状态，但它并不表示是在内存中的实际位置</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210422174832.png" alt="image-20210422174832324" style="zoom:67%;" />
+<p>若是带有头结点的单链表，如下图</p>
+<figure data-type="image" tabindex="7"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210422175518.png" alt="image-20210422175518154" loading="lazy"></figure>
+<p>空链表</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210422175636.png" alt="image-20210422175636371" style="zoom: 67%;" />
+<pre><code class="language-c">typedef struct Node {
+    ElemType data;
+    struct Node *next;
+} Node;
+typedef struct Node *LinkList; //定义linklist
+</code></pre>
+<ul>
+<li>
+<p>从这个结构定义中，我们可以看到结点由存放数据元素的数据域 和 存放后继结点地址的指针域组成。</p>
+</li>
+<li>
+<p>假设P是指向线性表第i个元素的指针，则该结点a<sub>i</sub>的数据域我们可以用P-&gt;data来表示，结点a<sub>i</sub>的指针域可以用P-&gt;next表示，p-&gt;next的值是一个指针，指向第i+1个元素，即指向a<sub>a+1</sub>的指针。</p>
+<p>（那么它这里的意思就是说，假设我有个代码如下，那么我们就可以说，p指向了i的指针）</p>
+<pre><code class="language-c">int i = 12;
+int *t = &amp;i;
+int *p = t;
+</code></pre>
+<figure data-type="image" tabindex="8"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210422182006.png" alt="image-20210422182006564" loading="lazy"></figure>
+</li>
+</ul>
+<p><strong>单链表的读取</strong></p>
+<p>在线性表的顺序结构中，我们要计算任意一个元素的存储位置是非常任意的。但在单链表中，想知道第i个元素究竟在哪里，没办法一开始就知道，必须得从头开始找。因此对于单链表实现获取第i个元素的数据的操作GetElem，在算法上，相对要麻烦一些。</p>
+<p>获得第i个数据的算法思路：</p>
+<ul>
+<li>1.声明一个结点p指向链表中的第一个结点，初始化j从1开始；</li>
+<li>2.当j&lt;i时，就遍历链表，让p的指针向后移动，不断指向下一个结点，j累加1；</li>
+<li>3.若到链表末尾p为空，则说明第i个元素不存在；</li>
+<li>4.否则查找成功，返回结点p的数据</li>
+</ul>
+<p>实现代码算法如下：</p>
+<pre><code class="language-c">Status GetElem(LinkList L, int i, ElemType *e) {
+    int j = 1;
+    LinkList p = L-&gt;next;
+    while(p&amp;&amp;j&lt;i) {
+        p = p-&gt;next;
+        j++;
+    }
+    //for(j = 1; j&lt;i&amp;&amp;p; j++) p = p-&gt;next;
+    
+    if(!p || j&gt;i)     //它这个j&gt;i用于的是避免i=0；
+        return ERROR;
+    *e = p-&gt;data;
+    return OK;
+}
+</code></pre>
+<ul>
+<li>由于这个算法的时间复杂度取决于i的位置，当i=1时，则不需要遍历，第一个就取出了数据，而当i=n时，则需要遍历n-1次才可以。因此最坏的时间复杂度是O（n）</li>
+<li>由于单链表的结构中没有定义表长，所以不能事先知道要循环多少次，因此也就不方便使用for来控制循环。其主要核心思想是“工作指针后移”。</li>
+</ul>
+<p><strong>单链表的插入与删除</strong></p>
+<p>单链表的插入</p>
+<pre><code class="language-c">s-&gt;next = p-&gt;next;
+p-&gt;next = s;
+</code></pre>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210422185753.png" alt="image-20210422185753923" style="zoom: 67%;" />
+<ul>
+<li>代码操作如上图</li>
+</ul>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210422190219.png" alt="image-20210422190218959" style="zoom: 67%;" />
+<ul>
+<li>
+<p>上面这图是插入结点s后</p>
+</li>
+<li>
+<p>而对于单链表的表头和表尾的特殊情况，操作是相同的</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210422190508.png" alt="image-20210422190508829" style="zoom: 67%;" />
+</li>
+</ul>
+<p>单链表第i个数据插入结点的算法思路：</p>
+<ul>
+<li>1.声明一结点p指向链表中的头结点，初始化j从1开始；</li>
+<li>2.当j&lt;i时，就遍历链表，让p的指针向后移动，不断指向下一结点，j累加1；</li>
+<li>3.若到链表末尾p为空，则说明第i个元素不存在；</li>
+<li>4.否则查找成功，在系统中生成一个空结点s；</li>
+<li>5.将数据元素e赋值给s-&gt;data；</li>
+<li>6.单链表的插入标准语句s-&gt;next = p-&gt;next; p-&gt;next = s；</li>
+<li>7.返回成功</li>
+</ul>
+<p>实现代码算法</p>
+<pre><code class="language-c">Status ListInsert(LinkList *L, int i, ElemType e) {
+    int j = 1;
+    LinkList p = *L;
+    while(p &amp;&amp; j&lt;i) {
+        p = p-&gt;next;
+        j++;
+    }
+    if(!p || j&gt;i) 
+        return ERROR;
+    LinkList s = (LinkList)malloc(sizeof(Node));
+    s-&gt;data = e;
+    s-&gt;next = p-&gt;next;
+    p-&gt;next = s;
+    return OK;
+}
+</code></pre>
+<ul>
+<li>这里的malloc其实质就是在内存开辟一个小空地，用来存放e数据s结点</li>
+</ul>
+<p>单链表的删除</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210422192313.png" alt="image-20210422192313660" style="zoom:67%;" />
+<ul>
+<li>
+<p>设存储元素a<sub>1</sub>的结点为q，要实现将结点q删除单链表的操作，其实就是将它的前继结点的指针绕过，指向它的后继结点即可，如上图。</p>
+<pre><code class="language-c">q = p-&gt;next;
+p-&gt;next = q-&gt;next; //或者p-&gt;next-&gt;next
+</code></pre>
+</li>
+</ul>
+<p>单链表第i个数据元素删除结点的算法思路：</p>
+<ul>
+<li>1.声明一结点p指向链表第一个结点，初始化j从1开始；</li>
+<li>2.当j&lt;i时，就遍历链表，让p的指针向后移动，不断指向下一个结点，j累加1；</li>
+<li>3.若到链表末尾p为空，则说明第i个元素不存在；</li>
+<li>4.否则查找成功，将欲删除的结点p-&gt;next赋值给q；</li>
+<li>5.单链表的删除标准语句p-&gt;next = q-&gt;next；</li>
+<li>6.将q结点中的数据赋值给e，作为返回。</li>
+<li>7.释放q结点</li>
+<li>8.返回成功</li>
+</ul>
+<p>实现代码算法如下</p>
+<pre><code class="language-c">Status ListDelete(LinkList *L, int i, ElemType *e) {
+    int j = 1;    //为了找到被删除的前一个，故不使用0
+    LinkList p = *L, q;
+    while(P &amp;&amp; j&lt;i) {
+        p = p-&gt;next;
+        j++;
+    }
+    
+    if(!(p-&gt;next) || j&gt;i) 
+        return ERROR;
+   
+    q = p-&gt;next;
+    p-&gt;next = q-&gt;next;
+    *e = q-&gt;data;
+    free(q);
+    return OK;
+}
+</code></pre>
+<ul>
+<li>free的作用是让系统回收一个Node结点，释放内存</li>
+</ul>
+<p>分析一下刚刚讲解的插入与删除算法，它们其实都是由两个部分组成：第一部分是遍历查找出第i个元素；第二部分就是插入和删除元素；</p>
+<p>对于整个算法来说，我们很任意推导出：它们的时间复杂度都是O（n）。如果我们在不知道第i个元素的指针位置，单链表数据结构在插入和删除操作上，与线性表的顺序存储结构没有什么太大优势。</p>
+<p>但如果，我们希望从第i个位置中插入10个元素，对于顺序存储结构意味着，每一次插入都需要移动n-1个元素，每次都是O（n）。而单链表，我只需要在第一次时，找到第i个位置的指针，此时为O(n)，接下来只是简单的通过赋值移动指针而已，时间复杂度都是O（1），显然，对于插入和删除数据越频繁的操作，单链表的效率优势就越是明显。</p>
+<p><strong>单链表的整表创建</strong></p>
+<p>回顾一下，顺序存储结构的创建，其实就是一个数组的初始化，即声明一个类型和大小的数组并赋值的过程。而单链表和顺序存储结构不一样，它不像顺序存储结构这么集中，它可以很散，是一种动态结构。对于每个链表来说，它所占用空间的大小和位置是不需要预先分配划定的，可以根据系统的情况和实际的需求即时生成。</p>
+<p>所以创建单链表的过程就是一个动态生成链表的过程。即从“空表”的初始状态起，依次建立各元素结点，并逐个插入链表。</p>
+<p>单链表整表创建的算法思路</p>
+<ul>
+<li>1.声明一结点p和计数器变量i    （我们通常称这个p为工作指针）</li>
+<li>2.初始化一空链表L</li>
+<li>3.让L的头结点的指针指向NULL，即建立一个带头结点的单链表</li>
+<li>4.循环
+<ul>
+<li>生成一新结点赋值给p；</li>
+<li>随机生成一数字赋值给p的数据域</li>
+</ul>
+</li>
+</ul>
+<p>实现代码算法</p>
+<pre><code class="language-c">Node* createNode(ElemType e) {
+    LinkList node = (LinkList)malloc(sizeof(Node));
+    node-&gt;data = e;
+    node-&gt;NULL;
+    return node;
+}
+
+void CreateListHead(LinkList *L, int n) {        //建立一个带有头结点的单链线性表
+    //*L = (LinkList)malloc(sizeof(Node));   //建立头结点 //我觉得这个可以建立一个初始化函数来做
+    *L = createNode(n);
+    LinkList p;
+    int i;
+    for(i = 0; i&lt;n; i++) {
+        p = createNode(rand() % 100 + 1);
+        p-&gt;next = (*L)-&gt;next;
+        (*L)-&gt;next = p;
+    }
+} 
+</code></pre>
+<ul>
+<li>
+<p>在这段算法代码里，我们其实用的是插队的办法，就是始终让新节点在第一位置。我们也可以把这种算法简称为头插法，如下图所示：</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210425230503.png" alt="image-20210425230503423" style="zoom: 80%;" />
+</li>
+<li>
+<p>但我们其实有另一种方法的，为什么不把新结点都放到最后呢？这才是排队时的正常思维，所谓的先来后到。我们每次把新的结点都插在终端结点的后面，这种算法叫做尾插法。</p>
+</li>
+</ul>
+<p>实现代码算法</p>
+<pre><code class="language-c">Node* createNode(ElemType e) {
+    LinkList node = (LinkList)malloc(sizeof(Node));
+    node-&gt;data = e;
+    node-&gt;NULL;
+    return node;
+}
+
+void CreateListTail(LinkList *L, int n) {        //建立一个带有头结点的单链线性表
+    //*L = (LinkList)malloc(sizeof(Node));   //建立头结点 //我觉得这个可以建立一个初始化函数来做
+    *L = createNode(n);
+    LinkList p, last = *L;
+    int i;
+    for(i = 0; i&lt;n; i++) {
+        p = createNode(rand() % 100 + 1);
+        last-&gt;next = p;
+        last = p;
+    }
+} 
+</code></pre>
+<ul>
+<li>注意L与last的关系，L是整个链表（虽然它是一个头结点，但它就是整个链表），而last是指向尾结点的变量，last会随着循环不断第变化结点，而L则是随着循环增长为一个多结点的链表。</li>
+<li>而这里，我们节省了一部，last-&gt;next = NULL，为什么呢？因为在那个创建新结点的函数就包含了这一代码。</li>
+</ul>
+<blockquote>
+<p><strong>我的创建单链表的版本</strong></p>
+<ul>
+<li>1.建立一个函数（名为createNode），用于建立新结点
+<ul>
+<li>声明一结点node</li>
+<li>使用malloc初始化node</li>
+<li>随机生成一个数字赋值给node的数据域node-&gt;data</li>
+<li>让node的指针指向NULL</li>
+</ul>
+</li>
+<li>（下面是在createListHead函数的内容，传参有LinkList *L和int len）</li>
+<li>2.声明一个p结点作为工作指针，与一个用于计数的整型i</li>
+<li>3.将一个结点地址赋值给*L，作为头结点；</li>
+<li>4.循环
+<ul>
+<li>将一个结点的指针赋值给p</li>
+<li>让p的指针域指向(*L)-&gt;next；</li>
+<li>让(*L)-&gt;next指向p；</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><strong>单链表的整表删除</strong></p>
+<p>当我们不打算使用这个单链表时，我们需要把它销毁，其实也就是在内存中将它释放掉，以便于留出空间给其它程序或软件使用。</p>
+<p>单链表整表删除的算法思路如下：</p>
+<ul>
+<li>1.声明一结点p和q</li>
+<li>2.将第一个结点赋值给p；</li>
+<li>3.循环：
+<ul>
+<li>将下一个结点赋值给q；</li>
+<li>释放p；</li>
+<li>将q赋值给p；</li>
+</ul>
+</li>
+</ul>
+<p>实现算法代码如下：</p>
+<pre><code class="language-c">Status ClearList(LinkList *L) {
+    LinkList p, q;
+    p = (*L)-&gt;next;
+    while(p) {
+        q = p-&gt;next;
+        free(p);
+        p = q;
+    }
+    (*L)-&gt;next = NULL;
+    return OK;
+}
+</code></pre>
+<p>收撕鸡</p>
+<ul>
+<li>芝麻油</li>
+<li>白胡椒</li>
+<li>芝麻</li>
+<li>盐</li>
+</ul>
+<p>实现代码</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+
+#define OK 1
+#define ERROR 0
+#define TRUE 1
+#define FALSE 0
+
+typedef int Status;
+typedef int BOOL;
+typedef int ElemType;
+
+typedef struct node {
+    ElemType data;
+    struct node *next;
+} Node, *LinkList;
+
+void CreateListTail(LinkList *L, int n);
+Status ListInsert(LinkList *L, int i, ElemType e);
+Status ListDelete(LinkList *L, int i, ElemType *e);
+Status GetElem(LinkList L, int i, ElemType *e);
+Status ClearList(LinkList *L);
+Status PrintList(LinkList L);
+Status ArrangeList(LinkList *L);
+Status MergeList(LinkList *La, LinkList *Lb);
+BOOL ListEmpty(LinkList L);
+BOOL LocateElem(LinkList L, ElemType e);
+int ListLength(LinkList L);
+Node* CreateNode(ElemType d);
+
+Status GetElem(LinkList L, int i, ElemType *e) {
+    int j = 1;
+    LinkList p = L-&gt;next;
+    while(p&amp;&amp;j&lt;i) {    //得到第i个
+        p = p-&gt;next;
+        j++;
+    }
+    //for(j = 1; j&lt;i&amp;&amp;p; j++) p = p-&gt;next;
+    
+    if(!p || j&gt;i)     //它这个j&gt;i用于的是避免i=0；
+        return ERROR;
+    *e = p-&gt;data;
+    return OK;
+}
+
+Status ListInsert(LinkList *L, int i, ElemType e) {
+    int j = 1;
+    LinkList p = *L;
+    while(p &amp;&amp; j&lt;i) {   //得到前一个
+        p = p-&gt;next;
+        j++;
+    }
+    if(!p || j&gt;i) 
+        return ERROR;
+    LinkList s = (LinkList)malloc(sizeof(Node));
+    s-&gt;data = e;
+    s-&gt;next = p-&gt;next;
+    p-&gt;next = s;
+    return OK;
+}
+
+Status ListDelete(LinkList *L, int i, ElemType *e) {
+    int j = 1;    //为了找到被删除的前一个，故不使用0
+    LinkList p = *L, q;
+    while(p &amp;&amp; j&lt;i) {      //得到前一个
+        p = p-&gt;next;
+        j++;
+    }
+    
+    if(!(p-&gt;next) || j&gt;i) 
+        return ERROR;
+   
+    q = p-&gt;next;
+    p-&gt;next = q-&gt;next;
+    *e = q-&gt;data;
+    free(q);
+    return OK;
+}
+
+Node* CreateNode(ElemType d) {
+    LinkList node = (LinkList)malloc(sizeof(Node));
+    node-&gt;data = d;
+    node-&gt;next = NULL;
+    return node;
+}
+
+void CreateListTail(LinkList *L, int n) {        //建立一个带有头结点的单链线性表
+    //*L = (LinkList)malloc(sizeof(Node));   //建立头结点 //我觉得这个可以建立一个初始化函数来做 //这个就是整个链表，一般建立后，将NULL赋值给它的next指针。如果是尾插法，则不需要关注这一步，因为会将last = *L，然后最后会是last-&gt;next = NULL
+    *L = CreateNode(n);  
+    LinkList p, last = *L;
+    int i;
+    for(i = 0; i&lt;n; i++) {
+        p = CreateNode(rand() % 100 + 1);
+        last-&gt;next = p;
+        last = p;
+    }
+} 
+
+Status ClearList(LinkList *L) {
+    LinkList p, q;
+    p = (*L)-&gt;next;
+    while(p) {
+        q = p-&gt;next;
+        free(p);
+        p = q;
+    }
+    (*L)-&gt;next = NULL;
+    return OK;
+}
+
+BOOL LocateElem(LinkList L, ElemType e) {
+    LinkList p = L-&gt;next; //工作指针，得到第一个结点
+    while(p) {
+        if(p-&gt;data == e)
+            return TRUE;
+        p = p-&gt;next;
+    }
+    return FALSE;
+}
+
+int ListLength(LinkList L) {
+    LinkList p = L;
+    int len = 0;
+    
+    while(p = p-&gt;next) 
+        len++;
+   
+    /*
+    LinkList p = L-&gt;next;
+    int len = 0;
+    while(p) {
+        len++;
+        p = p-&gt;next;      
+    }*/
+    
+    /*这个是错误的，只能使用在没有头节点的单链表
+    LinkList p = L;
+    int len = 0;
+    while(p) {
+        len++;
+        p = p-&gt;next;       
+    }
+    */
+    return len;
+}
+
+Status ArrangeList(LinkList *L) {
+    LinkList p = (*L), q = p, min;
+    ElemType t = 0; 
+    while(p = p-&gt;next) {
+        min = p;
+        q = p;
+        while(q = q-&gt;next) if(min-&gt;data &gt; q-&gt;data) min = q;         //这个排序，我们不能用数字，要使用指针；
+        
+        t = min-&gt;data;
+        min-&gt;data = p-&gt;data;
+        p-&gt;data = t;     
+    }
+    return OK;
+}
+
+Status PrintList(LinkList L) {
+    LinkList p = L;
+    while(p = p-&gt;next) 
+        printf(&quot;%d &quot;, p-&gt;data);
+    printf(&quot;\n链表长度为：%d&quot;, ListLength(L));
+    printf(&quot;\n&quot;);
+    return OK;
+}
+
+Status PrintList(LinkList L) {
+    LinkList p;
+    if(L-&gt;next) {
+        for(p = L-&gt;next; )
+    }
+    
+    
+    while(p = p-&gt;next) 
+        printf(&quot;%d &quot;, p-&gt;data);
+    printf(&quot;\n链表长度为：%d&quot;, ListLength(L));
+    printf(&quot;\n&quot;);
+    return OK;
+}
+
+
+/*旧版
+Status MergeList(LinkList *La, LinkList Lb) {
+    LinkList p = *La;
+    while(p-&gt;next) 
+        p = p-&gt;next;
+    p-&gt;next = Lb-&gt;next;//La的终端结点的指针指向Lb的第一个结点；
+    return OK;
+}
+/*采用上述的合并函数，会有如下弊端：
+ * 1、当遍历第一个链表的时候，确实发现了La多出了一些结点，新的长度也是原来的La.len = Lb.len。但是注意了，当你遍历第二个链表的时候，你会发现他还有着合并前的元素结点；
+ * 2、当你对合并后的第一个链表进行操作时，例如排列第一个链表，你会发现第二个链表也被操作了。（那是因为这两个链表是相互连着的。
+*/
+
+Status MergeList(LinkList *La, LinkList *Lb) {
+    LinkList p = *La;
+    while(p-&gt;next)
+        p = p-&gt;next;                //得到终端结点。
+    p-&gt;next = (*Lb)-&gt;next;
+    (*Lb)-&gt;next = NULL;     //因为我们是把Lb的链表合并给La，所以我们要使Lb变为空表
+    return OK;
+}
+
+int main() {
+    srand(time(NULL));
+    /*顺序表测试
+    LinkList List;
+    CreateListTail(&amp;List, 10);
+    PrintList(List);
+    
+    ListInsert(&amp;List, 3, 2222);
+    PrintList(List);
+    
+    ElemType e = 0;
+    ListDelete(&amp;List, 7, &amp;e);
+    printf(&quot;删掉的元素是：%d\n&quot;, e);
+    PrintList(List);
+    
+    ArrangeList(&amp;List);
+    PrintList(List);*/
+    
+    /*union函数测试
+    SqList l1;
+    InitList(&amp;l1);
+    createList(&amp;l1, 3);
+    printf(&quot;顺序表一：&quot;);
+    PrintList(l1);
+    
+    SqList l2;
+    InitList(&amp;l2);
+    createList(&amp;l2, 5);
+    ListInsert(&amp;l2, 6, l2.data[0]);
+    printf(&quot;顺序表二：&quot;);
+    PrintList(l2);
+    
+    Union(&amp;l1, l2);
+    PrintList(l1);*/
+    
+    
+    LinkList l1;
+    CreateListTail(&amp;l1, 3);
+    printf(&quot;顺序表一：&quot;);
+    PrintList(l1);
+    
+    LinkList l2;
+    CreateListTail(&amp;l2, 5);
+    ListInsert(&amp;l2, 6, l2-&gt;next-&gt;data);
+    printf(&quot;顺序表二：&quot;);
+    PrintList(l2);
+    
+    MergeList(&amp;l1, l2);
+    PrintList(l1);
+    ArrangeList(&amp;l1);
+    PrintList(l1);
+                
+    printf(&quot;顺序表二：&quot;);
+    PrintList(l2);
+    
+    return 0;
+}
+</code></pre>
+<p>另一版本（浙江大学）</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+typedef struct node {
+    int data;
+    struct node* next;
+} Node;
+
+typedef struct {
+    Node* head;
+    Node* last;
+} List;
+
+void add(List* L, int x);
+
+int main() {
+    int x = 0;
+    List list;
+    list.head = list.last = NULL;
+    do {
+	    scanf(&quot;%d&quot;, &amp;x);
+        if(x!=-1) add(&amp;list, x);
+    } while(x!=-1);
+    
+    int isFound = 0;
+    Node* p;
+    scanf(&quot;%d&quot;, &amp;x);
+    for(p = list.head; p; p = p-&gt;next) {
+        if(p-&gt;data==x) {
+            isFound = 1;
+            printf(&quot;找到了\n&quot;);
+            break;
+        }
+    }
+    if(!isFound) printf(&quot;没有找到\n&quot;);
+    
+    
+    Node* q;
+   for(q = NULL, p = list.head; p; q = p, p = p-&gt;next) {
+        if(p-&gt;data==x) {
+            if(q) q-&gt;next = p-&gt;next;
+            else list.head = p-&gt;next;//预防是第一个
+            free(p);
+            break;
+        }
+    }    
+    for(p = list.head; p; p = p-&gt;next) printf(&quot;%d &quot;, p-&gt;data);
+    
+    printf(&quot;\n&quot;);
+    
+    for(p = list.head; p; p = q) {
+        q = p-&gt;next;
+        free(p);
+    }
+    //执行顺序是：初始化--判断--函数体——自增--判断——函数体---自增--判断--函数体
+    list.head = list.last = NULL; 
+    for(p = list.head; p; p = p-&gt;next) printf(&quot;%d &quot;, p-&gt;data);
+    return 0;
+}
+
+void add(List* L, int x) {
+    Node* p = (Node*)malloc(sizeof(Node));
+    p-&gt;next = NULL;
+    p-&gt;data = x;
+    if(L-&gt;last==NULL&amp;&amp;L-&gt;head==NULL) L-&gt;last = L-&gt;head = p;
+    else {
+    	L-&gt;last-&gt;next = p;
+    	L-&gt;last = p;
+	}
+    //第一种是都还为空；第二种是有；
+}
+</code></pre>
+<h2 id="下面是旧版我自己写的">下面是旧版（我自己写的）</h2>
+<pre><code class="language-c">typedef int Data;
+typedef struct _Node {
+    Data data;
+    struct _Node *next;
+} Node;
+
+typedef Node *LinkList;
+</code></pre>
+<pre><code class="language-c">/*用头指针指向第一个结点*/
+#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+#include &lt;stdlib.h&gt;
+
+typedef int Data;
+typedef struct _Node {
+    Data data;
+    struct _Node *next;
+} Node;
+
+typedef Node *LinkList;
+
+Node* createNode(int data) {
+    Node* node = (LinkList)malloc(sizeof(Node));
+    node-&gt;data = data;
+    node-&gt;next = NULL;
+    return node;
+}
+
+LinkList createList(int len) {
+    srand(time(NULL));
+    int data = rand() % 100 + 1;
+    Node *head = createNode(data);
+    Node *last = head;
+    int i;
+    for(i = 1; i&lt;len; i++) {
+        data = rand() % 100 + 1;
+        Node* node = createNode(data);
+        last-&gt;next = node;
+        last = node;
+    }
+    last-&gt;next = NULL;
+    return head;
+}
+
+int getLen(LinkList L) {
+    Node* p = L;
+    int len = 0;
+    while(p) {
+        len++;
+        p = p-&gt;next;
+    }
+    return len;
+}
+
+LinkList ListDelet(LinkList L, int k) {
+    int i = 1;
+    Node *p = L, *q;
+    while(p&amp;&amp;i&lt;k) {
+        i++;
+        q = p;
+        p = p-&gt;next;
+    }
+    q-&gt;next = p-&gt;next;
+    free(p);
+    return L;
+}
+
+void print(LinkList L) {
+    Node *p = L;
+    while(p) {
+        printf(&quot;%d &quot;, p-&gt;data);
+        p = p-&gt;next;
+    }
+    printf(&quot;\n&quot;);
+}
+
+
+
+int main() {
+    LinkList phead = createList(10);//声明一个头指针，用于指向第一个结点
+    print(phead);
+    ListDelet(phead, 3);
+    print(phead);
+    
+    
+    return 0;
+}
+</code></pre>
+<pre><code class="language-c">/*用头指针指向头结点*/
+#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+#include &lt;stdlib.h&gt;
+
+typedef int Data;
+typedef struct _Node {
+    Data data;
+    struct _Node *next;
+} Node;
+
+typedef Node *LinkList;
+
+Node* createNode(int data) {
+    Node* node = (LinkList)malloc(sizeof(Node));
+    node-&gt;data = data;
+    node-&gt;next = NULL;
+    return node;
+}
+
+LinkList createList(int len) {
+    srand(time(NULL));
+    int data, i;
+    Node *head = createNode(len), *last = head, *node; //这个head是建立一个头节点，而不是第一个结点
+    for(i = 0; i&lt;len; i++) {
+        data = rand() % 100 + 1;
+        node = createNode(data);
+        last-&gt;next = node;
+        last = node;
+    }
+    last-&gt;next = NULL;
+    return head;
+}
+
+/*倒插法
+LinkList createList(int len) {
+    srand(time(NULL));
+    int data, i;
+    Node *head = createNode(len), *p, *node; //这个head是建立一个头节点，而不是第一个结点
+    for(i = 0; i&lt;len; i++) {
+        data = rand() % 100 + 1;
+        node = createNode(data);
+        node-&gt;next = head-&gt;next;
+        head-&gt;next = node;
+    }
+    return head;
+}*/
+
+int getLen(LinkList L) {
+    Node* p = L-&gt;next;
+    int len = 0;
+    while(p) {
+        len++;
+        p = p-&gt;next;
+    }
+    return len;
+}
+
+LinkList ListDelet(LinkList L, int k) {
+    int i = 1;
+    Node *p = L-&gt;next, *q = L;//从第一个结点开数-&gt;一个问题-&gt;如果要删除的是结点1呢？, q就解决了
+    while(p&amp;&amp;i&lt;k) {
+        i++;
+        q = p; //删除前的一个
+        p = p-&gt;next; //得到要删除的那个
+    }
+    if(p) q-&gt;next = p-&gt;next;//p不为NULl的时候执行这句话
+    free(p);
+    return L;
+}
+
+void print(LinkList L) {
+    Node *p = L-&gt;next;
+    while(p) {
+        printf(&quot;%d &quot;, p-&gt;data);
+        p = p-&gt;next;
+    }
+    printf(&quot;\n&quot;);
+}
+
+void insert(LinkList L, int k) {
+    Node* p = L-&gt;next, *t = createNode(rand() % 100 + 1), *q = p;     //start with the 1st link
+    int i = 1;
+    while(p&amp;&amp;i&lt;k) {
+        q = p;
+        p = p-&gt;next;       
+        i++;
+    }
+    
+    t-&gt;next = p;
+    q-&gt;next = t;
+}
+
+int ListIndex(LinkList L, int k) {
+    int i = 1;
+    Node *p = L-&gt;next;
+    while(p&amp;&amp;i&lt;k) {
+        p = p-&gt;next;
+        i++;
+    }
+    if(p) return p-&gt;data;
+}
+
+int main() {
+    LinkList phead = createList(6);//声明一个头指针，用于指向头结点
+    print(phead);
+    ListDelet(phead, 3);
+    print(phead);
+    insert(phead, 2);
+    print(phead);
+    printf(&quot;%d&quot;, ListIndex(phead, 3));
+    
+    return 0;
+}
+
+//上面算法生成的链表是这样的：头指针-&gt;头结点-&gt;第一个结点-&gt;第二个结点-&gt;第三个结点...最后一个结点-&gt;NULL
+//当链表为空时：头指针-&gt;头结点-&gt;NULL
+</code></pre>
+<h2 id="34-单链表结构与顺序存储结构优缺点">3.4 单链表结构与顺序存储结构优缺点</h2>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210426001127.png" alt="image-20210426001127332" style="zoom: 67%;" />
+<p>总结对比：</p>
+<ul>
+<li>若线性表需要频繁查找，且很少进行插入和删除操作时，使用顺序存储结构最佳。相反则使用单链表结构。</li>
+<li>案例：对于游戏中，玩家的信息输入，一般都是只读，只插入，其它绝大部分情况都是读取，这个时候采用顺序结构是最好的。而相反，游戏中，玩家的武器或者装备列表，随着玩家的游戏过程中，可能会随时添加和删除，此时采用单链表结构就可以大展拳脚。</li>
+<li>当线性表中的元素个数变化较大时，或者根本不知道有多大时，最好就是采用单链表结构，这样就可以不用考虑存储空间的问题了。而如果事先知道线性表的大致长度，确定了元素的个数时，这个时候使用顺序存储结构效率会高很多。</li>
+</ul>
+<p>在现实当中，要根据实际情况，综合平衡采用哪种数据结构更能满足和达到需求和性能</p>
+<h2 id="35-静态链表">3.5 静态链表</h2>
+<p>没有指针的时候，我们如何也使用链表结构呢？于是有人就想出用数组来代替指针，来描述单链表。</p>
+<p>首先，我们的让数组元素由两个数据域组成，data和cur。也就是说，数组的每个下标都对应一个data和一个cur。数据域data，用来存放数据元素，也就是通常我们要处理的数据；而游标cur相当于单链表中的next指针，存放该元素的后继在数组中的下标。</p>
+<p>我们把这种用数组描述的链表叫做静态链表，这种描述方法还有起名为游标实现法。</p>
+<p>为了方便插入数据，我们通常会把数组建立的大一些，以便有一些空闲空间可以便于插入时不至于溢出。</p>
+<pre><code class="language-c">#define MAXSIZE 1000
+typedef struct {
+    ElemType data;
+    int cur;
+} Component, StaticLinkList[MAXSIZE];
+</code></pre>
+<p>另外我们对数组第一个元素和最后一个元素作为特殊元素处理，不存数据。我们通常把未被使用的数据元素称为备用链表。而数组第一个元素，即下标为0的元素的cur就存放备用链表的第一个结点的下标；而数组的最后一个元素的cur则存放第一个有数值的元素的下标，相当于单链表中的头结点作用，当整个链表为空时，则为0.</p>
+<figure data-type="image" tabindex="9"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210426012431.png" alt="image-20210426012431121" loading="lazy"></figure>
+<p>上面的图表示了初始化的数组状态</p>
+<pre><code class="language-c">Status InitList(StaticLinkList space) {
+    int i;
+    for(i = 0; i&lt;MAXSIZE-1; i++)
+        space[i].cur = i+1;
+    space[MAXSIZE - 1].cur = 0;
+    return 0;
+}
+</code></pre>
+<figure data-type="image" tabindex="10"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210426123648.png" alt="image-20210426123648054" loading="lazy"></figure>
+<p><strong>静态链表的插入操作</strong></p>
+<p>静态链表中要解决的是：如何用静态模拟动态链表的存储空间的分配，需要时申请，无用时释放</p>
+<p>为了辨明数组中哪些分量未被使用，解决的办法是将所有未被使用过的及已被删除的分量用游标链成一个备用的链表，每当插入时，便可以从备用链表上取得第一个结点作为待插入的新节点。</p>
+<pre><code class="language-c">int Malloc_SLL(StaticLinkList space) {
+    int i = space[0].cur;
+    if(space[0].cur)
+        space[0].cur = space[i].cur;
+    return i;
+}
+</code></pre>
+<p>这段代码的一个作用就是返回一个下标值，这个值就是数组头元素的cur存的第一个空闲的下标。从上面的图示来看，其实就是返回了7。</p>
+<p>那么既然下标为7的分量准备要使用了，就得有接替者，所以就把的分量的cur值赋值给头元素的cur，也就是把8给space[0].cur，之后就可以继续分配新的空闲分量，实现类型malloc函数的作用</p>
+<pre><code class="language-c">Status ListInsert(StaticLinkLst L, int i, ElemType e) {
+    int j, k, l;
+    k = MAX_SIZE - 1;
+    if(i&lt;1 || i&gt;ListLength(L) + 1)
+        return ERROR;
+    j = Malloc_SSL(L);
+    if(j) {
+        L[j].data = e;
+        for(i = 1; i&lt;i; i++)    //找到要插入元素的前一个
+            k = L[k].cur;
+        L[j].cur = L[k].cur;   //插入
+        L[k].cur = j;
+        return OK;
+    }
+    return ERROR;
+}
+</code></pre>
+<p><strong>静态链表的删除操作</strong></p>
+<pre><code class="language-c">Status ListDelete(StaticLinkList L, int i) {
+    int j, k;
+    if(i&lt;1 || i&gt;ListLength(L))
+        return ERROR;
+    k = MAX_SIZE - 1;
+    for(j = 1; j&lt;i; j++) 
+        k = L[k].cur;
+    j = L[k].cur;
+    L[k].cur = L[j].cur;
+    Free_SSL(L, j);
+    return OK;
+}
+</code></pre>
+<pre><code class="language-c">void Free_SSL(StaticLinkList space, int k) {
+    space[k].cur = space[0].cur; //把第一个元素的cur赋值给要删除分量的cur
+    space[0].cur = k;    //把要删除的分量下标赋值给第一个元素的cur
+}
+</code></pre>
+<p><strong>得到静态链表的长度</strong></p>
+<pre><code class="language-c">int ListLength(StaticLinkList L) {
+    int j = 0;
+    int i = L[MAXSIZE-1].cur;
+    while(i) {
+        i = L[i].cur;
+        j++;
+    }
+    return j;
+}
+</code></pre>
+<p><strong>得到一个元素</strong></p>
+<pre><code class="language-c">void GetElem(StaticLinkList L, int i, ElemType *e) {
+    int j = 0;
+    int k = L[MAXSIZE - 1].cur;
+    while(k &amp;&amp; i&gt;j) {        //得到元素
+        k = L[k].cur;
+        j++;
+    }
+    *e = L[k].data;
+}
+</code></pre>
+<p><strong>静态链表代码实现</strong></p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+
+#define MAXSIZE 1000
+#define TRUE 1
+#define FALSE 0
+#define ERROR 0
+#define OK 1
+
+typedef int BOOL;
+typedef int Status;
+typedef int ElemType;
+
+typedef struct {
+    ElemType data;
+    int cur;
+} Component, StaticLinkList[MAXSIZE];
+
+int Malloc_SSL(StaticLinkList space);
+void Free_SSL(StaticLinkList space, int k);
+Status ListInsert(StaticLinkList L, int i, ElemType e);
+BOOL LocateElem(StaticLinkList L, ElemType e);
+Status ClearList(StaticLinkList L);
+void PrintList(StaticLinkList L);
+void GetElem(StaticLinkList L, int i, ElemType *e);
+int ListLength(StaticLinkList L);
+Status InitList(StaticLinkList space);
+Status ListDelete(StaticLinkList L, int i);
+
+int Malloc_SSL(StaticLinkList space) {
+    int i = space[0].cur;
+    if(space[0].cur)
+        space[0].cur = space[i].cur;
+    return i;
+}
+
+void Free_SSL(StaticLinkList space, int k) {
+    space[k].cur = space[0].cur; //把第一个元素的cur赋值给要删除分量的cur
+    space[0].cur = k;    //把要删除的分量下标赋值给第一个元素的cur
+}
+
+Status ListDelete(StaticLinkList L, int i) {
+    int j, k;
+    if(i&lt;1 || i&gt;ListLength(L))
+        return ERROR;
+    k = MAXSIZE - 1;
+    for(j = 1; j&lt;i; j++) 
+        k = L[k].cur;
+    j = L[k].cur;
+    L[k].cur = L[j].cur;
+    Free_SSL(L, j);
+    return OK;
+}
+
+Status ListInsert(StaticLinkList L, int i, ElemType e) {
+    int j, k, l;
+    k = MAXSIZE - 1;
+    if(i&lt;1 || i&gt;ListLength(L) + 1)
+        return ERROR;
+    j = Malloc_SSL(L);
+    if(j) {
+        L[j].data = e;
+        for(l = 1; l&lt;i;l++)    //找到要插入元素的前一个
+            k = L[k].cur;
+        L[j].cur = L[k].cur;   //插入
+        L[k].cur = j;
+        return OK;
+    }
+    return ERROR;
+}
+
+BOOL LocateElem(StaticLinkList L, ElemType e) {
+    int k = L[MAXSIZE - 1].cur;
+    while(k) {
+        if(L[k].data == e)
+            return TRUE;
+        k = L[k].cur;       
+    }
+    return FALSE;
+}
+
+void PrintList(StaticLinkList L) {
+    int k = L[MAXSIZE - 1].cur;  //得到第一个元素
+    while(k) {
+        printf(&quot;%d &quot;, L[k].data);
+        k = L[k].cur;        
+    }
+    printf(&quot;\n&quot;);
+}
+
+Status ClearList(StaticLinkList L) {
+    int p = L[MAXSIZE - 1].cur, q;
+    while(p) {
+        q = L[p].cur;
+        Free_SSL(L, p);
+        p = q;
+    }
+    L[MAXSIZE - 1].cur = 0;
+    return OK;
+}
+
+void GetElem(StaticLinkList L, int i, ElemType *e) {
+    int j = 1;
+    int k = L[MAXSIZE - 1].cur;
+    while(k &amp;&amp; i&gt;j) {        //得到第i个元素的坐标
+        k = L[k].cur;
+        j++;
+    }
+    *e = L[k].data;
+}
+
+int ListLength(StaticLinkList L) {
+    int j = 0;
+    int i = L[MAXSIZE-1].cur;
+    while(i) {
+        i = L[i].cur;
+        j++;
+    }
+    return j;
+}
+
+void createList(StaticLinkList L, int len) {
+    int i, j;
+    InitList(L);
+    for(i = 0; i&lt;len; i++) {
+        j = Malloc_SSL(L); //得到了一个空闲空间
+        L[j].data = rand() % 100 + 1;
+        L[j].cur = L[MAXSIZE -1].cur;
+        L[MAXSIZE - 1].cur = j;
+    }        
+}
+
+Status InitList(StaticLinkList space) {
+    int i;
+    for(i = 0; i&lt;MAXSIZE-1; i++)
+        space[i].cur = i+1;
+    space[MAXSIZE - 1].cur = 0;
+    return 0;
+}
+
+int main() {
+    srand(time(NULL));
+    StaticLinkList list;
+    createList(list, 10);
+    PrintList(list);
+    printf(&quot;%d\n&quot;, ListLength(list));
+    
+    ElemType e;
+    GetElem(list, 3, &amp;e);
+    printf(&quot;%d\n&quot;, e);
+    
+    ListDelete(list, 5);
+    PrintList(list);
+    printf(&quot;%d\n&quot;, ListLength(list));
+    
+    ListInsert(list, 8, 999999);
+    PrintList(list);
+    
+    GetElem(list, 6, &amp;e);
+    printf(&quot;想要查找的数字是%d\n&quot;, e);
+    
+    printf(&quot;%d\n&quot;, LocateElem(list, e));
+    
+    ClearList(list);
+    printf(&quot;%d\n&quot;, list[MAXSIZE - 1].cur);
+    
+    ListInsert(list, 1, 8888);
+    PrintList(list);
+    
+    return 0;
+}
+</code></pre>
+<p><strong>静态链表优缺点</strong></p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210426171923.png" alt="image-20210426171923586" style="zoom:50%;" />
+<ul>
+<li>总得来说，静态链表其实是为了给没有指针的高级语言设计的一种实现单链表能力的方法。</li>
+<li>注意：一般在竞赛中需要链表的情况，最好是使用静态链表，因为如果你使用单链表结构，它的评判系统或许会崩溃。</li>
+</ul>
+<h2 id="36-循环链表">3.6 循环链表</h2>
+<p>对于单链表，由于每个结点只存储了向后的指针，到了尾标志就停止了向后链的操作，这样，当中某个结点就无法找到它的前驱结点了，就像我们刚才说的，不能回到从前。我们现在要考虑一种让最后一个结点的next指向头结点的链表。这个链表就是循环链表。</p>
+<p><strong>将单链表中终端结点的指针端由空指针改为指向头结点，就使整个单链表形成一个环，这种头尾相接的单链表称为单循环链表，简称循环链表（circular linked list）</strong></p>
+<p>为了使空链表与非空链表处理一致，我们通常设一个头结点，当然，也并不是说循环链表一定要头结点，这需要注意。循环链表带有头结点的空链表如图：</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210426173811.png" alt="image-20210426173811098" style="zoom: 67%;" />
+<p>对于非空的循环链表就如图：</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210426174042.png" alt="image-20210426174041916" style="zoom:67%;" />
+<p>其实循环链表和单链表的主要差异就在于循环的判断条件上，原来是判断p-&gt;next是否为空，现在则是p-&gt;next不等于头结点，则循环未结束。</p>
+<p>在单链表中，我们有了头结点时，我们可以用O(1)的时间访问第一个结点，但对于要访问到最后一个结点，却需要O(n)时间，因为我们需要将单链表全部扫描一遍。</p>
+<p>那有没有可能O(1)的时间由链表指针访问到最后一个结点呢？当然可以。</p>
+<p>不过，我们需要改进一下这个循环链表，不用头指针，而是用指向终端结点的尾指针来表示循环链表，此时查找开始结点和终端结点都很方便了。</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210426180038.png" alt="image-20210426180038336" style="zoom:80%;" />
+<pre><code class="language-c">void createCircularList(LinkList *L, int len) {
+    LinkList head = (LinkList)malloc(sizeof(Node)), node, last;
+    //int* arr = (int*)malloc(sizeof(int)*size);//这个是生成一个数组
+    int i;
+    last = head;
+    for(i = 0; i&lt;len; i++) {
+        node = (LinkList)malloc(sizeof(Node));
+        node-&gt;data = rand() % 100 + 1;
+        last-&gt;next = node;
+        last = node;       
+    }
+    last-&gt;next = head;  //终端指针指向头节点
+    *L = last;   //retur the pointer of the last node;
+}
+</code></pre>
+<p>得到链表长度</p>
+<pre><code class="language-c">int ListLength(LinkList L) {
+    LinkList p = L-&gt;next; //得到头结点
+    int len = 0;
+    while(p = p-&gt;next != L-&gt;next)
+        len++;
+    return len;
+}
+</code></pre>
+<ul>
+<li>对合并链表十分方便，时间复杂度为O（1）</li>
+</ul>
+<pre><code class="language-c">Status ListMerge(LinkList *La, LinkList *Lb) {   //两个都是单循环链表
+    LinkList p = *La, q = (*Lb)-&gt;next; //得到终端结点
+    (*Lb)-&gt;next = p-&gt;next;
+    p-&gt;next = q-&gt;next;   
+    free(q);
+    *La = *Lb;
+    (*Lb)-&gt;next = NULL;     //因为我们是把Lb的链表合并给La，所以我们要使Lb变为空表
+}
+//连接后要将另一个链表的头结点删掉   //上面这个不起作用
+
+
+//能起作用的：
+Status ListMerge(LinkList *La, LinkList *Lb) {   //两个都是单循环链表
+    LinkList p = (*La)-&gt;next, q = (*Lb)-&gt;next, t = (*Lb)-&gt;next; //得到终端结点
+    (*La)-&gt;next = q-&gt;next;
+    (*Lb)-&gt;next = p;    
+    *La = *Lb;         //将原本指向La终端结点的指针指向为Lb的终端结点
+    (*Lb) = t;
+    (*Lb)-&gt;next = (*Lb);  //使第二个表变为空表，不然一旦遍历这个表的时候，也会连着遍历La
+}
+</code></pre>
+<p>测试代码</p>
+<pre><code class="language-c">//测试单循环链表建立，得到长度，得到元素，合并
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+
+#define TRUE 1
+#define FALSE 0
+#define OK 1
+#define ERROR 0
+
+typedef int ElemType;
+typedef int Status;
+
+typedef struct Node {
+    ElemType data;
+    struct Node* next;
+} Node, *LinkList;
+
+void createCircularList(LinkList *L, int len);
+int ListLength(LinkList L);
+Status ListMerge(LinkList *La, LinkList *Lb);
+
+void createCircularList(LinkList *L, int len) {
+    LinkList head = (LinkList)malloc(sizeof(Node)), node, last;
+    //int* arr = (int*)malloc(sizeof(int)*size);//这个是生成一个数组
+    int i;
+    last = head;
+    for(i = 0; i&lt;len; i++) {
+        node = (LinkList)malloc(sizeof(Node));
+        node-&gt;data = rand() % 100 + 1;
+        last-&gt;next = node;
+        last = node;       
+    }
+    last-&gt;next = head;  //终端指针指向头节点
+    *L = last;   //retur the pointer of the last node;
+}
+
+int ListLength(LinkList L) {
+    LinkList p = L-&gt;next; //得到头结点
+    int len = 0;
+    while((p = p-&gt;next) != L-&gt;next)
+        len++;
+    return len;
+}
+
+Status GetElem(LinkList L, int i, ElemType *e) {
+    LinkList p = L-&gt;next-&gt;next; //得到第一个
+    int j = 1;
+    while(p != L-&gt;next &amp;&amp; i&gt;j) {
+        p = p-&gt;next;
+        j++;
+    }
+    if(p == L-&gt;next || j&gt;i)
+        return ERROR;
+    *e = p-&gt;data;
+    return OK;
+}
+ 
+
+Status ListMerge(LinkList *La, LinkList *Lb) {   //两个都是单循环链表
+    LinkList p = (*La)-&gt;next, q = (*Lb)-&gt;next, t = (*Lb)-&gt;next; //得到头结点
+    (*La)-&gt;next = q-&gt;next;
+    (*Lb)-&gt;next = p;    
+    *La = *Lb;         //将原本指向La终端结点的指针指向为Lb的终端结点
+    (*Lb) = t;
+    (*Lb)-&gt;next = (*Lb);  //使第二个表变为空表，不然一旦遍历这个表的时候，也会连着遍历La
+}
+
+void printList(LinkList L) {
+    LinkList p = L-&gt;next;
+    while((p = p-&gt;next) != L-&gt;next)
+        printf(&quot;%d &quot;, p-&gt;data);
+    printf(&quot;\n&quot;);
+}
+
+int main() {
+    srand(time(NULL));
+    LinkList ls;
+    createCircularList(&amp;ls, 10);
+    printList(ls);
+    printf(&quot;%d\n&quot;, ListLength(ls));
+    
+    
+    LinkList ls2;
+    createCircularList(&amp;ls2, 15);
+    printList(ls2);
+    printf(&quot;%d\n&quot;, ListLength(ls2));
+    
+    ListMerge(&amp;ls, &amp;ls2);
+    printList(ls);
+    printf(&quot;%d\n&quot;, ListLength(ls));
+    
+    printList(ls2);
+    printf(&quot;%d\n&quot;, ListLength(ls2));
+    
+    ElemType e;
+    GetElem(ls, 3, &amp;e);
+    printf(&quot;得到%d&quot;, e);
+    
+    return 0;
+}
+
+</code></pre>
+<h2 id="37-双向链表">3.7 双向链表</h2>
+<p>我们在单链表中，有了next指针，这就使得我们要查找下一个结点的时间复杂度为O（1）。可是如果要查找上一个结点，最坏的复杂度就是O（n）了，因为我们每次都要从头开始遍历查找（循环条件是如果下一个不是这个结点）</p>
+<p>于是提出了双向链表的概念。双向链表（double linked list）是在单链表的每个结点中，再设置一个指向其前驱结点的指针域。所以在双向链表中的结点都有两个指针域，一个指向后继，一个指向前驱。</p>
+<p><strong>线性表的双向链表存储结构</strong></p>
+<pre><code class="language-c">typedef struct DulNode {
+    ElemType data;
+    struct DulNode *prior;
+    struct DulNode *next;
+} DulNode, *DuLinkList;
+</code></pre>
+<p>既然单链表也可以有循环链表，那么双向链表也可以是循环表。</p>
+<p>双向链表的循环带头结点的空链表如图</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210426182916.png" alt="image-20210426182916417" style="zoom:67%;" />
+<p>非空的循环的带头结点的双向链表如图</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210426183140.png" alt="image-20210426183140725" style="zoom:80%;" />
+<p>双向链表是单链表中扩展出来的结构，所以它的很多操作都和单链表相同，比如求长度的ListLength，查找元素的GetElem，获得元素位置的LocateElem等，这些操作都只要涉及一个方向的指针即可，另一指针多了也不能提供什么帮助。</p>
+<p><strong>插入操作</strong></p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210426184249.png" alt="image-20210426184249675" style="zoom: 50%;" />
+<pre><code class="language-c">s-&gt;prior = p;
+s-&gt;next = p-&gt;next;
+p-&gt;next-&gt;prior = s;
+p-&gt;next = s;
+</code></pre>
+<p><strong>删除操作</strong></p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210426184744.png" alt="image-20210426184744728" style="zoom:67%;" />
+<pre><code class="language-c">p-&gt;prior-&gt;next = p-&gt;next;
+p-&gt;next-&gt;prior = p-&gt;prior;
+free(p);
+</code></pre>
+<p>总结：双向链表的结点在空间上占用略多一些，不过它在操作前驱结点的时候有效的提高了算法的时间性能，也就是空间换时间。</p>
+<pre><code class="language-c">//循环双向链表建造
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+
+#define TRUE 1
+#define FALSE 0
+#define OK 1
+#define ERROR 0
+
+typedef int ElemType;
+typedef int Status;
+
+typedef struct Node {
+    ElemType data;
+    struct Node* next;
+    struct Node* prior;
+} Node, *LinkList;
+
+Status createList(LinkList *L, int len);
+Node* createNode(int d);
+void PrintList(LinkList L);
+
+Node* createNode(int d) {
+    LinkList node = (LinkList)malloc(sizeof(Node));
+    node-&gt;data = d;
+    node-&gt;next = NULL;
+    node-&gt;prior = NULL;
+    return node;
+}
+
+/*
+Status createList(LinkList *L, int len) {
+    LinkList head = createNode(rand() % 100 + 1), p, last = head;
+    int i;
+    for(i = 0; i&lt;len; i++) {
+        p = createNode(rand() % 100 + 1);
+        last-&gt;next = p;
+        p-&gt;prior = last;
+        last = p;
+    }
+    last-&gt;next = head;
+    head-&gt;prior = last;
+    *L = head;
+}*/
+
+Status createList(LinkList *L, int len) {
+    LinkList *L = createNode(rand() % 100 + 1), p, last = *L;
+    int i;
+    for(i = 0; i&lt;len; i++) {
+        p = createNode(rand() % 100 + 1);
+        last-&gt;next = p;
+        p-&gt;prior = last;
+        last = p;
+    }
+    last-&gt;next = head;
+    head-&gt;prior = last;
+}
+
+void PrintList(LinkList L) {
+    LinkList p = L;
+    while((p = p-&gt;next) != L)
+        printf(&quot;%d &quot;, p-&gt;data);
+    printf(&quot;\n&quot;);
+    p = L;
+    while((p = p-&gt;prior)!=L) 
+        printf(&quot;%d &quot;, p-&gt;data);
+    printf(&quot;\n&quot;);
+}
+
+int main() {
+    srand(time(NULL));
+    LinkList list;
+    createList(&amp;list, 10);
+    PrintList(list);
+    return 0;
+}
+</code></pre>
+<h2 id="38-总结">3.8 总结</h2>
+<p>本章主要讲解的是线性表。</p>
+<p>有多种类型的线性表：顺序存储结构的线性表，单链表，单循环链表，双向链表，双循环链表，双链表，静态链表。</p>
+<p>线性表是具有零个或多个具有相同类型的数据元素的有限序列。然后谈了关于线性表的抽象数据类型，如它的一些基本操作。</p>
+<h1 id="第四章栈与队列">第四章：栈与队列</h1>
+<p>定义：栈是限定仅在表尾进行插入和删除操作的线性表；队列是只允许在一端进行插入操作，而另一端则进行删除操作的线性表；</p>
+<h2 id="41-栈的定义">4.1 栈的定义</h2>
+<p><strong>栈的定义</strong></p>
+<p>栈与手枪弹夹相似，后装进去的子弹先发射。栈的应用十分广泛，例如浏览器的后退键，word的撤销操作，也是这种方式来实现的。当然不同的软件具体实现代码会有很大差异，不过他们的原理思想都是一样的。</p>
+<p>栈；是限定仅在表尾进行插入和删除操作的线性表。</p>
+<p>我们把允许插入和删除的一端称为栈顶（top），另一端称为栈底（bottom），不含任何数据元素的栈称为空栈。栈又称为后进先出（Last In First Out）的线性表，简称LIFO结构。</p>
+<p>首先它是一个线性表，也就是说，栈元素具有线性关系，即前驱后继关系。只不过它是一种特殊的线性表而已。特殊之处就在于限制了线性表的插入和删除位置，它始终只在栈顶进行。</p>
+<p>栈的插入操作，叫作进栈，也称压栈，入栈。</p>
+<p>栈的删除操作，叫作出栈，也有点叫做弹栈。</p>
+<figure data-type="image" tabindex="11"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210429163234.png" alt="image-20210429163234159" loading="lazy"></figure>
+<p><strong>栈的抽象数据类型</strong></p>
+<pre><code class="language-c">ADT 栈(stack)
+Data
+    同线性表，元素具有相同的类型，相邻元素具有前驱和后继关系
+Operation
+    InitStack(*S);
+    DestroyStack(*S);
+    ClearStack(*S);
+    StackEmpty(S);
+    GetTop(S, *e);   //弹出S的栈顶元素
+    Push(*S, e);
+    Pop(*S, *e);
+    StackLength(S);
+endADT
+</code></pre>
+<ul>
+<li>而由于栈本身是一个线性表，那么上一章的线性表的顺序存储结构与链式存储结构，对于栈来说也同样适用。</li>
+</ul>
+<h2 id="42-栈之顺序存储结构">4.2 栈之顺序存储结构</h2>
+<p>栈的结构定义</p>
+<pre><code class="language-c">typedef int SElemType;
+typedef struct {
+    SElemType data[MAXSIZE];
+    int top;
+} SqStack;
+</code></pre>
+<p><strong>进栈操作</strong></p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210429164510.png" alt="image-20210429164510681" style="zoom:50%;" />
+<pre><code class="language-c">Status Push(SqStack *S, SElemType e) {
+    if(S-&gt;top == MAXSIZE - 1)
+        return ERROR;
+    S-&gt;data[++S-&gt;top] = e;
+    return OK;
+}
+</code></pre>
+<p><strong>出栈操作</strong></p>
+<pre><code class="language-c">Status Pop(SqStack *S, SElemType e) {
+    if(S-&gt;top == -1)
+        return ERROR;
+    *e = S-&gt;data[S-&gt;top];
+    S-&gt;top--;
+    return OK;
+}
+</code></pre>
+<p>由于两端代码都没有用到任何循环语句，因此时间复杂度为O(1)；</p>
+<h2 id="旧代码">旧代码</h2>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#define MAXSIZE 10
+#define OK 1
+#define ERROR 0
+
+typedef int ElemType;
+
+typedef struct Stack {
+    ElemType data[MAXSIZE];
+    int top;
+} Stack;
+
+typedef int Status;
+
+void initStack(Stack *S) {
+    S-&gt;top = 0;
+}
+
+Status StackPush(Stack *S, ElemType e) {
+    if(S-&gt;top==MAXSIZE) return ERROR;    
+    S-&gt;data[S-&gt;top++] = e;
+    return OK;
+}
+
+Status StackPop(Stack *S) {
+    if(S-&gt;top==0) return ERROR;
+    --(S-&gt;top);
+    return OK;
+}
+
+void print(Stack *S) {
+    int i;
+    for(i = 0; i&lt;S-&gt;top; i++) {
+        printf(&quot;%d &quot;, S-&gt;data[i]);
+    }
+    printf(&quot;\n&quot;);
+}
+
+int main() {
+    Stack s;
+    initStack(&amp;s);
+    StackPush(&amp;s, 9);
+    StackPush(&amp;s, 567);
+    StackPop(&amp;s);
+    print(&amp;s);
+    
+    return 0;
+}
+</code></pre>
+<h2 id="43-栈之链式存储结构">4.3 栈之链式存储结构</h2>
+<p>栈的链式存储结构定义</p>
+<pre><code class="language-c">typedef struct StackNode {
+    SElemType data;
+    struct StackNode* next;
+} StackNode, *LinkStackPtr;
+
+typedef struct LinkStack {
+    LinkStackPtr top;
+    int count;
+} LinkStack;
+</code></pre>
+<p><strong>进栈操作</strong></p>
+<pre><code class="language-c">StackNode* createNode(SElemType d) {
+    LinkStackPtr node = (LinkStackPtr)malloc(sizeof(StackNode));
+    node-&gt;next = NULL;
+    node-&gt;data = d;
+    return node;
+}
+
+Status Push(LinkStack *S, SElemType e) {
+    LinkStackPtr node = createNode(rand() % 100 + 1);
+    node-&gt;next = S-&gt;top;
+    S-&gt;top = node;
+    S-&gt;count++;
+    return OK;
+}
+</code></pre>
+<p><strong>出栈操作</strong></p>
+<pre><code class="language-c">Status Pop(LinkStack *S, SElemType *e) {
+    if(StackEmpty(*S))
+        return ERROR;
+    LinkStackPtr p = S-&gt;top;
+    *e = p-&gt;data;
+    S-&gt;top = p-&gt;next;
+    free(p);
+    S-&gt;count--;
+    return OK;
+}
+
+//书中的：
+Status Pop(LinkStack *S, SElemType *e) {
+    if(StackEmpty(*S))
+        return ERROR;
+    LinkStackPtr p = S-&gt;top;
+    *e = S-&gt;top-&gt;data;
+    S-&gt;top = S-&gt;top-&gt;next;
+    free(p);
+    S-&gt;count--;
+    return OK;
+}
+</code></pre>
+<p><strong>创建栈（自己写的）</strong></p>
+<pre><code class="language-c">StackNode* createNode(SElemType d) {
+    LinkStackPtr node = (LinkStackPtr)malloc(sizeof(StackNode));
+    node-&gt;next = NULL;
+    node-&gt;data = d;
+    return node;
+}
+
+Status createStack(LinkStack *S, int len) {
+    S-&gt;top = NULL;
+    S-&gt;count = 0;
+    int i;
+    for(i = 0; i&lt;len; i++)
+        Push(S, rand() % 100 + 1);
+    return OK;
+}
+</code></pre>
+<p>综合代码测试</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+
+#define TRUE 1
+#define FALSE 0
+#define OK 1
+#define ERROR 0
+
+typedef int SElemType;
+typedef int Status;
+typedef int BOOL;
+
+typedef struct StackNode {
+    SElemType data;
+    struct StackNode* next;
+} StackNode, *LinkStackPtr;
+
+typedef struct LinkStack {
+    LinkStackPtr top;
+    int count;
+} LinkStack;
+
+StackNode* createNode(SElemType d);
+Status Push(LinkStack *S, SElemType e);
+Status Pop(LinkStack *S, SElemType *e);
+Status createStack(LinkStack *S, int len);
+Status ClearStack(LinkStack *S); 
+BOOL StackEmpty(LinkStack S);
+int ListLength(LinkStack S);
+
+BOOL StackEmpty(LinkStack S) {
+    return S.count==0;
+}
+
+StackNode* createNode(SElemType d) {
+    LinkStackPtr node = (LinkStackPtr)malloc(sizeof(StackNode));
+    node-&gt;next = NULL;
+    node-&gt;data = d;
+    return node;
+}
+
+Status Push(LinkStack *S, SElemType e) {
+    LinkStackPtr node = createNode(rand() % 100 + 1);
+    node-&gt;next = S-&gt;top;
+    S-&gt;top = node;
+    S-&gt;count++;
+    return OK;
+}
+
+Status Pop(LinkStack *S, SElemType *e) {
+    if(StackEmpty(*S))
+        return ERROR;
+    LinkStackPtr p = S-&gt;top;
+    *e = p-&gt;data;
+    S-&gt;top = p-&gt;next;
+    free(p);
+    S-&gt;count--;
+    return OK;
+}
+
+Status createStack(LinkStack *S, int len) {
+    S-&gt;top = NULL;
+    S-&gt;count = 0;
+    int i;
+    for(i = 0; i&lt;len; i++)
+        Push(S, rand() % 100 + 1);
+    return OK;
+}
+
+void Print(LinkStack S) {
+    LinkStackPtr p = S.top;
+    while(p) {
+        printf(&quot;%d &quot;, p-&gt;data);
+        p = p-&gt;next;
+    }
+    printf(&quot;\n&quot;);
+    /*与下面这句不同
+    while(p = p-&gt;next);//这个会直接到null。如果要找栈底，应该是下面这个：
+    while(p-&gt;next) {
+       p = p-&gt;next;
+    }
+    */  
+}
+
+Status ClearStack(LinkStack *S) {
+    if(StackEmpty(*S))
+        return ERROR;
+    int i, len = S-&gt;count;
+    SElemType e;
+    printf(&quot;元素依次出栈：&quot;);
+    for(i = 0; i&lt;len; i++) {     //这里不能直接使用S-&gt;count啊，因为它会发生变化
+        Pop(S, &amp;e);
+        printf(&quot;%d &quot;, e);
+    }
+    S-&gt;count = 0;
+}
+
+int ListLength(LinkStack S) {
+    return S.count;
+}
+
+Status GetTop(Linkstack S) {
+    
+}
+
+int main() {
+    srand(time(NULL));
+    LinkStack list;
+    createStack(&amp;list, 10);
+    Print(list);
+    ClearStack(&amp;list);
+    printf(&quot;栈的长度是%d\n&quot;, ListLength(list));
+    Print(list);
+    return 0;
+}
+</code></pre>
+<h2 id="旧代码-2">旧代码</h2>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt; 
+#define MAXSIZE 10
+#define OK 1
+#define ERROR 0
+#define TRUE
+#define FALSE
+
+typedef int SElemType;
+
+typedef struct StackNode {
+    SElemType data;
+    struct StackNode* next;
+} StackNode, *LinkStackPtr;
+
+typedef struct LinkStack {
+    LinkStackPtr top;
+    int count;
+} LinkStack;
+
+typedef int Status;
+
+LinkStackPtr createNode(int data) {
+    LinkStackPtr s = (LinkStackPtr)malloc(sizeof(StackNode));
+    s-&gt;data = data;
+    s-&gt;next = NULL;
+    return s;
+}
+
+Status Push(LinkStack *S, SElemType e) {
+    
+    LinkStackPtr p = createNode(e);
+    p-&gt;next = S-&gt;top;
+    S-&gt;top = p;
+    S-&gt;count++;
+    return OK;
+}
+
+void print(LinkStack *S) {
+    LinkStackPtr t = S-&gt;top;
+    while(t) {
+        printf(&quot;%d &quot;, t-&gt;data);
+        t = t-&gt;next;
+    }
+}
+
+int InitStack(LinkStack *pS) {
+    pS-&gt;top = NULL;
+    pS-&gt;count = 0;
+    return OK;
+}
+
+Status Pop(LinkStack *S, SElemType *e) {
+    printf(&quot;\n&quot;);
+    if(S-&gt;count==0) return ERROR;
+    *e = S-&gt;top-&gt;data;
+    LinkStackPtr p = S-&gt;top;
+    S-&gt;top = S-&gt;top-&gt;next;
+    free(p);
+    S-&gt;count--;
+    return OK;
+}
+
+int StackLength(LinkStack S) {
+    return S-&gt;count;
+}
+
+
+
+
+
+
+
+
+int main() {
+    LinkStack s;
+    InitStack(&amp;s);
+    
+    int i;
+	srand(time(NULL));
+    for(i = 0; i&lt; 10; i++) {
+    	Push(&amp;s, rand()%100+1);
+	}
+	
+	printf(&quot;\n%d\n&quot;, s.count);
+    
+    
+    print(&amp;s);
+    int e;
+    Pop(&amp;s, &amp;e);
+    print(&amp;s);
+    printf(&quot;e = %d&quot;, e);
+    
+    
+    
+    
+    return 0;
+}
+</code></pre>
+<h2 id="44-栈的应用-递归">4.4 栈的应用-递归</h2>
+<p><strong>斐波那契数列实现</strong></p>
+<pre><code class="language-c">int F(int n) {
+    if(n==1) return 1;
+    if(n==0) return 0;
+    // if(n&lt;2) return n == 0? 0:1
+    return F(n - 1) + F(n-2);
+}
+
+/*原来的
+int main() {
+    int a[41] = {a[0] = 0, 1}, i;
+    for(i = 2; i&lt;41; i++) a[i] = a[i-1] + a[i-2];
+    
+    for(i = 0; i&lt;41; i++) {//执行42次
+        printf(&quot;%d &quot;, a[i]);//执行41次
+    }
+
+    return 0;
+}
+*/
+
+
+int main() {
+    int i;
+    for(i = 1; i&lt;41; i++) printf(&quot;%d &quot;, F(i));  
+    return 0;
+}
+</code></pre>
+<p>阶乘</p>
+<pre><code class="language-c">int N(int n) {
+    if(n&lt;=1) return 1;
+    return N(n - 1) * n;
+}
+</code></pre>
+<p>求和</p>
+<pre><code class="language-c">int Sum(int n) {
+    if(n==1) return 1;
+    return n + Sum(n-1);
+}
+</code></pre>
+<p>递归最重要的三要素</p>
+<ul>
+<li>重复：重复的语句是什么？</li>
+<li>边界：到哪里开始回归？</li>
+<li>变化：数值怎样变化？怎样往边界靠近？</li>
+</ul>
+<p>递归和循环可以相互转换</p>
+<h2 id="45-栈的应用-四则运算表达式求值">4.5 栈的应用-四则运算表达式求值</h2>
+<h3 id="一中缀表达式">一，中缀表达式</h3>
+<p>表达式根据运算符在操作数的位置分为中缀，后缀，前缀表达式。而中缀表达式就是我们人类使用的，例如3+2，2*8等。</p>
+<h3 id="二后缀表达式">二，后缀表达式</h3>
+<p>诸如2 8 *，6 8 × 2 - 9 10 + 2 × +与9 3 1 - 3 * + 10 2 / +之类的。它们的计算机结果依次是16，84，20；</p>
+<p><strong>后缀表达式的计算机求值：</strong><br>
+与前缀表达式类似，只是顺序是从左至右：从左至右扫描表达式，遇到数字时，将数字压入堆栈，遇到运算符时，弹出栈顶的两个数，用运算符对它们做相应的计算（次顶元素 op 栈顶元素），并将结果入栈；重复上述过程直到表达式最右端，最后运算得出的值即为表达式的结果。<br>
+例如后缀表达式“3 4 + 5 × 6 -”：</p>
+<ul>
+<li>(1) 从左至右扫描，将3和4压入堆栈；</li>
+<li>(2) 遇到+运算符，因此弹出4和3（4为栈顶元素，3为次顶元素，注意与前缀表达式做比较），计算出3+4的值，得7，再将7入栈；</li>
+<li>(3) 将5入栈；</li>
+<li>(4) 接下来是×运算符，因此弹出5和7，计算出7×5=35，将35入栈；</li>
+<li>(5) 将6入栈；</li>
+<li>(6) 最后是-运算符，计算出35-6的值，即29，由此得出最终结果。</li>
+</ul>
+<p>求值注意：</p>
+<ul>
+<li>后缀求值是：次顶 op 栈顶元素；从左到右</li>
+<li>前缀求值是：栈顶op次顶元素；从右到左</li>
+</ul>
+<p>中缀转表达式注意：</p>
+<ul>
+<li>转去后缀：从左到右扫，在扫到运算符，而如果它是优先级高于栈顶才入栈</li>
+<li>转去前缀：从右到左扫，扫完后需要将结果翻转，在扫描到运算符时，如果它的优先级时等于高于栈顶才入栈。</li>
+<li>共同点：当运算符需要出栈的时候，都是从栈顶依次往下出栈的。</li>
+</ul>
+<p>中缀转换为后缀表达式的方法（案例：9+（3-1）×3+10÷2，6×8-2+(9+10)×2，(3 + 4) × 5 - 6 ）</p>
+<ul>
+<li>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210429203802.jpeg" alt="img" style="zoom:67%;" />
+</li>
+</ul>
+<h3 id="三前缀表达式">三，前缀表达式</h3>
+<p><strong>前缀表达式的计算机求值</strong><br>
+从右至左扫描表达式，遇到数字时，将数字压入堆栈，遇到运算符时，弹出栈顶的两个数，用运算符对它们做相应的计算（栈顶元素 op 次顶元素），并将结果入栈；重复上述过程直到表达式最左端，最后运算得出的值即为表达式的结果。例如前缀表达式“- × + 3 4 5 6”：</p>
+<ul>
+<li>(1) 从右至左扫描，将6、5、4、3压入堆栈；</li>
+<li>(2) 遇到+运算符，因此弹出3和4（3为栈顶元素，4为次顶元素，注意与后缀表达式做比较），计算出3+4的值，7，再将7入栈；</li>
+<li>(3) 接下来是×运算符，因此弹出7和5，计算出7×5=35，将35入栈；</li>
+<li>(4) 最后是-运算符，计算出35-6的值，即29，由此得出最终结果。</li>
+<li>可以看出，用计算机计算前缀表达式的值是很容易的。</li>
+</ul>
+<p><strong>将中缀表达式转换为前缀表达式：</strong><br>
+遵循以下步骤：</p>
+<ul>
+<li>
+<p>(1) 初始化两个栈：运算符栈S1和储存中间结果的栈S2；</p>
+</li>
+<li>
+<p>(2) 从右至左扫描中缀表达式；</p>
+</li>
+<li>
+<p>(3) 遇到操作数时，将其压入S2；</p>
+</li>
+<li>
+<p>(4) 遇到运算符时，比较其与S1栈顶运算符的优先级：</p>
+<ul>
+<li>(4-1) 如果S1为空，或栈顶运算符为右括号“)”，则直接将此运算符入栈；</li>
+<li>(4-2) 否则，若优先级比栈顶运算符的较高或相等，也将运算符压入S1；</li>
+<li>(4-3) 否则，将S1栈顶的运算符弹出并压入到S2中，再次转到(4-1)与S1中新的栈顶运算符相比较；</li>
+</ul>
+</li>
+<li>
+<p>(5) 遇到括号时：</p>
+<ul>
+<li>(5-1) 如果是右括号“)”，则直接压入S1；</li>
+<li>(5-2) 如果是左括号“(”，则依次弹出S1栈顶的运算符，并压入S2，直到遇到右括号为止，此时将这一对括号丢弃；</li>
+</ul>
+</li>
+<li>
+<p>(6) 重复步骤(2)至(5)，直到表达式的最左边；</p>
+</li>
+<li>
+<p>(7) 将S1中剩余的运算符依次弹出并压入S2；</p>
+</li>
+<li>
+<p>(8) 依次弹出S2中的元素并输出，结果即为中缀表达式对应的前缀表达式。</p>
+</li>
+</ul>
+<h3 id="四练习题与程序实现">四，练习题与程序实现</h3>
+<p>练习题</p>
+<table>
+<thead>
+<tr>
+<th>中缀表达式</th>
+<th>前缀表达式</th>
+<th>后缀表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9+（3-1）×3+10÷2 = 20</td>
+<td>+ 9 + × - 3 1 3 ÷ 10 2</td>
+<td>9 3 1 - 3 × + 10 2 / +</td>
+</tr>
+<tr>
+<td>6×8-2+(9+10)×2 = 84</td>
+<td>+ - × 6 8 2 × + 9 10 2</td>
+<td>6 8 × 2 - 9 10 + 2 × +</td>
+</tr>
+<tr>
+<td>(3 + 4) × 5 - 6 = 29</td>
+<td>- × + 3 4 5 6</td>
+<td>3 4 + 5 × 6 -</td>
+</tr>
+<tr>
+<td>（8+3）×3 + （9+2）×8 = 121</td>
+<td>+ ×+ 8 3 3 × + 9 2 8</td>
+<td>8 3 + 3 × 9 2 + 8 × +</td>
+</tr>
+<tr>
+<td>4 * 3 + 1 - 8 * （2 * 4）= -51</td>
+<td>- + × 4 3 1 × 8 × 2 4</td>
+<td>4 3 × 1 + 8 2 4 × × -</td>
+</tr>
+<tr>
+<td>（（3 * 4 + 8）* 2 + 10）* 2 =  100，从内到外！递归！异曲同工！</td>
+<td>× + × + × 3 4 8 2 10 2</td>
+<td>3 4 × 8 + 2 × 10 + 2 ×</td>
+</tr>
+<tr>
+<td>（7+（78 + 10）* （10+1）/11）+5</td>
+<td>++7÷×+78 10 + 10 1 11 5</td>
+<td>7 78 10 + 10 1 + 11 ÷ × + 5 +</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>下列是将中缀转为前缀的程序</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+typedef struct Node {
+    char data;
+    struct Node* next;
+} Node, *StackNode;
+
+typedef struct {
+    StackNode top;
+    int count;
+} StackList;
+
+int value(char s) {
+    if(s == '+' || s == '-') return 1;
+    else if(s == '*' || s == '/') return 2;
+    else if('0'&lt;=s &amp;&amp; s&lt;='9') return 0;
+    else if(s=='(') return 3;
+    else if(s==')') return 4;
+}
+
+//char opNu[17] = &quot;0123456789+-*/()&quot;;
+//int value[16] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 2, 3, 4};
+
+void init(StackList *S) {
+    S-&gt;top = NULL;
+    S-&gt;count = 0;
+}
+
+char pop(StackList *S) {
+    if(S-&gt;count!=0) {
+        char e = S-&gt;top-&gt;data;
+        StackNode p = S-&gt;top;
+        S-&gt;top = S-&gt;top-&gt;next;
+        free(p);
+        return e;
+    }
+}
+
+void push(StackList *S, char e) {
+    StackNode node = (StackNode)malloc(sizeof(Node));
+    node-&gt;data = e;
+    node-&gt;next = S-&gt;top;
+    S-&gt;top = node;
+    S-&gt;count++;
+} 
+
+char getTop(StackList S) {
+    return (S.top)-&gt;data;
+}
+
+void print(StackList S) {
+    StackNode p = S.top;
+    while(p) {
+        printf(&quot;%c&quot;, p-&gt;data);
+        p = p-&gt;next;
+    }
+    printf(&quot;\n&quot;);
+}
+
+//做一个函数，用于等整个循环结束后，将s1剩下的运算符搞到s2里去
+void end(StackList *Sa, StackList *Sb) {
+    while(Sa-&gt;top) {
+        push(Sb, getTop(*Sa));
+        pop(Sa);
+    }
+} 
+
+void kh(StackList *Sa, StackList *Sb) {
+	while(Sa-&gt;top-&gt;data!=')') {
+		push(Sb, Sa-&gt;top-&gt;data);
+		pop(Sa);
+	}
+	pop(Sa);
+}
+
+int main() {
+    char str[20];
+    scanf(&quot;%18s&quot;, str);
+    
+    StackList s1, s2; //s1 is for op; s2 is for number and result
+    init(&amp;s1);
+    init(&amp;s2);
+    
+    //由中缀转前缀
+    int i;
+    for(i = strlen(str) - 1; i&gt;=0; i--) {
+        switch(value(str[i])) {         
+            case 0:
+                push(&amp;s2, str[i]);
+                break;
+            default:           	  
+                if(s1.count==0||value(str[i])==4||value(getTop(s1))==4) {//
+                	push(&amp;s1, str[i]);
+                	
+				} else if(value(str[i])==3) {
+					kh(&amp;s1, &amp;s2);
+				}else if(value(str[i])&gt;=value(getTop(s1))) {
+					push(&amp;s1, str[i]);
+				} else  {
+					end(&amp;s1, &amp;s2);
+					push(&amp;s1, str[i]);
+			    }
+				break;
+        }  
+		print(s1);
+		print(s2);
+		printf(&quot;----------------------------\n&quot;);
+	     
+    }
+    end(&amp;s1, &amp;s2);
+    
+    print(s2);
+    return 0;
+}
+</code></pre>
+<h2 id="46-队列内容为空">4.6 队列（内容为空）</h2>
+<h1 id="第五章字符串">第五章：字符串</h1>
+<h1 id="第六章树">第六章：树</h1>
+<p>定义：树（Tree）是n（n≥0）个结点的有限集。n=0时称为空树。在任意一棵非空树中：</p>
+<ul>
+<li>（1）有且仅有一个特定的称为根（root）的结点</li>
+<li>（2）当n&gt;1时，其余结点可分为m（m＞0）个互不相交的有限集T1，T2.。。其中每一个集合本身又是一棵树，并且称为根的子树（SubTree）。</li>
+</ul>
+<h2 id="61-树的定义">6.1 树的定义</h2>
+<p>定义：树（Tree）是n（n≥0）个结点的有限集。n=0时称为空树。在任意一棵非空树中：</p>
+<ul>
+<li>（1）有且仅有一个特定的称为根（root）的结点</li>
+<li>（2）当n&gt;1时，其余结点可分为m（m＞0）个互不相交的有限集T1，T2.。。其中每一个集合本身又是一棵树，并且称为根的子树（SubTree）。</li>
+</ul>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513010725.png" style="zoom:50%;" />
+<figure data-type="image" tabindex="12"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513010906.png" alt="" loading="lazy"></figure>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513010953.png" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513011026.png" style="zoom:50%;" />
+<p><strong>结点分类</strong></p>
+<img src="C:/Users/ywu66/AppData/Roaming/Typora/typora-user-images/image-20210513011249947.png" alt="image-20210513011249947" style="zoom:50%;" />
+<p><strong>结点间关系</strong></p>
+<p>结点的子树的根称为该结点的孩子（child），相应的，该结点称为孩子的双亲（parent）。同一个双亲的孩子之间互称兄弟（sibling）。结点的祖先是从根到该结点所经分支上的所有结点。</p>
+<figure data-type="image" tabindex="13"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513014829.png" alt="" loading="lazy"></figure>
+<ul>
+<li>所以对于H来说，D，B，A都是它的祖先。</li>
+<li>反之，<strong>以某结点为根的子树</strong>中的任一结点都称为该结点的子孙。B的子孙有D，G，H，I。</li>
+</ul>
+<p><strong>树的其他相关概念</strong></p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513015753.png" style="zoom: 80%;" />
+<p><strong>对比线性表与树的结构</strong></p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513020014.png" style="zoom:67%;" />
+<p><strong>树的抽象数据类型</strong></p>
+<p>给出了一些基本和常用的操作</p>
+<pre><code>ADT 树(tree)
+Data
+  树是由一个根节点和若干棵子树构成的。树中的结点具有相同数据类型及层次关系
+Operation
+  InitTree(*T): 构造空树T
+  DestroyTree(*T): 销毁树T
+  CreateTree(*T, definition): 按definition中给出的树的定义来构造树
+  ClearTree(*T): 若树T存在，则将树T清为空树
+  TreeEmpty(T): 若T为空树，则返回true，否则返回false
+  TreeDepth(T): 返回T的深度
+  Root(T): 返回T的根结点
+  Value(T, cur_e): cur_e是树T中一个结点，返回此结点的值
+  Assign(T, cur_e, value): 给树T的结点cur_e赋值为value
+  Parent(T, cur_e, value): 若cur_e是树T的非根结点，则返回它的双亲，否则返回空
+  LeftChild(T, cur_e): 若cur_e是树T的非叶节点，则返回它的最左孩子，否则返回空
+  RightSibling(T, cur_e): 若cur_e有右兄弟，则返回它的右兄弟，否则返回空
+  InsertChild(*T, *p, i, c): 其中p指向树T的某个结点，i为所指结点p第i课子树，非空树c与T不相交，操作结构为插入c为树T中P结点的第i课子树
+  DeleteChild(*T, *p, i): 其中p指向树T的某个结点，i为所指结点p的度，操作结果为删除T中P所指结点的第i课子树
+endADT
+</code></pre>
+<h2 id="62-树的存储结构">6.2 树的存储结构</h2>
+<h3 id="621-双亲表示法">6.2.1 双亲表示法</h3>
+<p>我们假设以一组连续空间存储树的结点，同时在每个结点中，附设一个指示器指示其双亲结点到链表中的位置。</p>
+<p>结点结构：data-parent（data是数据域，parent是指针域）</p>
+<p>结点的结构定义代码</p>
+<pre><code class="language-c">#define MAX_TREE_SIZE 100
+typedef int TElemType;
+typedef struct PTNode {
+    TElemType data;
+    int parent;
+} PHNode;
+typedef struct {
+    PHNode nodes[MAX_TREE_SIZE];
+    int r, n;
+} PTree;
+</code></pre>
+<p>例子：</p>
+<figure data-type="image" tabindex="14"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513021731.png" alt="" loading="lazy"></figure>
+<p>这样的存储结构，我们可以根据结点的parent指针就能很快的找到它的双亲结点，时间复杂度为O（1），而直到parent为-1时，表示找到了树结点的根。</p>
+<p>但当我们想要知道结点的孩子是什么，就得遍历整个结构了。</p>
+<p>那么就有了以下想法</p>
+<ul>
+<li>我们就增加一个结点最左边孩子的域，叫其为长子域，而如果这个结点没有孩子，则长子域就设置为-1。</li>
+</ul>
+<figure data-type="image" tabindex="15"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513022446.png" alt="" loading="lazy"></figure>
+<ul>
+<li>这样的结构是为了解决要找结点孩子的问题，甚至有2个孩子以上，而知道了长子是谁，找次子当然就简单了（只需要加1加1这样下去找）</li>
+</ul>
+<p>那么还有另一个问题，要找一个结点的兄弟呢？双亲表示法没有办法体现这样的关系。</p>
+<ul>
+<li>所以我们可以增加一个右兄弟域来体现兄弟之间的关系。也就是说如果一个结点存在它的右兄弟，则记录下右兄弟的坐标，否则赋值为-1；</li>
+</ul>
+<figure data-type="image" tabindex="16"><img src="C:/Users/ywu66/AppData/Roaming/Typora/typora-user-images/image-20210513022742448.png" alt="image-20210513022742448" loading="lazy"></figure>
+<p>而如果结点的孩子很多，我们又需要关注结点的双亲，又关注结点的兄弟，而且对时间遍历要求还比较高，那么我们可以把此结构扩展为有双亲域，长子域，再有右兄弟域。</p>
+<p><strong>存储结构的设计是一个非常灵活的过程，一个存储结构设计的是否合理，取决于基于该存储结构的运算是否合适，是否方便，时间复杂度好不好等。</strong></p>
+<h3 id="622-孩子表示法">6.2.2 孩子表示法</h3>
+<p>由于每个结点可能有多颗子树，可以考虑用多重链表，即每个结点有多个指针域，其中每个指针指向一颗子树的根结点，我们把这种方法叫做多重链表表示法。不过，树的每个结点的度，也就是它的孩子个数是不同的。所以可以设计两种方案来解决。</p>
+<p>方案一：</p>
+<p>一种是指针域就等于树的度（树的度是树的各个结点的最大值）。</p>
+<p>结构表示：data-child1-child2-child3-childd（child是指针域）</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513100126.png" alt="image-20210513100119362" style="zoom:67%;" />
+<ul>
+<li>但是这种方法对于树中个结点的度相差很大，显然是浪费空间，因为有很多的结点，它的指针域都是空的。不过如果树的各结点度相差很小时，那就意味着开辟的空间被充分利用了，这时存储结构的缺点反而变成了优点。</li>
+</ul>
+<p>而由于这个指针域或许很多会为空，所以我们有了第二种方案，即按需求去分配空间。</p>
+<p>方案二</p>
+<p>让每一个结点指针域的个数等于该结点的度，我们又专门取一个位置来存储结点的指针域的个数</p>
+<p>结构表示：data-degree-child1-child2...childd（degree为度域，也就是存储该结点的孩子结点的个数）</p>
+<img src="C:/Users/ywu66/AppData/Roaming/Typora/typora-user-images/image-20210513100950159.png" alt="image-20210513100950159" style="zoom: 67%;" />
+<p>这种方法克服了浪费空间的缺点，对空间利用率是很高了，但是由于各个结点的链表是不同结构，加上要维护结点的度的数值，在运算上就会带来时间上的损耗。</p>
+<p>能否有更好的办法，既可以减少空指针的浪费又能使结点结构相同（上面这个会因为结点的度不同而结构不同，这样会很乱）</p>
+<p>那就是取建立一个单链表去体现每个结点的孩子的关系</p>
+<p>这也就是我们要讲的孩子表示法。具体办法是把每个结点的孩子结点排列起来，以单链表作存储结构，则n个结点有n个孩子链表，如果是叶子结点则此单链表为空。然后n个头指针（那些孩子的双亲）又组成一个线性表，采用顺序存储结构，存放进一个一维数组中。</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513102742.png" alt="image-20210513102735158" style="zoom:67%;" />
+<p>为此，设计两种结点结构，一个是孩子链表的孩子结构：child-next</p>
+<p>其中child是数据域，用来存储某个结点在表头数组中的下标。next是指针域，用来存储指向某个结点的下一个孩子的结点的指针。</p>
+<p>另一个是表头数组的表头（头指针）结构：data-firstchild（其中data是数据域，存储某结点的数据信息。firstchild是头指针域，存储该结点的孩子链表的头指针。</p>
+<p>孩子表示法的结构定义</p>
+<pre><code class="language-c">#define MAX_TREE_SIZE 100
+typedef struct CTNode {
+    int child;
+    struct CTNode *next;
+} *ChildPtr;
+typedef struct {
+    TElemType data;
+    ChildPtr firstchild;
+} CTBox;
+typedef struct {
+    CTBox nodes[MAX_TREE_SIZE];
+    int r, n;
+} CTree;
+</code></pre>
+<p>这样的结构对于我们要查找某个结点的某个孩子，或者找某个结点的兄弟，只需要查找这个结点的孩子单链表即可。对于遍历整棵树也是很方便的，对头结点的数组循环即可。</p>
+<p>但是，我们如何知道某个结点的双亲是谁呢？比较麻烦，需要遍历整课树才行，难道就不能把双亲表示法和孩子表示法综合以下吗？当然是可以的</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513103825.png" alt="image-20210513103811605" style="zoom: 80%;" />
+<p>我们把这种方法称为双亲孩子表示法，应该算是孩子表示法的改进。</p>
+<h3 id="623-孩子兄弟表示法">6.2.3 孩子兄弟表示法</h3>
+<p>任意一棵树，它的结点的第一个孩子如果存在就是唯一的，它的右兄弟也是唯一的。因此，我们设置两个指针，分别指向该结点的第一个孩子和此结点的右兄弟</p>
+<p>结点结构：data-firstchild-rightsib</p>
+<pre><code class="language-c">typedef struct CSNode {
+    TElemType data;
+    struct CSNode *firstchild, *rightsib;
+} CSNode, *CSTree;
+</code></pre>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513150356.png" alt="image-20210513150351423" style="zoom:67%;" />
+<p>如果想找双亲的话，就增加一个parent指针域来解决快速查找双亲</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513150615.png" alt="image-20210513150611568" style="zoom:50%;" />
+<h2 id="63-二叉树的定义">6.3 二叉树的定义</h2>
+<p>二叉树查找算法，时间复杂度为log2(n)，在100以内查找7次保证能够猜出相应的数字来</p>
+<p>二叉树（binary tree）是n（n≥0）个结点的有限集合，该集合或者为空集（称为空二叉树），或者由一个根结点和两棵互不相交的，分别称为根结点的左子树和右子树的二叉树组成。</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513171508.png" alt="image-20210513171455101" style="zoom:50%;" />
+<p><strong>二叉树特点</strong></p>
+<p>二叉树特点有</p>
+<ul>
+<li>每个结点最多有两颗子树，所以二叉树中不存在度大于2的结点。注意不是只有两颗子树，而是最多有。没有子树或者有一棵子树的情况都是可以的。</li>
+<li>左子树和右子树是有顺序的，次序不能任意颠倒。</li>
+<li>即使树中某结点只有一棵子树，也要区分它是左子树还是右子树。</li>
+</ul>
+<p><strong>二叉树具有的五种基本形态</strong></p>
+<ul>
+<li>空二叉树</li>
+<li>只有一个根结点</li>
+<li>根结点只有左子树</li>
+<li>根结点只有右子树</li>
+<li>根结点既有左子树又有右子树</li>
+</ul>
+<figure data-type="image" tabindex="17"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513171936.png" alt="image-20210513171934709" loading="lazy"></figure>
+<p>那么如果有三个结点的树呢？有几种形态？从形态上考虑，三个结点的树只有两种情况，那就是树一，和后面四种中的任意一种（按深度来划分）。而对于二叉树来说，由于要区分左右，所以就演变成五种形态，后面四种分别代表了不同的二叉树。</p>
+<p><strong>特殊二叉树</strong></p>
+<p>1.斜树</p>
+<ul>
+<li>
+<p>顾名思义，斜树一定要是斜的，但是往哪边斜是有讲究的。</p>
+</li>
+<li>
+<p>左斜树：所有结点只有左子树的二叉树（上面的树2）</p>
+</li>
+<li>
+<p>右斜树：所有结点只有右子树的二叉树（上面的树5）</p>
+</li>
+<li>
+<p>斜树有一个很明显的特点，即每一层都只有一个结点，结点的个数与二叉树的深度相同。而我们也可以把线性表理解为是树的一种及其特殊的表现形式。</p>
+</li>
+</ul>
+<p>2.满二叉树</p>
+<figure data-type="image" tabindex="18"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513172655.png" alt="image-20210513172654159" loading="lazy"></figure>
+<p>在一棵二叉树中，如果所有分支结点都存在左子树和右子树，并且所有叶子都在同一层上，这样的二叉树称为满二叉树。</p>
+<figure data-type="image" tabindex="19"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513173721.png" alt="image-20210513173719785" loading="lazy"></figure>
+<p>3.完全二叉树</p>
+<p>对一棵具有n个结点的二叉树按层次序编号，如果编号为i（i≤i≤n）的结点与同样深度的满二叉树为i的结点在二叉树中位置完全相同，则这棵二叉树称为完全二叉树。</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513175117.png" alt="image-20210513175116107" style="zoom:67%;" />
+<p>首先，满二叉树一定是一颗完全二叉树，但完全二叉树不一定是满的</p>
+<figure data-type="image" tabindex="20"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513175731.png" alt="image-20210513175729303" loading="lazy"></figure>
+<figure data-type="image" tabindex="21"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513175803.png" alt="image-20210513175759634" loading="lazy"></figure>
+<h2 id="64-二叉树的性质">6.4 二叉树的性质</h2>
+<p>性质1</p>
+<figure data-type="image" tabindex="22"><img src="C:/Users/ywu66/AppData/Roaming/Typora/typora-user-images/image-20210513180045658.png" alt="image-20210513180045658" loading="lazy"></figure>
+<p>性质2</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513180131.png" alt="image-20210513180129802" style="zoom:50%;" />
+<p>性质3</p>
+<p>性质3：对任何一棵二叉树T，如果其终端结点数（叶子结点数）为n<sub>0</sub>，度为2的结点数为n<sub>2</sub>，则n<sub>0</sub>=n<sub>2</sub>+1。</p>
+<p>一棵二叉树，除了叶子结点外，剩下的就是度为1或2的结点数了。则数T结点总数n=n<sub>0</sub>+n<sub>1</sub>+n<sub>2</sub>。</p>
+<figure data-type="image" tabindex="23"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513180912.png" alt="image-20210513180910902" loading="lazy"></figure>
+<figure data-type="image" tabindex="24"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513181228.png" alt="image-20210513181227077" loading="lazy"></figure>
+<p>性质4</p>
+<p>性质4：具有n个结点的完全二叉树的深度为：向下取整（log<sub>2</sub>n）+1。</p>
+<figure data-type="image" tabindex="25"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513181953.png" alt="image-20210513181951910" loading="lazy"></figure>
+<figure data-type="image" tabindex="26"><img src="C:/Users/ywu66/AppData/Roaming/Typora/typora-user-images/image-20210513182011740.png" alt="image-20210513182011740" loading="lazy"></figure>
+<p>性质5</p>
+<figure data-type="image" tabindex="27"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513182156.png" alt="image-20210513182154707" loading="lazy"></figure>
+<ul>
+<li>有这条性质，主要是因为完全二叉树独特的性质，因为它是按编号来的</li>
+</ul>
+<h2 id="65-二叉树的存储结构">6.5 二叉树的存储结构</h2>
+<h3 id="651-二叉树顺序存储结构">6.5.1 二叉树顺序存储结构</h3>
+<p>前面谈到顺序存储对树这一对多的关系结构实现起来是比较困难的。但是二叉树是一种特殊的树，由于它的独特性，使得顺序存储结构也可以实现。</p>
+<p>二叉树的顺序存储结构就是用一维数组来存储二叉树中的结点，并且结点的存储位置，也就是数组下标要能体现结点之间的逻辑关系，比如双亲与孩子的关系，左右兄弟的关系等。</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513203055.png" alt="image-20210513203035520" style="zoom:67%;" />
+<figure data-type="image" tabindex="28"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513203057.png" alt="image-20210513203052226" loading="lazy"></figure>
+<p>当然，对于一般的二叉树，尽管层序编号不能反映逻辑关系，但是可以将其按完全二叉树编号，只不过把不存在的结点设置为“^&quot;而已。</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513203546.png" alt="image-20210513203545010" style="zoom:67%;" />
+<p>考虑一种极端的情况，一颗深度为k的右斜树，它只有k个结点，却需要分配2<sup>k</sup>-1个存储单元空间，这显然是对存储空间的浪费。所以顺序结构一般只用于完全二叉树</p>
+<figure data-type="image" tabindex="29"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513204418.png" alt="image-20210513204417322" loading="lazy"></figure>
+<h3 id="652-二叉链表">6.5.2 二叉链表</h3>
+<p>既然顺序结构的适应性不强，那么就得考虑链式存储结构。二叉树每个结点最多有两个孩子，所以为它设计一个数据域和两个指针域，我们称这样的链表叫做二叉链表。</p>
+<p>结点结构：lchild-data-rchild（左右分别存放相应孩子的指针）</p>
+<p>二叉链表的结点结构定义：</p>
+<pre><code class="language-c">typedef struct BiTNode {
+    TElemType data;
+    struct BigTNode *lchild, *rchild;
+} BiTNode, *BiTree;
+</code></pre>
+<p>结构示意图</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513205029.png" alt="image-20210513205025240" style="zoom:50%;" />
+<p>如果有需要，这里还可以再增加一个指向双亲的指针域，那样就称之为三叉链表。</p>
+<h2 id="66-遍历二叉树">6.6 遍历二叉树</h2>
+<h3 id="661-二叉树遍历原理">6.6.1 二叉树遍历原理</h3>
+<p>对于二叉树的遍历来讲，在有限时间内达到最高效率，次序非常重要。</p>
+<p>二叉树遍历（traversing binary tree）是指从根结点出发，按照某种次序依次访问二叉树中所有结点，使得每个结点被访问一次，且仅被访问一次。</p>
+<p>根据二叉树的遍历次序不同，分为多种方法。</p>
+<h3 id="682-二叉树遍历方法">6.8.2 二叉树遍历方法</h3>
+<p>限制了从左到右的遍历方式后，那么就只剩下以下主要的几种</p>
+<p><strong>1.前序遍历</strong></p>
+<p>规则是若二叉树为空，则空操作返回，否则先访问根结点，然后前序遍历左子树，再谦虚遍历右子树。</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513210143.png" alt="image-20210513210142111" style="zoom:67%;" />
+<p><strong>2.中序遍历</strong></p>
+<p>规则是若二叉树为空，则空操作返回，否则从根结点开始（注意不是先访问根结点），中序遍历根结点的左子树，然后是访问根结点，最后中序遍历右子树。</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513210345.png" alt="image-20210513210344850" style="zoom:67%;" />
+<p><strong>3.后序遍历</strong></p>
+<p>规则是若树为空，则空操作返回，否则从左到右先叶子后结点的方式遍历访问左右子树，最后访问根结点。</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513215627.png" alt="image-20210513215626393" style="zoom:67%;" />
+<p><strong>4.层序遍历</strong></p>
+<p>规则是若树为空，则空操作返回，否则从树的第一层，也就是根结点开始访问，从上而下逐层遍历，在同一层中，按从左到右的顺序对结点逐个访问。</p>
+<figure data-type="image" tabindex="30"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513215914.png" alt="image-20210513215913269" loading="lazy"></figure>
+<h3 id="683-二叉树遍历算法">6.8.3 二叉树遍历算法</h3>
+<p><strong>1.前序遍历算法</strong></p>
+<p>二叉树的定义是用递归的方式，所以，实现遍历算法也可以采用递归，而且及其简洁明了。</p>
+<pre><code class="language-c">void PreOrderTraverse(BiTree T) {
+    if(T==NULL) return;
+    printf(&quot;%c&quot;, T-&gt;data);
+    PreOrderTraverse(T-&gt;lchild);
+    PreOrderTraverse(T-&gt;rchild);
+}
+</code></pre>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513220514.gif" alt="img" style="zoom:67%;" />
+<p><strong>2.中序遍历算法</strong></p>
+<pre><code class="language-c">void PreOrderTraverse(BiTree T) {
+    if(T==NULL) return;    
+    PreOrderTraverse(T-&gt;lchild);
+    printf(&quot;%c&quot;, T-&gt;data);
+    PreOrderTraverse(T-&gt;rchild);
+}
+</code></pre>
+<ul>
+<li>一直往左走，当发现指针为NULL，则返回，打印结点。</li>
+</ul>
+<figure data-type="image" tabindex="31"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513221024.gif" alt="img" loading="lazy"></figure>
+<ul>
+<li>因为找到13后探下去，发现是NULL，才返回打印。</li>
+</ul>
+<p><strong>3.后序遍历算法</strong></p>
+<pre><code class="language-c">void PreOrderTraverse(BiTree T) {
+    if(T==NULL) return;    
+    PreOrderTraverse(T-&gt;lchild);
+    PreOrderTraverse(T-&gt;rchild);
+    printf(&quot;%c&quot;, T-&gt;data);
+}
+</code></pre>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513221630.gif" alt="img" style="zoom:67%;" />
+<h3 id="664-推导遍历结果">6.6.4 推导遍历结果</h3>
+<h2 id="67-二叉树的建立">6.7 二叉树的建立</h2>
+<figure data-type="image" tabindex="32"><img src="C:/Users/ywu66/AppData/Roaming/Typora/typora-user-images/image-20210513222040295.png" alt="image-20210513222040295" loading="lazy"></figure>
+<p>如果我们要在内存中建立一个如左边的二叉树，为了能让每个结点确认是否有左右孩子，我们对它进行了扩展，变成如右边这样的二叉树。也就是将二叉树中每个结点的空指针引出一个虚结点，其值为一个特定值，比如”#“。我们称这种处理后的二叉树为原二叉树的扩展二叉树。扩展二叉树就可以做到一个遍历序列确定一根二叉树了。比如上面这个二叉树的前序遍历序列就为AB#D##C##</p>
+<p>假设二叉树的结点均为一个字符，实现算法如下：下面是前序建立算法</p>
+<pre><code class="language-c">void CreateBiTree(BiTree *T) {
+    TElemType ch;
+    scanf(&quot;%c&quot;, &amp;ch);
+    if(ch=='#') *T = NULL;
+    else {
+        *T = (BiTree)malloc(sizeof(BiTNode));
+        if(!*T) exit(OVERFLOW);
+        (*T)-&gt;data=ch;
+        CreateBiTree(&amp;(*T)-&gt;lchild);
+        CreateBiTree(&amp;(*T)-&gt;rchild);///这里-&gt;的优先级高于&amp;，先-&gt;，*，&amp;
+    }
+}
+</code></pre>
+<h3 id="实现代码">实现代码</h3>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+typedef char TElemType;
+typedef struct BiTNode {
+    TElemType data;
+    struct BiTNode *lchild, *rchild;
+} BiTNode, *BiTree;
+
+void CreateBiTree(BiTree *T) {
+    TElemType ch;
+    scanf(&quot;%c&quot;, &amp;ch);
+    if(ch=='#') *T = NULL;
+    else {
+        *T = (BiTree)malloc(sizeof(BiTNode));
+        if(!*T) exit(OVERFLOW);
+        (*T)-&gt;data=ch;
+        CreateBiTree(&amp;(*T)-&gt;lchild);
+        CreateBiTree(&amp;(*T)-&gt;rchild);///这里-&gt;的优先级高于&amp;，先-&gt;，*，&amp;
+    }
+}
+
+void PreOrderTraverse(BiTree T) {
+    if(T==NULL) return;
+    printf(&quot;%c &quot;, T-&gt;data);
+    PreOrderTraverse(T-&gt;lchild);
+    PreOrderTraverse(T-&gt;rchild);
+}
+
+int main() {
+    BiTree T;
+    CreateBiTree(&amp;T);
+    PreOrderTraverse(T);
+    return 0;
+}
+</code></pre>
+<p>例1：建立以下二叉树</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210513225838.png" alt="image-20210513225813739" style="zoom: 80%;" />
+<p>应该输入：ABDH#K###E##CFI###G#J##<br>
+前序输出：A B D H K E C F I G J</p>
+<p>自己练习：</p>
+<ul>
+<li>构建三函数，反别操作二叉树建立，二叉树搜索，二叉树遍历（前序）</li>
+</ul>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+typedef int TElemType;
+typedef struct BiTNode {
+    TElemType data;
+    struct BiTNode *lchild, *rchild;
+} BiTNode, *BiTree;
+
+void CreateBiTree(BiTree *T) {
+    TElemType ch;
+    scanf(&quot;%d&quot;, &amp;ch);
+    if(ch==-1) *T = NULL;
+    else {
+        *T = (BiTree)malloc(sizeof(BiTNode));
+        if(!*T) exit(1);//exit(OVERFLOW);
+        (*T)-&gt;data=ch;
+        CreateBiTree(&amp;(*T)-&gt;lchild);
+        CreateBiTree(&amp;(*T)-&gt;rchild);///这里-&gt;的优先级高于&amp;，先-&gt;，*，&amp;
+    }
+}
+
+BiTree insert(BiTree *T, int x) {
+    if(!*T) {
+        *T = (BiTree)malloc(sizeof(BiTNode));
+        (*T)-&gt;lchild = (*T)-&gt;rchild = NULL;
+        (*T)-&gt;data = x;
+     } else {
+         if(x&gt;(*T)-&gt;data) {
+             (*T)-&gt;rchild = insert(&amp;(*T)-&gt;rchild, x);
+         } else {
+             (*T)-&gt;lchild = insert(&amp;(*T)-&gt;lchild, x);
+         }
+     }
+    return *T;
+}
+
+BiTree findMax(BitTree T) {
+    if(T-&gt;rchild) return T-&gt;rchild;
+    return T;
+}
+
+BiTree findMin(BiTree T) {//迭代版本
+    while(T-&gt;lchild) T = T-&gt;lchild;
+    return T;
+}
+
+/*
+使用递归遍历；
+* 一直遍历到为空，空就生成一个新的放进去。
+*/
+
+void create(BiTree *T) {
+    int x;
+    scanf(&quot;%d&quot;, &amp;x);
+    if(x==-1) return;
+    else insert(T, x);
+    return create(T);
+}
+
+void PreOrderTraverse(BiTree T) {
+    if(T==NULL) return;
+    printf(&quot;%d &quot;, T-&gt;data);
+    PreOrderTraverse(T-&gt;lchild);
+    PreOrderTraverse(T-&gt;rchild);
+}
+
+int search(int x, BiTree T) {    
+    if(T==NULL) return 0;
+    else if(T-&gt;data==x) return 1;
+    else if(x&gt;T-&gt;data) {
+        return search(x, T-&gt;rchild);
+    } else {
+        return search(x, T-&gt;lchild);
+    }
+}
+
+int main() {
+    BiTree T = NULL;
+    create(&amp;T);
+    int a = search(8, T);
+    int b = search(56, T);
+    printf(&quot;a=%d, b=%d\n&quot;, a, b);
+    printf(&quot;max = %d, min = %d\n&quot;, findMax(T)-&gt;data, findMin(T)-&gt;data);
+    PreOrderTraverse(T);
+    return 0;
+}
+</code></pre>
+<p>10 9 8 3 -1 -1 -1 -1 40 -1 -1</p>
+<p><a href="https://blog.csdn.net/chaiwenjun000/article/details/48547005">二叉搜索树的简单实现（Binary Search Tree）</a></p>
+<p>while</p>
+<h2 id="68-线索二叉树">6.8 线索二叉树</h2>
+<h3 id="681-线索二叉树原理">6.8.1 线索二叉树原理</h3>
+<p>我们的二叉树会存在很大的指针浪费，这些指针就空在那，利用不充分，随着结点越多，叶子结点就越多，浪费就会越多。</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210514101425.png" alt="image-20210514101424220" style="zoom:50%;" />
+<p>计算空指针域：</p>
+<ul>
+<li>对于一个有n个结点的二叉链表，每个结点有指向左右孩子的两个指针域，所以一共是2n个指针域。而n个结点的二叉树一共有n-1条分支线，也就是说，其实存在2n-（n-1）=n+1个空指针域。也就是这些空间不存储任何事情，白白浪费着内存的资源。</li>
+</ul>
+<p>我们在做中序遍历时，得到了HDIBJEAFCC这样的字符序列，遍历过后，我们可以知道，结点i的前驱是D，后继是B，结点F的前驱是A，后继是C。也就是说我们可以清楚的知道任意一个结点，它的前驱和后继是哪一个</p>
+<p>可是这是建立在已经遍历过的基础上的。在二叉链表，我们只能知道左右孩子是谁，而不知道某个结点的前驱，后继是谁。要想知道得再遍历一次，以后每次需要知道，都必须遍历一次。那么就考虑在创建的时候就记住这些前驱和后继就可以了。我们可以考虑用这些空指针存放在<strong>某一种遍历次序下的</strong>前驱和后继的地址。</p>
+<p>我们把这种指向前驱和后继的指针称为线索，加上线索的二叉链表称为线索链表，相应的二叉树就称为线索二叉树（Threaded Binary Tree）</p>
+<p>下列是二叉树进行中序遍历后，将所有的空指针域中的rchild，改为指向它的后继结点。于是我们就知道H的后继结点是D，I的后继结点是B，J的后继结点是E，E的后继是A，F的后继是C，G的后继因为不存在而指向NULL。此时共有6个空指针域被利用。</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210514132010.png" alt="image-20210514132008202" style="zoom:67%;" />
+<p>我们将这课二叉树的所有树的所有空指针域中的lchild，改为指向当前结点的前驱。因此H的前驱是NULL，I的前驱是D，J的前驱是B，F的前驱是A，G的前驱是C。一共5个空指针域被利用，正好和上面的后继加起来是11个。</p>
+<figure data-type="image" tabindex="33"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210514162338.png" alt="image-20210514162336518" loading="lazy"></figure>
+<p>对二叉树以某种次序遍历使其变为线索二叉树的过程称做是线索化。</p>
+<p>但是问题还没有完全解决，那就是我们得增加一个东西，去判断指针域存的是孩子还是后继或者前驱。</p>
+<p>结点结构：lchild-ltag-data-rtag-rchild，其中：</p>
+<ul>
+<li>ltag为0时，指向该结点的左孩子，为1时指向该结点的前驱</li>
+<li>rtag为0时，指向该结点的右孩子，为1时指向该结点的后继</li>
+</ul>
+<img src="C:/Users/ywu66/AppData/Roaming/Typora/typora-user-images/image-20210514162822803.png" alt="image-20210514162822803" style="zoom:50%;" />
+<h3 id="682-线索二叉树的实现">6.8.2 线索二叉树的实现</h3>
+<p>二叉树的线索存储结构：</p>
+<pre><code class="language-c">typedef enum{Link, Thread} PointerTag;
+typedef struct BiThrNode {
+    TElemType data;
+    struct BiThrNode *lchild, *rchild;
+    PointerTag LTag;
+    PointerTag RTag;
+} BiThrNode, *BiThrTree;
+</code></pre>
+<p>线索化的实质就是将二叉链表只能的空指针改为指向前或后继的线索。由于前驱和后继的信息只有在遍历该二叉树时才能得到，所以线索化的过程就是在遍历的过程中修改空指针的过程。</p>
+<p>中序遍历线索化的递归函数代码：</p>
+<pre><code class="language-c">BiThrTree pre;  //全局变量，始终指向刚刚访问过的结点
+void InThreading(BiThrTree p) {
+    if(p) {  //当p非空时
+        InThreading(p-&gt;lchild);
+        if(!p-&gt;lchild) {  //当p是空时
+            p-&gt;LTag = Thread;
+            p-&gt;lchild = pre;
+        }
+        if(!pre-&gt;rchild) {
+            pre-&gt;RTag = Thread;
+            pre-&gt;rchild = p;
+        }
+        pre = p;
+        InThreading(p-&gt;rchild);
+    }
+}
+</code></pre>
+<p>你会发现，这段代码除了大判断里面的两个判断与赋值操作外，其他的都和二叉树中序遍历的递归代码几乎完全一样。只不过是将本来应该打印结点的功能改成了线索化的功能。</p>
+<p>有了线索二叉树后，我们对它遍历时就发现，其实就等于是操作一个双向链表结构。</p>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210514193630.png" alt="image-20210514193626411" style="zoom:67%;" />
+<p>遍历代码：</p>
+<pre><code class="language-c">Status InOrderTraverse_Thr(BiThrTree T) {
+    BiThrTree p;
+    p = T-&gt;lchild;
+    while(p!=T) {   //不断遍历，直到上面图中的4出现
+        while(p-&gt;LTag == Link) p = p-&gt;lchild;    //循环至H，遇到LTag=0了就结束了
+        printf(&quot;%c&quot;, p-&gt;data);
+        while(p-&gt;RTag==Thread&amp;&amp;p-&gt;rchild!=T) {  //打印D，然后因为D的RTag为0就退出
+            p = p-&gt;rchild;
+            printf(&quot;%c&quot;, p-&gt;data);
+        }
+        p = p-&gt;rchild;    //指向结点D的右孩子
+    }
+    return 0;
+}
+</code></pre>
+<ul>
+<li>接着第二次循环，打印I，进入B。。。。。</li>
+</ul>
+<p>这段代码等于是一个链表的扫描，所以时间复杂度为O(n)。</p>
+<p>在实际问题中，如果所用的二叉树需要经常遍历或查找结点时需要某种遍历序列中的前驱和后继，那么采用线索二叉链表的存储结构就是非常不错的选择。</p>
+<h2 id="69-树森林与二叉树的转换">6.9 树，森林与二叉树的转换</h2>
+<p>树转二叉树十分容易：</p>
+<ul>
+<li>将兄弟连线，一个结点的左孩子存长子，右孩子存兄弟</li>
+</ul>
+
+            </div>
+            
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      Yuan
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://yuanfeng123.github.io/post/di-6-zhang-shu-zu-yu-han-shu/" title="第6章 数组与函数">https://yuanfeng123.github.io/post/di-6-zhang-shu-zu-yu-han-shu/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://yuanfeng123.github.io/tag/dMfm7tyYN/"># C/C++</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="第7章 数组与算法详讲" href="https://yuanfeng123.github.io/post/di-7-zhang-shu-zu-yu-suan-fa-xiang-jiang/">第7章 数组与算法详讲</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="第7章 数组与算法详讲" href="https://yuanfeng123.github.io/post/di-7-zhang-shu-zu-yu-suan-fa-xiang-jiang/">上一篇</a>
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="第5章 逻辑" href="https://yuanfeng123.github.io/post/di-5-zhang-luo-ji/">第5章 逻辑</a>
+        <a class="nav-mobile-next" title="第5章 逻辑" href="https://yuanfeng123.github.io/post/di-5-zhang-luo-ji/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
+            
+            
+  
+    
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '225735e3a16d61b1860a',
+    clientSecret: '30ff619369fc342542af5655387b650692b17d27',
+    repo: 'Yuanfeng123.github.io',
+    owner: 'Yuanfeng123',
+    admin: ['Yuanfeng123'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
+    
+    
+  
+
+          </div>
         </div>
       </div>
     </div>
@@ -1217,6 +4425,223 @@
     parent.insertBefore(aelem, next);
   })
 </script>
+    <div class="reward-mask" style="display: none;">
+  <div class="reward-relative">
+    <span class="close" aria-hidden="true">x</span>
+    <div class="reward-body">
+      <h2>感谢您的支持，我会继续努力的!</h2>
+      <div class="reward-img-box">
+        <div style="position: relative; width: 140px; height: 140px;">
+          
+          
+          
+        </div>
+      </div>
+      <p class="reward-word">扫码打赏，你说多少就多少</p>
+      <p class="reward-tip">打开微信扫一扫，即可进行扫码打赏哦</p>
+    </div>
+    <div class="bottom">
+      
+      
+    </div>
+  </div>
+</div>
+<style>
+  .reward-mask {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000054;
+  }
+
+  .reward-relative {
+    position: relative;
+    width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -205px;
+  }
+
+  .reward-relative .close {
+    position: absolute;
+    right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #929292;
+  }
+
+  .reward-body {
+    padding: 40px 20px 20px;
+  }
+
+  .bottom {
+    display: flex;
+  }
+
+  .reward-btn {
+    text-align: center;
+  }
+
+  .reward-btn-text {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #ff9734;
+    color: #FFF;
+    margin-top: 20px;
+  }
+
+  .pay-text {
+    margin-top: 10px;
+    padding: 10px;
+    flex: 1;
+    transition: all .2s linear;
+  }
+
+  .pay-text:hover {
+    background-color: #a5a5a536;
+  }
+
+  .reward-body h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  .reward-body h2:after,
+  .reward-body h2:before {
+    font-family: Arial, Helvetica, sans-serif;
+    background: 0 0;
+    width: 0;
+    height: 0;
+    font-style: normal;
+    color: #eee;
+    font-size: 80px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .reward-body h2:before {
+    content: '\201c';
+    left: 50px;
+  }
+
+  .reward-body h2:after {
+    content: '\201d';
+    right: 80px;
+  }
+
+  .reward-img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 6px solid #ea5f00;
+    margin: 0 auto;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .reward-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .reward-relative {
+      height: 100%;
+      top: 0px;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .reward-relative .bottom {
+      flex-direction: column;
+    }
+
+    .reward-relative .pay-text {
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .reward-body h2:after {
+      right: 40px;
+    }
+
+    .reward-body h2:after,
+    .reward-body h2:before {
+      font-size: 60px;
+    }
+
+    .reward-body h2:before {
+      left: 20px;
+    }
+  }
+</style>
+<script>
+  !function () {
+    var mask = document.querySelector('.reward-mask');
+    let close = document.querySelector('.reward-relative .close');
+    let rewardBtn = document.querySelector('.reward-btn');
+
+    let zfb = document.querySelector('#zfb'),
+      wx = document.querySelector('#wx'),
+      zfbBtn = document.querySelector('#zfbBtn'),
+      wxBtn = document.querySelector('#wxBtn');
+
+    if (zfbBtn && wxBtn) {
+      zfbBtn.addEventListener('click', () => {
+        window.Velocity(zfb, 'transition.slideLeftIn', {
+          duration: 400
+        });
+        window.Velocity(wx, 'transition.slideRightOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+
+      wxBtn.addEventListener('click', () => {
+        window.Velocity(wx, 'transition.slideRightIn', {
+          duration: 400
+        });
+        window.Velocity(zfb, 'transition.slideLeftOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+    }
+
+    rewardBtn.addEventListener('click', (e) => {
+      window.Velocity(mask, 'transition.slideDownIn', {
+        duration: 400
+      })
+    });
+
+    close.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.Velocity(mask, 'transition.slideUpOut', {
+        duration: 400
+      })
+    })
+  }()
+</script>
+
   </div>
 </body>
 
@@ -9231,7 +12656,6 @@ int main() {
     speed: 200
   });
 </script>
-
 
 
 
