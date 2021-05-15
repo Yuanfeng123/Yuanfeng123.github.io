@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yuanfeng123.github.io</id>
     <title>Gridea</title>
-    <updated>2021-05-15T00:44:57.238Z</updated>
+    <updated>2021-05-15T00:47:39.920Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yuanfeng123.github.io"/>
     <link rel="self" href="https://yuanfeng123.github.io/atom.xml"/>
@@ -11,11 +11,11 @@
     <icon>https://yuanfeng123.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
     <entry>
-        <title type="html"><![CDATA[时代的]]></title>
+        <title type="html"><![CDATA[C语言程序设计笔记列表]]></title>
         <id>https://yuanfeng123.github.io/post/shi-dai-de/</id>
         <link href="https://yuanfeng123.github.io/post/shi-dai-de/">
         </link>
-        <updated>2021-05-14T12:43:07.000Z</updated>
+        <updated>2021-05-14T00:43:07.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[ewe ]]></title>
