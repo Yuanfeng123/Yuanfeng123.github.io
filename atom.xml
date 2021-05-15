@@ -2,13 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yuanfeng123.github.io</id>
     <title>Yuanfeng&apos;s Blog</title>
-    <updated>2021-05-15T05:58:45.801Z</updated>
+    <updated>2021-05-15T06:04:00.127Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yuanfeng123.github.io"/>
     <link rel="self" href="https://yuanfeng123.github.io/atom.xml"/>
     <logo>https://yuanfeng123.github.io/images/avatar.png</logo>
     <icon>https://yuanfeng123.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Yuanfeng&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[信息奥赛一本通题解]]></title>
+        <id>https://yuanfeng123.github.io/post/xin-xi-ao-sai-yi-ben-tong-ti-jie/</id>
+        <link href="https://yuanfeng123.github.io/post/xin-xi-ao-sai-yi-ben-tong-ti-jie/">
+        </link>
+        <updated>2021-05-14T18:02:08.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[大话数据结构笔记列表]]></title>
+        <id>https://yuanfeng123.github.io/post/da-hua-shu-ju-jie-gou-bi-ji-lie-biao/</id>
+        <link href="https://yuanfeng123.github.io/post/da-hua-shu-ju-jie-gou-bi-ji-lie-biao/">
+        </link>
+        <updated>2021-05-14T18:01:24.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[第7章 数组与算法详讲]]></title>
         <id>https://yuanfeng123.github.io/post/di-7-zhang-shu-zu-yu-suan-fa-xiang-jiang/</id>
@@ -64,34 +78,5 @@
         <link href="https://yuanfeng123.github.io/post/di-10-zhang/">
         </link>
         <updated>2021-05-13T15:21:33.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C语言程序设计笔记列表]]></title>
-        <id>https://yuanfeng123.github.io/post/shi-dai-de/</id>
-        <link href="https://yuanfeng123.github.io/post/shi-dai-de/">
-        </link>
-        <updated>2021-05-13T12:43:07.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="预备知识">预备知识</h2>
-<p><a href="https://c.runoob.com/compile/12">在线编辑器（菜鸟教程）</a></p>
-<h2 id="目录列表">目录列表</h2>
-<p><a href="https://yuanfeng123.github.io/post/di-1-zhang-ji-suan-ji-yu-c-yu-yan/">第1章 计算机与C语言</a></p>
-<p><a href="https://yuanfeng123.github.io/post/di-3-zhang-cheng-xu-jie-gou/">第2章 变量与表达式</a></p>
-<p><a href="https://yuanfeng123.github.io/post/di-3-zhang-cheng-xu-jie-gou/">第3章 程序结构</a></p>
-<p><a href="https://yuanfeng123.github.io/post/di-4-zhang-xun-huan-ji-qi-ying-yong/">第4章 循环及其应用</a></p>
-<p><a href="https://yuanfeng123.github.io/post/di-5-zhang-luo-ji/">第5章 逻辑</a></p>
-<p>第6章 数组与函数</p>
-<p>第7章 数组与算法详讲</p>
-]]></summary>
-        <content type="html"><![CDATA[<h2 id="预备知识">预备知识</h2>
-<p><a href="https://c.runoob.com/compile/12">在线编辑器（菜鸟教程）</a></p>
-<h2 id="目录列表">目录列表</h2>
-<p><a href="https://yuanfeng123.github.io/post/di-1-zhang-ji-suan-ji-yu-c-yu-yan/">第1章 计算机与C语言</a></p>
-<p><a href="https://yuanfeng123.github.io/post/di-3-zhang-cheng-xu-jie-gou/">第2章 变量与表达式</a></p>
-<p><a href="https://yuanfeng123.github.io/post/di-3-zhang-cheng-xu-jie-gou/">第3章 程序结构</a></p>
-<p><a href="https://yuanfeng123.github.io/post/di-4-zhang-xun-huan-ji-qi-ying-yong/">第4章 循环及其应用</a></p>
-<p><a href="https://yuanfeng123.github.io/post/di-5-zhang-luo-ji/">第5章 逻辑</a></p>
-<p>第6章 数组与函数</p>
-<p>第7章 数组与算法详讲</p>
-]]></content>
     </entry>
 </feed>

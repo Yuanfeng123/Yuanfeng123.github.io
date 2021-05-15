@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="">
 <meta name="theme-color" content="#000">
-<title>第7章 数组与算法详讲 | Yuanfeng&#39;s Blog</title>
+<title>信息奥赛一本通题解 | Yuanfeng&#39;s Blog</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/favicon.ico?v=1621058635048">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/media/fonts/font-awesome.css">
@@ -58,8 +58,8 @@
 </script>
 
 
-  <meta name="description" content="第7章 数组与算法详讲" />
-  <meta name="keywords" content="C/C++" />
+  <meta name="description" content="信息奥赛一本通题解" />
+  <meta name="keywords" content="信息奥赛一本通题解" />
 </head>
 
 <body>
@@ -223,8 +223,7 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            <div class="post-side-meta" id="post_side_meta">
-              
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/images/avatar.png"/>
@@ -267,210 +266,6 @@
 
 
 </div>
-            </div>
-            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number auto"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li><a href="#71-%E6%95%B0%E7%BB%84">7.1 数组</a>
-<ul>
-<li><a href="#711-%E6%95%B0%E7%BB%84%E8%BF%90%E7%AE%97">7.1.1 数组运算</a></li>
-<li><a href="#712-%E6%95%B0%E7%BB%84%E4%BE%8B%E5%AD%90%E7%B4%A0%E6%95%B0">7.1.2 数组例子：素数</a></li>
-</ul>
-</li>
-<li><a href="#72-%E6%90%9C%E7%B4%A2">7.2 搜索</a>
-<ul>
-<li><a href="#721-%E7%BA%BF%E6%80%A7%E6%90%9C%E7%B4%A2">7.2.1 线性搜索</a></li>
-<li><a href="#722-%E6%90%9C%E7%B4%A2%E7%9A%84%E4%BE%8B%E5%AD%90">7.2.2 搜索的例子</a></li>
-<li><a href="#723-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E6%B3%95">7.2.3 二分查找法</a></li>
-<li><a href="#731-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95">7.3.1 排序算法</a></li>
-</ul>
-</li>
-<li><a href="#81-%E6%8C%87%E9%92%88">8.1 指针</a>
-<ul>
-<li><a href="#811-%E5%8F%96%E5%9C%B0%E5%9D%80%E8%BF%90%E7%AE%97">8.1.1 取地址运算</a></li>
-<li><a href="#812-%E6%8C%87%E9%92%88">8.1.2 指针</a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
-      }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
-    });
-  }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
           
         
       </div>
@@ -558,8 +353,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://yuanfeng123.github.io/post/di-7-zhang-shu-zu-yu-suan-fa-xiang-jiang/">
-      第7章 数组与算法详讲
+    <a class="post-title-link" href="https://yuanfeng123.github.io/post/xin-xi-ao-sai-yi-ben-tong-ti-jie/">
+      信息奥赛一本通题解
     </a>
   </h1>
   <div class="post-meta">
@@ -567,7 +362,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-05-14 13:56:30">2021-05-14</span>
+      <span class="publish-time" data-t="2021-05-14 14:02:08">2021-05-14</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -576,8 +371,8 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
-      <a href="https://yuanfeng123.github.io/tag/dMfm7tyYN/">
-        <span>C/C++</span>
+      <a href="https://yuanfeng123.github.io/tag/Bp74hcYEn/">
+        <span>信息奥赛一本通题解</span>
       </a>
       
       
@@ -586,17 +381,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>13<span class="language" data-lan="minute">分钟</span></span>
+      <span>1<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>2691<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>33<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/di-7-zhang-shu-zu-yu-suan-fa-xiang-jiang/" data-flag-title="第7章 数组与算法详讲" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/xin-xi-ao-sai-yi-ben-tong-ti-jie/" data-flag-title="信息奥赛一本通题解" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -605,669 +400,10 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <h1 id="71-数组">7.1 数组</h1>
-<h2 id="711-数组运算">7.1.1 数组运算</h2>
-<p>先用C语言做最简单的搜索：在一组给定的数据中，如何找出某个数据是否存在？</p>
-<pre><code class="language-C">int search(int key, int a[], int length); 
-
-int main() {
-	int a[] = {2, 4, 6, 7, 8, 9, 10, 32, 57, 81, 0, 77};
-	int x;
-    int result;
-	scanf(&quot;%d&quot;, &amp;x);
-	result = search(x, a, sizeof(a)/sizeof(a[0]));
-	if(result!=-1) {
-		printf(&quot;你要查找的%d，它的位置是%d&quot;, x, result);
-	} else {
-		printf(&quot;你所要查找的元素不存在&quot;);
-	}
-	
-	return 0;
-}
-
-int search(int key, int a[], int length) {
-	int ret=-1;
-	int i;
-	for(i=0;i&lt;length;i++) {
-		if(key==a[i]) {
-			ret = i;
-			break;
-		} 
-	}
-	return ret;
-}
-</code></pre>
-<p><strong>数组的集成初始化</strong></p>
-<pre><code class="language-C">int a[] = {2, 4, 6, 7, 8, 9, 10, 32, 57, 81, 0, 77};
-//也可以int a[] = {2, 4, 6, 7, 8, 9, 10, 32, 57, 81, 0, 77,};这是一种古老的习惯方式
-</code></pre>
-<ul>
-<li>
-<p>另一种初始化方式</p>
-<pre><code class="language-C">int a[10] = {0}//这样会将数组的初始值全变为0
-
-//原理:int a[12] = {2}, 这样的话，除了a[0]=2以外，其它的都会变为0
-</code></pre>
-</li>
-<li>
-<p>直接用大括号给出数组的所有元素的初始值</p>
-</li>
-<li>
-<p>不需要给出数组的大小，编译器替你数</p>
-</li>
-</ul>
-<p>集成初始化时的定位（C99 only）</p>
-<pre><code class="language-C">int a[10] = {
-    [0]=2, [2]=3, 6
-}
-</code></pre>
-<ul>
-<li>
-<p>用[n]在初始化数据中给出定位</p>
-</li>
-<li>
-<p>没有定位的数据接在前面的位置后面</p>
-</li>
-<li>
-<p>其它位置的值补零</p>
-</li>
-<li>
-<p>也可以不给出数组的大小，让编译器算（也就是在最大下标的定位数据+1就是数组的元素数量）</p>
-</li>
-<li>
-<p>特别适合初始数据稀疏的数组</p>
-</li>
-<li>
-<p>案例：</p>
-<ul>
-<li>
-<p>案例一</p>
-<pre><code class="language-C">int a[13]={
-    [1]=2, 4, [5]=6
-};
-{
-    int i;
-    for(i=0;i&lt;13;i++) {
-        printf(&quot;%d\t&quot;, a[i]);
-    }
-}
-</code></pre>
-</li>
-<li>
-<p>案例二</p>
-<pre><code class="language-C">int a[]={
-    [1]=2, 4, [5]=6
-};
-{
-    int i;
-    for(i=0;i&lt;6;i++) {
-        printf(&quot;%d\t&quot;, a[i]);
-    }
-}
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<p>数组的大小</p>
-<ul>
-<li>
-<p>sizeof给出整个数组所占据的内容的大小，单位是字节</p>
-<p>sizeof(a)/sizeof(a[0])</p>
-</li>
-<li>
-<p>sizeof(a[0])给出数组中的单个元素的大小，于是相除就得到了数组的单元个数</p>
-</li>
-<li>
-<p>这样的代码，一旦修改数组中初始的数据，不需要修改遍历的代码</p>
-</li>
-</ul>
-<p>数组的赋值</p>
-<ul>
-<li>
-<pre><code class="language-C">int a[] = {2, 4, 6, 7, 8, 9, 10, 32, 57, 81, 0, 77};
-int b[] = a;
-//上面的代码是否能将数组a赋给b？
-</code></pre>
-</li>
-<li>
-<p>数组变量本身不能被赋值，上面的代码是不对的</p>
-</li>
-<li>
-<p>要把一个数组的所有元素交给另一个数组，必须采用遍历</p>
-<pre><code class="language-C">for(i=0;i&lt;length;i++) {
-    b[i]=a[i];
-}
-</code></pre>
-</li>
-</ul>
-<p>数组的遍历</p>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022039.png" alt="72" loading="lazy"></figure>
-<p>数组为传参</p>
-<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022040.png" alt="73" loading="lazy"></figure>
-<h2 id="712-数组例子素数">7.1.2 数组例子：素数</h2>
-<p>怎么判断是不是素数呢？</p>
-<pre><code class="language-C">int isPrime(int x) {
-    int ret = 1;
-    int i;
-    if(x==1) ret = 0;
-    for(i=2;i&lt;x;i++) {
-        if(x%i==0) {
-            ret = 0;
-            break;
-        }
-    }
-    return ret;
-}
-</code></pre>
-<ul>
-<li>从2到x-1测试是否可以整除</li>
-<li>对于n要循环n-1遍
-<ul>
-<li>当n很大时就是n遍</li>
-</ul>
-</li>
-</ul>
-<p>算法二：去掉偶数后，从3到x-1，每次加2</p>
-<pre><code class="language-C">int isPrime(int x) {
-    int ret = 1;
-    int i;
-    if(x==1||(x%2==0&amp;&amp;x!=2)) ret=0;
-    for(i=3;i&lt;x;i+=2) {
-        if(x%1==0;) {
-            ret=0;
-            break;
-        }
-    }
-    return ret;
-}
-</code></pre>
-<ul>
-<li>如果x是偶数，立刻返回0；</li>
-<li>否则要循环（n-3）/2+1遍
-<ul>
-<li>当n很大时就是n/2遍</li>
-</ul>
-</li>
-</ul>
-<p>算法三：无须到x-1，到sqrt（x）就够了</p>
-<pre><code class="language-C">int isPrime(int x) {
-    int ret = 1;
-    int i;
-    if(x==1||(x%2==0&amp;&amp;x!=2)) ret=0;
-    for(i=3;i&lt;sqrt(x);i+=2) {
-        if(x%1==0;) {
-            ret 0;
-            break;
-        }
-    }
-    return ret;
-}
-</code></pre>
-<ul>
-<li>只需要循环sqrt(x)遍</li>
-</ul>
-<h1 id="72-搜索">7.2 搜索</h1>
-<h2 id="721-线性搜索">7.2.1 线性搜索</h2>
-<p>搜索</p>
-<ul>
-<li>在一个数组中找到某数的位置，或确认是否存在</li>
-<li>基本方法：遍历</li>
-</ul>
-<pre><code class="language-C">int search(int key, int a[], int len) {
-    int ret = -1;
-    for(int i=0; i&lt;len; i++) {
-        if(key==a[i]) {
-            ret = i;
-            break;
-        }
-    } 
-    return ret;
-}
-</code></pre>
-<ul>
-<li>我们要具备“单一出口原则”</li>
-</ul>
-<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022041.png" alt="74" loading="lazy"></figure>
-<h2 id="722-搜索的例子">7.2.2 搜索的例子</h2>
-<p>利用哈希表</p>
-<pre><code class="language-C">	struct {
-		int amount;
-		char *name;
-	} coins[] = {
-		{1, &quot;penny&quot;},
-		{5, &quot;nickel&quot;},
-		{10, &quot;dime&quot;},
-		{25, &quot;quarter&quot;},
-		{50, &quot;half-dollar&quot;}
-	};
-	
-	int key;
-	scanf(&quot;%d&quot;, &amp;key);
-	
-	int i; 
-    for(i=0; i&lt;sizeof(coins)/sizeof(coins[0]); i++) {
-        if(key==coins[i].amount) {
-        	printf(&quot;%s&quot;, coins[i].name);
-            break;
-        }
-    } 
-</code></pre>
-<h2 id="723-二分查找法">7.2.3 二分查找法</h2>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-
-int search(int key, int arr[], int len);
-
-int main() {
-    int a[] = {2, 5, 7, 8, 9, 10, 16, 17, 19, 20, 29, 35, 36};
-    int key;
-    printf(&quot;%d&quot;, search(key, a, sizeof(a)/sizeof(a[0])));
-    
-    return 0;
-}
-
-int search(int key, int arr[], int len) {
-    int left = 0;
-    int right = len - 1;
-    
-    while(right&gt;left) {
-        int mid = (left+right)/2;
-        if(arr[mid]&gt;key) {
-            right = mid - 1;
-        } else if(arr[mid]==key) {
-            return mid;
-        } else {
-            right = mid + 1;
-        } 
-    }
-}
-</code></pre>
-<p>搜索效率是log2 x</p>
-<h2 id="731-排序算法">7.3.1 排序算法</h2>
-<p>选择排序（我的版本）</p>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-
-void make(int a[], int len);
-
-int main() {
-	//int a[] = {7, 8, 3, 4, 9, 1, 0, 2, 5};
-	int a[] = {7, 8, 3, 4, 9, 1};
-	make(a, sizeof(a)/sizeof(a[0]));
-	return 0;
-}
-
-void make(int a[], int len) {
-	int min;
-	int i, j;
-	for(i=0;i&lt;len-1;i++) {
-		min = a[i+1];
-		for(j=i+1;j&lt;len;j++) {
-			if(min&gt;a[j]) {
-				min = a[j];
-				a[j] = a[i];
-		        a[i] = min;
-			}
-			
-		}
-		{
-			int c;
-			printf(&quot;第%d次：&quot;, i);
-			for(c=0;c&lt;len;c++) {
-				printf(&quot;%d\t&quot;, a[c]);
-			}
-			printf(&quot;\n&quot;);
-		 } 
-		
-	}
-	
-	for(i=0;i&lt;len;i++) {
-		printf(&quot;%d\t&quot;, a[i]);
-	}
-}
-</code></pre>
-<ul>
-<li>
-<p>上面这个代码会存在着问题，问题就是：“它会排成1，3，4，7，9，8”</p>
-</li>
-<li>
-<p>解决方案是：</p>
-<pre><code class="language-C">	for(i=0;i&lt;len-1;i++) {
-		min = a[i];//修改了这里
-		for(j=i+1;j&lt;len;j++) {
-			if(min&gt;a[j]) {
-				min = a[j];
-				a[j] = a[i];
-		        a[i] = min;
-			}
-			
-		}
-		{
-			int c;
-			printf(&quot;第%d次：&quot;, i);
-			for(c=0;c&lt;len;c++) {
-				printf(&quot;%d\t&quot;, a[c]);
-			}
-			printf(&quot;\n&quot;);
-		 } 
-		
-	}
-</code></pre>
-</li>
-</ul>
-<p>选择排序（第二版）</p>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-
-int main() {
-    int a[] = {7, 8, 3, 4, 9, 1};
-    int len = sizeof(a)/sizeof(a[0]);
-    int i, max, j;
-   
-    for(i=len-1;i&gt;0;i--) {
-        max = a[i];
-         for(j=0;j&lt;=i;j++) {
-             if(max&lt;a[j]) {
-                 max = a[j]; 
-                 a[j] = a[i];
-                 a[i] = max
-             }    
-         }
-    }
-    for(i=0;i&lt;len;i++) {
-        printf(&quot;%d &quot;, a[i]);
-    }
-    return 0;
-}
-
-</code></pre>
-<h1 id="81-指针">8.1 指针</h1>
-<h2 id="811-取地址运算">8.1.1 取地址运算</h2>
-<p>sizeof</p>
-<ul>
-<li>是一个运算符，给出某个类型或变量在内存中所占据的字节数
-<ul>
-<li>sizeof(int)</li>
-<li>sizeof(i)</li>
-</ul>
-</li>
-<li>输出：printf(&quot;%ld&quot;, sizeof(double))
-<ul>
-<li>ld是长整数型</li>
-</ul>
-</li>
-</ul>
-<p>运算符&amp;</p>
-<ul>
-<li>
-<p>scanf(&quot;%d&quot;, &amp;i);里的&amp;</p>
-</li>
-<li>
-<p>获得变量的地址，它的操作数必须是变量</p>
-<pre><code class="language-C">int i=0;
-printf(&quot;0x%x&quot;, &amp;i);//不对
-printf(&quot;%p, &amp;i&quot;);//得到一个地址
-
-//但是
-int i = 0;
-int p;
-p=(int)&amp;i;//int是强制转化
-printf(&quot;0x%x&quot;, p);
-
-</code></pre>
-</li>
-<li>
-<p>还有另一个事情，在不同位数的架构下，地址也不一样</p>
-</li>
-<li>
-<p>地址的大小是否与int相同取决与编译器</p>
-<ul>
-<li>int i; printf(&quot;%p&quot;, &amp;i);</li>
-</ul>
-</li>
-</ul>
-<p>内存存储</p>
-<ul>
-<li>i和p都存在一个叫堆栈里的地方，是从自顶向下来排
-<ul>
-<li>先写的会更高</li>
-</ul>
-</li>
-</ul>
-<p>试试这些&amp;</p>
-<ul>
-<li>
-<p>变量的地址</p>
-</li>
-<li>
-<p>相邻变量的地址</p>
-</li>
-<li>
-<p>&amp;的结果的sizeof</p>
-</li>
-<li>
-<p>数组的地址</p>
-</li>
-<li>
-<p>数组的单元的地址</p>
-</li>
-<li>
-<p>相邻的数组单元的地址</p>
-</li>
-<li>
-<p>试验代码</p>
-<pre><code class="language-C">int i[10];
-
-printf(&quot;%p\n&quot;, &amp;i);//0xbff8dd44
-printf(&quot;%p\n&quot;, i);//0xbff8dd44
-
-printf(&quot;%p\n&quot;, i[0]);//0xbff8dd44
-printf(&quot;%p\n&quot;, i[1]);//0xbff8dd48
-    
-
-</code></pre>
-</li>
-</ul>
-<h2 id="812-指针">8.1.2 指针</h2>
-<p>scanf</p>
-<ul>
-<li>如果能够将取得的变量的地址传递给一个函数，能否通过这个地址咋那个函数内访问这个变量？
-<ul>
-<li>scanf(&quot;%d&quot;, &amp;i);就是一个例子</li>
-</ul>
-</li>
-<li>scanf()的原型应该是怎样的？我们需要一个参数能保存别的变量的地址，如何表达能够保存地址的变量？</li>
-<li>是否可以运用到赋值数组呢？</li>
-</ul>
-<p>指针</p>
-<ul>
-<li>
-<p>就是保存地址的变量</p>
-<pre><code class="language-C">int i;
-int* p = &amp;i;//p是一个指针，*表示了出来，表示指向了是一个int，用来存储i的地址
-//可以说“p指向了i”，也就是p得到了i的地址了
-
-int* p, q;//这里，p是指针，但q是一个普通的int类型变量
-
-int *p, q;//可以靠近也可以不靠近，这个*不是给int的
-
-//想表达q也是指针怎么写？
-int *p, *q;
-</code></pre>
-</li>
-</ul>
-<p>指针变量</p>
-<ul>
-<li>变量的值是内存的地址
-<ul>
-<li>普通变量的值是实际的值</li>
-<li>指针变量的值是具有实际值变量的地址</li>
-</ul>
-</li>
-</ul>
-<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022042.png" alt="75" loading="lazy"></figure>
-<p>作为参数的指针</p>
-<ul>
-<li>void f(int *p);</li>
-<li>在被调用的时候得到了某个变量的地址：
-<ul>
-<li>int i=0; f(&amp;i);</li>
-</ul>
-</li>
-</ul>
-<pre><code class="language-C">void f(int *p);
-
-int main() {
-    int i = 6;
-    printf(&quot;%p\n&quot;, &amp;i);
-    f(&amp;i);
-    
-    return 0;
-}
-
-void f(int *p) {
-    printf(&quot;%p\n&quot;, p);
-}
-</code></pre>
-<ul>
-<li>在函数里面可以通过这个指针访问外面的这个i
-<ul>
-<li>但不知道它叫做i，只知道地址</li>
-<li>不像和普通函数一样只能传值进去而无法做到访问那个函数外面的变量</li>
-<li>而当我们可以访问这个地址的时候，这就意味着我们可以读，可以写了</li>
-</ul>
-</li>
-</ul>
-<p>访问那个地址上的变量</p>
-<ul>
-<li>*是一个单目运算符，用来访问指针的值所表示的地址上的变量</li>
-<li>可以做右值也可以做左值
-<ul>
-<li>int k = *p;</li>
-<li>*p = k+1;</li>
-</ul>
-</li>
-</ul>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-
-void f(int *p);
-void g(int k);
-
-int main() {
-    int i = 6;
-    printf(&quot;%p\n&quot;, &amp;i);
-    f(&amp;i);
-    g(i);
-    
-    return 0;
-}
-
-void f(int *p) {
-    printf(&quot;%p\n&quot;, p);
-    printf(&quot;%d\n&quot;, *p);//输出值
-	*p=36; //改变了外面变量的值了
-}
-
-void g(int k) {
-	printf(&quot;%d\n&quot;, k);
-}
-</code></pre>
-<p>传入地址</p>
-<ul>
-<li>为什么？
-<ul>
-<li>int i; scanf(&quot;%d&quot;, i);</li>
-</ul>
-</li>
-<li>编译没有报错？
-<ul>
-<li>但运行会出错</li>
-</ul>
-</li>
-</ul>
-<p>传入函数的数组成了什么？</p>
-<ul>
-<li>函数参数表中的数组实际上是指针
-<ul>
-<li>sizeof(a) == sizeof(int*)</li>
-<li>但是可以用数组的运算符[]进行运算</li>
-</ul>
-</li>
-</ul>
-<p>数组参数</p>
-<ul>
-<li>
-<p>以下四种函数原型是等价的</p>
-<pre><code class="language-C">int sum(int *ar, int n);
-int sum(int *, int);
-int sum(int ar[], int n);
-int sum(int [], int);
-</code></pre>
-</li>
-</ul>
-<p>访问函数外数组案例</p>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-
-int maxmin(int a[], int len, int *max, int *min);
-
-int main() {
-    int a[] = {1, 2, 3, 4, 5, 6, 7, 18, 11, 10};
-    int max, min;
-    maxmin(a, sizeof(a)/sizeof(a[0]), &amp;max, &amp;min);
-    printf(&quot;%d %d&quot;, max, min);
-    return 0;
-}
-
-
-int maxmin(int a[], int len, int *max, int *min) {
-    int i;
-    *max = *min = a[0];
-    for(i=0;i&lt;len;i++) {
-        if(a[i]&gt;*max) *max=a[i];
-        if(a[i]&lt;*min) *min=a[i];
-    }
-    printf(&quot;%d&quot;, sizeof(a));
-    printf(&quot;%d&quot;, sizeof(int*));
-}
-</code></pre>
-<p>数组变量是特殊的指针</p>
-<ul>
-<li>
-<p>数组变量本身表达地址，所以</p>
-<ul>
-<li>int a[10]; int*p=a;//无需用&amp;取地址</li>
-<li>但是数组的单位表达式变量，需要用&amp;取地址</li>
-<li>a==&amp;a[0]</li>
-</ul>
-</li>
-<li>
-<p>[]运算符可以对数组做，也可以对指针做；</p>
-<ul>
-<li>
-<p>p[0]&lt;==&gt;a[0]</p>
-<pre><code class="language-C">int *p = &amp;min;
-printf(&quot;%d\n&quot;, *p);
-printf('%d\n', p[0]);
-</code></pre>
-</li>
-</ul>
-</li>
-<li>
-<p>*运算符可以对指针做，也可以对数组做</p>
-<ul>
-<li>*a=25;</li>
-</ul>
-</li>
-<li>
-<p>数组变量是const的指针，所以不能被赋值</p>
-<ul>
-<li>int a[] &lt;==&gt; int * const a = ...</li>
-</ul>
-<pre><code class="language-C">int b[];=====int * const b;//所以数组是个常量指针，所以不能被赋值
-b=a;//这样的赋值数组是错误的
-
-int *q = a;//这个可以
-</code></pre>
-</li>
-</ul>
+              <p>第1章 C语言入门</p>
+<p>第2章 变量与表达式</p>
+<p>第3章 条件分支语句</p>
+<p>第4章 循环语句</p>
 
             </div>
             
@@ -1280,7 +416,7 @@ int *q = a;//这个可以
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://yuanfeng123.github.io/post/di-7-zhang-shu-zu-yu-suan-fa-xiang-jiang/" title="第7章 数组与算法详讲">https://yuanfeng123.github.io/post/di-7-zhang-shu-zu-yu-suan-fa-xiang-jiang/</a>
+      <a href="https://yuanfeng123.github.io/post/xin-xi-ao-sai-yi-ben-tong-ti-jie/" title="信息奥赛一本通题解">https://yuanfeng123.github.io/post/xin-xi-ao-sai-yi-ben-tong-ti-jie/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -1289,21 +425,17 @@ int *q = a;//这个可以
   </ul>
   <div class="tags">
     
-      <a href="https://yuanfeng123.github.io/tag/dMfm7tyYN/"># C/C++</a>
+      <a href="https://yuanfeng123.github.io/tag/Bp74hcYEn/"># 信息奥赛一本通题解</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="大话数据结构笔记列表" href="https://yuanfeng123.github.io/post/da-hua-shu-ju-jie-gou-bi-ji-lie-biao/">大话数据结构笔记列表</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="大话数据结构笔记列表" href="https://yuanfeng123.github.io/post/da-hua-shu-ju-jie-gou-bi-ji-lie-biao/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="第6章 数组与函数" href="https://yuanfeng123.github.io/post/di-6-zhang-shu-zu-yu-han-shu/">第6章 数组与函数</a>
-        <a class="nav-mobile-next" title="第6章 数组与函数" href="https://yuanfeng123.github.io/post/di-6-zhang-shu-zu-yu-han-shu/">下一篇</a>
+        <a class="nav-pc-next" title="大话数据结构笔记列表" href="https://yuanfeng123.github.io/post/da-hua-shu-ju-jie-gou-bi-ji-lie-biao/">大话数据结构笔记列表</a>
+        <a class="nav-mobile-next" title="大话数据结构笔记列表" href="https://yuanfeng123.github.io/post/da-hua-shu-ju-jie-gou-bi-ji-lie-biao/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
