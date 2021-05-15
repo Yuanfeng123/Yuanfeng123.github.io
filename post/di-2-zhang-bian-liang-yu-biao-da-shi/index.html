@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="">
 <meta name="theme-color" content="#000">
-<title>关于 | Yuanfeng&#39;s Blog</title>
+<title>第2章 变量与表达式 | Yuanfeng&#39;s Blog</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/favicon.ico?v=1621055568618">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/media/fonts/font-awesome.css">
@@ -58,8 +58,8 @@
 </script>
 
 
-  <meta name="description" content="关于" />
-  <meta name="keywords" content="" />
+  <meta name="description" content="第2章 变量与表达式" />
+  <meta name="keywords" content="C/C++" />
 </head>
 
 <body>
@@ -273,14 +273,25 @@
   <div class="toc-wrapper auto-number auto"
     id="toc_wrapper">
     <ul class="markdownIt-TOC">
-<li>
+<li><a href="#21-%E5%8F%98%E9%87%8F">2.1 变量</a>
 <ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">⛹ 兴趣爱好</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80">📬 联系我呀</a></li>
+<li><a href="#211-%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89">2.1.1 变量定义</a></li>
+<li><a href="#212-%E5%8F%98%E9%87%8F%E8%B5%8B%E5%80%BC%E4%B8%8E%E5%88%9D%E5%A7%8B%E5%8C%96">2.1.2 变量赋值与初始化</a></li>
+<li><a href="#213-%E5%85%B3%E4%BA%8Escanf">2.1.3 关于scanf</a></li>
+<li><a href="#213-%E5%B8%B8%E9%87%8Fvs%E5%8F%98%E9%87%8F">2.1.3 常量VS变量</a></li>
+<li><a href="#214-%E5%AE%8F%E5%AE%9A%E4%B9%89">2.1.4 宏定义</a></li>
 </ul>
 </li>
+<li><a href="#22-%E6%B5%AE%E7%82%B9%E6%95%B0">2.2 浮点数</a></li>
+<li><a href="#23-%E8%A1%A8%E8%BE%BE%E5%BC%8F">2.3 表达式</a>
+<ul>
+<li><a href="#231-%E8%A1%A8%E8%BE%BE%E5%BC%8F">2.3.1 表达式</a></li>
+<li><a href="#232-%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7">2.3.2 运算符优先级</a></li>
+<li><a href="#233-%E4%BA%A4%E6%8D%A2%E5%8F%98%E9%87%8F">2.3.3 交换变量</a></li>
+<li><a href="#234-%E5%A4%8D%E5%90%88%E8%B5%8B%E5%80%BC%E4%B8%8E%E9%80%92%E5%A2%9E%E9%80%92%E5%87%8F">2.3.4 复合赋值与递增递减</a></li>
+</ul>
+</li>
+<li><a href="#24-%E7%BC%96%E7%A8%8B%E9%A2%98">2.4 编程题</a></li>
 </ul>
 
   </div>
@@ -546,8 +557,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://yuanfeng123.github.io/post/about/">
-      关于
+    <a class="post-title-link" href="https://yuanfeng123.github.io/post/di-2-zhang-bian-liang-yu-biao-da-shi/">
+      第2章 变量与表达式
     </a>
   </h1>
   <div class="post-meta">
@@ -555,23 +566,36 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2019-01-23 15:09:48">2019-01-23</span>
+      <span class="publish-time" data-t="2021-05-14 13:12:04">2021-05-14</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://yuanfeng123.github.io/tag/dMfm7tyYN/">
+        <span>C/C++</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
+      <span>25<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>110<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>6487<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/about/" data-flag-title="关于" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/di-2-zhang-bian-liang-yu-biao-da-shi/" data-flag-title="第2章 变量与表达式" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -580,20 +604,717 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
+              <h1 id="21-变量">2.1 变量</h1>
+<h2 id="211-变量定义">2.1.1 变量定义</h2>
+<p><strong>算找零</strong></p>
+<p>如何能在程序运行时输入那个数字23，然后计算输出结果？</p>
+<ul>
+<li>因为要算不同数字的时候，又有重新编辑，编译，很麻烦。所以我们有个方法，我们给它多少，它就告诉我多少</li>
+</ul>
+<blockquote>
+<p>我们需要：</p>
+<ul>
+<li>
+<p>准备一个地方用来放输入的数字</p>
+</li>
+<li>
+<p>有个方法可以输入数字</p>
+</li>
+<li>
+<p>能让输入的数字参与计算</p>
+</li>
+</ul>
 </blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<p>我将会在这个网站上面分析我的笔记以及学习进度等，专注于编程语言以及信息奥赛的学习内容</p>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>目前是美高一名高中生</p>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<p>喜欢数学，物理，日语，英语，历史，政治，最热爱的莫属编程</p>
-<h2 id="联系我呀">📬 联系我呀</h2>
-<p>我的Email：ywu6622@gmail.com</p>
+<p>change.c：</p>
+<pre><code class="language-C">int price = 0;
+
+printf(&quot;请输入金额（元）：&quot;);
+scanf(&quot;%d&quot;, &amp;price);
+
+int change = 100 - price;
+
+printf(&quot;找您%d元。\n&quot;, change);
+</code></pre>
+<p><strong>如何输入</strong></p>
+<ul>
+<li>输入也是在终端窗口中进行</li>
+<li>输入是以行为单位进行的，行的结束标志就是你按下了回车键。在你按下回车之前，你的程序不会读到任何东西</li>
+</ul>
+<p><strong>变量</strong></p>
+<ul>
+<li>Int price = 0</li>
+<li>这一行，定义了一个变量（C语言与JS不同，在JS中定义与声明是分开的，但C语言中，声明的同时也是定义），变量的名字为price，初始值为0，它的数据类型为int</li>
+<li>变量就是一个用来存放数据的地方（用来保存数据的地方），当我们需要在程序里保存数据时，比如上面的例子中要记录用户输入的价格，就需要一个变量来保存它。用一个变量保存了数据，它才能参加到后面的计算中，比如计算找零。</li>
+</ul>
+<p><strong>变量定义</strong></p>
+<ul>
+<li>
+<p>变量定义的一般形式：&lt;类型名称&gt;&lt;变量名称&gt;</p>
+<ul>
+<li>Int price</li>
+<li>Int amount</li>
+<li>Int price，amount（可以一行定义多个变量）</li>
+</ul>
+</li>
+</ul>
+<p><strong>变量的名字</strong></p>
+<ul>
+<li>变量需要一个名字，变量的名字是一种标识符，意思是用来区分这个和那个的不同的名字，也可以表达函数等等的名字</li>
+<li>标识符有标识符的构造规则。基本的原则就是只能由数字，字母，下划线组成，但数字不能出现在第一个位置上，C语言的关键字（有的地方也叫保留字）不可以用做标识符</li>
+</ul>
+<p>C语言的保留字：auto, break, case, char, const, continue, default, do, double, else, enum, extern, float, for, goto, if, int, long, register, return, short, signed, sizeof, static, struct, switch, typedef, union, unsigned, void, volatile, while, inline, restrict（不需要背诵下来，在学习的过程中了解到就可以了）</p>
+<h2 id="212-变量赋值与初始化">2.1.2 变量赋值与初始化</h2>
+<p><strong>赋值和初始化</strong></p>
+<ul>
+<li>Int price = 0</li>
+<li>这一行，定义了一个变量，变量的名字为price，初始值为0，它的数据类型为int</li>
+<li>Price=0是一个式子，这里的“=”是一个赋值运算符，表示将“=”右边的值赋给“=”左边的变量。因为是在定义变量的时候做的赋值，所以这个时候的赋值又叫做初始化</li>
+<li>对于C语言来说，初始化和赋值的差异不是特别的大，但对于C++语言来说就可能比较大</li>
+</ul>
+<p><strong>赋值</strong></p>
+<ul>
+<li>和数学不同，a=b，在数学中的是描述一种关系，a=b，那么b=a，是描述一种它们之间相等的关系，表示a与b的值一样。</li>
+<li>但在程序设计中，a=b表示要求计算机做一个动作：将b的值赋给a。</li>
+<li>关系是静态的，动作是动态的。</li>
+<li>在数学中，a=b和b=a是等价的，但在程序设计中，两者的意思是完全相反的</li>
+</ul>
+<p><strong>初始化</strong></p>
+<ul>
+<li>
+<p>当赋值发生在定义变量的时候，就像程序1中的第7行那样，就是变量的初始化。虽然C语言并没有强制要求所有的变量都在定义的地方做初始化，但是所有的变量在第一次被使用（出现在赋值运算符的右边）之前被应该赋值一次<br>
+如果没有初始化？（没有初始化就直接把它放到右边去用）</p>
+<pre><code class="language-C">int main() {
+    int i;
+    int j;
+    j=i+10;
+    printf(&quot;%d\n&quot;, j);
+    return 0;
+}
+
+输出：1856970856
+</code></pre>
+<ul>
+<li>那么我们可以看到，没有定义初始化，得到一个奇怪的结果的原因是因为，你一开始没有给它一个明确的值，那么它只能使用原先那个地方的内存里的值，原先内存里的那个值是什么，它就是什么</li>
+</ul>
+<pre><code class="language-c">int main() {
+    int i=0;
+    int j;
+    j=i+10;
+    printf(&quot;%d\n&quot;, j);
+    return 0;
+}
+
+输出：10
+</code></pre>
+</li>
+</ul>
+<p><strong>变量初始化</strong><br>
+• &lt;类型名称&gt; &lt;变量名称&gt; = &lt;初始值&gt;;<br>
+int price = 0;<br>
+int amount = 100;<br>
+• 组合变量定义的时候，也可以在这个定义中单独给单个变量赋初值，如：<br>
+int price = 0, amount = 100;（不能单独一个值就赋给所有变量，只能一个一个的单独去赋值）</p>
+<figure data-type="image" tabindex="1"><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201225211602313.png" alt="image-20201225211602313" loading="lazy"></figure>
+<p><strong>表达式</strong></p>
+<ul>
+<li>
+<p>“＝”是赋值运算符，有运算符的式子就叫做表达式。</p>
+<p>price=0;</p>
+<p>change=100-price;</p>
+</li>
+</ul>
+<p><strong>变量类型</strong></p>
+<ul>
+<li>int price = 0;</li>
+<li>这一行，定义了一个变量。变量的名字是price，类型是int，初始值是0。</li>
+<li>C是一种有类型的语言，所有的变量在使用之前必须定义或声明，所有的变量必须具有确定的数据类型。数据类型表示在变量中可以存放什么样的数据，变量中只能存放指定类型的数据，程序运行过程中也不能改变变量的类型。</li>
+</ul>
+<p><strong>第二个变量</strong></p>
+<ul>
+<li>int change = 100 - price;</li>
+<li>定义了第二个变量change</li>
+<li>并且做了计算</li>
+</ul>
+<p>这个是C99的写法，C99允许你在程序中的任何地方定义变量，在使用这个变量之前，你定义了它就可以。</p>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021603.png" alt="未命名图片" loading="lazy"></figure>
+<p><strong>读整数</strong></p>
+<ul>
+<li>scanf(&quot;%d&quot;, &amp;price);</li>
+<li>%d说要读一个整数了</li>
+<li>要求scnaf这个函数读入下一个整数，读到的结果赋值给变量price</li>
+<li>小心price前面的&amp;（和指针有关）</li>
+<li>printf是要求输出东西，scanf是要求输入东西</li>
+</ul>
+<p>如果输入的不是整数呢？</p>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021604.png" alt="2" loading="lazy"></figure>
+<p>它会默认那个值是0，但我们其实有办法知道用户输入的不是0，而是非数字</p>
+<ul>
+<li>我们还有别的办法知道那个scanf对不对</li>
+</ul>
+<h2 id="213-关于scanf">2.1.3 关于scanf</h2>
+<pre><code class="language-C">int main() {
+    int a,b;
+    中文逗号 scanf(&quot;%d，%d&quot;, &amp;a, &amp;b);
+    英文逗号 scanf(&quot;%d,%d&quot;, &amp;a, &amp;b);
+    各个空格或者换行满足这个空格 scanf(&quot;%d %d&quot;, &amp;a, &amp;b);
+    scanf(&quot;price%d %d&quot;, &amp;a, &amp;b);
+    各个空格或者换行满足这个空格，还需要在输入完两个值后给个东西来满足那个空格，但它不会被程序读取到 scanf(&quot;%d %d &quot;, &amp;a, &amp;b);
+    各个空格或者换行满足这个空格，还需要在输入完两个值后给个东西来满足那个换行 scanf(&quot;%d %d\n&quot;, &amp;a, &amp;b);
+    printf(&quot;%d %d\n&quot;, a, b)
+}
+</code></pre>
+<ul>
+<li>
+<p>放在scanf里面的，不是输出给你看的，而是要你要输入的</p>
+</li>
+<li>
+<p>第4个，你要先给它一个price，例如“price 1 3”就可以了</p>
+</li>
+<li>
+<p>我们使用scanf，就是在运用它的副作用（它是其实是一个有返回值的函数的，但它有输出这个功能），当读取一个文件到末尾的时候，它会返回-1，当输入不成功的时候，会返回0</p>
+<p>应用：</p>
+<pre><code class="language-c">while(scanf(&quot;%d %d&quot;, &amp;a, &amp;b)!=EOF) printf(&quot;%d&quot;, a+b);
+</code></pre>
+</li>
+</ul>
+<h2 id="213-常量vs变量">2.1.3 常量VS变量</h2>
+<p><strong>常量</strong></p>
+<ul>
+<li>
+<p>Int change=100-price</p>
+</li>
+<li>
+<p>固定不变的数，是常数，是常量。不是固定不变的量就是变量。直接写在程序里，我们称之为直接量（literal）或者字面量</p>
+</li>
+<li>
+<p>但上面的100，我们有一个更好的方式表示</p>
+<p>给它定义一个常量：const int AMOUNT = 100（因为我们一般对一个const的变量，需要将其大写强调它是一个常量）这个也是C99的写法</p>
+<pre><code class="language-C">int main() {
+    const int AMOUNT = 100;
+    int price = 0;
+    
+    printf(&quot;请输入金额（元）:&quot;);
+    int change = AMOUNT - price;
+    printf(&quot;找您%d元。\n&quot;. change);
+    
+    return 0;
+}
+</code></pre>
+<p>这样的写法有很多很多好处</p>
+<ul>
+<li>第一，防止遗忘：直接写上100，等过些时间忘了，你就根本不知道你写的这个100是什么了。而你用amount，大家都能懂</li>
+<li>第二，易于修改：将它的定义写在最前面，等你想要修改它的时候，只需要到前面修改就可以了</li>
+</ul>
+<p>所以我们经常使用这样的常量去代替程序中这样的具体数字</p>
+</li>
+</ul>
+<p><strong>Const</strong></p>
+<ul>
+<li>
+<p>const是一个修饰符，加在int的前面，用来给这个变量加上一个const（不变的）的属性。这个const的属性表示这个变量的值一旦初始化，就不能再修改了<br>
+Int change = AMOUNT - price</p>
+</li>
+<li>
+<p>如果你试图对常量做修改，把它放在赋值运算符的左边，就会被编译器发现，指出为一个错误</p>
+<pre><code class="language-C">int main() {
+    const int AMOUNT = 100;
+    int price = 0;
+    
+    AMOUNT=90;
+    
+    printf(&quot;请输入金额（元）:&quot;);
+    scanf(&quot;%d&quot;, &amp;price);
+    
+    int change = AMOUNT - price;
+    printf(&quot;找您%d元。\n&quot;. change);
+    
+    return 0;
+}
+
+输出：error：read-only variable is not....AMOUNT=90; 
+</code></pre>
+<p>但我们想让用户可以输入这个AMOUNT的值，而不是使用固定的初始值</p>
+<ul>
+<li>
+<p>这个变量在哪里定义比较好？</p>
+<pre><code class="language-C">int main() {
+    int amount = 100;
+    int price = 0;
+     
+    printf(&quot;请输入金额（元）:&quot;);
+    scanf(&quot;%d&quot;, &amp;price);
+    
+    printf(&quot;请输入票面&quot;);
+    scanf(&quot;%d&quot;, &amp;amount);
+    
+    int change = amount - price;
+    printf(&quot;找您%d元。\n&quot;, change);
+    
+    return 0;
+}
+</code></pre>
+<p>你也可以一个scanf读一个，也可以一个scanf读多个输入的值</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>plus.c</p>
+<pre><code class="language-C">int a;
+int b;
+
+printf(&quot;请输入两个整数:&quot;);
+scanf(&quot;%d %d, &amp;a, &amp;b&quot;);
+printf(&quot;%d + %d = %d\n&quot;, a, b, a+b);
+</code></pre>
+<p>一，空格；二，回车</p>
+<p>如果你输入的不是整数，scanf就会出错，加上的是两个奇奇怪怪的数字。因为我们还没有判断输入的是什么值。</p>
+<ul>
+<li>如果你输入的不是整数，那么它会默认采用初始值，或者是随意空间里面的一个值</li>
+</ul>
+<h2 id="214-宏定义">2.1.4 宏定义</h2>
+<h1 id="22-浮点数">2.2 浮点数</h1>
+<p><strong>英制计量单位转换</strong></p>
+<ul>
+<li>
+<p>美国人固执的使用英制计量单位，他们习惯用几尺几寸（英尺英寸）来报自己的身高。如果遇到一个美国人告诉你他是5英尺7，他的身高应该是一米几呢？</p>
+<ul>
+<li>（5+7÷12）×0.3048=1.7018米</li>
+</ul>
+<pre><code class="language-C">printf(&quot;请分别输入身高的英尺和英寸,&quot; &quot;如输入\&quot;5 7\&quot;表示5英尺7英寸:&quot;);
+
+int foot;
+int inch;
+
+scanf(&quot;%d %d&quot;, &amp;foot, &amp;inch);
+
+printf(&quot;身高是%f米。\n&quot;, ((foot + inch / 12)*0.3048));
+</code></pre>
+<p>我们如果就这样使用的话，会出错，会算不了inch/12的小数值</p>
+<ul>
+<li>你可以试试分别输入6，与5到inch试试，它们会得到相同的结果</li>
+</ul>
+</li>
+</ul>
+<p><strong>因为</strong></p>
+<ul>
+<li>
+<p>因为两个整数的运算只能得出整数的结果</p>
+<ul>
+<li>10/3=3（在C语言中，它只取整数，把小数部分的给扔了）；而在上面inch/12，如果inch小于12，它就会取0，那就会产生错误呀</li>
+</ul>
+</li>
+<li>
+<p>10与10.0是在C语言中是两个不一样的数</p>
+</li>
+<li>
+<p>10.0是浮点数</p>
+</li>
+</ul>
+<pre><code class="language-C">int main() {
+    printf(&quot;%d\n&quot;, 10.0/3);
+    return 0;
+}
+
+
+如果只是把10改成10.0还是不可以的，这样程序会报错，会显示这个类型是double，要你把%d改为%f
+
+是的，改成%f就能运行正确，结果是3.33333
+</code></pre>
+<pre><code class="language-C">int main() {
+    printf(&quot;%f\n&quot;, 10.0/3*3);
+    return 0;
+}
+</code></pre>
+<p>它会输出10.000000</p>
+<p>为什么不会是9.999...呢？</p>
+<pre><code class="language-C">//第一段
+printf(&quot;%f\n&quot;, (10.0/3)*3); //输出10.000000;
+    所以不是运算顺序的问题;
+
+//第二段
+int a = 10.0/3;
+int b=a*3;   //b也会输出10.000000
+
+//第三段
+int a = 3.3333;//不是循环
+int b=a*3;//b输出的是9.9999
+
+</code></pre>
+<p>原来是这样！</p>
+<p>单精度浮点数（float）与双精度浮点数（double）的区别：</p>
+<p>（1）在内存中占有的字节数不同：    单精度浮点数在机内占4个字节，双精度浮点数在机内占8个字节</p>
+<p>（2）有效数字位数不同：     单精度浮点数有效数字8位，双精度浮点数有效数字16位</p>
+<p>（3）所能表示数的范围不同：     单精度浮点的表示范围：-3.40E+38 ~ +3.40E+38；双精度浮点的表示范围：-1.79E+308 ~ +1.79E+308</p>
+<p>小数位数多出有效位的情况下就发生进位了。</p>
+<p>值得注意的是，%f和%lf都是默认输出6位小数，并不代表double类型的精度只有6位小数  如果需要多输出，强制指定就可以了。</p>
+<p>例如 printf(&quot;.15lf\n&quot;,a); 就可以输出15位小数了。</p>
+<p>在C语言中，带小数点的数，我们有一个专门的术语，叫浮点数</p>
+<p><strong>浮点数</strong></p>
+<ul>
+<li>带小数点的数值。浮点这个词的本意就是指小数点是浮动的，是计算机内部表达非整数（包含分数和无理数）的一种方式。另一种方式叫做定点数（就是永远固定在同一个位置上，比如第四位，那它就永远都是在第四位），不过在C语言中我们不会遇到定点数。人们借用浮点数这个词来表达所有的带小数点的数</li>
+</ul>
+<p>改进</p>
+<pre><code class="language-C">(foot + inch/12.0)*0.3048
+</code></pre>
+<p>当浮点数和整数放在一起的时候，C会将整数转换成浮点数，然后进行浮点数的运算，那么得出的结果就是浮点数了，这就是为什么整数的%d不管用了，因为后面的是一个浮点数，你提醒它后面有个整数没用昂，都不匹配</p>
+<p>我们还有第二种改法</p>
+<p><strong>double</strong></p>
+<ul>
+<li>inch是定义为int类型的变量，如果把int改为double，那么它就变成了是double类型的浮点数变量了</li>
+<li>double的意思是双，是“双精度浮点数”中的第一个单词，人们用来表示浮点数类型。除了double，还有float，float意思就是浮点，表示“单精度浮点数”</li>
+</ul>
+<pre><code class="language-C">int main() {
+    printf(&quot;请分别输入身高的英尺和英寸,&quot; &quot;如输入\&quot;5 7\&quot;表示5英尺7英寸:&quot;);
+    
+    double foot;
+    double inch;
+
+    scanf(&quot;%lf %lf&quot;, &amp;foot, &amp;inch);
+    printf(&quot;身高是%f米。\n&quot;, ((foot + inch / 12)*0.3048));
+    
+    return 0;
+}
+</code></pre>
+<p>对于整数%d，我们输入输出都用它。但对于浮点数，输入用的是%lf，输出用的是%f；%lf代表什么，会在讲输入输出的时候讲</p>
+<p>有以下方法改进（使其输出有小数）</p>
+<blockquote>
+<p>第一种</p>
+<pre><code class="language-C">int a;
+scanf(&quot;%d&quot;, &amp;a);//输入整数
+
+printf(&quot;%f&quot;, a/3.0);//输出的是一个浮点数 
+</code></pre>
+<p>第二种</p>
+<pre><code class="language-C">double a;
+
+scanf(&quot;%d&quot;, &amp;a);//无论你输入的是整数还是浮点数，它都会是浮点数
+
+printf(&quot;%f&quot;, a/3);//输出的是一个浮点数
+</code></pre>
+<p>而无论是哪种方法，它最后的输出必须是提醒后面有一个浮点数%f，而不是%d</p>
+</blockquote>
+<p>数据类型</p>
+<ul>
+<li>整数
+<ul>
+<li>int</li>
+<li>printf(&quot;%d&quot;,...)</li>
+<li>scanf(&quot;%d&quot;,...)</li>
+</ul>
+</li>
+<li>带小数点的数（浮点数）
+<ul>
+<li>double</li>
+<li>printf(&quot;%f&quot;,...)</li>
+<li>scanf(&quot;%lf&quot;,...)</li>
+</ul>
+</li>
+</ul>
+<p><strong>整数</strong><br>
+我们在生活当中是遇不到整数的，小学一二年级学的是整数加减，往后便是分数，带有小数的了。而在现实生活中也很难遇到整数。在计算机里面为什么会出现整数这样的东西？整数类型不能表达有小数部分的数，整数和整数的运算结果还是整数。计算机里会有纯粹的整数这种奇怪的东西，是因为整数的运算比较快，而且占地方也小。其实人们日常生活中大量做的还是纯粹整数的计算，所以整数的用处还是很大的。</p>
+<blockquote>
+<p>整数运算</p>
+<pre><code class="language-C">printf(&quot;%d\n&quot;, 10/3);//会输出3
+
+printf(&quot;%d\n&quot;, 10/3*3);//会输出9
+</code></pre>
+<p>这些是整数运算，所以会产生这种情况</p>
+</blockquote>
+<h1 id="23-表达式">2.3 表达式</h1>
+<h2 id="231-表达式">2.3.1 表达式</h2>
+<p><strong>表达式</strong></p>
+<ul>
+<li>表达式是一系列运算符和算子的组合，用来计算一个值</li>
+<li>price=cost + 12（这是一个表达式，表达式是包含“=”号左边的变量，“=”也是运算符，是一个赋值运算符。对于C语言来说，整个这一行都是表达式）</li>
+</ul>
+<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021605.png" alt="3" loading="lazy"></figure>
+<p><strong>运算符与算子</strong></p>
+<ul>
+<li>运算符（operator）：是指进行运算的动作，操作数值什么的，比如加法运算符“+”，减法运算符“-”，还有赋值运算符“=”</li>
+<li>算子（operand）：是指参与运算的值，这个值可能是一个常数，也可能是变量，还可能是一个方法（函数）的返回值</li>
+<li>一个是动作，一个是参与运算的东西</li>
+<li>例子：a+b，5+a
+<ul>
+<li>a=b+5（a，b，5都是算子；“=”与“+”都是运算符）</li>
+<li>这些都是运算符：</li>
+</ul>
+</li>
+</ul>
+<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021606.png" alt="4" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021607.png" alt="5" loading="lazy"></figure>
+<p><strong>计算时间差</strong></p>
+<ul>
+<li>
+<p>输入两个时间，每个时间分别输入小时和分钟的值，然后输出两个时间之间的差，也以几小时几分表示</p>
+</li>
+<li>
+<pre><code class="language-C">int hour1, minute1;
+int hour2, minute2;
+
+scanf(&quot;%d %d&quot;, &amp;hour1, &amp;minute1);
+scanf(&quot;%d %d&quot;. &amp;hour2, &amp;minute2);
+</code></pre>
+</li>
+<li>
+<p>这个程序很简单，可以采用直接减，但很容易出现一个问题，就是，如果我要求的是3点20分与5点10分的时间间隔呢？10-20=-10，不就产生了一个负数了吗？产生了一个借位的问题，如果这直接算的话，明显是错误的</p>
+</li>
+<li>
+<p>所以我们需要给它进位，将小时往分钟换算来进行加减，加减完后，再换回几时几分</p>
+</li>
+</ul>
+<p>有两个解决方法</p>
+<ul>
+<li>
+<p>往分钟换：小时*60</p>
+<pre><code class="language-C">int hour1, minute1;
+int hour2, minute2;
+
+scanf(&quot;%d %d&quot;, &amp;hour1, &amp;minute1);
+scanf(&quot;%d %d&quot;, &amp;hour2, &amp;minute2);
+
+int t1 = hour1*60 + minute1;
+int t2 = hour2*60 + minute2;
+
+int t  = t2-t1;
+
+printf(&quot;时间差是%d小时%d分。&quot;, t/60, t%60);    
+</code></pre>
+<ul>
+<li>hour1*60+minute1 转换为分钟为单位</li>
+<li>t/60 小时部分；t%60 分钟</li>
+</ul>
+</li>
+<li>
+<p>往小时换：换出来会有小数，所以采用浮点，不过可能会得出循环小数，可以参照换算身高（foot+inch/12）的做法</p>
+<pre><code class="language-C">int hour1, minute1;
+int hour2, minute2;
+
+scanf(&quot;%d %d&quot;, &amp;hour1, &amp;minute1);
+scanf(&quot;%d %d&quot;, &amp;hour2, &amp;minute2);
+
+double h1 = hour1 + minute1/60.0;
+double h2 = hour2 + minute2/60.0;
+
+int sum = (h2-h1) * 60;
+
+printf(&quot;时间差是%d小时%d分。&quot;, sum/60, sum%60);    
+</code></pre>
+<p>但会有不准的时候，比如说4时8分到5时10分，会输出1小时1分，因为61.9999</p>
+</li>
+</ul>
+<h2 id="232-运算符优先级">2.3.2 运算符优先级</h2>
+<p><strong>求平均值</strong></p>
+<ul>
+<li>
+<p>写一个程序，输入两个整数，输出它们的平均值</p>
+<pre><code class="language-C">int a, b;
+
+scanf(&quot;%d %d&quot;, &amp;a, &amp;b);
+
+double c = (a+b)/2.0;
+
+printf(&quot;%d和%d的平均值=%f\n&quot;, a, b, c);
+</code></pre>
+</li>
+</ul>
+<p>为什么还要用2.0呢？</p>
+<ul>
+<li>如果你用2的话，它进行的就是整数运算了，整数除以整数=整数（计算机的固执）</li>
+<li>用2.0，计算机识别到是个浮点数，就会进行浮点数的运算，才能看到小数部分</li>
+</ul>
+<p>看一下上面的例子：（a+b）/2.0</p>
+<ul>
+<li>如果不加括号，那它就会变成是a+b/2.0了</li>
+<li>这个就是运算符优先级，加括号就它优先，简单来说就是先算谁</li>
+</ul>
+<figure data-type="image" tabindex="7"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021608.png" alt="6" loading="lazy"></figure>
+<p>什么是单目运算，双目运算与三目运算呢？</p>
+<ul>
+<li>
+<p>单目运算：单目运算符是指运算所需变量为一个的运算符，又叫一元运算符，其中有逻辑非运算符：!、按位取反运算符：~、自增自减运算符：++， –等。逻辑非运算符【!】、按位取反运算符【~】、自增自减运算符【++， –】、负号运算符【-】、类型转换运算符【(类型)】、指针运算符和取地址运算符【*和&amp;】、长度运算符【sizeof】。因为我们有时候也进行单个算子的运算，比如想把a的值取负，就是-a，得到a的相反数，它只运算一个算子，所以叫单目。-（-5）这些，取自身的相反数；+b这类。</p>
+</li>
+<li>
+<p>双目运算：双目运算符就是对两个变量进行操作；初等运算符：下标运算符【[]】、分量运算符的指向结构体成员运算符【-&gt;】、结构体成员运算符【.】；算术运算符：乘法运算符【*】、除法运算符【/】、取余运算符【%】 、加法运算符【+】、减法运算符【-】；关系运算符：等于运算符【==】、不等于运算符【!=】 、关系运算符【&lt; &gt; &lt;= &gt;= 】；逻辑运算符：逻辑与运算符【&amp;&amp;】 、逻辑或运算符【||】、逻辑非运算符【！】；位运算符：按位与运算符【&amp;】、按位异或运算符【^】 、按位或运算符【|】、左移动运算符【&lt;&lt;】、右移动运算符【&gt;&gt;】；赋值运算符：赋值运算符【= += -= *  = / = % = &gt;&gt;= &lt;&lt;= &amp;= |= ^=】；逗号运算符：逗号运算符【,】。两个算子的结合，5×6，3×2；双目是两个算子</p>
+</li>
+<li>
+<p>三目运算：也可以称为三元运算符，条件（三元）运算符是JavaScript 仅有的使用三个操作数的运算符。例子：a&gt;b? a：b（比较大小）</p>
+</li>
+</ul>
+<p>结合运算是什么意思？</p>
+<ul>
+<li>就是a<em>b+c还有好几个变量，但它会先做a</em>b，再加c，符合我们日常生活中的一般算术的认知</li>
+<li>但单目呢，a*-b（取负），因为它出现在右边，所以先做它，所以是自右向左的结合关系</li>
+</ul>
+<p>在C语言中，有个特殊的运算符，赋值运算符，在别的一些语言中，赋值是一个其它的语句，是一个动作，但对于C语言来说，它是一个运算符</p>
+<p><strong>赋值运算符</strong></p>
+<ul>
+<li>赋值也是运算，也有结果</li>
+<li>a=6的结果是a被赋予的值，也就是6</li>
+<li>a=b=6，a=（b=6），因为是从自右向左的</li>
+<li>为什么说赋值的优先级比所有运算符都低呢？</li>
+</ul>
+<figure data-type="image" tabindex="8"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021609.png" alt="7" loading="lazy"></figure>
+<p>如果它是优先级高的话，就是从左向右，那就会变成a等于b再加5就没有下文了，所以为了让它和正常的算术一样，必须要让它变为比较低的优先级运算符</p>
+<ul>
+<li>
+<p>既然赋值是一个运算符，赋值有结果，就有人这样做它的赋值：嵌入式赋值</p>
+<pre><code class="language-C">int a = 6;
+int b;
+int c=1+(b=a);
+</code></pre>
+<p>但不推荐这样做，因为不利于阅读，还有容易产生错误</p>
+</li>
+</ul>
+<p><strong>结合关系</strong></p>
+<ul>
+<li>
+<p>一般都是自左向右</p>
+</li>
+<li>
+<p>单目+-和赋值=自右向左</p>
+</li>
+<li>
+<pre><code class="language-C">result = a = b = 3 + c;
+result = 2;
+result = (result = result * 2) *6 * (result = 3 + result);    
+</code></pre>
+<p>避免写出这样的式子，不利于阅读，还容易照成误解。不要写出这样的复杂表达式，应该将其拆分为多个表达式，然后以明显，正确的顺序来进行计算</p>
+</li>
+</ul>
+<h2 id="233-交换变量">2.3.3 交换变量</h2>
+<p><strong>交换两个变量</strong></p>
+<ul>
+<li>
+<p>如果已经有：</p>
+<p>int a = 6;</p>
+<p>int b = 5;</p>
+</li>
+<li>
+<p>如何交换a，b两个变量的值？</p>
+</li>
+</ul>
+<p>我们需要明白一点，程序是看步骤执行的，不是看关系</p>
+<p><strong>程序是按步执行的</strong></p>
+<ul>
+<li>程序表达的是顺序执行的动作，而不是关系<br>
+a=b<br>
+b=a<br>
+是依次执行的，如果这样交换的话，结果是a和b都得到b原来的值，因为它是按先后顺序做的</li>
+</ul>
+<p>正确的应该是：</p>
+<pre><code class="language-C">int a=5, b=6, t;
+
+t = a;
+a = b;
+b = t;
+
+printf(&quot;a=%d, b=%d\n&quot;, a, b);
+
+return 0;
+</code></pre>
+<p><strong>Dev C++的调试</strong></p>
+<ul>
+<li>断点：设置断点，它会在那个步骤停下</li>
+</ul>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021610.png" width="300px">
+<h2 id="234-复合赋值与递增递减">2.3.4 复合赋值与递增递减</h2>
+<p><strong>复合赋值</strong></p>
+<ul>
+<li>
+<p>算术运算符“+，-，*，/，%”与赋值运算符“=”的结合起来的运算符，可以形成复合赋值运算符，如“+=，-=，**=，/=，%=”</p>
+</li>
+<li>
+<p>total += 5</p>
+<p>total = total + 5</p>
+</li>
+<li>
+<p>注意：两个运算符中间不可以有空格</p>
+</li>
+<li>
+<p>产生的原因大概是因为PDP-11中有这样的指令，于是专门也在C语言中设计了这样的指令</p>
+</li>
+<li>
+<p>total += （sum+100）/2；<br>
+total = total + （sum+100）/2</p>
+</li>
+<li>
+<p>total *= sum+12；<br>
+total = total * （sum+12）</p>
+</li>
+<li>
+<p>所以它是先算出右边的结果，再与左边的那个变量产生结果</p>
+</li>
+<li>
+<p>total /= 12+6<br>
+total = total /（12+6）</p>
+</li>
+</ul>
+<p><strong>递增递减运算符</strong></p>
+<ul>
+<li>
+<p>“++”和“--”是两个特殊的运算符，它们是单目运算符，这个算子还必须是变量（不能是直接量，如5++，2--这些是不行的，必须是变量，如a++，b--）。这两个运算符分别叫递增递减运算符，它们的作用就是给这个变量+1或-1</p>
+</li>
+<li>
+<p>count++<br>
+count +=1<br>
+count = count + 1</p>
+</li>
+</ul>
+<p><strong>前缀和后缀</strong></p>
+<ul>
+<li>++和--可以放在变量的前面，叫做前缀形式；也可以放在变量的后面形式，叫做后缀形式</li>
+<li>a++的值是a加1以前的值（就是没有加1之前的a），而++a的值是加1后的值。无论哪个，a自己的值都加了1。就是它们的结果不一样而已</li>
+</ul>
+<img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021611.png" width="300px">
+<p><strong>++--</strong></p>
+<ul>
+<li>++与--也有历史来源，和复合赋值运算符一样：当年PDP-11也有两个特殊的机器指令，INC（递增）和DEC（递减）。有了++与--之后呢，C语言的编译器就能把它们编译成对应的指令，那么运算可以加快。但是今天，这个不太有意义了，因为编译器也更加聪明了，不写成++与--这种形式，写出a=a+1，它也能识别出来，也给你产生一个指令。或许现在有些CPU已经没有那种特殊的INC和DEC的指令，没办法去加快。但今天我们还能使用，是因为它写的比较短，比你写出i=i+1要短，运算速度也加快，所以还有人去用它</li>
+<li>可以单独使用，但是不要组合进表达式<br>
+++i++--的结果是？<br>
+i++++的结果是？<br>
+a=b+=c++-d+--e/-f</li>
+</ul>
+<h1 id="24-编程题">2.4 编程题</h1>
+<p>可以在https://pintia.cn/中找题目</p>
+<p>我的账号：2629871996@qq.com</p>
+<p>还有好多OJ系统可以给你刷题训练</p>
 
             </div>
             
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      Yuan
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://yuanfeng123.github.io/post/di-2-zhang-bian-liang-yu-biao-da-shi/" title="第2章 变量与表达式">https://yuanfeng123.github.io/post/di-2-zhang-bian-liang-yu-biao-da-shi/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://yuanfeng123.github.io/tag/dMfm7tyYN/"># C/C++</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="第1章 计算机与C语言" href="https://yuanfeng123.github.io/post/di-1-zhang-ji-suan-ji-yu-c-yu-yan/">第1章 计算机与C语言</a>
+        <a class="nav-mobile-next" title="第1章 计算机与C语言" href="https://yuanfeng123.github.io/post/di-1-zhang-ji-suan-ji-yu-c-yu-yan/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
             
             
   

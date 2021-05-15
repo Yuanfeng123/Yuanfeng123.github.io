@@ -9,7 +9,7 @@
 <meta name="description" content="">
 <meta name="theme-color" content="#000">
 <title>Yuanfeng&#39;s Blog</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/favicon.ico?v=1621055278547">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/favicon.ico?v=1621055568618">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/media/fonts/font-awesome.css">
 <link
@@ -224,13 +224,13 @@
     </div>
     <div class="sidebar-item-box">
       <a href="">
-        <span class="site-item-stat-count">3</span>
+        <span class="site-item-stat-count">1</span>
         <span class="site-item-stat-name language" data-lan="category">分类</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="/tags/">
-        <span class="site-item-stat-count">3</span>
+        <span class="site-item-stat-count">1</span>
         <span class="site-item-stat-name language" data-lan="tag">标签</span>
       </a>
     </div>
@@ -284,12 +284,25 @@
         </div>    
         
       
-      <a href="https://yuanfeng123.github.io/post/di-10-zhang/">
+      <a href="https://yuanfeng123.github.io/post/di-2-zhang-bian-liang-yu-biao-da-shi/">
         <div class="motion-warpper tag-archive-node">
           <div class="tag-node">
             <h1>
-              05-13
-              <small>第10章</small>
+              05-14
+              <small>第2章 变量与表达式</small>
+            </h1>
+          </div>  
+      </div>
+      </a>
+    
+      
+      
+      <a href="https://yuanfeng123.github.io/post/di-1-zhang-ji-suan-ji-yu-c-yu-yan/">
+        <div class="motion-warpper tag-archive-node">
+          <div class="tag-node">
+            <h1>
+              05-14
+              <small>第1章 计算机与C语言</small>
             </h1>
           </div>  
       </div>
@@ -310,25 +323,12 @@
     
       
       
-      <a href="https://yuanfeng123.github.io/post/ee454-te-gong-454-de-tai-yang/">
+      <a href="https://yuanfeng123.github.io/post/di-10-zhang/">
         <div class="motion-warpper tag-archive-node">
           <div class="tag-node">
             <h1>
               05-13
-              <small>ee454特工454的太阳</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://yuanfeng123.github.io/post/ewe/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              05-13
-              <small>ewe </small>
+              <small>第10章 枚举与结构类型</small>
             </h1>
           </div>  
       </div>
@@ -577,6 +577,1036 @@
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://yuanfeng123.github.io/post/di-2-zhang-bian-liang-yu-biao-da-shi/"" data-c="
+          &lt;h1 id=&#34;21-变量&#34;&gt;2.1 变量&lt;/h1&gt;
+&lt;h2 id=&#34;211-变量定义&#34;&gt;2.1.1 变量定义&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;算找零&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如何能在程序运行时输入那个数字23，然后计算输出结果？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;因为要算不同数字的时候，又有重新编辑，编译，很麻烦。所以我们有个方法，我们给它多少，它就告诉我多少&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们需要：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;准备一个地方用来放输入的数字&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有个方法可以输入数字&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;能让输入的数字参与计算&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;change.c：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int price = 0;
+
+printf(&amp;quot;请输入金额（元）：&amp;quot;);
+scanf(&amp;quot;%d&amp;quot;, &amp;amp;price);
+
+int change = 100 - price;
+
+printf(&amp;quot;找您%d元。\n&amp;quot;, change);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;如何输入&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;输入也是在终端窗口中进行&lt;/li&gt;
+&lt;li&gt;输入是以行为单位进行的，行的结束标志就是你按下了回车键。在你按下回车之前，你的程序不会读到任何东西&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;变量&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Int price = 0&lt;/li&gt;
+&lt;li&gt;这一行，定义了一个变量（C语言与JS不同，在JS中定义与声明是分开的，但C语言中，声明的同时也是定义），变量的名字为price，初始值为0，它的数据类型为int&lt;/li&gt;
+&lt;li&gt;变量就是一个用来存放数据的地方（用来保存数据的地方），当我们需要在程序里保存数据时，比如上面的例子中要记录用户输入的价格，就需要一个变量来保存它。用一个变量保存了数据，它才能参加到后面的计算中，比如计算找零。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;变量定义&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;变量定义的一般形式：&amp;lt;类型名称&amp;gt;&amp;lt;变量名称&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Int price&lt;/li&gt;
+&lt;li&gt;Int amount&lt;/li&gt;
+&lt;li&gt;Int price，amount（可以一行定义多个变量）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;变量的名字&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;变量需要一个名字，变量的名字是一种标识符，意思是用来区分这个和那个的不同的名字，也可以表达函数等等的名字&lt;/li&gt;
+&lt;li&gt;标识符有标识符的构造规则。基本的原则就是只能由数字，字母，下划线组成，但数字不能出现在第一个位置上，C语言的关键字（有的地方也叫保留字）不可以用做标识符&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;C语言的保留字：auto, break, case, char, const, continue, default, do, double, else, enum, extern, float, for, goto, if, int, long, register, return, short, signed, sizeof, static, struct, switch, typedef, union, unsigned, void, volatile, while, inline, restrict（不需要背诵下来，在学习的过程中了解到就可以了）&lt;/p&gt;
+&lt;h2 id=&#34;212-变量赋值与初始化&#34;&gt;2.1.2 变量赋值与初始化&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;赋值和初始化&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Int price = 0&lt;/li&gt;
+&lt;li&gt;这一行，定义了一个变量，变量的名字为price，初始值为0，它的数据类型为int&lt;/li&gt;
+&lt;li&gt;Price=0是一个式子，这里的“=”是一个赋值运算符，表示将“=”右边的值赋给“=”左边的变量。因为是在定义变量的时候做的赋值，所以这个时候的赋值又叫做初始化&lt;/li&gt;
+&lt;li&gt;对于C语言来说，初始化和赋值的差异不是特别的大，但对于C++语言来说就可能比较大&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;赋值&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;和数学不同，a=b，在数学中的是描述一种关系，a=b，那么b=a，是描述一种它们之间相等的关系，表示a与b的值一样。&lt;/li&gt;
+&lt;li&gt;但在程序设计中，a=b表示要求计算机做一个动作：将b的值赋给a。&lt;/li&gt;
+&lt;li&gt;关系是静态的，动作是动态的。&lt;/li&gt;
+&lt;li&gt;在数学中，a=b和b=a是等价的，但在程序设计中，两者的意思是完全相反的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;初始化&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;当赋值发生在定义变量的时候，就像程序1中的第7行那样，就是变量的初始化。虽然C语言并没有强制要求所有的变量都在定义的地方做初始化，但是所有的变量在第一次被使用（出现在赋值运算符的右边）之前被应该赋值一次&lt;br&gt;
+如果没有初始化？（没有初始化就直接把它放到右边去用）&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int main() {
+    int i;
+    int j;
+    j=i+10;
+    printf(&amp;quot;%d\n&amp;quot;, j);
+    return 0;
+}
+
+输出：1856970856
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;那么我们可以看到，没有定义初始化，得到一个奇怪的结果的原因是因为，你一开始没有给它一个明确的值，那么它只能使用原先那个地方的内存里的值，原先内存里的那个值是什么，它就是什么&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int main() {
+    int i=0;
+    int j;
+    j=i+10;
+    printf(&amp;quot;%d\n&amp;quot;, j);
+    return 0;
+}
+
+输出：10
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;变量初始化&lt;/strong&gt;&lt;br&gt;
+• &amp;lt;类型名称&amp;gt; &amp;lt;变量名称&amp;gt; = &amp;lt;初始值&amp;gt;;&lt;br&gt;
+int price = 0;&lt;br&gt;
+int amount = 100;&lt;br&gt;
+• 组合变量定义的时候，也可以在这个定义中单独给单个变量赋初值，如：&lt;br&gt;
+int price = 0, amount = 100;（不能单独一个值就赋给所有变量，只能一个一个的单独去赋值）&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201225211602313.png&#34; alt=&#34;image-20201225211602313&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;表达式&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;“＝”是赋值运算符，有运算符的式子就叫做表达式。&lt;/p&gt;
+&lt;p&gt;price=0;&lt;/p&gt;
+&lt;p&gt;change=100-price;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;变量类型&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;int price = 0;&lt;/li&gt;
+&lt;li&gt;这一行，定义了一个变量。变量的名字是price，类型是int，初始值是0。&lt;/li&gt;
+&lt;li&gt;C是一种有类型的语言，所有的变量在使用之前必须定义或声明，所有的变量必须具有确定的数据类型。数据类型表示在变量中可以存放什么样的数据，变量中只能存放指定类型的数据，程序运行过程中也不能改变变量的类型。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;第二个变量&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;int change = 100 - price;&lt;/li&gt;
+&lt;li&gt;定义了第二个变量change&lt;/li&gt;
+&lt;li&gt;并且做了计算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这个是C99的写法，C99允许你在程序中的任何地方定义变量，在使用这个变量之前，你定义了它就可以。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021603.png&#34; alt=&#34;未命名图片&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;读整数&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;scanf(&amp;quot;%d&amp;quot;, &amp;amp;price);&lt;/li&gt;
+&lt;li&gt;%d说要读一个整数了&lt;/li&gt;
+&lt;li&gt;要求scnaf这个函数读入下一个整数，读到的结果赋值给变量price&lt;/li&gt;
+&lt;li&gt;小心price前面的&amp;amp;（和指针有关）&lt;/li&gt;
+&lt;li&gt;printf是要求输出东西，scanf是要求输入东西&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果输入的不是整数呢？&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021604.png&#34; alt=&#34;2&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;它会默认那个值是0，但我们其实有办法知道用户输入的不是0，而是非数字&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我们还有别的办法知道那个scanf对不对&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;213-关于scanf&#34;&gt;2.1.3 关于scanf&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int main() {
+    int a,b;
+    中文逗号 scanf(&amp;quot;%d，%d&amp;quot;, &amp;amp;a, &amp;amp;b);
+    英文逗号 scanf(&amp;quot;%d,%d&amp;quot;, &amp;amp;a, &amp;amp;b);
+    各个空格或者换行满足这个空格 scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;a, &amp;amp;b);
+    scanf(&amp;quot;price%d %d&amp;quot;, &amp;amp;a, &amp;amp;b);
+    各个空格或者换行满足这个空格，还需要在输入完两个值后给个东西来满足那个空格，但它不会被程序读取到 scanf(&amp;quot;%d %d &amp;quot;, &amp;amp;a, &amp;amp;b);
+    各个空格或者换行满足这个空格，还需要在输入完两个值后给个东西来满足那个换行 scanf(&amp;quot;%d %d\n&amp;quot;, &amp;amp;a, &amp;amp;b);
+    printf(&amp;quot;%d %d\n&amp;quot;, a, b)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;放在scanf里面的，不是输出给你看的，而是要你要输入的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第4个，你要先给它一个price，例如“price 1 3”就可以了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我们使用scanf，就是在运用它的副作用（它是其实是一个有返回值的函数的，但它有输出这个功能），当读取一个文件到末尾的时候，它会返回-1，当输入不成功的时候，会返回0&lt;/p&gt;
+&lt;p&gt;应用：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;while(scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;a, &amp;amp;b)!=EOF) printf(&amp;quot;%d&amp;quot;, a+b);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;213-常量vs变量&#34;&gt;2.1.3 常量VS变量&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;常量&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Int change=100-price&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;固定不变的数，是常数，是常量。不是固定不变的量就是变量。直接写在程序里，我们称之为直接量（literal）或者字面量&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;但上面的100，我们有一个更好的方式表示&lt;/p&gt;
+&lt;p&gt;给它定义一个常量：const int AMOUNT = 100（因为我们一般对一个const的变量，需要将其大写强调它是一个常量）这个也是C99的写法&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int main() {
+    const int AMOUNT = 100;
+    int price = 0;
+    
+    printf(&amp;quot;请输入金额（元）:&amp;quot;);
+    int change = AMOUNT - price;
+    printf(&amp;quot;找您%d元。\n&amp;quot;. change);
+    
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这样的写法有很多很多好处&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一，防止遗忘：直接写上100，等过些时间忘了，你就根本不知道你写的这个100是什么了。而你用amount，大家都能懂&lt;/li&gt;
+&lt;li&gt;第二，易于修改：将它的定义写在最前面，等你想要修改它的时候，只需要到前面修改就可以了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以我们经常使用这样的常量去代替程序中这样的具体数字&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Const&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;const是一个修饰符，加在int的前面，用来给这个变量加上一个const（不变的）的属性。这个const的属性表示这个变量的值一旦初始化，就不能再修改了&lt;br&gt;
+Int change = AMOUNT - price&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果你试图对常量做修改，把它放在赋值运算符的左边，就会被编译器发现，指出为一个错误&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int main() {
+    const int AMOUNT = 100;
+    int price = 0;
+    
+    AMOUNT=90;
+    
+    printf(&amp;quot;请输入金额（元）:&amp;quot;);
+    scanf(&amp;quot;%d&amp;quot;, &amp;amp;price);
+    
+    int change = AMOUNT - price;
+    printf(&amp;quot;找您%d元。\n&amp;quot;. change);
+    
+    return 0;
+}
+
+输出：error：read-only variable is not....AMOUNT=90; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;但我们想让用户可以输入这个AMOUNT的值，而不是使用固定的初始值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;这个变量在哪里定义比较好？&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int main() {
+    int amount = 100;
+    int price = 0;
+     
+    printf(&amp;quot;请输入金额（元）:&amp;quot;);
+    scanf(&amp;quot;%d&amp;quot;, &amp;amp;price);
+    
+    printf(&amp;quot;请输入票面&amp;quot;);
+    scanf(&amp;quot;%d&amp;quot;, &amp;amp;amount);
+    
+    int change = amount - price;
+    printf(&amp;quot;找您%d元。\n&amp;quot;, change);
+    
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;你也可以一个scanf读一个，也可以一个scanf读多个输入的值&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;plus.c&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int a;
+int b;
+
+printf(&amp;quot;请输入两个整数:&amp;quot;);
+scanf(&amp;quot;%d %d, &amp;amp;a, &amp;amp;b&amp;quot;);
+printf(&amp;quot;%d + %d = %d\n&amp;quot;, a, b, a+b);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;一，空格；二，回车&lt;/p&gt;
+&lt;p&gt;如果你输入的不是整数，scanf就会出错，加上的是两个奇奇怪怪的数字。因为我们还没有判断输入的是什么值。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果你输入的不是整数，那么它会默认采用初始值，或者是随意空间里面的一个值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;214-宏定义&#34;&gt;2.1.4 宏定义&lt;/h2&gt;
+&lt;h1 id=&#34;22-浮点数&#34;&gt;2.2 浮点数&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;英制计量单位转换&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;美国人固执的使用英制计量单位，他们习惯用几尺几寸（英尺英寸）来报自己的身高。如果遇到一个美国人告诉你他是5英尺7，他的身高应该是一米几呢？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（5+7÷12）×0.3048=1.7018米&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;printf(&amp;quot;请分别输入身高的英尺和英寸,&amp;quot; &amp;quot;如输入\&amp;quot;5 7\&amp;quot;表示5英尺7英寸:&amp;quot;);
+
+int foot;
+int inch;
+
+scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;foot, &amp;amp;inch);
+
+printf(&amp;quot;身高是%f米。\n&amp;quot;, ((foot + inch / 12)*0.3048));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我们如果就这样使用的话，会出错，会算不了inch/12的小数值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你可以试试分别输入6，与5到inch试试，它们会得到相同的结果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;因为&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;因为两个整数的运算只能得出整数的结果&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;10/3=3（在C语言中，它只取整数，把小数部分的给扔了）；而在上面inch/12，如果inch小于12，它就会取0，那就会产生错误呀&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;10与10.0是在C语言中是两个不一样的数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;10.0是浮点数&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int main() {
+    printf(&amp;quot;%d\n&amp;quot;, 10.0/3);
+    return 0;
+}
+
+
+如果只是把10改成10.0还是不可以的，这样程序会报错，会显示这个类型是double，要你把%d改为%f
+
+是的，改成%f就能运行正确，结果是3.33333
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int main() {
+    printf(&amp;quot;%f\n&amp;quot;, 10.0/3*3);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;它会输出10.000000&lt;/p&gt;
+&lt;p&gt;为什么不会是9.999...呢？&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;//第一段
+printf(&amp;quot;%f\n&amp;quot;, (10.0/3)*3); //输出10.000000;
+    所以不是运算顺序的问题;
+
+//第二段
+int a = 10.0/3;
+int b=a*3;   //b也会输出10.000000
+
+//第三段
+int a = 3.3333;//不是循环
+int b=a*3;//b输出的是9.9999
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;原来是这样！&lt;/p&gt;
+&lt;p&gt;单精度浮点数（float）与双精度浮点数（double）的区别：&lt;/p&gt;
+&lt;p&gt;（1）在内存中占有的字节数不同：    单精度浮点数在机内占4个字节，双精度浮点数在机内占8个字节&lt;/p&gt;
+&lt;p&gt;（2）有效数字位数不同：     单精度浮点数有效数字8位，双精度浮点数有效数字16位&lt;/p&gt;
+&lt;p&gt;（3）所能表示数的范围不同：     单精度浮点的表示范围：-3.40E+38 ~ +3.40E+38；双精度浮点的表示范围：-1.79E+308 ~ +1.79E+308&lt;/p&gt;
+&lt;p&gt;小数位数多出有效位的情况下就发生进位了。&lt;/p&gt;
+&lt;p&gt;值得注意的是，%f和%lf都是默认输出6位小数，并不代表double类型的精度只有6位小数  如果需要多输出，强制指定就可以了。&lt;/p&gt;
+&lt;p&gt;例如 printf(&amp;quot;.15lf\n&amp;quot;,a); 就可以输出15位小数了。&lt;/p&gt;
+&lt;p&gt;在C语言中，带小数点的数，我们有一个专门的术语，叫浮点数&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;浮点数&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;带小数点的数值。浮点这个词的本意就是指小数点是浮动的，是计算机内部表达非整数（包含分数和无理数）的一种方式。另一种方式叫做定点数（就是永远固定在同一个位置上，比如第四位，那它就永远都是在第四位），不过在C语言中我们不会遇到定点数。人们借用浮点数这个词来表达所有的带小数点的数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;改进&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;(foot + inch/12.0)*0.3048
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;当浮点数和整数放在一起的时候，C会将整数转换成浮点数，然后进行浮点数的运算，那么得出的结果就是浮点数了，这就是为什么整数的%d不管用了，因为后面的是一个浮点数，你提醒它后面有个整数没用昂，都不匹配&lt;/p&gt;
+&lt;p&gt;我们还有第二种改法&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;double&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;inch是定义为int类型的变量，如果把int改为double，那么它就变成了是double类型的浮点数变量了&lt;/li&gt;
+&lt;li&gt;double的意思是双，是“双精度浮点数”中的第一个单词，人们用来表示浮点数类型。除了double，还有float，float意思就是浮点，表示“单精度浮点数”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int main() {
+    printf(&amp;quot;请分别输入身高的英尺和英寸,&amp;quot; &amp;quot;如输入\&amp;quot;5 7\&amp;quot;表示5英尺7英寸:&amp;quot;);
+    
+    double foot;
+    double inch;
+
+    scanf(&amp;quot;%lf %lf&amp;quot;, &amp;amp;foot, &amp;amp;inch);
+    printf(&amp;quot;身高是%f米。\n&amp;quot;, ((foot + inch / 12)*0.3048));
+    
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;对于整数%d，我们输入输出都用它。但对于浮点数，输入用的是%lf，输出用的是%f；%lf代表什么，会在讲输入输出的时候讲&lt;/p&gt;
+&lt;p&gt;有以下方法改进（使其输出有小数）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第一种&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int a;
+scanf(&amp;quot;%d&amp;quot;, &amp;amp;a);//输入整数
+
+printf(&amp;quot;%f&amp;quot;, a/3.0);//输出的是一个浮点数 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;第二种&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;double a;
+
+scanf(&amp;quot;%d&amp;quot;, &amp;amp;a);//无论你输入的是整数还是浮点数，它都会是浮点数
+
+printf(&amp;quot;%f&amp;quot;, a/3);//输出的是一个浮点数
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;而无论是哪种方法，它最后的输出必须是提醒后面有一个浮点数%f，而不是%d&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;数据类型&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;整数
+&lt;ul&gt;
+&lt;li&gt;int&lt;/li&gt;
+&lt;li&gt;printf(&amp;quot;%d&amp;quot;,...)&lt;/li&gt;
+&lt;li&gt;scanf(&amp;quot;%d&amp;quot;,...)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;带小数点的数（浮点数）
+&lt;ul&gt;
+&lt;li&gt;double&lt;/li&gt;
+&lt;li&gt;printf(&amp;quot;%f&amp;quot;,...)&lt;/li&gt;
+&lt;li&gt;scanf(&amp;quot;%lf&amp;quot;,...)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;整数&lt;/strong&gt;&lt;br&gt;
+我们在生活当中是遇不到整数的，小学一二年级学的是整数加减，往后便是分数，带有小数的了。而在现实生活中也很难遇到整数。在计算机里面为什么会出现整数这样的东西？整数类型不能表达有小数部分的数，整数和整数的运算结果还是整数。计算机里会有纯粹的整数这种奇怪的东西，是因为整数的运算比较快，而且占地方也小。其实人们日常生活中大量做的还是纯粹整数的计算，所以整数的用处还是很大的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;整数运算&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;printf(&amp;quot;%d\n&amp;quot;, 10/3);//会输出3
+
+printf(&amp;quot;%d\n&amp;quot;, 10/3*3);//会输出9
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这些是整数运算，所以会产生这种情况&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;23-表达式&#34;&gt;2.3 表达式&lt;/h1&gt;
+&lt;h2 id=&#34;231-表达式&#34;&gt;2.3.1 表达式&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;表达式&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;表达式是一系列运算符和算子的组合，用来计算一个值&lt;/li&gt;
+&lt;li&gt;price=cost + 12（这是一个表达式，表达式是包含“=”号左边的变量，“=”也是运算符，是一个赋值运算符。对于C语言来说，整个这一行都是表达式）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021605.png&#34; alt=&#34;3&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;运算符与算子&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;运算符（operator）：是指进行运算的动作，操作数值什么的，比如加法运算符“+”，减法运算符“-”，还有赋值运算符“=”&lt;/li&gt;
+&lt;li&gt;算子（operand）：是指参与运算的值，这个值可能是一个常数，也可能是变量，还可能是一个方法（函数）的返回值&lt;/li&gt;
+&lt;li&gt;一个是动作，一个是参与运算的东西&lt;/li&gt;
+&lt;li&gt;例子：a+b，5+a
+&lt;ul&gt;
+&lt;li&gt;a=b+5（a，b，5都是算子；“=”与“+”都是运算符）&lt;/li&gt;
+&lt;li&gt;这些都是运算符：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021606.png&#34; alt=&#34;4&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021607.png&#34; alt=&#34;5&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;计算时间差&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;输入两个时间，每个时间分别输入小时和分钟的值，然后输出两个时间之间的差，也以几小时几分表示&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int hour1, minute1;
+int hour2, minute2;
+
+scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;hour1, &amp;amp;minute1);
+scanf(&amp;quot;%d %d&amp;quot;. &amp;amp;hour2, &amp;amp;minute2);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这个程序很简单，可以采用直接减，但很容易出现一个问题，就是，如果我要求的是3点20分与5点10分的时间间隔呢？10-20=-10，不就产生了一个负数了吗？产生了一个借位的问题，如果这直接算的话，明显是错误的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;所以我们需要给它进位，将小时往分钟换算来进行加减，加减完后，再换回几时几分&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有两个解决方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;往分钟换：小时*60&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int hour1, minute1;
+int hour2, minute2;
+
+scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;hour1, &amp;amp;minute1);
+scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;hour2, &amp;amp;minute2);
+
+int t1 = hour1*60 + minute1;
+int t2 = hour2*60 + minute2;
+
+int t  = t2-t1;
+
+printf(&amp;quot;时间差是%d小时%d分。&amp;quot;, t/60, t%60);    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;hour1*60+minute1 转换为分钟为单位&lt;/li&gt;
+&lt;li&gt;t/60 小时部分；t%60 分钟&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;往小时换：换出来会有小数，所以采用浮点，不过可能会得出循环小数，可以参照换算身高（foot+inch/12）的做法&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int hour1, minute1;
+int hour2, minute2;
+
+scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;hour1, &amp;amp;minute1);
+scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;hour2, &amp;amp;minute2);
+
+double h1 = hour1 + minute1/60.0;
+double h2 = hour2 + minute2/60.0;
+
+int sum = (h2-h1) * 60;
+
+printf(&amp;quot;时间差是%d小时%d分。&amp;quot;, sum/60, sum%60);    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;但会有不准的时候，比如说4时8分到5时10分，会输出1小时1分，因为61.9999&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;232-运算符优先级&#34;&gt;2.3.2 运算符优先级&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;求平均值&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;写一个程序，输入两个整数，输出它们的平均值&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int a, b;
+
+scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;a, &amp;amp;b);
+
+double c = (a+b)/2.0;
+
+printf(&amp;quot;%d和%d的平均值=%f\n&amp;quot;, a, b, c);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为什么还要用2.0呢？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果你用2的话，它进行的就是整数运算了，整数除以整数=整数（计算机的固执）&lt;/li&gt;
+&lt;li&gt;用2.0，计算机识别到是个浮点数，就会进行浮点数的运算，才能看到小数部分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;看一下上面的例子：（a+b）/2.0&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果不加括号，那它就会变成是a+b/2.0了&lt;/li&gt;
+&lt;li&gt;这个就是运算符优先级，加括号就它优先，简单来说就是先算谁&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021608.png&#34; alt=&#34;6&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;什么是单目运算，双目运算与三目运算呢？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;单目运算：单目运算符是指运算所需变量为一个的运算符，又叫一元运算符，其中有逻辑非运算符：!、按位取反运算符：~、自增自减运算符：++， –等。逻辑非运算符【!】、按位取反运算符【~】、自增自减运算符【++， –】、负号运算符【-】、类型转换运算符【(类型)】、指针运算符和取地址运算符【*和&amp;amp;】、长度运算符【sizeof】。因为我们有时候也进行单个算子的运算，比如想把a的值取负，就是-a，得到a的相反数，它只运算一个算子，所以叫单目。-（-5）这些，取自身的相反数；+b这类。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;双目运算：双目运算符就是对两个变量进行操作；初等运算符：下标运算符【[]】、分量运算符的指向结构体成员运算符【-&amp;gt;】、结构体成员运算符【.】；算术运算符：乘法运算符【*】、除法运算符【/】、取余运算符【%】 、加法运算符【+】、减法运算符【-】；关系运算符：等于运算符【==】、不等于运算符【!=】 、关系运算符【&amp;lt; &amp;gt; &amp;lt;= &amp;gt;= 】；逻辑运算符：逻辑与运算符【&amp;amp;&amp;amp;】 、逻辑或运算符【||】、逻辑非运算符【！】；位运算符：按位与运算符【&amp;amp;】、按位异或运算符【^】 、按位或运算符【|】、左移动运算符【&amp;lt;&amp;lt;】、右移动运算符【&amp;gt;&amp;gt;】；赋值运算符：赋值运算符【= += -= *  = / = % = &amp;gt;&amp;gt;= &amp;lt;&amp;lt;= &amp;amp;= |= ^=】；逗号运算符：逗号运算符【,】。两个算子的结合，5×6，3×2；双目是两个算子&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;三目运算：也可以称为三元运算符，条件（三元）运算符是JavaScript 仅有的使用三个操作数的运算符。例子：a&amp;gt;b? a：b（比较大小）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;结合运算是什么意思？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;就是a&lt;em&gt;b+c还有好几个变量，但它会先做a&lt;/em&gt;b，再加c，符合我们日常生活中的一般算术的认知&lt;/li&gt;
+&lt;li&gt;但单目呢，a*-b（取负），因为它出现在右边，所以先做它，所以是自右向左的结合关系&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在C语言中，有个特殊的运算符，赋值运算符，在别的一些语言中，赋值是一个其它的语句，是一个动作，但对于C语言来说，它是一个运算符&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;赋值运算符&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;赋值也是运算，也有结果&lt;/li&gt;
+&lt;li&gt;a=6的结果是a被赋予的值，也就是6&lt;/li&gt;
+&lt;li&gt;a=b=6，a=（b=6），因为是从自右向左的&lt;/li&gt;
+&lt;li&gt;为什么说赋值的优先级比所有运算符都低呢？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021609.png&#34; alt=&#34;7&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;如果它是优先级高的话，就是从左向右，那就会变成a等于b再加5就没有下文了，所以为了让它和正常的算术一样，必须要让它变为比较低的优先级运算符&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;既然赋值是一个运算符，赋值有结果，就有人这样做它的赋值：嵌入式赋值&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int a = 6;
+int b;
+int c=1+(b=a);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;但不推荐这样做，因为不利于阅读，还有容易产生错误&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;结合关系&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;一般都是自左向右&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;单目+-和赋值=自右向左&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;result = a = b = 3 + c;
+result = 2;
+result = (result = result * 2) *6 * (result = 3 + result);    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;避免写出这样的式子，不利于阅读，还容易照成误解。不要写出这样的复杂表达式，应该将其拆分为多个表达式，然后以明显，正确的顺序来进行计算&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;233-交换变量&#34;&gt;2.3.3 交换变量&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;交换两个变量&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;如果已经有：&lt;/p&gt;
+&lt;p&gt;int a = 6;&lt;/p&gt;
+&lt;p&gt;int b = 5;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如何交换a，b两个变量的值？&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们需要明白一点，程序是看步骤执行的，不是看关系&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;程序是按步执行的&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;程序表达的是顺序执行的动作，而不是关系&lt;br&gt;
+a=b&lt;br&gt;
+b=a&lt;br&gt;
+是依次执行的，如果这样交换的话，结果是a和b都得到b原来的值，因为它是按先后顺序做的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;正确的应该是：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int a=5, b=6, t;
+
+t = a;
+a = b;
+b = t;
+
+printf(&amp;quot;a=%d, b=%d\n&amp;quot;, a, b);
+
+return 0;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Dev C++的调试&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;断点：设置断点，它会在那个步骤停下&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021610.png&#34; width=&#34;300px&#34;&gt;
+&lt;h2 id=&#34;234-复合赋值与递增递减&#34;&gt;2.3.4 复合赋值与递增递减&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;复合赋值&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;算术运算符“+，-，*，/，%”与赋值运算符“=”的结合起来的运算符，可以形成复合赋值运算符，如“+=，-=，**=，/=，%=”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;total += 5&lt;/p&gt;
+&lt;p&gt;total = total + 5&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;注意：两个运算符中间不可以有空格&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;产生的原因大概是因为PDP-11中有这样的指令，于是专门也在C语言中设计了这样的指令&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;total += （sum+100）/2；&lt;br&gt;
+total = total + （sum+100）/2&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;total *= sum+12；&lt;br&gt;
+total = total * （sum+12）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;所以它是先算出右边的结果，再与左边的那个变量产生结果&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;total /= 12+6&lt;br&gt;
+total = total /（12+6）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;递增递减运算符&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;“++”和“--”是两个特殊的运算符，它们是单目运算符，这个算子还必须是变量（不能是直接量，如5++，2--这些是不行的，必须是变量，如a++，b--）。这两个运算符分别叫递增递减运算符，它们的作用就是给这个变量+1或-1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;count++&lt;br&gt;
+count +=1&lt;br&gt;
+count = count + 1&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;前缀和后缀&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;++和--可以放在变量的前面，叫做前缀形式；也可以放在变量的后面形式，叫做后缀形式&lt;/li&gt;
+&lt;li&gt;a++的值是a加1以前的值（就是没有加1之前的a），而++a的值是加1后的值。无论哪个，a自己的值都加了1。就是它们的结果不一样而已&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412021611.png&#34; width=&#34;300px&#34;&gt;
+&lt;p&gt;&lt;strong&gt;++--&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;++与--也有历史来源，和复合赋值运算符一样：当年PDP-11也有两个特殊的机器指令，INC（递增）和DEC（递减）。有了++与--之后呢，C语言的编译器就能把它们编译成对应的指令，那么运算可以加快。但是今天，这个不太有意义了，因为编译器也更加聪明了，不写成++与--这种形式，写出a=a+1，它也能识别出来，也给你产生一个指令。或许现在有些CPU已经没有那种特殊的INC和DEC的指令，没办法去加快。但今天我们还能使用，是因为它写的比较短，比你写出i=i+1要短，运算速度也加快，所以还有人去用它&lt;/li&gt;
+&lt;li&gt;可以单独使用，但是不要组合进表达式&lt;br&gt;
+++i++--的结果是？&lt;br&gt;
+i++++的结果是？&lt;br&gt;
+a=b+=c++-d+--e/-f&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;24-编程题&#34;&gt;2.4 编程题&lt;/h1&gt;
+&lt;p&gt;可以在https://pintia.cn/中找题目&lt;/p&gt;
+&lt;p&gt;我的账号：2629871996@qq.com&lt;/p&gt;
+&lt;p&gt;还有好多OJ系统可以给你刷题训练&lt;/p&gt;
+">第2章 变量与表达式</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://yuanfeng123.github.io/post/di-1-zhang-ji-suan-ji-yu-c-yu-yan/"" data-c="
+          &lt;h1 id=&#34;11-计算机与编程语言&#34;&gt;1.1 计算机与编程语言&lt;/h1&gt;
+&lt;h2 id=&#34;111-计算机如何工作编程是什么&#34;&gt;1.1.1 计算机如何工作？编程是什么？&lt;/h2&gt;
+&lt;p&gt;计算机是为人类服务的，那么我们拿餐厅的服务员来做一下比较。比如说你想要一杯水，你可以和服务员说“给我一杯水”&lt;/p&gt;
+&lt;p&gt;但对计算机就不一样了，你和它说“给我一杯水”，它根本不会搭理你，不是故意无视你，而是它真的不知道怎么做呀。计算机需要程序员输入一条条指令才会动，所以聪明的不是计算机，虽然凭借内部的芯片，让计算机拥有速度可以执行多项任务的智能，但一切智慧的源头都是来自程序员。所以每当程序员要让计算机执行任务时，都必须要给出十分具体，清晰的指令。&lt;/p&gt;
+&lt;p&gt;对人可以说“what to do”;但对计算机就得是“how to do”了&lt;/p&gt;
+&lt;p&gt;**编程（Programming）**是编定程序的中文简称，就是让计算机代码解决某个问题，对某个计算体系规定一定的运算方式，使计算体系按照该计算方式运行，并最终得到相应结果的过程。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;程序（program）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;定义：一组指示计算机或其他具有消息处理能力设备每一步动作的指令，通常用某种程序设计语言编写，运行于某种目标体系结构上。&lt;/li&gt;
+&lt;li&gt;程序是如何解决问题的东西&lt;/li&gt;
+&lt;li&gt;指特定的一系列动作、行动或操作，或一系列指令的集合&lt;/li&gt;
+&lt;li&gt;程序（program）是为实现特定目标或解决特定问题而用计算机语言编写的命令序列的集合。为实现预期目的而进行操作的一系列语句和指令。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;程序设计（programming）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;程序设计是给出解决特定问题程序的过程，是软件构造活动中的重要组成部分。程序设计往往以某种程序设计语言为工具，给出这种语言下的程序。程序设计过程应当包括分析、设计、编码、测试、排错等不同阶段。专业的程序设计人员常被称为程序员。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;算法（Algorithm）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果想让计算机做计算任务，那么就需要将程序员的想法，思维过程用编程语言将步骤一步一步列出来&lt;/li&gt;
+&lt;li&gt;这些步骤就是算法&lt;/li&gt;
+&lt;li&gt;计算机做的都是计算&lt;/li&gt;
+&lt;li&gt;算法是为了解决某个问题的步骤和方法，有多种算法可以解决同一个问题，只不过就看它们的复杂度，选取最优的算法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;编程语言&lt;/strong&gt;：不是与计算机用来和计算机沟通的，而是发出指令的，程序员将自己的思维过程用编程语言列出来，让计算机执行计算，去解决问题&lt;/p&gt;
+&lt;p&gt;程序的执行有两种方法：解释与编译&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;解释（Python）&lt;/strong&gt;：另一个程序试图去理解你的程序&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;解释性语言拥有特殊的计算能力，容易修改，执行效率会低一点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;编译（C语言）&lt;/strong&gt;：另一个程序会翻译你的程序去机器语言，变成可直接执行文件，相当于一个翻译器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;编译性语言效率更快，并且有确定的运算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412024428.png&#34; alt=&#34;image-20201225195737961&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;​                                                                            &lt;em&gt;编译流程&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;加深理解：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;解释性语言就好像吃火锅，边做边吃，编译性语言就是全部菜上来再开吃，因为火锅要边煮边吃，所以效率会低一些&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;但语言本无解释与编译之分，仅凭个人喜好安排，你要是想用编译器就用，想用解释器就用，都是凭靠自己的习惯与喜好&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;补充知识点&#34;&gt;补充知识点&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;程序设计步骤&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;分析问题&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对于接受的任务要进行认真的分析，研究所给定的条件，分析最后应达到的目标，找出解决问题的规律，选择解题的方法，完成实际问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;设计算法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;即设计出解题的方法和具体步骤。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;编写程序&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将算法翻译成计算机程序设计语言，对源程序进行编辑、编译和连接。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;运行程序，分析结果&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;运行可执行程序，得到运行结果。能得到运行结果并不意味着程序正确，要对结果进行分析，看它是否合理。不合理要对程序进行调试，即通过上机发现和排除程序中的故障的过程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;编写程序文档&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;许多程序是提供给别人使用的，如同正式的产品应当提供产品说明书一样，正式提供给用户使用的程序，必须向用户提供程序说明书。内容应包括：程序名称、程序功能、运行环境、程序的装入和启动、需要输入的数据，以及使用注意事项等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;112-计算机的思维是什么&#34;&gt;1.1.2 计算机的思维是什么？&lt;/h2&gt;
+&lt;p&gt;计算机是最擅长做重复的东西——枚举法&lt;/p&gt;
+&lt;p&gt;比如一道方程：2x+6=12，人类会很快就能算出来，但计算机不同呀，它会这样算&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;2×1+6≠12；2×2+6≠12&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一直重复，直到得出正确答案&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果程序员加上一个约束条件，比如说给出一个范围给它，它就会更高效&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;12-c语言&#34;&gt;1.2 C语言&lt;/h1&gt;
+&lt;h2 id=&#34;121-为什么我们选择c语言&#34;&gt;1.2.1 为什么我们选择C语言？&lt;/h2&gt;
+&lt;p&gt;程序设计语言非常多，而C语言在市场份额中占据非常大，将近17%！可以在TIOBE官网中查询&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;市场份额&lt;/strong&gt;：市场份额亦称“市场占有率”。指某企业某一产品（或品类）的销售量（或销售额）在市场同类产品（或品类）中所占比重。反映企业在市场上的地位。通常市场份额越高，竞争力越强。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412024442.png&#34; alt=&#34;image-20201225201730246&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;一，Java与C语言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;（1）为什么java会不稳定呢？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Java不稳定的主要因素还是因为有更好的其它语言可以代替它&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;（2）且C语言稳定的因素是它能够解决特定的一些问题，而这些问题是其它语言很难做到的，例如操作系统，嵌入式，这些除了C语言就没有其它选择了，其它则有时候使用C++&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;二，其它语言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;（1）现代的编程语言在语法中差异很小&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;现代的新出现的所有编程语言都是C-like语言，因为它们都和C语言十分接近，如变量怎样定义，函数等&lt;/li&gt;
+&lt;li&gt;而上世纪60，70年代就不同了，因为当时的语言差异非常大。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;（2）语言的能力/适用领域主要是由它的库与传统所决定的&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;库：因为有些编程语言它的库中或许有些函数或者类可以用于解决这个问题&lt;/li&gt;
+&lt;li&gt;传统：因为一个问题或许它在传统里有个专门的语言可以解决，如果这种问题要写的软件比较多，则这门语言就应用的多，那么市场份额也就越大&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;嵌入式&lt;/strong&gt;：我们都知道，计算机系统可以处理各种数据、管理各种数据，我们这里所说的数据是包括文字、数字、图片以及各种指令。计算机系统就象人的大脑，记忆我们经历过的各种信息，帮我们分析各种信息，还可以控制指挥我们的各种行为。我们希望能制造各种有智能的机器，那幺这些机器就需要一套脑系统，这些机器可能很小，如我们使用的数码照相机，我们不能将PC机装进去，也不能照相的时候还抗着PC机，于是就需要给它设计一套小小的可以嵌在里面的脑系统，这个大脑有多聪明，就要看它的软件了。这个嵌在里面的脑系统就是一个嵌入式计算机系统，那幺我们可以这样定义：隐藏在一些更大的系统中，管理控制这些系统，并带有微处理器的专用软硬件系统称为嵌入式计算机系统，通常称为嵌入式系统。&lt;/p&gt;
+&lt;p&gt;C语言与其它语言&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C++语言；包括C语言的全部特性&lt;/li&gt;
+&lt;li&gt;Java语言：基于C++语言开发的&lt;/li&gt;
+&lt;li&gt;Perl&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;122-c语言的简单历史&#34;&gt;1.2.2 C语言的简单历史&lt;/h2&gt;
+&lt;p&gt;一，C语言简介&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C语言在1969年开发出来&lt;/li&gt;
+&lt;li&gt;C语言由B语言发展过来，B语言由BCPL发展过来，BCPL由Fortran发展过来&lt;/li&gt;
+&lt;li&gt;Fortran是人类历史上第一个高级程序设计语言，于1957年开发&lt;/li&gt;
+&lt;li&gt;BCPL和B都支持指针（C语言的指针也是使得C语言变为重要的东西）间接方式，所以C也支持了&lt;/li&gt;
+&lt;li&gt;C语言还受到了PL/I（非常重要的底层编程语言或系统编程语言，汇编语言，与机器语言非常接近，所以可以做一些像操作系统这样的基础程序，在高级语言中，C语言是最低级的语言）的影响，还和PDP-11的机器有很大关系&lt;/li&gt;
+&lt;li&gt;1973年3月，第三版的Unix上出现了C语言的编译器（编译C语言程序）&lt;/li&gt;
+&lt;li&gt;1973年11月，第四版的Unix（system four）发不了，这个版本完全用C语言重新写的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;二，C语言版本与发展&lt;/p&gt;
+&lt;p&gt;（1）C语言K&amp;amp;R版本-经典的C&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在C语言的发展历史上最早出现的一个版本是K&amp;amp;R-C&lt;/li&gt;
+&lt;li&gt;这本书里面提出了一些C语言规范的东西，于是后面的编译器都是按照这样的要求做了&lt;/li&gt;
+&lt;li&gt;叫经典的C，旧的C，传统C&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;（2）C语言标准&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1989年ANSIC（美国国家标准学会）发布了一个标准—ANSIC C&lt;/li&gt;
+&lt;li&gt;1990年ISO（国际标准组织）搬着了ANSIC的标准—C89&lt;/li&gt;
+&lt;li&gt;C的标准在1995年与1999年两次更新—C95与C99，现在的标准是C18，是2018年最新发布的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;（3）不同版本的差异：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;语法上面的一些具体差异&lt;/li&gt;
+&lt;li&gt;也有能力上的差异，如C99的变量是可以在任意地方去定义的；变量可以有const修饰表明这个变量是不可以被修改的。&lt;/li&gt;
+&lt;li&gt;所有的编译器都支持C99版&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;123-编程软件&#34;&gt;1.2.3 编程软件&lt;/h2&gt;
+&lt;p&gt;一，C语言的应用：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;操作系统&lt;/li&gt;
+&lt;li&gt;驱动程序：&lt;/li&gt;
+&lt;li&gt;底层驱动：图形引擎，图像处理，声音效果；驱动这个游戏的效果，比如玩游戏时的那个引擎，怎样把这个三维的视频播放给你看&lt;/li&gt;
+&lt;li&gt;嵌入式系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些底下的东西语言是用C语言在写&lt;/p&gt;
+&lt;p&gt;那么上层的东西，表面的东西呢？如一些网站，展示出来的不是用C语言做的，网站背后用的代码不是C语言写的，但网站的服务器本身是C语言写的操作系统，网站的服务器软件是C语言写的，可是直接在给你提供数据的这些代码不是C语言写的&lt;/p&gt;
+&lt;p&gt;所以C语言是一门工业型语言&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;是一些做非常基础性工作的人在用C语言（什么人在用C语言？）&lt;/li&gt;
+&lt;li&gt;开发效率＞学习过程&lt;/li&gt;
+&lt;li&gt;开发效率＞开发乐趣&lt;/li&gt;
+&lt;li&gt;日常应用程序很少直接用到C语言编写，都是间接式应用到的，比如那个程序是用别的程序设计语言写的，但那个程序的编程软件是用C语言写的。&lt;/li&gt;
+&lt;li&gt;学习C的过程主要是写练习代码，而非真实软件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;二，编译到运行&lt;br&gt;
+（1）C语言需要被编译才能运行，所以你需要：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;编辑器-将你写的代码写在上面，记录下来，只要是个文本编辑软件就可以了，那也就代表着电脑中的文本编辑器也可以用来当编辑器。&lt;/li&gt;
+&lt;li&gt;编译器-对你的代码进行转换，变成计算机能懂的东西，也就是一个翻译器，翻译成可执行文件&lt;/li&gt;
+&lt;li&gt;或者直接采用IDE（集成开发环境）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;（2）推荐的编程软件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dev C++&lt;/li&gt;
+&lt;li&gt;免费&lt;/li&gt;
+&lt;li&gt;安装简单，便捷，不大&lt;/li&gt;
+&lt;li&gt;不用建工程（因为它可以只是单一的编译运行C源文件，而其它的必须要建立项目，建立工程等繁琐步骤）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;（3）其他选择&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MS Visual Studio Express（Windows）-缺点：太大了；优点：功能多&lt;/li&gt;
+&lt;li&gt;Xcode（Mac OS X）-基于unix系统的&lt;/li&gt;
+&lt;li&gt;Eclipse-CDT&lt;/li&gt;
+&lt;li&gt;Geany（和MinGW一起）-拥有非常基础的编辑器的功能，在这基础上可以调用外部的一些编译器，但它做的很精细，比如说有语法高亮等功能&lt;/li&gt;
+&lt;li&gt;Sublime（和MinGW一起）&lt;/li&gt;
+&lt;li&gt;vim/emacs（和MinGW一起）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;MinGW是Minimalist GNU for Windows的缩写。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最小的GNU版本（里面有GNU的编译器），里面包含着编译器套装（GCC）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;完全凭个人喜欢，习惯选择，你也可以使用命令行做编辑器，和编译&lt;/p&gt;
+&lt;p&gt;DEV C++的编译器是mingw的，所以无需再另行安装mingw了&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mingw32&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;124-记事本mingw命令行&#34;&gt;1.2.4 记事本+MinGW+命令行&lt;/h2&gt;
+&lt;p&gt;你也可以使用记事本+MinGW+命令行使用，只需要做好环境设置就可以了&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;为了在 Windows 上安装 GCC，您需要安装 MinGW。为了安装 MinGW，请访问 MinGW 的主页 www.mingw.org，进入 MinGW 下载页面，下载最新版本的 MinGW 安装程序，命名格式为 MinGW-&lt;version&gt;.exe。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当安装 MinGW 时，您至少要安装 gcc-core、gcc-g++、binutils 和 MinGW runtime，但是一般情况下都会安装更多其他的项。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;添加您安装的 MinGW 的 bin 子目录到您的 PATH 环境变量中，这样您就可以在命令行中通过简单的名称来指定这些工具。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当完成安装时，您可以从 Windows 命令行上运行 gcc、g++、ar、ranlib、dlltool 和其他一些 GNU 工具。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;流程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;第一，用编辑器（或者记事本也可以），写好了后缀名是C的文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第二，打开cmd，转到C文件所在的目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第三，输入“gcc 文件名.c”，就可以将其编译成可执行文件了，它的文件名是a.exe&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gcc -o name.exe file.c
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;添加到环境变量后的好处是，可以在命令行使用这些工具了&lt;/p&gt;
+&lt;p&gt;常用命令行指令&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;cd 文件夹//用于打开文件夹
+cd ..//回到上级目录
+md 文件夹名字//新建文件夹
+dir 显示目录//显示目录    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/yishichangan1/article/details/51250329&#34;&gt;Visual Studio2010简体中文版/旗舰版安装教程&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我的百度网盘有存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;MinGW 是什么？&lt;/p&gt;
+&lt;p&gt;​    MinGW 提供了一套简单方便的Windows下的基于GCC 程序开发环境。MinGW 收集了一系列免费的Windows 使用的头文件和库文件；同时整合了GNU ( http://www.gnu.org/ )的工具集，特别是GNU 程序开发工具，如经典gcc, g++, make等。MinGW是完全免费的自由软件，它在Windows平台上模拟了Linux下GCC的开发环境，为C++的跨平台开发提供了良好基础支持，为了在Windows下工作的程序员熟悉Linux下的C++工程组织提供了条件。&lt;/p&gt;
+&lt;p&gt;轻量级与重量级（在软件架构当中的术语解释）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;轻量级是相对于重量级的一种对于组件的评判标准，它用来衡量组件对其环境的依赖程度。&lt;/li&gt;
+&lt;li&gt;轻与重是根据其组件对环境的依赖程度&lt;/li&gt;
+&lt;li&gt;如果这个依赖越小，就越轻量;反之就越重量。&lt;/li&gt;
+&lt;li&gt;误区：常常有人用大小来衡量轻量级与重量级，比如php的框架，因为slim要比Laravel小的多，就认为slim轻量而laravel、zend framwork是重量级的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;13-第一个c语言程序与环境设置&#34;&gt;1.3 第一个C语言程序与环境设置&lt;/h1&gt;
+&lt;h2 id=&#34;131-线上开发环境&#34;&gt;1.3.1 线上开发环境&lt;/h2&gt;
+&lt;p&gt;在线IDE：https://www.tutorialspoint.com/codingground.htm&lt;/p&gt;
+&lt;p&gt;过去在电脑上安装集成开发环境：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows-Dev C++&lt;/li&gt;
+&lt;li&gt;Mac-Xcode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有些线上IDE有严格的语法标准，例如int Hi（只是声明），而没有初始化，有些IDE不能没有初始化。虽然已经在scanf前已经声明了Hi。但它们只接受有初始化的变量（例如int Hi=0）&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int main(int argc, char **argv) {
+    printf(&amp;quot;Hello, World!\n&amp;quot;);
+    int i=0;
+    scanf(&amp;quot;%d&amp;quot;, &amp;amp;i);
+    printf(&amp;quot;%d&amp;quot;, i+10);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;132-windows安装编程软件&#34;&gt;1.3.2 Windows安装编程软件&lt;/h2&gt;
+&lt;p&gt;现在在网上一搜什么软件都有，因为C语言的历史上，有很多人做了它的开发环境，做了编译器。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;70年代，80年代出现的语言都这样，不是一家独大。在当时，语言的规范一旦出来，就会有很多人去做它的编译器了。&lt;/li&gt;
+&lt;li&gt;但近几年出现的语言，它的开发环境，标准只掌握在一些极少的团体当中。好处：只有一个软件，没别的选择，这个软件是怎样就是怎样&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;C语言过去即使有标准，但不同的编译器厂家，写不同编译器的人，因为他们常常带着自己的一些想法，一些编程习惯，所以造成了很多“方言”&lt;/p&gt;
+&lt;p&gt;在SourceForge（代码托管网站）安装Dev C++&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;输出&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;printf（&amp;quot;Hello World\n&amp;quot;）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“”里面的内容叫字符串。屏幕会原封不动的输出&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;\n表示需要在输出的结果后面换一行&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;暂停&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果你在使用Dev C++ 4.9.9.2&lt;/li&gt;
+&lt;li&gt;system(&amp;quot;pause&amp;quot;);&lt;/li&gt;
+&lt;li&gt;让程序运行完成后，窗口还能留下&lt;/li&gt;
+&lt;li&gt;不是Dev C++ 4.9.9.2就不需要这个了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;133-第一个c程序&#34;&gt;1.3.3 第一个C程序&lt;/h2&gt;
+&lt;p&gt;关于那个小黑框，因为我们还没涉及到GUI（图形用户界面），我们可以称呼它为命令行，终端，控制台都可以。不过我们大多数还是称呼它为终端。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;终端&lt;/strong&gt;：指用户与机器交互的系统，用户可以在其输入数据，它可以输出返回的结果。（终端（Computer terminal），是一台电脑或者计算机系统，用来让用户输入数据，及显示其计算结果的机器，简而言之就是人类用户与计算机交互的设备。终端有些是全电子的，也有些是机电的。其又名终端机，它与一部独立的电脑不同，但也是电脑组成的部分。）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;电脑=主机+终端&lt;/li&gt;
+&lt;li&gt;终端=输入设备+输出设备&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;**控制台（console）**是命令行界面的别称。取其字面意义，控制台可泛指用于对系统或软件进行管理的应用程序、硬件。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+int main() {
+    printf(&amp;quot;Hello World!\n&amp;quot;);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;程序框架&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;所有的程序都需要这一段&lt;/li&gt;
+&lt;li&gt;在学函数之前，我们写的代码都只是会在这个框架之中&lt;/li&gt;
+&lt;li&gt;学函数后，我们会调用函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;程序中的错误&lt;/strong&gt;&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412024459.png&#34; alt=&#34;image-20201225205046312&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;（1）编译的时候发现的错误所在的地方会以红色的底表示出来&lt;/p&gt;
+&lt;p&gt;（2）具体的错误原因列在下方的窗口里（是英文的）&lt;/p&gt;
+&lt;p&gt;（3）C的编译器给出的错误提示往往不是那么好“猜”。报错十分的模糊（例如你在n段语句后不加“；”，但它在报错是在n+1行前要你添加上“；”）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不要用中文！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;中国学生还有一个极其常见的低级错误，就是用了中文输入法来输入程序。那些标点符号，在中文和英文可能看上去相似，但是对于计算机是完全不同的符号，如果你还开了全角标点的话，问题就更严重了&lt;/li&gt;
+&lt;li&gt;因为计算机只懂的数字，那么所有的信息都必须转换为数字，计算机才能看得懂。或者称之为是编码，颜色必须也得转换为编码，称为颜色编码。有些颜色在人的肉眼里看会非常相似，但对于计算机是完全不一样的颜色，因为编码不一样。&lt;/li&gt;
+&lt;li&gt;而符号也是如此，在手写的时候，人类分不清英文格式与中文格式的符号，因为及其相似。但计算机就不一样了，对它来说，那两个符号的编码完全不一样。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;134-关于那个0&#34;&gt;1.3.4 关于那个0&lt;/h2&gt;
+&lt;p&gt;因为数字0和字母o非常相似，而一开始呢，我们又是手写的程序，然后交给操作员打到打卡机，但这操作员它可不懂这代码，他只会按上面代码操作，所以因为这代码是别人写的，他这操作员不就分不清了吗？这究竟是0还是o呢？&lt;/p&gt;
+&lt;p&gt;于是说，要么在0那里加个斜线，要么在中间加个点，只要能分清出是0还是o就行了&lt;/p&gt;
+&lt;h2 id=&#34;135-做点计算&#34;&gt;1.3.5 做点计算&lt;/h2&gt;
+&lt;p&gt;关于除法与乘法的符号与我们手写的不一样，为什么呢？因为当时的打字机没有这些运算符号。于是就用了比较相似的代替着&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+int main() {
+    printf(&amp;quot;%d\n&amp;quot;, 23 + 57);
+    printf(&amp;quot;23+57=%d\n&amp;quot;, 23 + 57);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+">第1章 计算机与C语言</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://yuanfeng123.github.io/post/shi-dai-de/"" data-c="
+          &lt;h2 id=&#34;第一章&#34;&gt;第一章&lt;/h2&gt;
+">C语言程序设计笔记列表</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://yuanfeng123.github.io/post/di-10-zhang/"" data-c="
@@ -1418,25 +2448,7 @@ int main() {
 &lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/yangcs2009/article/details/39698997#:~:text=%E5%B0%8F%E7%AB%AF%E5%B0%B1%E6%98%AF%E4%BD%8E%E4%BD%8D%E5%AD%97,%E5%86%85%E5%AD%98%E7%9A%84%E9%AB%98%E5%9C%B0%E5%9D%80%E7%AB%AF%E3%80%82&#34;&gt;计算机大端模式和小端模式 内存对齐问题（sizeof）&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.jianshu.com/p/f38f2c524ace&#34;&gt;程序在计算机内部的存储方式&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-">第10章</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://yuanfeng123.github.io/post/shi-dai-de/"" data-c="
-          &lt;h2 id=&#34;第一章&#34;&gt;第一章&lt;/h2&gt;
-">C语言程序设计笔记列表</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://yuanfeng123.github.io/post/ee454-te-gong-454-de-tai-yang/"" data-c="
-          &lt;p&gt;343443434344日&lt;/p&gt;
-">ee454特工454的太阳</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://yuanfeng123.github.io/post/ewe/"" data-c="
-          &lt;p&gt;erererere&lt;/p&gt;
-">ewe </a>
+">第10章 枚举与结构类型</a>
       </div>
       
       <div class="item">
