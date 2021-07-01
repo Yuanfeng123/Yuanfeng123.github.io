@@ -8,7 +8,7 @@
 <meta name="keywords" content="C/C++中文网学习，信息学竞赛学习资料，Yuanfeng&#39;s Blog，Yuanfeng的博客">
 <meta name="description" content="">
 <meta name="theme-color" content="#000">
-<title>第1章 计算机与C语言 | Yuanfeng&#39;s Blog</title>
+<title>NOIP教学指导系列 | Yuanfeng&#39;s Blog</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/favicon.ico?v=1625098415726">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/media/fonts/font-awesome.css">
@@ -58,8 +58,8 @@
 </script>
 
 
-  <meta name="description" content="第1章 计算机与C语言" />
-  <meta name="keywords" content="C/C++" />
+  <meta name="description" content="NOIP教学指导系列" />
+  <meta name="keywords" content="" />
 </head>
 
 <body>
@@ -223,8 +223,7 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            <div class="post-side-meta" id="post_side_meta">
-              
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/images/avatar.png"/>
@@ -267,217 +266,6 @@
 
 
 </div>
-            </div>
-            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number auto"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li><a href="#11-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80">1.1 计算机与编程语言</a>
-<ul>
-<li><a href="#111-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%BC%96%E7%A8%8B%E6%98%AF%E4%BB%80%E4%B9%88">1.1.1 计算机如何工作？编程是什么？</a>
-<ul>
-<li><a href="#%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86%E7%82%B9">补充知识点</a></li>
-</ul>
-</li>
-<li><a href="#112-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E6%80%9D%E7%BB%B4%E6%98%AF%E4%BB%80%E4%B9%88">1.1.2 计算机的思维是什么？</a></li>
-</ul>
-</li>
-<li><a href="#12-c%E8%AF%AD%E8%A8%80">1.2 C语言</a>
-<ul>
-<li><a href="#121-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E9%80%89%E6%8B%A9c%E8%AF%AD%E8%A8%80">1.2.1 为什么我们选择C语言？</a></li>
-<li><a href="#122-c%E8%AF%AD%E8%A8%80%E7%9A%84%E7%AE%80%E5%8D%95%E5%8E%86%E5%8F%B2">1.2.2 C语言的简单历史</a></li>
-<li><a href="#123-%E7%BC%96%E7%A8%8B%E8%BD%AF%E4%BB%B6">1.2.3 编程软件</a></li>
-<li><a href="#124-%E8%AE%B0%E4%BA%8B%E6%9C%ACmingw%E5%91%BD%E4%BB%A4%E8%A1%8C">1.2.4 记事本+MinGW+命令行</a></li>
-</ul>
-</li>
-<li><a href="#13-%E7%AC%AC%E4%B8%80%E4%B8%AAc%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E4%B8%8E%E7%8E%AF%E5%A2%83%E8%AE%BE%E7%BD%AE">1.3 第一个C语言程序与环境设置</a>
-<ul>
-<li><a href="#131-%E7%BA%BF%E4%B8%8A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">1.3.1 线上开发环境</a></li>
-<li><a href="#132-windows%E5%AE%89%E8%A3%85%E7%BC%96%E7%A8%8B%E8%BD%AF%E4%BB%B6">1.3.2 Windows安装编程软件</a></li>
-<li><a href="#133-%E7%AC%AC%E4%B8%80%E4%B8%AAc%E7%A8%8B%E5%BA%8F">1.3.3 第一个C程序</a></li>
-<li><a href="#134-%E5%85%B3%E4%BA%8E%E9%82%A3%E4%B8%AA0">1.3.4 关于那个0</a></li>
-<li><a href="#135-%E5%81%9A%E7%82%B9%E8%AE%A1%E7%AE%97">1.3.5 做点计算</a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
-      }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
-    });
-  }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
           
         
       </div>
@@ -565,8 +353,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://yuanfeng123.github.io/post/di-1-zhang-ji-suan-ji-yu-c-yu-yan/">
-      第1章 计算机与C语言
+    <a class="post-title-link" href="https://yuanfeng123.github.io/post/noip-jiao-xue-zhi-dao/">
+      NOIP教学指导系列
     </a>
   </h1>
   <div class="post-meta">
@@ -574,36 +362,23 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-05-14 13:11:05">2021-05-14</span>
+      <span class="publish-time" data-t="2021-05-14 04:43:29">2021-05-14</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://yuanfeng123.github.io/tag/dMfm7tyYN/">
-        <span>C/C++</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>19<span class="language" data-lan="minute">分钟</span></span>
+      <span>1<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>5337<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>154<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/di-1-zhang-ji-suan-ji-yu-c-yu-yan/" data-flag-title="第1章 计算机与C语言" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/noip-jiao-xue-zhi-dao/" data-flag-title="NOIP教学指导系列" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -612,346 +387,24 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <h1 id="11-计算机与编程语言">1.1 计算机与编程语言</h1>
-<h2 id="111-计算机如何工作编程是什么">1.1.1 计算机如何工作？编程是什么？</h2>
-<p>计算机是为人类服务的，那么我们拿餐厅的服务员来做一下比较。比如说你想要一杯水，你可以和服务员说“给我一杯水”</p>
-<p>但对计算机就不一样了，你和它说“给我一杯水”，它根本不会搭理你，不是故意无视你，而是它真的不知道怎么做呀。计算机需要程序员输入一条条指令才会动，所以聪明的不是计算机，虽然凭借内部的芯片，让计算机拥有速度可以执行多项任务的智能，但一切智慧的源头都是来自程序员。所以每当程序员要让计算机执行任务时，都必须要给出十分具体，清晰的指令。</p>
-<p>对人可以说“what to do”;但对计算机就得是“how to do”了</p>
-<p>**编程（Programming）**是编定程序的中文简称，就是让计算机代码解决某个问题，对某个计算体系规定一定的运算方式，使计算体系按照该计算方式运行，并最终得到相应结果的过程。</p>
-<p><strong>程序（program）</strong></p>
+              <p>这是一个新的系列，这套系列将会指导noip课程教学，将会从编程语言基础，到算法，再到数据结构全部讲解与指导。将会按照单元-章-章节-课时，如此划分。</p>
+<p>每个课时包含以下部分：</p>
 <ul>
-<li>定义：一组指示计算机或其他具有消息处理能力设备每一步动作的指令，通常用某种程序设计语言编写，运行于某种目标体系结构上。</li>
-<li>程序是如何解决问题的东西</li>
-<li>指特定的一系列动作、行动或操作，或一系列指令的集合</li>
-<li>程序（program）是为实现特定目标或解决特定问题而用计算机语言编写的命令序列的集合。为实现预期目的而进行操作的一系列语句和指令。</li>
+<li>复习巩固</li>
+<li>预习新知/题目练习</li>
+<li>知识传授</li>
+<li>知识应用（包含生活应用，编程应用，以及竞赛练习题）</li>
+<li>课时总结</li>
+<li>小测</li>
 </ul>
-<p><strong>程序设计（programming）</strong></p>
+<p>采取最简单，最详细的方式去展示。</p>
+<p>参考资料</p>
 <ul>
-<li>程序设计是给出解决特定问题程序的过程，是软件构造活动中的重要组成部分。程序设计往往以某种程序设计语言为工具，给出这种语言下的程序。程序设计过程应当包括分析、设计、编码、测试、排错等不同阶段。专业的程序设计人员常被称为程序员。</li>
+<li>《大话数据结构》</li>
+<li>《啊哈C语言》</li>
+<li>《啊哈算法》</li>
+<li>《信息奥赛一本通》</li>
 </ul>
-<p><strong>算法（Algorithm）</strong></p>
-<ul>
-<li>如果想让计算机做计算任务，那么就需要将程序员的想法，思维过程用编程语言将步骤一步一步列出来</li>
-<li>这些步骤就是算法</li>
-<li>计算机做的都是计算</li>
-<li>算法是为了解决某个问题的步骤和方法，有多种算法可以解决同一个问题，只不过就看它们的复杂度，选取最优的算法</li>
-</ul>
-<p><strong>编程语言</strong>：不是与计算机用来和计算机沟通的，而是发出指令的，程序员将自己的思维过程用编程语言列出来，让计算机执行计算，去解决问题</p>
-<p>程序的执行有两种方法：解释与编译</p>
-<ul>
-<li>
-<p><strong>解释（Python）</strong>：另一个程序试图去理解你的程序</p>
-<ul>
-<li>解释性语言拥有特殊的计算能力，容易修改，执行效率会低一点</li>
-</ul>
-</li>
-<li>
-<p><strong>编译（C语言）</strong>：另一个程序会翻译你的程序去机器语言，变成可直接执行文件，相当于一个翻译器</p>
-<ul>
-<li>编译性语言效率更快，并且有确定的运算</li>
-</ul>
-</li>
-</ul>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412024428.png" alt="image-20201225195737961" loading="lazy"></figure>
-<p>​                                                                            <em>编译流程</em></p>
-<p>加深理解：</p>
-<ul>
-<li>
-<p>解释性语言就好像吃火锅，边做边吃，编译性语言就是全部菜上来再开吃，因为火锅要边煮边吃，所以效率会低一些</p>
-</li>
-<li>
-<p>但语言本无解释与编译之分，仅凭个人喜好安排，你要是想用编译器就用，想用解释器就用，都是凭靠自己的习惯与喜好</p>
-</li>
-</ul>
-<h3 id="补充知识点">补充知识点</h3>
-<p><strong>程序设计步骤</strong></p>
-<p>分析问题</p>
-<ul>
-<li>对于接受的任务要进行认真的分析，研究所给定的条件，分析最后应达到的目标，找出解决问题的规律，选择解题的方法，完成实际问题。</li>
-</ul>
-<p>设计算法</p>
-<ul>
-<li>即设计出解题的方法和具体步骤。</li>
-</ul>
-<p>编写程序</p>
-<ul>
-<li>将算法翻译成计算机程序设计语言，对源程序进行编辑、编译和连接。</li>
-</ul>
-<p>运行程序，分析结果</p>
-<ul>
-<li>运行可执行程序，得到运行结果。能得到运行结果并不意味着程序正确，要对结果进行分析，看它是否合理。不合理要对程序进行调试，即通过上机发现和排除程序中的故障的过程。</li>
-</ul>
-<p>编写程序文档</p>
-<ul>
-<li>许多程序是提供给别人使用的，如同正式的产品应当提供产品说明书一样，正式提供给用户使用的程序，必须向用户提供程序说明书。内容应包括：程序名称、程序功能、运行环境、程序的装入和启动、需要输入的数据，以及使用注意事项等。</li>
-</ul>
-<h2 id="112-计算机的思维是什么">1.1.2 计算机的思维是什么？</h2>
-<p>计算机是最擅长做重复的东西——枚举法</p>
-<p>比如一道方程：2x+6=12，人类会很快就能算出来，但计算机不同呀，它会这样算</p>
-<ul>
-<li>
-<p>2×1+6≠12；2×2+6≠12</p>
-</li>
-<li>
-<p>一直重复，直到得出正确答案</p>
-</li>
-<li>
-<p>如果程序员加上一个约束条件，比如说给出一个范围给它，它就会更高效</p>
-</li>
-</ul>
-<h1 id="12-c语言">1.2 C语言</h1>
-<h2 id="121-为什么我们选择c语言">1.2.1 为什么我们选择C语言？</h2>
-<p>程序设计语言非常多，而C语言在市场份额中占据非常大，将近17%！可以在TIOBE官网中查询</p>
-<ul>
-<li><strong>市场份额</strong>：市场份额亦称“市场占有率”。指某企业某一产品（或品类）的销售量（或销售额）在市场同类产品（或品类）中所占比重。反映企业在市场上的地位。通常市场份额越高，竞争力越强。</li>
-</ul>
-<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412024442.png" alt="image-20201225201730246" loading="lazy"></figure>
-<p><strong>一，Java与C语言</strong></p>
-<p>（1）为什么java会不稳定呢？</p>
-<ul>
-<li>Java不稳定的主要因素还是因为有更好的其它语言可以代替它</li>
-</ul>
-<p>（2）且C语言稳定的因素是它能够解决特定的一些问题，而这些问题是其它语言很难做到的，例如操作系统，嵌入式，这些除了C语言就没有其它选择了，其它则有时候使用C++</p>
-<p><strong>二，其它语言</strong></p>
-<p>（1）现代的编程语言在语法中差异很小</p>
-<ul>
-<li>现代的新出现的所有编程语言都是C-like语言，因为它们都和C语言十分接近，如变量怎样定义，函数等</li>
-<li>而上世纪60，70年代就不同了，因为当时的语言差异非常大。</li>
-</ul>
-<p>（2）语言的能力/适用领域主要是由它的库与传统所决定的</p>
-<ul>
-<li>库：因为有些编程语言它的库中或许有些函数或者类可以用于解决这个问题</li>
-<li>传统：因为一个问题或许它在传统里有个专门的语言可以解决，如果这种问题要写的软件比较多，则这门语言就应用的多，那么市场份额也就越大</li>
-</ul>
-<p><strong>嵌入式</strong>：我们都知道，计算机系统可以处理各种数据、管理各种数据，我们这里所说的数据是包括文字、数字、图片以及各种指令。计算机系统就象人的大脑，记忆我们经历过的各种信息，帮我们分析各种信息，还可以控制指挥我们的各种行为。我们希望能制造各种有智能的机器，那幺这些机器就需要一套脑系统，这些机器可能很小，如我们使用的数码照相机，我们不能将PC机装进去，也不能照相的时候还抗着PC机，于是就需要给它设计一套小小的可以嵌在里面的脑系统，这个大脑有多聪明，就要看它的软件了。这个嵌在里面的脑系统就是一个嵌入式计算机系统，那幺我们可以这样定义：隐藏在一些更大的系统中，管理控制这些系统，并带有微处理器的专用软硬件系统称为嵌入式计算机系统，通常称为嵌入式系统。</p>
-<p>C语言与其它语言</p>
-<ul>
-<li>C++语言；包括C语言的全部特性</li>
-<li>Java语言：基于C++语言开发的</li>
-<li>Perl</li>
-</ul>
-<h2 id="122-c语言的简单历史">1.2.2 C语言的简单历史</h2>
-<p>一，C语言简介</p>
-<ul>
-<li>C语言在1969年开发出来</li>
-<li>C语言由B语言发展过来，B语言由BCPL发展过来，BCPL由Fortran发展过来</li>
-<li>Fortran是人类历史上第一个高级程序设计语言，于1957年开发</li>
-<li>BCPL和B都支持指针（C语言的指针也是使得C语言变为重要的东西）间接方式，所以C也支持了</li>
-<li>C语言还受到了PL/I（非常重要的底层编程语言或系统编程语言，汇编语言，与机器语言非常接近，所以可以做一些像操作系统这样的基础程序，在高级语言中，C语言是最低级的语言）的影响，还和PDP-11的机器有很大关系</li>
-<li>1973年3月，第三版的Unix上出现了C语言的编译器（编译C语言程序）</li>
-<li>1973年11月，第四版的Unix（system four）发不了，这个版本完全用C语言重新写的</li>
-</ul>
-<p>二，C语言版本与发展</p>
-<p>（1）C语言K&amp;R版本-经典的C</p>
-<ul>
-<li>在C语言的发展历史上最早出现的一个版本是K&amp;R-C</li>
-<li>这本书里面提出了一些C语言规范的东西，于是后面的编译器都是按照这样的要求做了</li>
-<li>叫经典的C，旧的C，传统C</li>
-</ul>
-<p>（2）C语言标准</p>
-<ul>
-<li>1989年ANSIC（美国国家标准学会）发布了一个标准—ANSIC C</li>
-<li>1990年ISO（国际标准组织）搬着了ANSIC的标准—C89</li>
-<li>C的标准在1995年与1999年两次更新—C95与C99，现在的标准是C18，是2018年最新发布的</li>
-</ul>
-<p>（3）不同版本的差异：</p>
-<ul>
-<li>语法上面的一些具体差异</li>
-<li>也有能力上的差异，如C99的变量是可以在任意地方去定义的；变量可以有const修饰表明这个变量是不可以被修改的。</li>
-<li>所有的编译器都支持C99版</li>
-</ul>
-<h2 id="123-编程软件">1.2.3 编程软件</h2>
-<p>一，C语言的应用：</p>
-<ul>
-<li>操作系统</li>
-<li>驱动程序：</li>
-<li>底层驱动：图形引擎，图像处理，声音效果；驱动这个游戏的效果，比如玩游戏时的那个引擎，怎样把这个三维的视频播放给你看</li>
-<li>嵌入式系统</li>
-</ul>
-<p>这些底下的东西语言是用C语言在写</p>
-<p>那么上层的东西，表面的东西呢？如一些网站，展示出来的不是用C语言做的，网站背后用的代码不是C语言写的，但网站的服务器本身是C语言写的操作系统，网站的服务器软件是C语言写的，可是直接在给你提供数据的这些代码不是C语言写的</p>
-<p>所以C语言是一门工业型语言</p>
-<ul>
-<li>是一些做非常基础性工作的人在用C语言（什么人在用C语言？）</li>
-<li>开发效率＞学习过程</li>
-<li>开发效率＞开发乐趣</li>
-<li>日常应用程序很少直接用到C语言编写，都是间接式应用到的，比如那个程序是用别的程序设计语言写的，但那个程序的编程软件是用C语言写的。</li>
-<li>学习C的过程主要是写练习代码，而非真实软件</li>
-</ul>
-<p>二，编译到运行<br>
-（1）C语言需要被编译才能运行，所以你需要：</p>
-<ul>
-<li>编辑器-将你写的代码写在上面，记录下来，只要是个文本编辑软件就可以了，那也就代表着电脑中的文本编辑器也可以用来当编辑器。</li>
-<li>编译器-对你的代码进行转换，变成计算机能懂的东西，也就是一个翻译器，翻译成可执行文件</li>
-<li>或者直接采用IDE（集成开发环境）</li>
-</ul>
-<p>（2）推荐的编程软件</p>
-<ul>
-<li>Dev C++</li>
-<li>免费</li>
-<li>安装简单，便捷，不大</li>
-<li>不用建工程（因为它可以只是单一的编译运行C源文件，而其它的必须要建立项目，建立工程等繁琐步骤）</li>
-</ul>
-<p>（3）其他选择</p>
-<ul>
-<li>MS Visual Studio Express（Windows）-缺点：太大了；优点：功能多</li>
-<li>Xcode（Mac OS X）-基于unix系统的</li>
-<li>Eclipse-CDT</li>
-<li>Geany（和MinGW一起）-拥有非常基础的编辑器的功能，在这基础上可以调用外部的一些编译器，但它做的很精细，比如说有语法高亮等功能</li>
-<li>Sublime（和MinGW一起）</li>
-<li>vim/emacs（和MinGW一起）</li>
-</ul>
-<p>MinGW是Minimalist GNU for Windows的缩写。</p>
-<ul>
-<li>最小的GNU版本（里面有GNU的编译器），里面包含着编译器套装（GCC）</li>
-</ul>
-<p>完全凭个人喜欢，习惯选择，你也可以使用命令行做编辑器，和编译</p>
-<p>DEV C++的编译器是mingw的，所以无需再另行安装mingw了</p>
-<ul>
-<li>Mingw32</li>
-</ul>
-<h2 id="124-记事本mingw命令行">1.2.4 记事本+MinGW+命令行</h2>
-<p>你也可以使用记事本+MinGW+命令行使用，只需要做好环境设置就可以了</p>
-<ul>
-<li>
-<p>为了在 Windows 上安装 GCC，您需要安装 MinGW。为了安装 MinGW，请访问 MinGW 的主页 www.mingw.org，进入 MinGW 下载页面，下载最新版本的 MinGW 安装程序，命名格式为 MinGW-<version>.exe。</p>
-</li>
-<li>
-<p>当安装 MinGW 时，您至少要安装 gcc-core、gcc-g++、binutils 和 MinGW runtime，但是一般情况下都会安装更多其他的项。</p>
-</li>
-<li>
-<p>添加您安装的 MinGW 的 bin 子目录到您的 PATH 环境变量中，这样您就可以在命令行中通过简单的名称来指定这些工具。</p>
-</li>
-<li>
-<p>当完成安装时，您可以从 Windows 命令行上运行 gcc、g++、ar、ranlib、dlltool 和其他一些 GNU 工具。</p>
-</li>
-</ul>
-<p>流程</p>
-<ul>
-<li>
-<p>第一，用编辑器（或者记事本也可以），写好了后缀名是C的文件</p>
-</li>
-<li>
-<p>第二，打开cmd，转到C文件所在的目录</p>
-</li>
-<li>
-<p>第三，输入“gcc 文件名.c”，就可以将其编译成可执行文件了，它的文件名是a.exe</p>
-<pre><code>gcc -o name.exe file.c
-</code></pre>
-</li>
-</ul>
-<p>添加到环境变量后的好处是，可以在命令行使用这些工具了</p>
-<p>常用命令行指令</p>
-<pre><code class="language-C">cd 文件夹//用于打开文件夹
-cd ..//回到上级目录
-md 文件夹名字//新建文件夹
-dir 显示目录//显示目录    
-</code></pre>
-<pre><code class="language-C">
-
-</code></pre>
-<p><a href="https://blog.csdn.net/yishichangan1/article/details/51250329">Visual Studio2010简体中文版/旗舰版安装教程</a></p>
-<ul>
-<li>我的百度网盘有存</li>
-</ul>
-<p>MinGW 是什么？</p>
-<p>​    MinGW 提供了一套简单方便的Windows下的基于GCC 程序开发环境。MinGW 收集了一系列免费的Windows 使用的头文件和库文件；同时整合了GNU ( http://www.gnu.org/ )的工具集，特别是GNU 程序开发工具，如经典gcc, g++, make等。MinGW是完全免费的自由软件，它在Windows平台上模拟了Linux下GCC的开发环境，为C++的跨平台开发提供了良好基础支持，为了在Windows下工作的程序员熟悉Linux下的C++工程组织提供了条件。</p>
-<p>轻量级与重量级（在软件架构当中的术语解释）</p>
-<ul>
-<li>轻量级是相对于重量级的一种对于组件的评判标准，它用来衡量组件对其环境的依赖程度。</li>
-<li>轻与重是根据其组件对环境的依赖程度</li>
-<li>如果这个依赖越小，就越轻量;反之就越重量。</li>
-<li>误区：常常有人用大小来衡量轻量级与重量级，比如php的框架，因为slim要比Laravel小的多，就认为slim轻量而laravel、zend framwork是重量级的。</li>
-</ul>
-<h1 id="13-第一个c语言程序与环境设置">1.3 第一个C语言程序与环境设置</h1>
-<h2 id="131-线上开发环境">1.3.1 线上开发环境</h2>
-<p>在线IDE：https://www.tutorialspoint.com/codingground.htm</p>
-<p>过去在电脑上安装集成开发环境：</p>
-<ul>
-<li>Windows-Dev C++</li>
-<li>Mac-Xcode</li>
-</ul>
-<p>有些线上IDE有严格的语法标准，例如int Hi（只是声明），而没有初始化，有些IDE不能没有初始化。虽然已经在scanf前已经声明了Hi。但它们只接受有初始化的变量（例如int Hi=0）</p>
-<pre><code class="language-C">int main(int argc, char **argv) {
-    printf(&quot;Hello, World!\n&quot;);
-    int i=0;
-    scanf(&quot;%d&quot;, &amp;i);
-    printf(&quot;%d&quot;, i+10);
-    return 0;
-}
-</code></pre>
-<h2 id="132-windows安装编程软件">1.3.2 Windows安装编程软件</h2>
-<p>现在在网上一搜什么软件都有，因为C语言的历史上，有很多人做了它的开发环境，做了编译器。</p>
-<ul>
-<li>70年代，80年代出现的语言都这样，不是一家独大。在当时，语言的规范一旦出来，就会有很多人去做它的编译器了。</li>
-<li>但近几年出现的语言，它的开发环境，标准只掌握在一些极少的团体当中。好处：只有一个软件，没别的选择，这个软件是怎样就是怎样</li>
-</ul>
-<p>C语言过去即使有标准，但不同的编译器厂家，写不同编译器的人，因为他们常常带着自己的一些想法，一些编程习惯，所以造成了很多“方言”</p>
-<p>在SourceForge（代码托管网站）安装Dev C++</p>
-<p><strong>输出</strong></p>
-<ul>
-<li>
-<p>printf（&quot;Hello World\n&quot;）</p>
-</li>
-<li>
-<p>“”里面的内容叫字符串。屏幕会原封不动的输出</p>
-</li>
-<li>
-<p>\n表示需要在输出的结果后面换一行</p>
-</li>
-</ul>
-<p><strong>暂停</strong></p>
-<ul>
-<li>如果你在使用Dev C++ 4.9.9.2</li>
-<li>system(&quot;pause&quot;);</li>
-<li>让程序运行完成后，窗口还能留下</li>
-<li>不是Dev C++ 4.9.9.2就不需要这个了</li>
-</ul>
-<h2 id="133-第一个c程序">1.3.3 第一个C程序</h2>
-<p>关于那个小黑框，因为我们还没涉及到GUI（图形用户界面），我们可以称呼它为命令行，终端，控制台都可以。不过我们大多数还是称呼它为终端。</p>
-<p><strong>终端</strong>：指用户与机器交互的系统，用户可以在其输入数据，它可以输出返回的结果。（终端（Computer terminal），是一台电脑或者计算机系统，用来让用户输入数据，及显示其计算结果的机器，简而言之就是人类用户与计算机交互的设备。终端有些是全电子的，也有些是机电的。其又名终端机，它与一部独立的电脑不同，但也是电脑组成的部分。）</p>
-<ul>
-<li>电脑=主机+终端</li>
-<li>终端=输入设备+输出设备</li>
-</ul>
-<p>**控制台（console）**是命令行界面的别称。取其字面意义，控制台可泛指用于对系统或软件进行管理的应用程序、硬件。</p>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-
-int main() {
-    printf(&quot;Hello World!\n&quot;);
-    return 0;
-}
-</code></pre>
-<p><strong>程序框架</strong></p>
-<ul>
-<li>所有的程序都需要这一段</li>
-<li>在学函数之前，我们写的代码都只是会在这个框架之中</li>
-<li>学函数后，我们会调用函数</li>
-</ul>
-<p><strong>程序中的错误</strong></p>
-<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412024459.png" alt="image-20201225205046312" loading="lazy"></figure>
-<p>（1）编译的时候发现的错误所在的地方会以红色的底表示出来</p>
-<p>（2）具体的错误原因列在下方的窗口里（是英文的）</p>
-<p>（3）C的编译器给出的错误提示往往不是那么好“猜”。报错十分的模糊（例如你在n段语句后不加“；”，但它在报错是在n+1行前要你添加上“；”）</p>
-<p><strong>不要用中文！！！</strong></p>
-<ul>
-<li>中国学生还有一个极其常见的低级错误，就是用了中文输入法来输入程序。那些标点符号，在中文和英文可能看上去相似，但是对于计算机是完全不同的符号，如果你还开了全角标点的话，问题就更严重了</li>
-<li>因为计算机只懂的数字，那么所有的信息都必须转换为数字，计算机才能看得懂。或者称之为是编码，颜色必须也得转换为编码，称为颜色编码。有些颜色在人的肉眼里看会非常相似，但对于计算机是完全不一样的颜色，因为编码不一样。</li>
-<li>而符号也是如此，在手写的时候，人类分不清英文格式与中文格式的符号，因为及其相似。但计算机就不一样了，对它来说，那两个符号的编码完全不一样。</li>
-</ul>
-<h2 id="134-关于那个0">1.3.4 关于那个0</h2>
-<p>因为数字0和字母o非常相似，而一开始呢，我们又是手写的程序，然后交给操作员打到打卡机，但这操作员它可不懂这代码，他只会按上面代码操作，所以因为这代码是别人写的，他这操作员不就分不清了吗？这究竟是0还是o呢？</p>
-<p>于是说，要么在0那里加个斜线，要么在中间加个点，只要能分清出是0还是o就行了</p>
-<h2 id="135-做点计算">1.3.5 做点计算</h2>
-<p>关于除法与乘法的符号与我们手写的不一样，为什么呢？因为当时的打字机没有这些运算符号。于是就用了比较相似的代替着</p>
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-
-int main() {
-    printf(&quot;%d\n&quot;, 23 + 57);
-    printf(&quot;23+57=%d\n&quot;, 23 + 57);
-    return 0;
-}
-</code></pre>
 
             </div>
             
@@ -968,7 +421,7 @@ int main() {
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://yuanfeng123.github.io/post/di-1-zhang-ji-suan-ji-yu-c-yu-yan/" title="第1章 计算机与C语言">https://yuanfeng123.github.io/post/di-1-zhang-ji-suan-ji-yu-c-yu-yan/</a>
+      <a href="https://yuanfeng123.github.io/post/noip-jiao-xue-zhi-dao/" title="NOIP教学指导系列">https://yuanfeng123.github.io/post/noip-jiao-xue-zhi-dao/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -977,21 +430,19 @@ int main() {
   </ul>
   <div class="tags">
     
-      <a href="https://yuanfeng123.github.io/tag/dMfm7tyYN/"># C/C++</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="第2章 变量与表达式" href="https://yuanfeng123.github.io/post/di-2-zhang-bian-liang-yu-biao-da-shi/">第2章 变量与表达式</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="第2章 变量与表达式" href="https://yuanfeng123.github.io/post/di-2-zhang-bian-liang-yu-biao-da-shi/">上一篇</a>
+        <a class="nav-pc-next" title="第1章 计算机与C语言" href="https://yuanfeng123.github.io/post/di-1-zhang-ji-suan-ji-yu-c-yu-yan/">第1章 计算机与C语言</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="第1章 计算机与C语言" href="https://yuanfeng123.github.io/post/di-1-zhang-ji-suan-ji-yu-c-yu-yan/">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="NOIP教学指导系列" href="https://yuanfeng123.github.io/post/noip-jiao-xue-zhi-dao/">NOIP教学指导系列</a>
-        <a class="nav-mobile-next" title="NOIP教学指导系列" href="https://yuanfeng123.github.io/post/noip-jiao-xue-zhi-dao/">下一篇</a>
+        <a class="nav-pc-next" title="第11章 可变数组与链表" href="https://yuanfeng123.github.io/post/di-11-zhang-ke-bian-shu-zu-yu-lian-biao/">第11章 可变数组与链表</a>
+        <a class="nav-mobile-next" title="第11章 可变数组与链表" href="https://yuanfeng123.github.io/post/di-11-zhang-ke-bian-shu-zu-yu-lian-biao/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
