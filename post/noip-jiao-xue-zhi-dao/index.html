@@ -9,7 +9,7 @@
 <meta name="description" content="">
 <meta name="theme-color" content="#000">
 <title>NOIP教学指导系列 | Yuanfeng&#39;s Blog</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/favicon.ico?v=1625382248125">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/favicon.ico?v=1646524153657">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Yuanfeng123/Yuanfeng123.github.io@master/media/fonts/font-awesome.css">
 <link
@@ -992,849 +992,6 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 ">资源汇总</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://yuanfeng123.github.io/post/di-10-zhang-mei-ju-yu-jie-gou-lei-xing/"" data-c="
-          &lt;h1 id=&#34;101-枚举&#34;&gt;10.1 枚举&lt;/h1&gt;
-&lt;h2 id=&#34;1011-枚举&#34;&gt;10.1.1 枚举&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;常量符号化&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-
-const int red = 0;
-const int yellow = 1;
-const int green = 2;
-
-int main(int argc, char const *argv[]) {
-    int color = -1;
-    char *colorName = NULL;
-    
-    printf(&amp;quot;输入你喜欢的颜色的代码：&amp;quot;);
-    scanf(&amp;quot;%d&amp;quot;, &amp;amp;color);
-    switch(color) {
-        case red: colorName = &amp;quot;red&amp;quot;; break;
-        case yellow: colorName = &amp;quot;yellow&amp;quot;; break;
-        case green: colorName = &amp;quot;green&amp;quot;; break;
-        default: colorName = &amp;quot;unknown&amp;quot;; break;    
-    }
-    printf(&amp;quot;你喜欢的颜色是%s\n&amp;quot;, colorName);
-  
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;用符号而不是具体的数字来表示程序中的数字&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;枚举&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-
-enum COLOR {RED, YELLOW, GREEN};
-
-int main(int argc, char const *argv[]) {
-    int color = -1;
-    char *colorName = NULL;
-    
-    printf(&amp;quot;输入你喜欢的颜色的代码：&amp;quot;);
-    scanf(&amp;quot;%d&amp;quot;, &amp;amp;color);
-    switch(color) {
-        case RED: colorName = &amp;quot;red&amp;quot;; break;
-        case YELLOW: colorName = &amp;quot;yellow&amp;quot;; break;
-        case GREEN: colorName = &amp;quot;green&amp;quot;; break;
-        default: colorName = &amp;quot;unknown&amp;quot;; break;    
-    }
-    printf(&amp;quot;你喜欢的颜色是%s\n&amp;quot;, colorName);
-  
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;用枚举而不是定义独立的const int变量&lt;/li&gt;
-&lt;li&gt;更方便的形式去定义名字&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;枚举&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;枚举是一种用户定义的数据类型，它用关键字enum以如下语法来声明：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;enum 枚举类型名字{名字0, ...., 名字n};
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;枚举类型名字通常并不真的使用，要用的是在大括号里的名字，因为它们就是常量符号，它们的数据类型是int，值则依次从0到n&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;例如&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;enum colors{red, yellow, green};
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;就创建了三个常量，red的值是0，yellow的值是1，而green是2&lt;/li&gt;
-&lt;li&gt;当需要一些可以排列起来的常量值时，定义枚举的意义就是给出了这些常量值名字&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;代码&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-enum color {red, yellow, green};
-void f(enum color c);
-
-int main() {
-    enum color t = red;//0
-    scanf(&amp;quot;%d&amp;quot;, &amp;amp;t);
-    f(t);
-    
-    return 0;
-}
-
-void f(enum color c) {
-    printf(&amp;quot;%d\n&amp;quot;, c);
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;枚举量可以作为值&lt;/li&gt;
-&lt;li&gt;枚举类型可以跟上enum作为类型&lt;/li&gt;
-&lt;li&gt;但是实际上是以整数来做内 部计算和外部输入输出的&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;套路：自动计数的枚举&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-enum COLOR {RED, YELLOW, GREEN, NumCOLORS};
-int main(int argc, char const *argv[]) {
-    int color = -1;
-    char *ColorName[NumCOLORS] = {
-        &amp;quot;red&amp;quot;, &amp;quot;yellow&amp;quot;, &amp;quot;green&amp;quot;,
-    };
-    char *colorName = NULL;
-    
-    printf(&amp;quot;输入你喜欢的颜色的代码：&amp;quot;);
-    scanf(&amp;quot;%d&amp;quot;, &amp;amp;color);
-    if(color&amp;gt;=0&amp;amp;&amp;amp;color&amp;lt;NumCOLORS) {
-        colorName = ColorNames[color];
-    } else {
-        colorName = &amp;quot;unknown&amp;quot;;
-    }
-    printf(&amp;quot;你喜欢的颜色是%s\n&amp;quot;, colorName);
-    
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;枚举量&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;声明枚举量的时候可以指定值
-&lt;ul&gt;
-&lt;li&gt;enum COLOR {RED=1, YELLOW, GREEN = 5};&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-enum COLOR {RED=1, YELLOW, GREEN = 5, NumCOLORS};
-int main() {
-    printf(&amp;quot;code for GREEN is %d\n&amp;quot;, GREEN);
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;枚举只是int&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;即使给枚举类型的变量赋不存在的整数值也没有任何warning，error&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;枚举&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;虽然枚举类型可以当作类型使用，但是实际上很少用或者是不好用&lt;/li&gt;
-&lt;li&gt;如果有意义上排比的名字，用枚举比const int方便（用于常量符号化）&lt;/li&gt;
-&lt;li&gt;枚举比宏好，因为枚举有int类型&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;102-结构&#34;&gt;10.2 结构&lt;/h1&gt;
-&lt;h2 id=&#34;1021-结构类型&#34;&gt;10.2.1 结构类型&lt;/h2&gt;
-&lt;p&gt;如果我们需要表达三个值一起，怎么办？比如年月日三个一起，或者是一个人的信息&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;struct people {
-    char name[11];
-    int gender;
-    int height;
-    int grade;
-};
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;需要表达由不同数据组成的数据，就得需要用到C语言的结构&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;声明结构类型&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-
-int main(int argc, char const *argv[]) {
-    struct date {
-        int month;
-        int day;
-        int year;
-    };
-    struct date today;
-    today.month = 07;
-    today.day = 31;
-    today.year = 2014;
-    printf(&amp;quot;Today&#39;s date is %i-%i-%i. \n&amp;quot;, today.year, today.month, today.day);
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;在函数内/外？&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-
-struct date {
-        int month;
-        int day;
-        int year;
-};
-
-int main(int argc, char const *argv[]) {
-    struct date today;
-    today.month = 07;
-    today.day = 31;
-    today.year = 2014;
-    printf(&amp;quot;Today&#39;s date is %i-%i-%i. \n&amp;quot;, today.year, today.month, today.day);
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;和本地变量一样，在函数内部声明的结构类型只能在函数内部使用&lt;/li&gt;
-&lt;li&gt;所以通常在函数外部声明结构类型，这样就可以被多个函数所使用了&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;声明结构的形式&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;struct point{
-    int x;
-    int y;
-};
-struct point p1, p2;//p1和p2都是point，里面有x和y的值
-
-struct {
-    int x;
-    int y;
-} p1, p2;//p1和p2都是一种无名结构，里面有x和y，但这个结构没有名字
-
-//更常见的做法是下面这样的
-struct point {
-    int x;
-    int y;
-} p1, p2;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;结构的初始化&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-
-struct date {
-   int month;
-   int day;
-   int year;
-};
-
-int main(int argc, char const *argv[]) {
-    struct date today = {07, 31, 2014};
-    struct date thismonth = {.month = 7, .year = 2014};
-    
-    printf(&amp;quot;Today&#39;s date is %i-%i-%i. \n&amp;quot;, today.year, today.month, today.day);
-    printf(&amp;quot;This month is %i-%i-%i. \n&amp;quot;, thismonth.year, thismonth.month, thismonth.day);
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;没有给初始值的结构成员的值会是0&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;结构成员&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;结构和数组有点像
-&lt;ul&gt;
-&lt;li&gt;不同点：数组元素只能是同一类型，而结构成员可以是不同类型的&lt;/li&gt;
-&lt;li&gt;数组用[]运算符和下标访问其成员
-&lt;ul&gt;
-&lt;li&gt;a[0] = 10;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;结构用.运算符和名字访问其成员
-&lt;ul&gt;
-&lt;li&gt;today.day&lt;/li&gt;
-&lt;li&gt;student.firstName&lt;/li&gt;
-&lt;li&gt;p1.x&lt;/li&gt;
-&lt;li&gt;pl.y&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;结构类型没有意义，结构变量才是实体&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;结构运算&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;要访问整个结构，直接用结构变量的名字&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;对于整个结构，可以做赋值，取地址，也可以传递给函数参数&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;p1 = (struct point){5, 10};//相当于p1.x = 5; p1.y = 10;
-&lt;ul&gt;
-&lt;li&gt;前面有个强制转换，要把这两个值转为point的变量，并赋给p1&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;p1 = p2; //相当于p1.x = p2.x; p1.y = p2.y;&lt;/li&gt;
-&lt;li&gt;数组无法做这两种运算&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;其它&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;struct point p1 = {5, 10};
-struct point p1 = {.x = 5, .y = 10};
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;测试代码&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-
-struct date {
-   int month;
-   int day;
-   int year;
-};
-
-int main(int argc, char const *argv[]) {
-    struct date today;
-    today = (struct date){07, 31, 2014};
-    struct date day;
-    day = today;
-    
-    day.year = 2015;
-    
-    printf(&amp;quot;Today&#39;s date is %i-%i-%i. \n&amp;quot;, today.year, today.month, today.day);
-    printf(&amp;quot;The day&#39;s date is %i-%i-%i. \n&amp;quot;, day.year, day.month, day.day);//2015-07-31
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;%i是%d的老式写法&lt;/li&gt;
-&lt;li&gt;而上面这段代码也说明了，year和month其它都是两个完全不同的变量，有各自自己的值。但就是day = today这条代码不一样&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;结构指针&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;和数组不同，结构变量的名字并不是结构变量的地址，必须使用&amp;amp;运算符&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;代码&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-
-struct date {
-   int month;
-   int day;
-   int year;
-};
-
-int main(int argc, char const *argv[]) {
-    struct date today;
-    today = (struct date){07, 31, 2014};
-    struct date day;
-    
-    struct date *pDate = &amp;amp;today;
-        
-    printf(&amp;quot;Today&#39;s date is %i-%i-%i. \n&amp;quot;, today.year, today.month, today.day);
-    printf(&amp;quot;The day&#39;s date is %i-%i-%i. \n&amp;quot;, day.year, day.month, day.day);//2015-07-31
-    printf(&amp;quot;address of today is %p\n&amp;quot;, pDate);
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;结构作为函数参数&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int numberOfDays(struct date d)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;整个结构可以作为参数的值传入函数&lt;/li&gt;
-&lt;li&gt;这时候是在函数内新建一个结构变量，并复制调用者的结构的值&lt;/li&gt;
-&lt;li&gt;也可以返回一个结构&lt;/li&gt;
-&lt;li&gt;这与数组完全不同&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;给出明天的日子&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-#include &amp;lt;stdbool.h&amp;gt;
-
-struct date {
-    int month;
-    int day;
-    int year;
-};
-
-bool isLeap(struct date d);
-int numberOfDays(struct date d);
-
-int main(int argc, char const *argv[]) {
-    struct date today, tomorrow;
-    
-    printf(&amp;quot;Enter today&#39;s date (yyyy mm dd):&amp;quot;);
-    scanf(&amp;quot;%i %i %i&amp;quot;, &amp;amp;today.year, &amp;amp;today.month, &amp;amp;today.day);
-    
-    if(today.day != numberOfDays(today)) {
-        tomorrow.day = today.day + 1;
-        tomorrow.month = today.month;
-        tomorrow.year = today.year;
-    } else if(today.month == 12) {
-        tomorrow.day = 1;
-        tomorrow.month = 1;
-        tomorrow.year = today.year + 1;
-    } else {
-        tomorrow.day = 1;
-        tomorrow.month = today.month + 1;
-        tomorrow.year = today.year;
-    } 
-    
-    printf(&amp;quot;Tomorrow&#39;s date is %i-%i-%i&amp;quot;, tomorrow.year, tomorrow.month, tomorrow.day);
-    
-    return 0;
-}
-
-int numberOfDays(struct date d) {
-    int result;
-    const int numOfDays[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    
-    result = numOfDays[d.month - 1];
-    if(d.month == 2 &amp;amp;&amp;amp; isLeap(d)) result = 29;
-    
-    return result;
-}
-
-bool isLeap(struct date d) {
-    bool result = false;
-    if(d.year % 4 == 0 &amp;amp;&amp;amp; d.year % 100 !=0 || d.year % 400 == 0) result = true;
-    
-    return result;
-}
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;输入结构&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;没有直接的方式可以一次scanf一个结构&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;错误代码&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-
-struct point {
-    int x;
-    int y;
-};
-
-void getStruct
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;解决方案&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;结构与数组不一样，因此没有办法直接修改&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;而结构作为参数的值传入函数时，只不过就是克隆了另一个结构，而不是指针&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;传入函数与传入数组是不同的&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;在这个输入函数中，完全可以创建一个临时的结构变量，然后把这个结构返回给调用者&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;正确代码&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-
-struct point {
-    int x;
-    int y;
-};
-
-struct point getStruct(void);
-void output(struct point p); 
-
-int main() {
-    struct point y = {0, 0};
-    y = getStruct();
-    output(y);
-    
-    return 0;
-}
-
-struct point getStruct(void) {
-    struct point p;
-    scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;p.x, &amp;amp;p.y);
-    return p;
-}
-
-void output(struct point p) {
-    printf(&amp;quot;x=%d&amp;quot;, p.x);
-    printf(&amp;quot;y=%d&amp;quot;, p.y);
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;结构指针作为参数&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;经典C说过：传入一个较大的结构时，传入指针比返回结构更有效&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;指向结构的指针&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;struct date {
-    int month;
-    int day;
-    int year; 
-} myday;
-
-struct date *p = &amp;amp;myday;
-
-(*p).month = 12;
-p-&amp;gt;month = 12;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;用-&amp;gt;表示指针所指的结构变量中的成员&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;结构指针参数&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-
-struct point* getStruct(struct point*);
-void output(struct point);
-void print(const struct point *p);
-
-int main() {
-    struct point y = {0, 0};
-    getStruct(&amp;amp;y);
-    output(y);
-    output(*getStruct(&amp;amp;y));//现在这个指针指向的是函数的返回值
-    print(getStruct(&amp;amp;y));
-    getStruct(&amp;amp;y)-&amp;gt;x = 0;
-    *getStruct(&amp;amp;y) = (struct point){1,2};
-}
-
-struct point* getStruct(struct point *p) {
-    scanf(&amp;quot;%d&amp;quot;, &amp;amp;(p-&amp;gt;x));
-    scanf(&amp;quot;%d&amp;quot;, &amp;amp;(p-&amp;gt;y));
-    printf(&amp;quot;d, %d&amp;quot;, p-&amp;gt;x, p-&amp;gt;y);
-    return p;
-}
-
-void output(struct point p) {
-    printf(&amp;quot;%d, %d&amp;quot;, p.x, p.y);
-}
-
-void print(const struct point *p) {
-    printf(&amp;quot;%d, %d&amp;quot;, p-&amp;gt;x, p-&amp;gt;y);
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;1022-结构与函数&#34;&gt;10.2.2 结构与函数&lt;/h2&gt;
-&lt;p&gt;结构数组&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;struct date dates[100];
-struct date dates[] = {
-    {4, 5, 2005}. {2, 4, 2005}};
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;代码案例&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-struct time {
-    int hours;
-    int minutes;
-    int seconds;
-};
-
-struct time timeUpdate(struct time now);
-
-int main(void) {
-    struct time testTimes[5] = {
-        {11, 59, 59}, {12, 0, 0}, {1, 29, 59}, {23, 59, 59}, {19, 12, 27}
-    };
-    
-    int i;
-    for(i=0;i&amp;lt;5;i++) {
-        printf(&amp;quot;Time is %.2i:%.2i:%.2i&amp;quot;, testTimes[i].hour, testTimes[i].minutes, testTimes[i].seconds);
-        testTimes[i] = timeUpdate(testTimes[i]);
-        printf(&amp;quot;...one second later it&#39;s %.2i:%.2i:%.2i\n&amp;quot;, testTimes[i].hour, testTimes[i].minutes, testTimes[i].seconds)
-    }
-    return 0;
-}
-
-struct time timeUpdate(struct time now) {
-    ++now.seconds;
-    if(now.seconds == 60) {
-        now.seconds = 0;
-        ++now.minutes;
-        
-        if(now.minutes == 60) {
-            now.minutes = 0;
-            ++now.hour;
-            
-            if(now.hour == 24) {
-                now.hour = 0;
-            }
-        }
-    }
-    
-    return now;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;结构中的结构&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;struct dateAndTime {
-    struct date sdate;
-    struct time stime;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;嵌套的结构&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;struct point {
-    int x;
-    int y;
-};
-
-struct rectangle {
-    struct point pt1;
-    struct point pt2;
-};
-&lt;/code&gt;&lt;/pre&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022112.png&#34; alt=&#34;81&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022113.png&#34; alt=&#34;82&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;最后一个rp-&amp;gt;pt1-&amp;gt;x，是因为pt1不是指针，无法指向，它就是一个结构&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;结构中的结构的数组&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-
-struct point {
-    int x;
-    int y;
-};
-
-struct rectangle {
-    struct point p1;
-    struct point p2;
-};
-
-void printRect(struct rectangle r) {
-    printf(&amp;quot;&amp;lt;%d, %d&amp;gt; to &amp;lt;%d, %d&amp;gt;\n&amp;quot;, r.p1.x, r.p1.y, r.p2.x, r.p2.y);
-}
-
-int main(int argc, char const *argv[]) {
-    int i;
-    struct rectangle rects[2] = {
-        {
-            {1, 2}, {3, 4}
-        },
-        {
-            {5, 6}, {7, 8}
-        }
-    };
-    for(i=0;i&amp;lt;2;i++) printRect(rects[i]);
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;1023-拓展像类一样在结构体中封装函数&#34;&gt;10.2.3 拓展：像类一样在结构体中封装函数&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-typedef struct point {
-    int x, y;
-    void (*setPoint)(struct point *s, int a, int b);
-} Point;
-
-void set(Point *s, int a, int b) {
-    s-&amp;gt;x = a;
-    s-&amp;gt;y = b;
-}
-
-
-int main() {
-    Point p1;
-    p1.setPoint = set;
-    p1.setPoint(&amp;amp;p1, 6, 9);
-    printf(&amp;quot;%d, %d&amp;quot;, p1.x, p1.y);
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;1024-拓展c可以在结构体中定义函数&#34;&gt;10.2.4 拓展：C++可以在结构体中定义函数&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
-using namespace std;
-//思路：先把毯子信息存在数组中，再得到要查看的点，遍历毯子信息，看哪个毯子盖住了这个点。 
-typedef struct Carpet
-{
-	int xmin, xmax, ymin, ymax;
-	Carpet()
-	{
-		set(0,0,0,0);
-	}
-	void set(int a, int b, int g, int k)
-	{
-		xmin = a;
-		xmax = a + g;
-		ymin = b;
-		ymax = b + k;
-	}
-	bool contains(int x, int y)//地毯是否盖住(x,y)点
-	{
-		if(x &amp;gt;= xmin &amp;amp;&amp;amp; x &amp;lt;= xmax &amp;amp;&amp;amp; y &amp;gt;= ymin &amp;amp;&amp;amp; y &amp;lt;= ymax)
-			return true;
-		else
-			return false;
-	}
-}Carpet;
-
-int main()
-{
-	int n, a, b, g, k, x, y, frontCptNum = -1;//frontCptNum:最上面毯子的编号 
-	Carpet carp[10005];
-	cin&amp;gt;&amp;gt;n;
-	for(int i = 1; i &amp;lt;= n; ++i)
-	{
-		cin&amp;gt;&amp;gt;a&amp;gt;&amp;gt;b&amp;gt;&amp;gt;g&amp;gt;&amp;gt;k;
-		carp[i].set(a, b, g, k);
-	}
-	cin&amp;gt;&amp;gt;x&amp;gt;&amp;gt;y;
-	for(int i = 1; i &amp;lt;= n; ++i)
-	{
-		if(carp[i].contains(x, y))
-			frontCptNum = i; 
-	}	
-	cout&amp;lt;&amp;lt;frontCptNum;
-	return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;103-类型与联合&#34;&gt;10.3 类型与联合&lt;/h1&gt;
-&lt;h2 id=&#34;1031-类型定义&#34;&gt;10.3.1 类型定义&lt;/h2&gt;
-&lt;p&gt;自定义数据类型（typedef）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;C语言提供了一个叫做typeof的功能来声明一个已有的数据类型的新名字&lt;/p&gt;
-&lt;p&gt;比如：typedef int Length;&lt;/p&gt;
-&lt;p&gt;使得Length成为int类型的别名&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;这样，Length这个名字就可以代替int出现在变量定义和参数声明的地方了：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;Length a, b, len;
-Length numbers[10];
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;typedef&lt;/p&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022114.png&#34; alt=&#34;83&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;typedef struct {
-    int month;
-    int day;
-    int year;
-} Date;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022115.png&#34; alt=&#34;84&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;332-联合&#34;&gt;3.3.2 联合&lt;/h2&gt;
-&lt;p&gt;他们会共用内存&lt;/p&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022116.png&#34; alt=&#34;86&#34; style=&#34;zoom:67%;&#34; /&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022117.png&#34; alt=&#34;87&#34; style=&#34;zoom:33%;&#34; /&gt;
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-
-typedef union {
-    int i;
-    char ch[sizeof(int)];
-} CHI;
-
-int main(int argc, char const *argv[]) {
-    CHI chi;
-    int i;
-    chi.i = 1234;
-    for(i=0; i&amp;lt;sizeof(int); i++) {
-        printf(&amp;quot;%02hhX&amp;quot;, chi.ch[i]);
-    }
-    printf(&amp;quot;\n&amp;quot;);
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;小端与大端&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;预备知识&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;地址为什么会用十六进制？0000 0000 0062 FDDC，地址是这样的。&lt;/li&gt;
-&lt;li&gt;一个十六进制数是用4个比特存储的，上面这个则用了64比特存储。而因为我们用的是64位的电脑，所以它的指针所占的字节是8字节（占多少与电脑的寻址能力有关）。64/8=8，你看，8字节，刚刚好&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;一、大端模式和小端模式的起源&lt;br&gt;
-关于大端小端名词的由来，有一个有趣的故事，来自于Jonathan Swift的《格利佛游记》：Lilliput和Blefuscu这两个强国在过去的36个月中一直在苦战。战争的原因：大家都知道，吃鸡蛋的时候，原始的方法是打破鸡蛋较大的一端，可以那时的皇帝的祖父由于小时侯吃鸡蛋，按这种方法把手指弄破了，因此他的父亲，就下令，命令所有的子民吃鸡蛋的时候，必须先打破鸡蛋较小的一端，违令者重罚。然后老百姓对此法令极为反感，期间发生了多次叛乱，其中一个皇帝因此送命，另一个丢了王位，产生叛乱的原因就是另一个国家Blefuscu的国王大臣煽动起来的，叛乱平息后，就逃到这个帝国避难。据估计，先后几次有11000余人情愿死也不肯去打破鸡蛋较小的端吃鸡蛋。这个其实讽刺当时英国和法国之间持续的冲突。Danny Cohen一位网络协议的开创者，第一次使用这两个术语指代内存中的字节顺序，后来就被大家广泛接受。&lt;/p&gt;
-&lt;p&gt;二、什么是大端和小端&lt;br&gt;
-Big-Endian和Little-Endian的定义如下：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Little-Endian就是低位字节排放在内存的低地址端，高位字节排放在内存的高地址端。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Big-Endian就是高位字节排放在内存的低地址端，低位字节排放在内存的高地址端。举一个例子，比如数字0x12 34 56 78在内存中的表示形式为：&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210413195958.png&#34; alt=&#34;image-20210413195958069&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;p&gt;3)下面是两个具体例子：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;16bit宽的数0x1234在Little-endian模式（以及Big-endian模式）CPU内存中的存放方式（假设从地址0x4000开始存放）为：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210413200729.png&#34; alt=&#34;image-20210413200729657&#34; style=&#34;zoom:67%;&#34; /&gt;
-&lt;ul&gt;
-&lt;li&gt;32bit宽的数0x12345678在Little-endian模式以及Big-endian模式）CPU内存中的存放方式（假设从地址0x4000开始存放）为：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210413211447.png&#34; alt=&#34;image-20210413211447470&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
-&lt;p&gt;4)大端小端没有谁优谁劣，各自优势便是对方劣势：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;小端模式 ：强制转换数据不需要调整字节内容，1、2、4字节的存储方式一样。&lt;/li&gt;
-&lt;li&gt;大端模式 ：符号位的判定固定为第一个字节，容易判断正负。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;5）理解高位字节与低位字节&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;0x12345678的二进制表示；0001 0010 0011 0100 0101 0110 0111 1000，它所说的高位字节是右边的，例如0001（4比特，而一个char我们是1字节的，也就是8比特，所以它会读取到0001 0010）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;三、数组在大端小端情况下的存储：&lt;br&gt;
-　　以unsigned int value = 0x12345678为例，分别看看在两种字节序下其存储情况，我们可以用unsigned char buf[4]来表示value：&lt;br&gt;
-　　Big-Endian: 低地址存放高位，如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;高地址
----------------
-    buf[3] (0x78) -- 低位
-    buf[2] (0x56)
-    buf[1] (0x34)
-    buf[0] (0x12) -- 高位
----------------
-低地址
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Little-Endian: 低地址存放低位，如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;高地址
----------------
-    buf[3] (0x12) -- 高位
-    buf[2] (0x34)
-    buf[1] (0x56)
-    buf[0] (0x78) -- 低位
-低地址
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;代码验证&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-
-union {
-    unsigned int i;
-    unsigned char s[sizeof(int)]; //如果不加unsigned，会出现多个fff的情况，这是因为signed char会有数组元素是负数的情况
-} test;
-
-int main() {
-    test.i = 0x12345678;
-    //printf(&amp;quot;%02x\n&amp;quot;, test.i);
-    int i;
-    for(i = 0; i&amp;lt;sizeof(int); i++) printf(&amp;quot;%d:0x%02X\n&amp;quot;, i, test.s[i]);// 2是向右对齐，而0的意思是当有空的时候以0填充
-    //printf(&amp;quot;%010d&amp;quot;, 1234);
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-
-union {
-    unsigned int i;
-    unsigned char s[sizeof(int)];
-} test;
-
-int IsBigEndian() {  
-    int a = 0x1234;  
-    char b =  *(char *)&amp;amp;a;  //通过将int强制类型转换成char单字节，通过判断起始存储位置。即等于 取b等于a的低地址部分  
-    if( b == 0x12) return 1;  
-    return 0;  
-}
-
-int main() {
-    printf(&amp;quot;%d&amp;quot;, IsBigEndian());
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;四、为什么会有大小端模式之分呢？&lt;br&gt;
-这是因为在计算机系统中，我们是以字节为单位的，每个地址单元都对应着一个字节，一个字节为8bit。但是在C语言中除了8bit的char之外，还有16bit的short型，32bit的long型（要看具体的编译器），另外，对于位数大于8位的处理器，例如16位或者32位的处理器，由于寄存器宽度大于一个字节，那么必然存在着一个如果将多个字节安排的问题。因此就导致了大端存储模式和小端存储模式。例如一个16bit的short型x，在内存中的地址为0x0010，x的值为0x1122，那么0x11为高字节，0x22为低字节。对于大端模式，就将0x11放在低地址中，即0x0010中，0x22放在高地址中，即0x0011中。小端模式，刚好相反。我们常用的X86结构是小端模式，而KEIL C51则为大端模式。很多的ARM，DSP都为小端模式。有些ARM处理器还可以由硬件来选择是大端模式还是小端模式。&lt;/p&gt;
-&lt;p&gt;参考资料&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/Eunice_fan1207/article/details/79232563&#34;&gt;变量在内存中的字节顺序是-----大端还是小端？&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/yangcs2009/article/details/39698997#:~:text=%E5%B0%8F%E7%AB%AF%E5%B0%B1%E6%98%AF%E4%BD%8E%E4%BD%8D%E5%AD%97,%E5%86%85%E5%AD%98%E7%9A%84%E9%AB%98%E5%9C%B0%E5%9D%80%E7%AB%AF%E3%80%82&#34;&gt;计算机大端模式和小端模式 内存对齐问题（sizeof）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.jianshu.com/p/f38f2c524ace&#34;&gt;程序在计算机内部的存储方式&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-">第10章 枚举与结构类型</a>
       </div>
       
       <div class="item">
@@ -6255,6 +5412,849 @@ Node* add(Node* head, int number) {
       </div>
       
       <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://yuanfeng123.github.io/post/di-10-zhang-mei-ju-yu-jie-gou-lei-xing/"" data-c="
+          &lt;h1 id=&#34;101-枚举&#34;&gt;10.1 枚举&lt;/h1&gt;
+&lt;h2 id=&#34;1011-枚举&#34;&gt;10.1.1 枚举&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;常量符号化&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+const int red = 0;
+const int yellow = 1;
+const int green = 2;
+
+int main(int argc, char const *argv[]) {
+    int color = -1;
+    char *colorName = NULL;
+    
+    printf(&amp;quot;输入你喜欢的颜色的代码：&amp;quot;);
+    scanf(&amp;quot;%d&amp;quot;, &amp;amp;color);
+    switch(color) {
+        case red: colorName = &amp;quot;red&amp;quot;; break;
+        case yellow: colorName = &amp;quot;yellow&amp;quot;; break;
+        case green: colorName = &amp;quot;green&amp;quot;; break;
+        default: colorName = &amp;quot;unknown&amp;quot;; break;    
+    }
+    printf(&amp;quot;你喜欢的颜色是%s\n&amp;quot;, colorName);
+  
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;用符号而不是具体的数字来表示程序中的数字&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;枚举&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+enum COLOR {RED, YELLOW, GREEN};
+
+int main(int argc, char const *argv[]) {
+    int color = -1;
+    char *colorName = NULL;
+    
+    printf(&amp;quot;输入你喜欢的颜色的代码：&amp;quot;);
+    scanf(&amp;quot;%d&amp;quot;, &amp;amp;color);
+    switch(color) {
+        case RED: colorName = &amp;quot;red&amp;quot;; break;
+        case YELLOW: colorName = &amp;quot;yellow&amp;quot;; break;
+        case GREEN: colorName = &amp;quot;green&amp;quot;; break;
+        default: colorName = &amp;quot;unknown&amp;quot;; break;    
+    }
+    printf(&amp;quot;你喜欢的颜色是%s\n&amp;quot;, colorName);
+  
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;用枚举而不是定义独立的const int变量&lt;/li&gt;
+&lt;li&gt;更方便的形式去定义名字&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;枚举&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;枚举是一种用户定义的数据类型，它用关键字enum以如下语法来声明：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;enum 枚举类型名字{名字0, ...., 名字n};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;枚举类型名字通常并不真的使用，要用的是在大括号里的名字，因为它们就是常量符号，它们的数据类型是int，值则依次从0到n&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;例如&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;enum colors{red, yellow, green};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;就创建了三个常量，red的值是0，yellow的值是1，而green是2&lt;/li&gt;
+&lt;li&gt;当需要一些可以排列起来的常量值时，定义枚举的意义就是给出了这些常量值名字&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;代码&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+enum color {red, yellow, green};
+void f(enum color c);
+
+int main() {
+    enum color t = red;//0
+    scanf(&amp;quot;%d&amp;quot;, &amp;amp;t);
+    f(t);
+    
+    return 0;
+}
+
+void f(enum color c) {
+    printf(&amp;quot;%d\n&amp;quot;, c);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;枚举量可以作为值&lt;/li&gt;
+&lt;li&gt;枚举类型可以跟上enum作为类型&lt;/li&gt;
+&lt;li&gt;但是实际上是以整数来做内 部计算和外部输入输出的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;套路：自动计数的枚举&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+enum COLOR {RED, YELLOW, GREEN, NumCOLORS};
+int main(int argc, char const *argv[]) {
+    int color = -1;
+    char *ColorName[NumCOLORS] = {
+        &amp;quot;red&amp;quot;, &amp;quot;yellow&amp;quot;, &amp;quot;green&amp;quot;,
+    };
+    char *colorName = NULL;
+    
+    printf(&amp;quot;输入你喜欢的颜色的代码：&amp;quot;);
+    scanf(&amp;quot;%d&amp;quot;, &amp;amp;color);
+    if(color&amp;gt;=0&amp;amp;&amp;amp;color&amp;lt;NumCOLORS) {
+        colorName = ColorNames[color];
+    } else {
+        colorName = &amp;quot;unknown&amp;quot;;
+    }
+    printf(&amp;quot;你喜欢的颜色是%s\n&amp;quot;, colorName);
+    
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;枚举量&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;声明枚举量的时候可以指定值
+&lt;ul&gt;
+&lt;li&gt;enum COLOR {RED=1, YELLOW, GREEN = 5};&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+enum COLOR {RED=1, YELLOW, GREEN = 5, NumCOLORS};
+int main() {
+    printf(&amp;quot;code for GREEN is %d\n&amp;quot;, GREEN);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;枚举只是int&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;即使给枚举类型的变量赋不存在的整数值也没有任何warning，error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;枚举&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;虽然枚举类型可以当作类型使用，但是实际上很少用或者是不好用&lt;/li&gt;
+&lt;li&gt;如果有意义上排比的名字，用枚举比const int方便（用于常量符号化）&lt;/li&gt;
+&lt;li&gt;枚举比宏好，因为枚举有int类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;102-结构&#34;&gt;10.2 结构&lt;/h1&gt;
+&lt;h2 id=&#34;1021-结构类型&#34;&gt;10.2.1 结构类型&lt;/h2&gt;
+&lt;p&gt;如果我们需要表达三个值一起，怎么办？比如年月日三个一起，或者是一个人的信息&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;struct people {
+    char name[11];
+    int gender;
+    int height;
+    int grade;
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;需要表达由不同数据组成的数据，就得需要用到C语言的结构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;声明结构类型&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+int main(int argc, char const *argv[]) {
+    struct date {
+        int month;
+        int day;
+        int year;
+    };
+    struct date today;
+    today.month = 07;
+    today.day = 31;
+    today.year = 2014;
+    printf(&amp;quot;Today&#39;s date is %i-%i-%i. \n&amp;quot;, today.year, today.month, today.day);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在函数内/外？&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+struct date {
+        int month;
+        int day;
+        int year;
+};
+
+int main(int argc, char const *argv[]) {
+    struct date today;
+    today.month = 07;
+    today.day = 31;
+    today.year = 2014;
+    printf(&amp;quot;Today&#39;s date is %i-%i-%i. \n&amp;quot;, today.year, today.month, today.day);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;和本地变量一样，在函数内部声明的结构类型只能在函数内部使用&lt;/li&gt;
+&lt;li&gt;所以通常在函数外部声明结构类型，这样就可以被多个函数所使用了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;声明结构的形式&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;struct point{
+    int x;
+    int y;
+};
+struct point p1, p2;//p1和p2都是point，里面有x和y的值
+
+struct {
+    int x;
+    int y;
+} p1, p2;//p1和p2都是一种无名结构，里面有x和y，但这个结构没有名字
+
+//更常见的做法是下面这样的
+struct point {
+    int x;
+    int y;
+} p1, p2;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结构的初始化&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+struct date {
+   int month;
+   int day;
+   int year;
+};
+
+int main(int argc, char const *argv[]) {
+    struct date today = {07, 31, 2014};
+    struct date thismonth = {.month = 7, .year = 2014};
+    
+    printf(&amp;quot;Today&#39;s date is %i-%i-%i. \n&amp;quot;, today.year, today.month, today.day);
+    printf(&amp;quot;This month is %i-%i-%i. \n&amp;quot;, thismonth.year, thismonth.month, thismonth.day);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;没有给初始值的结构成员的值会是0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;结构成员&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;结构和数组有点像
+&lt;ul&gt;
+&lt;li&gt;不同点：数组元素只能是同一类型，而结构成员可以是不同类型的&lt;/li&gt;
+&lt;li&gt;数组用[]运算符和下标访问其成员
+&lt;ul&gt;
+&lt;li&gt;a[0] = 10;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;结构用.运算符和名字访问其成员
+&lt;ul&gt;
+&lt;li&gt;today.day&lt;/li&gt;
+&lt;li&gt;student.firstName&lt;/li&gt;
+&lt;li&gt;p1.x&lt;/li&gt;
+&lt;li&gt;pl.y&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;结构类型没有意义，结构变量才是实体&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;结构运算&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;要访问整个结构，直接用结构变量的名字&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对于整个结构，可以做赋值，取地址，也可以传递给函数参数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;p1 = (struct point){5, 10};//相当于p1.x = 5; p1.y = 10;
+&lt;ul&gt;
+&lt;li&gt;前面有个强制转换，要把这两个值转为point的变量，并赋给p1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;p1 = p2; //相当于p1.x = p2.x; p1.y = p2.y;&lt;/li&gt;
+&lt;li&gt;数组无法做这两种运算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其它&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;struct point p1 = {5, 10};
+struct point p1 = {.x = 5, .y = 10};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;测试代码&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+struct date {
+   int month;
+   int day;
+   int year;
+};
+
+int main(int argc, char const *argv[]) {
+    struct date today;
+    today = (struct date){07, 31, 2014};
+    struct date day;
+    day = today;
+    
+    day.year = 2015;
+    
+    printf(&amp;quot;Today&#39;s date is %i-%i-%i. \n&amp;quot;, today.year, today.month, today.day);
+    printf(&amp;quot;The day&#39;s date is %i-%i-%i. \n&amp;quot;, day.year, day.month, day.day);//2015-07-31
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;%i是%d的老式写法&lt;/li&gt;
+&lt;li&gt;而上面这段代码也说明了，year和month其它都是两个完全不同的变量，有各自自己的值。但就是day = today这条代码不一样&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;结构指针&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;和数组不同，结构变量的名字并不是结构变量的地址，必须使用&amp;amp;运算符&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;代码&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+struct date {
+   int month;
+   int day;
+   int year;
+};
+
+int main(int argc, char const *argv[]) {
+    struct date today;
+    today = (struct date){07, 31, 2014};
+    struct date day;
+    
+    struct date *pDate = &amp;amp;today;
+        
+    printf(&amp;quot;Today&#39;s date is %i-%i-%i. \n&amp;quot;, today.year, today.month, today.day);
+    printf(&amp;quot;The day&#39;s date is %i-%i-%i. \n&amp;quot;, day.year, day.month, day.day);//2015-07-31
+    printf(&amp;quot;address of today is %p\n&amp;quot;, pDate);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;结构作为函数参数&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int numberOfDays(struct date d)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;整个结构可以作为参数的值传入函数&lt;/li&gt;
+&lt;li&gt;这时候是在函数内新建一个结构变量，并复制调用者的结构的值&lt;/li&gt;
+&lt;li&gt;也可以返回一个结构&lt;/li&gt;
+&lt;li&gt;这与数组完全不同&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;给出明天的日子&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;stdbool.h&amp;gt;
+
+struct date {
+    int month;
+    int day;
+    int year;
+};
+
+bool isLeap(struct date d);
+int numberOfDays(struct date d);
+
+int main(int argc, char const *argv[]) {
+    struct date today, tomorrow;
+    
+    printf(&amp;quot;Enter today&#39;s date (yyyy mm dd):&amp;quot;);
+    scanf(&amp;quot;%i %i %i&amp;quot;, &amp;amp;today.year, &amp;amp;today.month, &amp;amp;today.day);
+    
+    if(today.day != numberOfDays(today)) {
+        tomorrow.day = today.day + 1;
+        tomorrow.month = today.month;
+        tomorrow.year = today.year;
+    } else if(today.month == 12) {
+        tomorrow.day = 1;
+        tomorrow.month = 1;
+        tomorrow.year = today.year + 1;
+    } else {
+        tomorrow.day = 1;
+        tomorrow.month = today.month + 1;
+        tomorrow.year = today.year;
+    } 
+    
+    printf(&amp;quot;Tomorrow&#39;s date is %i-%i-%i&amp;quot;, tomorrow.year, tomorrow.month, tomorrow.day);
+    
+    return 0;
+}
+
+int numberOfDays(struct date d) {
+    int result;
+    const int numOfDays[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    
+    result = numOfDays[d.month - 1];
+    if(d.month == 2 &amp;amp;&amp;amp; isLeap(d)) result = 29;
+    
+    return result;
+}
+
+bool isLeap(struct date d) {
+    bool result = false;
+    if(d.year % 4 == 0 &amp;amp;&amp;amp; d.year % 100 !=0 || d.year % 400 == 0) result = true;
+    
+    return result;
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输入结构&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;没有直接的方式可以一次scanf一个结构&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;错误代码&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+struct point {
+    int x;
+    int y;
+};
+
+void getStruct
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;解决方案&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;结构与数组不一样，因此没有办法直接修改&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;而结构作为参数的值传入函数时，只不过就是克隆了另一个结构，而不是指针&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;传入函数与传入数组是不同的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在这个输入函数中，完全可以创建一个临时的结构变量，然后把这个结构返回给调用者&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;正确代码&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+struct point {
+    int x;
+    int y;
+};
+
+struct point getStruct(void);
+void output(struct point p); 
+
+int main() {
+    struct point y = {0, 0};
+    y = getStruct();
+    output(y);
+    
+    return 0;
+}
+
+struct point getStruct(void) {
+    struct point p;
+    scanf(&amp;quot;%d %d&amp;quot;, &amp;amp;p.x, &amp;amp;p.y);
+    return p;
+}
+
+void output(struct point p) {
+    printf(&amp;quot;x=%d&amp;quot;, p.x);
+    printf(&amp;quot;y=%d&amp;quot;, p.y);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;结构指针作为参数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;经典C说过：传入一个较大的结构时，传入指针比返回结构更有效&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;指向结构的指针&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;struct date {
+    int month;
+    int day;
+    int year; 
+} myday;
+
+struct date *p = &amp;amp;myday;
+
+(*p).month = 12;
+p-&amp;gt;month = 12;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;用-&amp;gt;表示指针所指的结构变量中的成员&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;结构指针参数&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+struct point* getStruct(struct point*);
+void output(struct point);
+void print(const struct point *p);
+
+int main() {
+    struct point y = {0, 0};
+    getStruct(&amp;amp;y);
+    output(y);
+    output(*getStruct(&amp;amp;y));//现在这个指针指向的是函数的返回值
+    print(getStruct(&amp;amp;y));
+    getStruct(&amp;amp;y)-&amp;gt;x = 0;
+    *getStruct(&amp;amp;y) = (struct point){1,2};
+}
+
+struct point* getStruct(struct point *p) {
+    scanf(&amp;quot;%d&amp;quot;, &amp;amp;(p-&amp;gt;x));
+    scanf(&amp;quot;%d&amp;quot;, &amp;amp;(p-&amp;gt;y));
+    printf(&amp;quot;d, %d&amp;quot;, p-&amp;gt;x, p-&amp;gt;y);
+    return p;
+}
+
+void output(struct point p) {
+    printf(&amp;quot;%d, %d&amp;quot;, p.x, p.y);
+}
+
+void print(const struct point *p) {
+    printf(&amp;quot;%d, %d&amp;quot;, p-&amp;gt;x, p-&amp;gt;y);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;1022-结构与函数&#34;&gt;10.2.2 结构与函数&lt;/h2&gt;
+&lt;p&gt;结构数组&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;struct date dates[100];
+struct date dates[] = {
+    {4, 5, 2005}. {2, 4, 2005}};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;代码案例&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+struct time {
+    int hours;
+    int minutes;
+    int seconds;
+};
+
+struct time timeUpdate(struct time now);
+
+int main(void) {
+    struct time testTimes[5] = {
+        {11, 59, 59}, {12, 0, 0}, {1, 29, 59}, {23, 59, 59}, {19, 12, 27}
+    };
+    
+    int i;
+    for(i=0;i&amp;lt;5;i++) {
+        printf(&amp;quot;Time is %.2i:%.2i:%.2i&amp;quot;, testTimes[i].hour, testTimes[i].minutes, testTimes[i].seconds);
+        testTimes[i] = timeUpdate(testTimes[i]);
+        printf(&amp;quot;...one second later it&#39;s %.2i:%.2i:%.2i\n&amp;quot;, testTimes[i].hour, testTimes[i].minutes, testTimes[i].seconds)
+    }
+    return 0;
+}
+
+struct time timeUpdate(struct time now) {
+    ++now.seconds;
+    if(now.seconds == 60) {
+        now.seconds = 0;
+        ++now.minutes;
+        
+        if(now.minutes == 60) {
+            now.minutes = 0;
+            ++now.hour;
+            
+            if(now.hour == 24) {
+                now.hour = 0;
+            }
+        }
+    }
+    
+    return now;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结构中的结构&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;struct dateAndTime {
+    struct date sdate;
+    struct time stime;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;嵌套的结构&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;struct point {
+    int x;
+    int y;
+};
+
+struct rectangle {
+    struct point pt1;
+    struct point pt2;
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022112.png&#34; alt=&#34;81&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022113.png&#34; alt=&#34;82&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;最后一个rp-&amp;gt;pt1-&amp;gt;x，是因为pt1不是指针，无法指向，它就是一个结构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;结构中的结构的数组&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+struct point {
+    int x;
+    int y;
+};
+
+struct rectangle {
+    struct point p1;
+    struct point p2;
+};
+
+void printRect(struct rectangle r) {
+    printf(&amp;quot;&amp;lt;%d, %d&amp;gt; to &amp;lt;%d, %d&amp;gt;\n&amp;quot;, r.p1.x, r.p1.y, r.p2.x, r.p2.y);
+}
+
+int main(int argc, char const *argv[]) {
+    int i;
+    struct rectangle rects[2] = {
+        {
+            {1, 2}, {3, 4}
+        },
+        {
+            {5, 6}, {7, 8}
+        }
+    };
+    for(i=0;i&amp;lt;2;i++) printRect(rects[i]);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;1023-拓展像类一样在结构体中封装函数&#34;&gt;10.2.3 拓展：像类一样在结构体中封装函数&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+typedef struct point {
+    int x, y;
+    void (*setPoint)(struct point *s, int a, int b);
+} Point;
+
+void set(Point *s, int a, int b) {
+    s-&amp;gt;x = a;
+    s-&amp;gt;y = b;
+}
+
+
+int main() {
+    Point p1;
+    p1.setPoint = set;
+    p1.setPoint(&amp;amp;p1, 6, 9);
+    printf(&amp;quot;%d, %d&amp;quot;, p1.x, p1.y);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;1024-拓展c可以在结构体中定义函数&#34;&gt;10.2.4 拓展：C++可以在结构体中定义函数&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+//思路：先把毯子信息存在数组中，再得到要查看的点，遍历毯子信息，看哪个毯子盖住了这个点。 
+typedef struct Carpet
+{
+	int xmin, xmax, ymin, ymax;
+	Carpet()
+	{
+		set(0,0,0,0);
+	}
+	void set(int a, int b, int g, int k)
+	{
+		xmin = a;
+		xmax = a + g;
+		ymin = b;
+		ymax = b + k;
+	}
+	bool contains(int x, int y)//地毯是否盖住(x,y)点
+	{
+		if(x &amp;gt;= xmin &amp;amp;&amp;amp; x &amp;lt;= xmax &amp;amp;&amp;amp; y &amp;gt;= ymin &amp;amp;&amp;amp; y &amp;lt;= ymax)
+			return true;
+		else
+			return false;
+	}
+}Carpet;
+
+int main()
+{
+	int n, a, b, g, k, x, y, frontCptNum = -1;//frontCptNum:最上面毯子的编号 
+	Carpet carp[10005];
+	cin&amp;gt;&amp;gt;n;
+	for(int i = 1; i &amp;lt;= n; ++i)
+	{
+		cin&amp;gt;&amp;gt;a&amp;gt;&amp;gt;b&amp;gt;&amp;gt;g&amp;gt;&amp;gt;k;
+		carp[i].set(a, b, g, k);
+	}
+	cin&amp;gt;&amp;gt;x&amp;gt;&amp;gt;y;
+	for(int i = 1; i &amp;lt;= n; ++i)
+	{
+		if(carp[i].contains(x, y))
+			frontCptNum = i; 
+	}	
+	cout&amp;lt;&amp;lt;frontCptNum;
+	return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;103-类型与联合&#34;&gt;10.3 类型与联合&lt;/h1&gt;
+&lt;h2 id=&#34;1031-类型定义&#34;&gt;10.3.1 类型定义&lt;/h2&gt;
+&lt;p&gt;自定义数据类型（typedef）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;C语言提供了一个叫做typeof的功能来声明一个已有的数据类型的新名字&lt;/p&gt;
+&lt;p&gt;比如：typedef int Length;&lt;/p&gt;
+&lt;p&gt;使得Length成为int类型的别名&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这样，Length这个名字就可以代替int出现在变量定义和参数声明的地方了：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;Length a, b, len;
+Length numbers[10];
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;typedef&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022114.png&#34; alt=&#34;83&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;typedef struct {
+    int month;
+    int day;
+    int year;
+} Date;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022115.png&#34; alt=&#34;84&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;332-联合&#34;&gt;3.3.2 联合&lt;/h2&gt;
+&lt;p&gt;他们会共用内存&lt;/p&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022116.png&#34; alt=&#34;86&#34; style=&#34;zoom:67%;&#34; /&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210412022117.png&#34; alt=&#34;87&#34; style=&#34;zoom:33%;&#34; /&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+typedef union {
+    int i;
+    char ch[sizeof(int)];
+} CHI;
+
+int main(int argc, char const *argv[]) {
+    CHI chi;
+    int i;
+    chi.i = 1234;
+    for(i=0; i&amp;lt;sizeof(int); i++) {
+        printf(&amp;quot;%02hhX&amp;quot;, chi.ch[i]);
+    }
+    printf(&amp;quot;\n&amp;quot;);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;小端与大端&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;预备知识&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;地址为什么会用十六进制？0000 0000 0062 FDDC，地址是这样的。&lt;/li&gt;
+&lt;li&gt;一个十六进制数是用4个比特存储的，上面这个则用了64比特存储。而因为我们用的是64位的电脑，所以它的指针所占的字节是8字节（占多少与电脑的寻址能力有关）。64/8=8，你看，8字节，刚刚好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一、大端模式和小端模式的起源&lt;br&gt;
+关于大端小端名词的由来，有一个有趣的故事，来自于Jonathan Swift的《格利佛游记》：Lilliput和Blefuscu这两个强国在过去的36个月中一直在苦战。战争的原因：大家都知道，吃鸡蛋的时候，原始的方法是打破鸡蛋较大的一端，可以那时的皇帝的祖父由于小时侯吃鸡蛋，按这种方法把手指弄破了，因此他的父亲，就下令，命令所有的子民吃鸡蛋的时候，必须先打破鸡蛋较小的一端，违令者重罚。然后老百姓对此法令极为反感，期间发生了多次叛乱，其中一个皇帝因此送命，另一个丢了王位，产生叛乱的原因就是另一个国家Blefuscu的国王大臣煽动起来的，叛乱平息后，就逃到这个帝国避难。据估计，先后几次有11000余人情愿死也不肯去打破鸡蛋较小的端吃鸡蛋。这个其实讽刺当时英国和法国之间持续的冲突。Danny Cohen一位网络协议的开创者，第一次使用这两个术语指代内存中的字节顺序，后来就被大家广泛接受。&lt;/p&gt;
+&lt;p&gt;二、什么是大端和小端&lt;br&gt;
+Big-Endian和Little-Endian的定义如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Little-Endian就是低位字节排放在内存的低地址端，高位字节排放在内存的高地址端。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Big-Endian就是高位字节排放在内存的低地址端，低位字节排放在内存的高地址端。举一个例子，比如数字0x12 34 56 78在内存中的表示形式为：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210413195958.png&#34; alt=&#34;image-20210413195958069&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;3)下面是两个具体例子：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;16bit宽的数0x1234在Little-endian模式（以及Big-endian模式）CPU内存中的存放方式（假设从地址0x4000开始存放）为：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210413200729.png&#34; alt=&#34;image-20210413200729657&#34; style=&#34;zoom:67%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;32bit宽的数0x12345678在Little-endian模式以及Big-endian模式）CPU内存中的存放方式（假设从地址0x4000开始存放）为：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Yuanfeng123/PicBed/main/2021/season2/20210413211447.png&#34; alt=&#34;image-20210413211447470&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;4)大端小端没有谁优谁劣，各自优势便是对方劣势：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;小端模式 ：强制转换数据不需要调整字节内容，1、2、4字节的存储方式一样。&lt;/li&gt;
+&lt;li&gt;大端模式 ：符号位的判定固定为第一个字节，容易判断正负。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;5）理解高位字节与低位字节&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;0x12345678的二进制表示；0001 0010 0011 0100 0101 0110 0111 1000，它所说的高位字节是右边的，例如0001（4比特，而一个char我们是1字节的，也就是8比特，所以它会读取到0001 0010）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;三、数组在大端小端情况下的存储：&lt;br&gt;
+　　以unsigned int value = 0x12345678为例，分别看看在两种字节序下其存储情况，我们可以用unsigned char buf[4]来表示value：&lt;br&gt;
+　　Big-Endian: 低地址存放高位，如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;高地址
+---------------
+    buf[3] (0x78) -- 低位
+    buf[2] (0x56)
+    buf[1] (0x34)
+    buf[0] (0x12) -- 高位
+---------------
+低地址
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Little-Endian: 低地址存放低位，如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;高地址
+---------------
+    buf[3] (0x12) -- 高位
+    buf[2] (0x34)
+    buf[1] (0x56)
+    buf[0] (0x78) -- 低位
+低地址
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;代码验证&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+union {
+    unsigned int i;
+    unsigned char s[sizeof(int)]; //如果不加unsigned，会出现多个fff的情况，这是因为signed char会有数组元素是负数的情况
+} test;
+
+int main() {
+    test.i = 0x12345678;
+    //printf(&amp;quot;%02x\n&amp;quot;, test.i);
+    int i;
+    for(i = 0; i&amp;lt;sizeof(int); i++) printf(&amp;quot;%d:0x%02X\n&amp;quot;, i, test.s[i]);// 2是向右对齐，而0的意思是当有空的时候以0填充
+    //printf(&amp;quot;%010d&amp;quot;, 1234);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+union {
+    unsigned int i;
+    unsigned char s[sizeof(int)];
+} test;
+
+int IsBigEndian() {  
+    int a = 0x1234;  
+    char b =  *(char *)&amp;amp;a;  //通过将int强制类型转换成char单字节，通过判断起始存储位置。即等于 取b等于a的低地址部分  
+    if( b == 0x12) return 1;  
+    return 0;  
+}
+
+int main() {
+    printf(&amp;quot;%d&amp;quot;, IsBigEndian());
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;四、为什么会有大小端模式之分呢？&lt;br&gt;
+这是因为在计算机系统中，我们是以字节为单位的，每个地址单元都对应着一个字节，一个字节为8bit。但是在C语言中除了8bit的char之外，还有16bit的short型，32bit的long型（要看具体的编译器），另外，对于位数大于8位的处理器，例如16位或者32位的处理器，由于寄存器宽度大于一个字节，那么必然存在着一个如果将多个字节安排的问题。因此就导致了大端存储模式和小端存储模式。例如一个16bit的short型x，在内存中的地址为0x0010，x的值为0x1122，那么0x11为高字节，0x22为低字节。对于大端模式，就将0x11放在低地址中，即0x0010中，0x22放在高地址中，即0x0011中。小端模式，刚好相反。我们常用的X86结构是小端模式，而KEIL C51则为大端模式。很多的ARM，DSP都为小端模式。有些ARM处理器还可以由硬件来选择是大端模式还是小端模式。&lt;/p&gt;
+&lt;p&gt;参考资料&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/Eunice_fan1207/article/details/79232563&#34;&gt;变量在内存中的字节顺序是-----大端还是小端？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/yangcs2009/article/details/39698997#:~:text=%E5%B0%8F%E7%AB%AF%E5%B0%B1%E6%98%AF%E4%BD%8E%E4%BD%8D%E5%AD%97,%E5%86%85%E5%AD%98%E7%9A%84%E9%AB%98%E5%9C%B0%E5%9D%80%E7%AB%AF%E3%80%82&#34;&gt;计算机大端模式和小端模式 内存对齐问题（sizeof）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jianshu.com/p/f38f2c524ace&#34;&gt;程序在计算机内部的存储方式&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+">第10章 枚举与结构类型</a>
+      </div>
+      
+      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://yuanfeng123.github.io/post/di-6-zhang-shu-zu-yu-han-shu/"" data-c="
           &lt;h1 id=&#34;61-数组基础&#34;&gt;6.1 数组基础&lt;/h1&gt;
 &lt;h2 id=&#34;611-初试数组&#34;&gt;6.1.1 初试数组&lt;/h2&gt;
@@ -8081,9 +8081,9 @@ int main() {
 &lt;h2 id=&#34;关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
 &lt;p&gt;我将会在这个网站上面分析我的笔记以及学习进度等，专注于编程语言以及信息奥赛的学习内容&lt;/p&gt;
 &lt;h2 id=&#34;博主是谁&#34;&gt;👨‍💻 博主是谁&lt;/h2&gt;
-&lt;p&gt;目前是美高一名高中生&lt;/p&gt;
-&lt;h2 id=&#34;兴趣爱好&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;
-&lt;p&gt;喜欢数学，物理，日语，英语，历史，政治，最热爱的莫属编程&lt;/p&gt;
+&lt;p&gt;目前是美国高中10年级学生（也就是对应的国内高一）&lt;/p&gt;
+&lt;h2 id=&#34;兴趣爱好与成就&#34;&gt;⛹ 兴趣爱好与成就&lt;/h2&gt;
+&lt;p&gt;会中日英三门语言，最热爱的莫属编程，数学与历史。&lt;/p&gt;
 &lt;h2 id=&#34;联系我呀&#34;&gt;📬 联系我呀&lt;/h2&gt;
 &lt;p&gt;我的Email：ywu6622@gmail.com&lt;/p&gt;
 ">关于</a>
