@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            background-color: #fefeee;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* background-color: green; */
+            height: 200px;
+            box-sizing: border-box;
+        }
+
+
+        .gift {
+            /* position: relative;
+    left: 25%; */
+            display: block;
+            width: 100px;
+            height: 90px;
+            /* background-color: plum; */
+            transform: scale(2);
+        }
+
+        .gift:before,
+        .gift:after {
+            position: absolute;
+            content: "";
+            left: 50px;
+            top: 10px;
+            width: 50px;
+            height: 80px;
+            background-color: red;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+
+        .gift:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+
+        .gift:hover {
+            transform: scale(2.2);
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h3>请我的姐姐挑选礼物, 嘻嘻~(其实三个都是姐姐的哦~)</h3>
+    </div>
+    <div class="main">
+        <a class="gift" href="2/index.html" target="_blank">
+
+        </a>
+        <a class="gift" href="1/index.html" target="_blank">
+        </a>
+        <a class="gift" href="3/index.html" target="_blank">
+
+        </a>
+
+    </div>
+
+    <div class="footer">
+        <h4>姐姐先打开音乐~</h4>
+        <h4>另外姐姐,每打开一个页面记得先点击一下,不然没有声音</h4>
+        <audio id="player" autoplay controls loop>
+            <source src="audio.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+
+    <!-- <source src="audio.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 元素。 -->
+    </audio>
+    <script>
+        let audio = document.getElementById("player");
+        audio.volume = 0.30;
+        
+
+    </script>
+
+</body>
+
+</html>

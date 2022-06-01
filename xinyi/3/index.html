@@ -1,0 +1,112 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+	<title>某某，我爱你 </title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url("digital-7_mono.ttf"
+					/*tpa=./digital-7_mono.ttf*/
+				) format("truetype");
+		}
+	</style>
+	<link href="css/default.css" tppabs="./css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js" tppabs="./js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js" tppabs="./js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js" tppabs="./js/functions.js"></script>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<audio autoplay="autoplay" height="100" width="100">
+				<source src="renxi.mp3" type="audio/mp3" />
+				<embed height="100" width="100" src="renxi.mp3" />
+			</audio>
+			<div id="code">
+				<span class="comments">姐姐</span><br />
+				<span class="space"><span class="comments">我爱你</span></span><br />
+				<span class="space" /><span
+					class="comments">嘿嘿姐姐~喜不喜欢，可能不喜欢叭，但我就是个programmer，也不懂什么浪漫，只能这样给姐姐礼物啦，对不起姐姐:(，但你是我的女孩子，我会尽我所能的去给你准备浪漫与惊喜，在认识我之前的18年，我会在我们见面那时把那18年的生日礼物都补回给姐姐。</span><br />
+				<span class="space" /><span
+					class="comments">听我说，我是真心喜欢你的，也因此很害怕失去你，我们要好好的知道了嘛。姐姐可以一直一直都相信我，毫无保留的，我永远都会是姐姐的后盾，超爱超爱姐姐的，把我当自己家人，知道了嘛。</span><br />
+				<span class="space" /><span class="comments">另外就是姐姐，我发现姐姐比我还在意自己外表，听我说，我们都是普通人，又不是什么大明星，我们只是普通人的恋爱，我们在一起开心就好！</span><br />
+				<span class="space" /><span
+					class="comments">认识姐姐，是宝宝最幸福的事啦，好爱好爱姐姐啊，宝宝和姐姐一定会有一个家的，嘻嘻~姐姐是一个很善良的人~同时也是最疼最包容本宝宝的人，mua~</span><br />
+
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						姐姐, 今天是我们认识的第
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						永远爱你，一辈子，不分离！<br />
+						<div class="signature">- 最爱你的人</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="bg1">
+				<div class="main">
+					<footer style="line-height:20px">
+						<div id="copyright">
+							<p><a href='http://51bbw.cn' target="_blank"></a>
+								<a href="http://ymjzy.net" target="_blank"></a>
+								<a href="" target="_blank"></a>
+							</p>
+
+						</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			var offsetX = $("#loveHeart").width() / 2;
+			var offsetY = $("#loveHeart").height() / 2 - 55;
+			var together = new Date();
+			together.setFullYear(2021, 12, 15);
+			together.setHours(0);
+			together.setMinutes(0);
+			together.setSeconds(0);
+			together.setMilliseconds(0);
+
+			if (!document.createElement('canvas').getContext) {
+				var msg = document.createElement("div");
+				msg.id = "errorMsg";
+				msg.innerHTML = "提醒您：您的浏览器版本过旧^_^<br/>" +
+					"推荐使用 <a href='http://dlsw.br.baidu.com/ditui/zujian/bdBrowserSetup-5956-ftn_1000061134.exe' target='_blank'>百度浏览器<br/>请先升级您的浏览器，效果很炫哦~~";
+				document.body.appendChild(msg);
+				$("#code").css("display", "none")
+				$("#copyright").css("position", "absolute");
+				$("#copyright").css("bottom", "10px");
+				document.execCommand("stop");
+			} else {
+				setTimeout(function () {
+					adjustWordsPosition();
+					startHeartAnimation();
+				}, 5000);
+
+				timeElapse(together);
+				setInterval(function () {
+					timeElapse(together);
+				}, 500);
+
+				adjustCodePosition();
+				$("#code").typewriter();
+			}
+		</script>
+		<audio id="bgmMusic" src="http://qzone.haoduoge.com/music/C2C3F0LSXH4D771253124A26CF9C71C939B2A.mp3"
+			preload="auto" type="audio/mp3" autoplay loop></audio>
+
+
+
+</body>
+
+</html>
