@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Camera Test</title>
+  </head>
+  <body>
+    <video id="video" width="640" height="480" autoplay></video>
+    <script>
+      navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } })
+      .then(function(stream) {
+        var video = document.getElementById("video");
+        video.srcObject = stream;
+        video.play();
+      })
+      .catch(function(err) {
+        console.log("An error occurred: " + err);
+      });
+    </script>
+  </body>
+</html>
