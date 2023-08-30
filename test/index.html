@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="test.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="phone1">
+        <div id="app">
+            <div class="header">
+                <!-- <div class="top">
+                    <span class="left">
+                        <span class="fontawesome-circle"></span>
+                        <span class="fontawesome-circle"></span>
+                        <span class="fontawesome-circle-blank"></span>
+                        <a href="http://rena.to" target="_blank">rena.to</a>
+                        <span class="fontawesome-signal"></span>
+                    </span>
+                    <span class="center clock"></span>
+                    <span class="right">
+                        <span>75%</span>
+                        <div id="battery"></div>
+                        <span class="fontawesome-bolt"></span>
+                    </span>
+                </div> -->
+            </div>
+            <div id="people"></div>
+            <div id="control">
+                <div class="button no">
+                    <a href="#" class="trigger"></a>
+                </div>
+                <div class="button info">
+                    <a href="#" class="trigger"></a>
+                </div>
+                <div class="button yes">
+                    <a href="#" class="trigger"></a>
+                </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="copy">
+        created by <a href="http://rena.to" target="_blank">rena.to</a>
+    </div> -->
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+   $('a[href*="#"]').click(function () {
+    return false;
+});
+
+
+
+    var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+
+    var Person = {
+        wrap: $('#people'),
+        people: [
+            {
+                name: '近BU',
+                age: 2532,
+                img: "https://sns-img-bd.xhscdn.com/b024f525-f523-dd6b-77fa-9bdcc0922eef?imageView2/2/w/1920/format/webp|imageMogr2/strip&quot"
+            },
+            {
+                name: '近NEU',
+                age: 2120,
+                img: "https://sns-img-bd.xhscdn.com/c3064eb7-0b5c-c960-3367-0c07f4d2af00?imageView2/2/w/1920/format/webp|imageMogr2/strip&quot"
+            },
+            {
+                name: '近BC',
+                age: 1218,
+                img: "https://sns-img-bd.xhscdn.com/c4f75366-06c4-9867-9aaa-2e92c834bf93?imageView2/2/w/1920/format/webp|imageMogr2/strip&quot"
+            },
+            {
+                name: '近UMass',
+                age: 1238,
+                img: "https://sns-img-bd.xhscdn.com/d6b6d3b8-1f10-7d60-f521-5930ed1305e6?imageView2/2/w/1920/format/webp|imageMogr2/strip&quot"
+            },
+            {
+                name: '近Harvard',
+                age: 2300,
+                img: "https://sns-img-bd.xhscdn.com/b024f525-f523-dd6b-77fa-9bdcc0922eef?imageView2/2/w/1920/format/webp|imageMogr2/strip&quot"
+            },
+            {
+                name: '近MIT',
+                age: 2231,
+                img: "https://sns-img-bd.xhscdn.com/f05f1f47-17c6-f1a8-24ae-93e4b39888ae?imageView2/2/w/1920/format/webp|imageMogr2/strip&quot"
+            },
+            {
+                name: '近Newbury',
+                age: 1224,
+                img: "https://a0.muscache.com/im/pictures/1afbc902-fa4e-44a9-902a-71d13a2ddde1.jpg?im_w=1200"
+            },
+            {
+                name: '近Chinatown',
+                age: 2218,
+                img: "https://a0.muscache.com/im/pictures/810d8d12-2904-4a8f-adeb-e996822be14a.jpg?im_w=1200"
+            },
+            {
+                name: '近地铁',
+                age: 3332,
+                img: "https://a0.muscache.com/im/pictures/miso/Hosting-48766928/original/01c3131c-c07f-4151-b72a-c908f0a3f2dc.jpeg?im_w=960"
+            }
+        ],
+        add: function () {
+            var random = this.people[Math.floor(Math.random() * this.people.length)];
+            this.wrap.append("<div class='person'><img alt='" + random.name + "' src='" + random.img + "' /><span><strong>" + random.name + "</strong>, " + "$" + random.age + "</span></div>");
+        }
+    }
+
+    var App = {
+        yesButton: $('.button.yes .trigger'),
+        noButton: $('.button.no .trigger'),
+        blocked: false,
+        like: function (liked) {
+            var animate = liked ? 'animateYes' : 'animateNo';
+            var self = this;
+            Person.add();
+            if (!this.blocked) {
+                this.blocked = true;
+                $('.person').eq(0).addClass(animate).one(animationEndEvent, function () {
+                    $(this).remove();
+                    self.blocked = false;
+                });
+            }
+        }
+    };
+
+    var Phone = {
+        wrap: $('#phone'),
+        clock: $('.clock'),
+        updateClock: function () {
+            var date = new Date();
+            var hours = date.getHours();
+            var min = date.getMinutes();
+            hours = (hours < 10 ? "0" : "") + hours;
+            min = (min < 10 ? "0" : "") + min;
+            var str = hours + ":" + min;
+            this.clock.text(str);
+        }
+    }
+
+    App.yesButton.on('mousedown', function () {
+        App.like(true);
+    });
+
+    App.noButton.on('mousedown', function () {
+        App.like(false);
+    });
+
+    $(document).ready(function () {
+        Person.people.forEach(function (person) {
+            new Image().src = person.img;
+        });
+        Phone.updateClock();
+        setInterval('Phone.updateClock()', 1000);
+
+        Person.add();
+        Person.add();
+        Person.add();
+        Person.add();
+    });
+</script>
+
+</html>
