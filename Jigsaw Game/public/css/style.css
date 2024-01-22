@@ -1,0 +1,28 @@
+#container {
+  width: 960px;
+  height: 540px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin:10px 0px 0px 250px;
+  border: solid #000 1px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s linear;
+  font-size: 0;
+}
+.small-img {
+  width: 240px;
+  height: 190px;
+  background-image: url('../img/3.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 300px;
+  left: 10px;
+  border: solid #000 1px;
+}
